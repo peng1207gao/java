@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcUnitCode" table="SJJC_UNIT_CODE">
+    	<comment>SJJC_UNIT_CODE</comment>
+        <!-- single primaryKey -->
+	    <id name="code" type="string" length="32">
+	    	<column name="CODE">
+    	        <comment>单位编码</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="name" type="string"  length="128"  not-null="false">
+	    	<column name="NAME">
+    	        <comment>单位名称</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

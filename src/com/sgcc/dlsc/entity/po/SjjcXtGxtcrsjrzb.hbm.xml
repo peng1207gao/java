@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcXtGxtcrsjrzb" table="SJJC_XT_GXTCRSJRZB">
+    	<comment>基础支撑_各系统插入数据日志表</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="inTableName" type="string"  length="100"  not-null="true">
+	    	<column name="IN_TABLE_NAME">
+    	        <comment>插入表表名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="inType" type="string"  length="110"  not-null="true">
+	    	<column name="IN_TYPE">
+    	        <comment>插入类型，1.插入新数据 2.全量修改 3.增量修改　</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="inDate" type="date"  not-null="true">
+	    	<column name="IN_DATE">
+    	        <comment>插入时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="false">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称，增量修改时设置修改的省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="areaname" type="string"  length="128"  not-null="false">
+	    	<column name="AREANAME">
+    	        <comment>地区名称，增量修改时设置修改的地区名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="string"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="string"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theday" type="string"  length="2"  not-null="false">
+	    	<column name="THEDAY">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thehour" type="string"  length="2"  not-null="false">
+	    	<column name="THEHOUR">
+    	        <comment>小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theminute" type="string"  length="2"  not-null="false">
+	    	<column name="THEMINUTE">
+    	        <comment>分钟，如果为96点数据，按照分钟的开始时间计算</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thesecond" type="string"  length="2"  not-null="false">
+	    	<column name="THESECOND">
+    	        <comment>秒</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datavaluekey" type="string"  length="128"  not-null="false">
+	    	<column name="DATAVALUEKEY">
+    	        <comment>插入数据主键，能具体到哪条数据的更新</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dataStatus" type="string"  length="110"  not-null="false">
+	    	<column name="DATA_STATUS">
+    	        <comment>数据状态，插入时默认为0我们进行取数之后为1，取数失败为2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dataSourse" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATA_SOURSE">
+    	        <comment>数据来源部分，区分数据来自哪个部门：11.营销分析与辅助决策系统12.营销业务应用系统2.规划计划信息系统3.经法系统4.财务管控系统</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

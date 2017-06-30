@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.IrReport" table="IR_REPORT">
+    	<comment>新闻报表信息</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rnqme" type="string"  length="100"  not-null="false">
+	    	<column name="RNQME">
+    	        <comment>报表名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabname" type="string"  length="100"  not-null="false">
+	    	<column name="TABNAME">
+    	        <comment>数据表名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xh" type="integer"  not-null="false">
+	    	<column name="XH">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rtype" type="integer"  not-null="false">
+	    	<column name="RTYPE">
+    	        <comment>报表类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ntype" type="integer"  not-null="false">
+	    	<column name="NTYPE">
+    	        <comment>新闻类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="timetype" type="integer"  not-null="false">
+	    	<column name="TIMETYPE">
+    	        <comment>时间类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="string"  length="50"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>只读</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="string"  length="50"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>备用2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="200"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>备用3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="200"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>备用4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>备用5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>备用6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="itemid" type="string"  length="32"  not-null="false">
+	    	<column name="ITEMID">
+    	        <comment>ITEMID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

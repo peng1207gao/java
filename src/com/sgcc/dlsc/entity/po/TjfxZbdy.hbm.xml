@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxZbdy" table="TJFX_ZBDY">
+    	<comment>指标定义表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>系统主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="zbfl" type="string"  length="32"  not-null="true">
+	    	<column name="ZBFL">
+    	        <comment>指标分类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zbmc" type="string"  length="100"  not-null="false">
+	    	<column name="ZBMC">
+    	        <comment>指标名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datasource" type="string"  length="20"  not-null="false">
+	    	<column name="DATASOURCE">
+    	        <comment>数据来源</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bm" type="string"  length="100"  not-null="false">
+	    	<column name="BM">
+    	        <comment>表名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sjpd" type="string"  length="10"  not-null="false">
+	    	<column name="SJPD">
+    	        <comment>数据频度</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sjsj" type="string"  length="10"  not-null="false">
+	    	<column name="SJSJ">
+    	        <comment>数据时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sfkwh" type="string"  length="2"  not-null="false">
+	    	<column name="SFKWH">
+    	        <comment>是否可维护</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sszb" type="string"  length="32"  not-null="false">
+	    	<column name="SSZB">
+    	        <comment>主指标</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="scsql" type="string"  length="4000"  not-null="false">
+	    	<column name="SCSQL">
+    	        <comment>删除SQL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gxsql" type="string"  length="4000"  not-null="false">
+	    	<column name="GXSQL">
+    	        <comment>更新SQL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zdycqfu" type="string"  length="200"  not-null="false">
+	    	<column name="ZDYCQFU">
+    	        <comment>自定义抽取服务</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bhgsjsql" type="string"  length="4000"  not-null="false">
+	    	<column name="BHGSJSQL">
+    	        <comment>不合格数据SQL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bz" type="string"  length="500"  not-null="false">
+	    	<column name="BZ">
+    	        <comment>备注</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sfqy" type="string"  length="2"  not-null="false">
+	    	<column name="SFQY">
+    	        <comment>是否启用</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="px" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="PX">
+    	        <comment>排序</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ssld" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="SSLD">
+    	        <comment>数据粒度</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ssldz" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="SSLDZ">
+    	        <comment>数据粒度值</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

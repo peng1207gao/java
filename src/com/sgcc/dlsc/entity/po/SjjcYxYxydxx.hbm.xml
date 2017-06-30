@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxYxydxx" table="SJJC_YX_YXYDXX">
+    	<comment>SJJC_YX_YXYDXX</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>OBJ_ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="infodate" type="date"  not-null="true">
+	    	<column name="INFODATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ldpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LDPOWER">
+    	        <comment>最大拉电负荷</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cfpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CFPOWER">
+    	        <comment>错峰负荷</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bfpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BFPOWER">
+    	        <comment>避峰负荷</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fkpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FKPOWER">
+    	        <comment>负控限电负荷</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="llquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LLQUANTITY">
+    	        <comment>拉电影响电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cfquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CFQUANTITY">
+    	        <comment>错峰转移电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bfquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BFQUANTITY">
+    	        <comment>避峰影响电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fkquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FKQUANTITY">
+    	        <comment>负控限电影响电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powergap" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="POWERGAP">
+    	        <comment>最大电力缺口</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

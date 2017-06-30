@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoContransenergyinfo" table="CO_CONTRANSENERGYINFO">
+    	<comment>?????????? </comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="contractid" type="string"  length="36"  not-null="false">
+	    	<column name="CONTRACTID">
+    	        <comment>CONTRACTID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transno" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TRANSNO">
+    	        <comment>TRANSNO</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transmission" type="string"  length="36"  not-null="false">
+	    	<column name="TRANSMISSION">
+    	        <comment>????ID </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transperson" type="string"  length="32"  not-null="false">
+	    	<column name="TRANSPERSON">
+    	        <comment>TRANSPERSON</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transphone" type="string"  length="36"  not-null="false">
+	    	<column name="TRANSPHONE">
+    	        <comment>TRANSPHONE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transconftime" type="date"  not-null="false">
+	    	<column name="TRANSCONFTIME">
+    	        <comment>TRANSCONFTIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transenergy" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TRANSENERGY">
+    	        <comment>TRANSENERGY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cost" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="COST">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lossattribute" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="LOSSATTRIBUTE">
+    	        <comment>1????2????3??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE">
+    	        <comment>PRICE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="settleside" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="SETTLESIDE">
+    	        <comment>1?????2?????3???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="settletype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="SETTLETYPE">
+    	        <comment>1?????????2???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isincludetax" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISINCLUDETAX">
+    	        <comment>ISINCLUDETAX</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="taxrate" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TAXRATE">
+    	        <comment>TAXRATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loss" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="LOSS">
+    	        <comment>LOSS</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energypercent" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="ENERGYPERCENT">
+    	        <comment>ENERGYPERCENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startdate" type="date"  not-null="false">
+	    	<column name="STARTDATE">
+    	        <comment>STARTDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="enddate" type="date"  not-null="false">
+	    	<column name="ENDDATE">
+    	        <comment>ENDDATE</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

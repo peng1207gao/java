@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrRuleParams" table="TR_RULE_PARAMS">
+    	<comment>TR_RULE_PARAMS</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="paramName" type="string"  length="128"  not-null="true">
+	    	<column name="PARAM_NAME">
+    	        <comment>参数名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dataType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATA_TYPE">
+    	        <comment>参数数据类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="keyClass" type="string"  length="32"  not-null="false">
+	    	<column name="KEY_CLASS">
+    	        <comment>辅助信息</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramIsautopub" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="PARAM_ISAUTOPUB">
+    	        <comment>是否需要公告</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeRuleId" type="string"  length="32"  not-null="true">
+	    	<column name="TRADE_RULE_ID">
+    	        <comment>规则ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramCode" type="string"  length="128"  not-null="false">
+	    	<column name="PARAM_CODE">
+    	        <comment>参数值 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwTransprovincialtradeinfo" table="DW_TRANSPROVINCIALTRADEINFO">
+    	<comment>结算_跨省交易电量</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thetype" type="string"  length="36"  not-null="false">
+	    	<column name="THETYPE">
+    	        <comment>发电类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECQUANTITY">
+    	        <comment>电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="source" type="string"  length="36"  not-null="false">
+	    	<column name="SOURCE">
+    	        <comment>送出地区</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="destination" type="string"  length="36"  not-null="false">
+	    	<column name="DESTINATION">
+    	        <comment>受入地区</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

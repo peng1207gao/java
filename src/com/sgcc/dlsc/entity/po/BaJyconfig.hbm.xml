@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaJyconfig" table="BA_JYCONFIG">
+    	<comment>?????</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="xh" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="XH">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jdid" type="string"  length="32"  not-null="false">
+	    	<column name="JDID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ddate" type="date"  not-null="false">
+	    	<column name="DDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dmane" type="string"  length="32"  not-null="false">
+	    	<column name="DMANE">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr1" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR1">
+    	        <comment>????1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr2" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR2">
+    	        <comment>????2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr3" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR3">
+    	        <comment>????3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr4" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR4">
+    	        <comment>????4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr5" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR5">
+    	        <comment>????5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="flowinsid" type="string"  length="64"  not-null="false">
+	    	<column name="FLOWINSID">
+    	        <comment>流程实例ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sdate" type="date"  not-null="true">
+	    	<column name="SDATE">
+    	        <comment>节点开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="edate" type="date"  not-null="true">
+	    	<column name="EDATE">
+    	        <comment>节点结束时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="flowid" type="string"  length="64"  not-null="false">
+	    	<column name="FLOWID">
+    	        <comment>流程定义ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

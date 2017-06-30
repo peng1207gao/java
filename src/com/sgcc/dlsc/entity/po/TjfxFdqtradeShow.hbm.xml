@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxFdqtradeShow" table="TJFX_FDQTRADE_SHOW">
+    	<comment>发电权交易展示表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>guid</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="mktMonth" type="date"  not-null="true">
+	    	<column name="MKT_MONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tjname" type="string"  length="36"  not-null="true">
+	    	<column name="TJNAME">
+    	        <comment>统计项目</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthsettlequantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHSETTLEQUANTITY">
+    	        <comment>当月交易电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthplanquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHPLANQUANTITY">
+    	        <comment>当月计划电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthplancompletionrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHPLANCOMPLETIONRATE">
+    	        <comment>当月计划完成率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthtb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHTB">
+    	        <comment>当月同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljsettlequantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJSETTLEQUANTITY">
+    	        <comment>累计交易电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljcontractquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJCONTRACTQUANTITY">
+    	        <comment>累计合同电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljcompletionrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJCOMPLETIONRATE">
+    	        <comment>累计交易电量进度</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljtb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJTB">
+    	        <comment>累计同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractid" type="string"  length="32"  not-null="false">
+	    	<column name="CONTRACTID">
+    	        <comment>合同ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yl1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="YL1">
+    	        <comment>预留字段1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yl2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="YL2">
+    	        <comment>预留字段2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yl3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="YL3">
+    	        <comment>预留字段3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yl4" type="string"  length="50"  not-null="false">
+	    	<column name="YL4">
+    	        <comment>预留字段4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yl5" type="string"  length="50"  not-null="false">
+	    	<column name="YL5">
+    	        <comment>预留字段5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yl6" type="string"  length="50"  not-null="false">
+	    	<column name="YL6">
+    	        <comment>预留字段6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwBalanceinfo" table="DW_BALANCEINFO">
+    	<comment>平衡_电力电量平衡情况</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paddingcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PADDINGCAPACITY">
+    	        <comment>通调装机容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="availablecapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AVAILABLECAPACITY">
+    	        <comment>综合可调容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxdemand" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXDEMAND">
+    	        <comment>统调用电最大需求</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="surplusdeficiency" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SURPLUSDEFICIENCY">
+    	        <comment>全月电量余缺</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="situation" type="float"  length="126"  not-null="false">
+	    	<column name="SITUATION">
+    	        <comment>供需紧张情况</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

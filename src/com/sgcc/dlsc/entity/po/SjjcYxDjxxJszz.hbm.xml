@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxDjxxJszz" table="SJJC_YX_DJXX_JSZZ">
+    	<comment>营销_营销电价信息_加收代征电价</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="addedPrcId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="ADDED_PRC_ID">
+    	        <comment>加收代征单价标识,代征加收关系唯一标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="detId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="DET_ID">
+    	        <comment>目录电价明细标识,目录电度电价唯一标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plCode" type="string"  length="8"  not-null="false">
+	    	<column name="PL_CODE">
+    	        <comment>代征项代码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plAbbr" type="string"  length="64"  not-null="false">
+	    	<column name="PL_ABBR">
+    	        <comment>代征项简称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plName" type="string"  length="256"  not-null="true">
+	    	<column name="PL_NAME">
+    	        <comment>代征项名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plPrc" type="big_decimal"  length="10"  not-null="true">
+	    	<column name="PL_PRC">
+    	        <comment>代征单价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="prcIoFlag" type="string"  length="32"  not-null="false">
+	    	<column name="PRC_IO_FLAG">
+    	        <comment>价内价外标志,价内代征：参与力率电费计算；价外代征：不参与力率电费计算；只统计不参与计算(如电铁还贷)</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispSn" type="big_decimal"  length="5"  not-null="false">
+	    	<column name="DISP_SN">
+    	        <comment>显示序号,显示多个代征时，可根据习惯设定显示的顺序</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iduFlag" type="string"  length="32"  not-null="false">
+	    	<column name="IDU_FLAG">
+    	        <comment>变动标志</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

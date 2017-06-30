@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrCoefficientConfig" table="TR_COEFFICIENT_CONFIG">
+    	<comment>TR_COEFFICIENT_CONFIG</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>TRADESEQ_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramTypeCode" type="string"  length="64"  not-null="false">
+	    	<column name="PARAM_TYPE_CODE">
+    	        <comment>PARAM_TYPE_CODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramName" type="string"  length="64"  not-null="false">
+	    	<column name="PARAM_NAME">
+    	        <comment>PARAM_NAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramCode" type="string"  length="64"  not-null="false">
+	    	<column name="PARAM_CODE">
+    	        <comment>PARAM_CODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramValue" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PARAM_VALUE">
+    	        <comment>PARAM_VALUE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakNum1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_NUM1">
+    	        <comment>BAK_NUM1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakNum2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_NUM2">
+    	        <comment>BAK_NUM2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakNum3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_NUM3">
+    	        <comment>BAK_NUM3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakNum4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_NUM4">
+    	        <comment>BAK_NUM4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr1" type="string"  length="64"  not-null="false">
+	    	<column name="BAK_STR1">
+    	        <comment>BAK_STR1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr2" type="string"  length="64"  not-null="false">
+	    	<column name="BAK_STR2">
+    	        <comment>BAK_STR2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr3" type="string"  length="64"  not-null="false">
+	    	<column name="BAK_STR3">
+    	        <comment>BAK_STR3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr4" type="string"  length="64"  not-null="false">
+	    	<column name="BAK_STR4">
+    	        <comment>BAK_STR4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatePersion" type="string"  length="128"  not-null="false">
+	    	<column name="UPDATE_PERSION">
+    	        <comment>UPDATE_PERSION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateTime" type="date"  not-null="false">
+	    	<column name="UPDATE_TIME">
+    	        <comment>UPDATE_TIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

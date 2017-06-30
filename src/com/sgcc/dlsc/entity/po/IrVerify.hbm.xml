@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.IrVerify" table="IR_VERIFY">
+    	<comment>IR_VERIFY</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="verifyinfo" type="string"  length="32"  not-null="true">
+	    	<column name="VERIFYINFO">
+    	        <comment>审核信息ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="verifyuser" type="string"  length="32"  not-null="false">
+	    	<column name="VERIFYUSER">
+    	        <comment>审核人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="verifytime" type="date"  not-null="false">
+	    	<column name="VERIFYTIME">
+    	        <comment>审核时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="verifydetail" type="string"  length="240"  not-null="false">
+	    	<column name="VERIFYDETAIL">
+    	        <comment>审核内容</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="verifyconclusion" type="string"  length="2"  not-null="false">
+	    	<column name="VERIFYCONCLUSION">
+    	        <comment>审核结论  0-不通过；1-通过</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradeanmtTranscap" table="TR_TRADEANMT_TRANSCAP">
+    	<comment>TR_TRADEANMT_TRANSCAP</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeanmtId" type="string"  length="32"  not-null="true">
+	    	<column name="TRADEANMT_ID">
+    	        <comment>交易公告ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tdxekssj" type="date"  not-null="false">
+	    	<column name="TDXEKSSJ">
+    	        <comment>通道限额起始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tdxejssj" type="date"  not-null="false">
+	    	<column name="TDXEJSSJ">
+    	        <comment>通道限额结束时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xez" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="XEZ">
+    	        <comment>限额值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>场景信息</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeTimepart" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TRADE_TIMEPART">
+    	        <comment>0:不分时间段；1-n：1至n时间段申报数据</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

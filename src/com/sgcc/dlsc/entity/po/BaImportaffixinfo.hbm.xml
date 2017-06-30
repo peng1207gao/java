@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaImportaffixinfo" table="BA_IMPORTAFFIXINFO">
+    	<comment>BA_IMPORTAFFIXINFO</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>场景</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="affixname" type="string"  length="150"  not-null="false">
+	    	<column name="AFFIXNAME">
+    	        <comment>附件名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="participantid" type="string"  length="36"  not-null="false">
+	    	<column name="PARTICIPANTID">
+    	        <comment>市场成员ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="affixfile" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+	    	<column name="AFFIXFILE">
+    	        <comment>附件内容</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaQueryCfg" table="BA_QUERY_CFG">
+    	<comment>BA_QUERY_CFG</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="cjid" type="string"  length="32"  not-null="true">
+	    	<column name="CJID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gnid" type="string"  length="32"  not-null="true">
+	    	<column name="GNID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yhid" type="string"  length="32"  not-null="true">
+	    	<column name="YHID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mrmc" type="string"  length="32"  not-null="true">
+	    	<column name="MRMC">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sx" type="string"  length="32"  not-null="true">
+	    	<column name="SX">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lx" type="string"  length="32"  not-null="true">
+	    	<column name="LX">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="z" type="string"  length="200"  not-null="false">
+	    	<column name="Z">
+    	        <comment>?</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fzlx" type="string"  length="32"  not-null="true">
+	    	<column name="FZLX">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fzhs" type="string"  length="32"  not-null="false">
+	    	<column name="FZHS">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fzwz" type="string"  length="32"  not-null="false">
+	    	<column name="FZWZ">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="glzd" type="string"  length="32"  not-null="false">
+	    	<column name="GLZD">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="glz" type="string"  length="32"  not-null="false">
+	    	<column name="GLZ">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sfxs" type="string"  length="32"  not-null="true">
+	    	<column name="SFXS">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gnxsmc" type="string"  length="32"  not-null="false">
+	    	<column name="GNXSMC">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ys" type="string"  length="32"  not-null="false">
+	    	<column name="YS">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sfbt" type="string"  length="32"  not-null="true">
+	    	<column name="SFBT">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="byzd1" type="string"  length="32"  not-null="false">
+	    	<column name="BYZD1">
+    	        <comment>????1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="byzd2" type="string"  length="32"  not-null="false">
+	    	<column name="BYZD2">
+    	        <comment>????2</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

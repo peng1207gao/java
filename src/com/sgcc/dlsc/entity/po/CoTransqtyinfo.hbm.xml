@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoTransqtyinfo" table="CO_TRANSQTYINFO">
+    	<comment>?????</comment>
+        <!-- single primaryKey -->
+	    <id name="transinfoid" type="string" length="36">
+	    	<column name="TRANSINFOID">
+    	        <comment>???ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="contractid" type="string"  length="36"  not-null="false">
+	    	<column name="CONTRACTID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transmission" type="string"  length="36"  not-null="false">
+	    	<column name="TRANSMISSION">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkid" type="string"  length="36"  not-null="false">
+	    	<column name="LINKID">
+    	        <comment>???ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkno" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="LINKNO">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="passagewayno" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PASSAGEWAYNO">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="passagewayname" type="string"  length="128"  not-null="false">
+	    	<column name="PASSAGEWAYNAME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startgateid" type="string"  length="36"  not-null="false">
+	    	<column name="STARTGATEID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endgateid" type="string"  length="36"  not-null="false">
+	    	<column name="ENDGATEID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startprice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="STARTPRICE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endprice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="ENDPRICE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transprice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TRANSPRICE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lossrate" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="LOSSRATE">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TRANSQTY">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capfee" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPFEE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="seprate" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SEPRATE">
+    	        <comment>???????%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="peakregurate" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PEAKREGURATE">
+    	        <comment>????%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isincludetax" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISINCLUDETAX">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="power" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="POWER">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="explanation" type="string"  length="1024"  not-null="false">
+	    	<column name="EXPLANATION">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="spare1" type="string"  length="128"  not-null="false">
+	    	<column name="SPARE1">
+    	        <comment>??1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="spare2" type="string"  length="128"  not-null="false">
+	    	<column name="SPARE2">
+    	        <comment>??2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="spare3" type="string"  length="128"  not-null="false">
+	    	<column name="SPARE3">
+    	        <comment>??3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starttime" type="date"  not-null="false">
+	    	<column name="STARTTIME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endtime" type="date"  not-null="false">
+	    	<column name="ENDTIME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transcap" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TRANSCAP">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPPRICE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

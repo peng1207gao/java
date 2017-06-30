@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoContemplatewithparam" table="CO_CONTEMPLATEWITHPARAM">
+    	<comment>??????</comment>
+        <!-- single primaryKey -->
+	    <id name="contracttemplatecode" type="string" length="36">
+	    	<column name="CONTRACTTEMPLATECODE">
+    	        <comment>??????</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contracttype" type="string"  length="64"  not-null="false">
+	    	<column name="CONTRACTTYPE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contracttemplatename" type="string"  length="100"  not-null="false">
+	    	<column name="CONTRACTTEMPLATENAME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contracttemplatefile" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+	    	<column name="CONTRACTTEMPLATEFILE">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="string"  length="16"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="issueddate" type="date"  not-null="false">
+	    	<column name="ISSUEDDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="false">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="effectiveflag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="EFFECTIVEFLAG">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isshare" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISSHARE">
+    	        <comment>ISSHARE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="descreption" type="string"  length="256"  not-null="false">
+	    	<column name="DESCREPTION">
+    	        <comment>DESCREPTION</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

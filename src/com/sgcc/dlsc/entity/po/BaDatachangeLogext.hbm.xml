@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaDatachangeLogext" table="BA_DATACHANGE_LOGEXT">
+    	<comment>接口信息扩展表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="fguid" type="string"  length="36"  not-null="false">
+	    	<column name="FGUID">
+    	        <comment>FGUID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userid" type="string"  length="64"  not-null="false">
+	    	<column name="USERID">
+    	        <comment>USERID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatedate" type="date"  not-null="false">
+	    	<column name="UPDATEDATE">
+    	        <comment>UPDATEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="keyvalue1" type="string"  length="256"  not-null="false">
+	    	<column name="KEYVALUE1">
+    	        <comment>KEYVALUE1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="keyvalue2" type="string"  length="256"  not-null="false">
+	    	<column name="KEYVALUE2">
+    	        <comment>KEYVALUE2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="deptCode" type="string"  length="18"  not-null="false">
+	    	<column name="DEPT_CODE">
+    	        <comment>DEPT_CODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabYear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="TAB_YEAR">
+    	        <comment>TAB_YEAR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabMonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TAB_MONTH">
+    	        <comment>TAB_MONTH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDay" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TAB_DAY">
+    	        <comment>TAB_DAY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tableid" type="string"  length="32"  not-null="false">
+	    	<column name="TABLEID">
+    	        <comment>TABLEID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

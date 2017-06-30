@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaTable" table="BA_TABLE">
+    	<comment>BA_TABLE</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="balance" type="string"  length="36"  not-null="false">
+	    	<column name="BALANCE">
+    	        <comment>平衡主题</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="baTable" type="string"  length="36"  not-null="false">
+	    	<column name="BA_TABLE">
+    	        <comment>数据表</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="baUnit" type="string"  length="36"  not-null="false">
+	    	<column name="BA_UNIT">
+    	        <comment>项目</comment>
+	    	</column>
+    	</property>   
+         
+	    <property name="baUnitName" type="string"  length="36"  not-null="false">
+	    	<column name="BA_UNIT_NAME">
+    	        <comment>项目名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startdate" type="date"  not-null="false">
+	    	<column name="STARTDATE">
+    	        <comment>开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="enddate" type="date"  not-null="false">
+	    	<column name="ENDDATE">
+    	        <comment>结束时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fz" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="FZ">
+    	        <comment>分组</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sx" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="SX">
+    	        <comment>显示顺序</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

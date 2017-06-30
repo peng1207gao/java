@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaGenerateelec" table="BA_GENERATEELEC">
+    	<comment>统调可发电量信息</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATE_TYPE">
+    	        <comment>期别  年、冬、夏、季、月、旬、周、日 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabdate" type="date"  not-null="true">
+	    	<column name="TABDATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC">
+    	        <comment>统调可发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecSu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubReport" table="PUB_REPORT">
+    	<comment>审计表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="moduleid" type="string"  length="36"  not-null="true">
+	    	<column name="MODULEID">
+    	        <comment>模块ID  通用编码表中type=9</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="funcName" type="string"  length="64"  not-null="true">
+	    	<column name="FUNC_NAME">
+    	        <comment>功能名称   </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="funcType" type="string"  length="32"  not-null="true">
+	    	<column name="FUNC_TYPE">
+    	        <comment>功能类型名称   年、季、月、日</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDate" type="date"  not-null="true">
+	    	<column name="TAB_DATE">
+    	        <comment>数据日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="seqId" type="string"  length="36"  not-null="false">
+	    	<column name="SEQ_ID">
+    	        <comment>序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="seqName" type="string"  length="64"  not-null="false">
+	    	<column name="SEQ_NAME">
+    	        <comment>序列名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pubPersonid" type="string"  length="36"  not-null="false">
+	    	<column name="PUB_PERSONID">
+    	        <comment>发布人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pubDate" type="date"  not-null="false">
+	    	<column name="PUB_DATE">
+    	        <comment>发布时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="effective" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="EFFECTIVE">
+    	        <comment>是否生效</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="string"  length="32"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>bak1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="string"  length="32"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>bak2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>bak3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

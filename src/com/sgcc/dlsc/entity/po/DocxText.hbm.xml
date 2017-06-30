@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DocxText" table="DOCX_TEXT">
+    	<comment>DOCX_TEXT</comment>
+        <!-- single primaryKey -->
+	    <id name="appid" type="string" length="36">
+	    	<column name="APPID">
+    	        <comment>行ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="docid" type="string"  length="20"  not-null="true">
+	    	<column name="DOCID">
+    	        <comment>文档ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="indexnum" type="big_decimal"  length="22"  not-null="true">
+	    	<column name="INDEXNUM">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="text" type="org.springframework.orm.hibernate3.support.ClobStringType"  not-null="false">
+	    	<column name="TEXT">
+    	        <comment>文字</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fonttype" type="string"  length="20"  not-null="true">
+	    	<column name="FONTTYPE">
+    	        <comment>字体</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fontsize" type="string"  length="20"  not-null="true">
+	    	<column name="FONTSIZE">
+    	        <comment>字号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isblod" type="big_decimal"  length="22"  not-null="true">
+	    	<column name="ISBLOD">
+    	        <comment>是否加粗</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jce" type="string"  length="20"  not-null="true">
+	    	<column name="JCE">
+    	        <comment>对齐方式</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

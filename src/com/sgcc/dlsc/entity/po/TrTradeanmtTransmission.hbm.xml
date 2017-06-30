@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradeanmtTransmission" table="TR_TRADEANMT_TRANSMISSION">
+    	<comment>TR_TRADEANMT_TRANSMISSION</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>输电信息id</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeanmtId" type="string"  length="32"  not-null="true">
+	    	<column name="TRADEANMT_ID">
+    	        <comment>交易公告ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transmission" type="string"  length="36"  not-null="true">
+	    	<column name="TRANSMISSION">
+    	        <comment>输电方</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkid" type="string"  length="36"  not-null="true">
+	    	<column name="LINKID">
+    	        <comment>联络线ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkno" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="LINKNO">
+    	        <comment>联络线序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gateid" type="string"  length="36"  not-null="false">
+	    	<column name="GATEID">
+    	        <comment>计量关口ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startprice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="STARTPRICE">
+    	        <comment>上网电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endprice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="ENDPRICE">
+    	        <comment>下网电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transprice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TRANSPRICE">
+    	        <comment>输电电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lossrate" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="LOSSRATE">
+    	        <comment>线损率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TRANSQTY">
+    	        <comment>输电电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capfee" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPFEE">
+    	        <comment>容量电费</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="seprate" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SEPRATE">
+    	        <comment>联络线分电比例%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="peakregurate" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PEAKREGURATE">
+    	        <comment>PEAKREGURATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isincludetax" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISINCLUDETAX">
+    	        <comment>是否含税</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="power" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="POWER">
+    	        <comment>高峰电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="explanation" type="string"  length="1024"  not-null="false">
+	    	<column name="EXPLANATION">
+    	        <comment>备注</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transcap" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TRANSCAP">
+    	        <comment>收费容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPPRICE">
+    	        <comment>容量电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>场景信息</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

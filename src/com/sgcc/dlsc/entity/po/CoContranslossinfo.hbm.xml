@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoContranslossinfo" table="CO_CONTRANSLOSSINFO">
+    	<comment>????????</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>??</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="contractid" type="string"  length="36"  not-null="true">
+	    	<column name="CONTRACTID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="translineno" type="big_decimal"  length="12"  not-null="true">
+	    	<column name="TRANSLINENO">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linestartendgate" type="string"  length="64"  not-null="true">
+	    	<column name="LINESTARTENDGATE">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loss" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="LOSS">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkid" type="string"  length="36"  not-null="false">
+	    	<column name="LINKID">
+    	        <comment>???ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="direction" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="DIRECTION">
+    	        <comment>??,    1??0?? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transmission" type="string"  length="36"  not-null="false">
+	    	<column name="TRANSMISSION">
+    	        <comment>???,????ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

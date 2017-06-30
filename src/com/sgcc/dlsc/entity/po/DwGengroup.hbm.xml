@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwGengroup" table="DW_GenGroup">
+    	<comment>基础信息_发电集团</comment>
+        <!-- single primaryKey -->
+	    <id name="gengroupid" type="string" length="36">
+	    	<column name="GENGROUPID">
+    	        <comment>发电集团ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="gengroupname" type="string"  length="36"  not-null="true">
+	    	<column name="GENGROUPNAME">
+    	        <comment>发电集团名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gengroupdescr" type="string"  length="36"  not-null="false">
+	    	<column name="GENGROUPDESCR">
+    	        <comment>发电集团描述</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

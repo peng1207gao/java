@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubSupplyCoalusehour" table="PUB_SUPPLY_COALUSEHOUR">
+    	<comment>PUB_SUPPLY_COALUSEHOUR</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tmonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="TMONTH">
+    	        <comment>月份：1、2、3、4……11、12</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY1">
+    	        <comment>10万以下总发电量：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aveHours1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AVE_HOURS1">
+    	        <comment>10万以下平均利用小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY2">
+    	        <comment>10~20万级总发电量：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aveHours2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AVE_HOURS2">
+    	        <comment>10~20万级平均利用小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY3">
+    	        <comment>30万级总发电量：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aveHours3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AVE_HOURS3">
+    	        <comment>30万级平均利用小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY4">
+    	        <comment>60万级总发电量：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aveHours4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AVE_HOURS4">
+    	        <comment>60万级平均利用小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity5" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY5">
+    	        <comment>100万级总发电量：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aveHours5" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AVE_HOURS5">
+    	        <comment>100万级平均利用小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity6" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY6">
+    	        <comment>水电总发电量：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aveHours6" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AVE_HOURS6">
+    	        <comment>水电平均利用小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity7" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY7">
+    	        <comment>风电总发电量：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aveHours7" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AVE_HOURS7">
+    	        <comment>风电平均利用小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity8" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY8">
+    	        <comment>常规燃煤总发电量：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aveHours8" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AVE_HOURS8">
+    	        <comment>常规燃煤平均利用小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="STATE">
+    	        <comment>状态,0未发布，1发布，2待审批，3审批通过，4退回。默认为0</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="subjectguid" type="string"  length="32"  not-null="false">
+	    	<column name="SUBJECTGUID">
+    	        <comment>发布主题ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="20"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>填报人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillintime" type="date"  not-null="true">
+	    	<column name="FILLINTIME">
+    	        <comment>填报时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>备用1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>备用2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>备用3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>备用4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="32"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>备用5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="32"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>备用6</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcGhDllxx" table="SJJC_GH_DLLXX">
+    	<comment>规划计划_用电量信息</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wholeconsumption" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="WHOLECONSUMPTION">
+    	        <comment>全社会用电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wholeconsumptionrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="WHOLECONSUMPTIONRATE">
+    	        <comment>全社会用电量同比，单位：%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gridconsumption" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GRIDCONSUMPTION">
+    	        <comment>全网用电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gridconsumptionrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GRIDCONSUMPTIONRATE">
+    	        <comment>全网用电量同比，单位：%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="statisticalcalibre" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="STATISTICALCALIBRE">
+    	        <comment>统计口径，1直代管2全社会</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="primaryconsumption" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRIMARYCONSUMPTION">
+    	        <comment>第一产业用电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="secondconsumption" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SECONDCONSUMPTION">
+    	        <comment>第二产业用电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thirdconsumption" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="THIRDCONSUMPTION">
+    	        <comment>第三产业用电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="residentconsumption" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="RESIDENTCONSUMPTION">
+    	        <comment>城乡居民生活用电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+        <property name="dxpdeptcode" type="string"  length="18"  not-null="true">  
+			<column name="DXPDEPTCODE" sql-type="VARCHAR2(18) default '1'">
+    	        <comment>国网公司代码</comment>
+			</column>
+        </property> 
+         
+	    <property name="deptCode" type="string"  length="18"  not-null="false">
+	    	<column name="DEPT_CODE">
+    	        <comment>DEPT_CODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabYear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="TAB_YEAR">
+    	        <comment>TAB_YEAR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabMonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TAB_MONTH">
+    	        <comment>TAB_MONTH</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

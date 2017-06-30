@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.StKstjyb" table="ST_KSTJYB">
+    	<comment>ST_KSTJYB</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="jyfxmc" type="string"  length="36"  not-null="false">
+	    	<column name="JYFXMC">
+    	        <comment>交易方向名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjh" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJH">
+    	        <comment>当月计划 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sjwc" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SJWC">
+    	        <comment>实际完成 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tb" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="TB">
+    	        <comment>同比 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjhwcl" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="DYJHWCL">
+    	        <comment>当月计划完成率 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljsjwc" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJSJWC">
+    	        <comment>累计实际完成 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljtb" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="LJTB">
+    	        <comment>累计同比 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>年份 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="THEMONTH">
+    	        <comment>月份 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="10"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="string"  length="2"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>版本</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

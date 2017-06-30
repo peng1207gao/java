@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxDlyhydxx" table="SJJC_YX_DLYHYDXX">
+    	<comment>SJJC_YX_DLYHYDXX</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="false">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="consNo" type="string"  length="16"  not-null="false">
+	    	<column name="CONS_NO">
+    	        <comment>用户编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="year" type="string"  length="4"  not-null="false">
+	    	<column name="YEAR">
+    	        <comment>计费年，如2008,YYYY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="month" type="string"  length="2"  not-null="false">
+	    	<column name="MONTH">
+    	        <comment>计费月,MM</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orgNo" type="string"  length="16"  not-null="false">
+	    	<column name="ORG_NO">
+    	        <comment>供电单位编号:地市级单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orgName" type="string"  length="256"  not-null="false">
+	    	<column name="ORG_NAME">
+    	        <comment>供电单位名称:地市级单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="prcCode" type="string"  length="8"  not-null="false">
+	    	<column name="PRC_CODE">
+    	        <comment>电价码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecTypeCode" type="string"  length="8"  not-null="true">
+	    	<column name="ELEC_TYPE_CODE">
+    	        <comment>用电类别</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeTypeCode" type="string"  length="8"  not-null="true">
+	    	<column name="TRADE_TYPE_CODE">
+    	        <comment>电价行业类别,行业类别，目前使用国民经济行业分类与代码 （GB/T 4754－2002）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tsettlePq" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="T_SETTLE_PQ">
+    	        <comment>总结算电量,该电价码该级数各时段结算电量合计值</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

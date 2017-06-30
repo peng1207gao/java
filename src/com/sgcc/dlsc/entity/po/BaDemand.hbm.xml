@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaDemand" table="BA_DEMAND">
+    	<comment>??????</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>???</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="DATE_TYPE">
+    	        <comment>??  ??????????????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabdate" type="date"  not-null="true">
+	    	<column name="TABDATE">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxloadforecast" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXLOADFORECAST">
+    	        <comment>????????  ???MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="consumptionforecast" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CONSUMPTIONFORECAST">
+    	        <comment>?????  ???MWh </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

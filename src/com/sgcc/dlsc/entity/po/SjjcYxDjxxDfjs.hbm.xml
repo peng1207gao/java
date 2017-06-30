@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxDjxxDfjs" table="SJJC_YX_DJXX_DFJS">
+    	<comment>SJJC_YX_DJXX_DFJS</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="false">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paraVn" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="PARA_VN">
+    	        <comment>计算参数版本号,电价版本号，每次电价维护流程产生新版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="appNo" type="string"  length="16"  not-null="true">
+	    	<column name="APP_NO">
+    	        <comment>申请编号,流程实例的唯一标识,同时也可以作为版本号。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="parVerType" type="string"  length="8"  not-null="false">
+	    	<column name="PAR_VER_TYPE">
+    	        <comment>电费参数版本类别,1 电价、2 功率因数、3 变损标准</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="parBgnDate" type="date"  not-null="false">
+	    	<column name="PAR_BGN_DATE">
+    	        <comment>参数版本起始有效日期,某版本电费计算参数执行开始日期，此日开始有效</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="parEndDate" type="date"  not-null="false">
+	    	<column name="PAR_END_DATE">
+    	        <comment>参数版本终止有效日期,某版本电费计算参数执行结束日期，此日仍然有效</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="docNo" type="string"  length="128"  not-null="false">
+	    	<column name="DOC_NO">
+    	        <comment>政策文件编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="brief" type="string"  length="256"  not-null="false">
+	    	<column name="BRIEF">
+    	        <comment>计算参数版本简介</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="releaseFlag" type="string"  length="8"  not-null="false">
+	    	<column name="RELEASE_FLAG">
+    	        <comment>发布标志,标准参数是否已经发布，0未发布，1已发布。码表</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="releaseDate" type="date"  not-null="false">
+	    	<column name="RELEASE_DATE">
+    	        <comment>发布日期,标准参数发布日期</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

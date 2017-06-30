@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrSortruleValue" table="TR_SORTRULE_VALUE">
+    	<comment>????????????</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>???</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradRole" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="TRAD_ROLE">
+    	        <comment>????  ??tr_TradeSeq_Info??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="factorId" type="string"  length="32"  not-null="false">
+	    	<column name="FACTOR_ID">
+    	        <comment>??ID  ?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="factorName" type="string"  length="64"  not-null="true">
+	    	<column name="FACTOR_NAME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="no" type="big_decimal"  length="8"  not-null="true">
+	    	<column name="NO">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ascOrDesc" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="ASC_OR_DESC">
+    	        <comment>????  1???2?? </comment>
+	    	</column>
+    	</property>  
+         
+         <property name="sortQzRatio" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SORT_QZ_RATIO">
+    	        <comment>权重系数</comment>
+	    	</column>
+    	</property>
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>????  ???? </comment>
+	    	</column>
+    	</property>  
+         
+          <property name="ruleId" type="string"  length="32"  not-null="true">
+	    	<column name="RULE_ID">
+    	        <comment>规则ID</comment>
+	    	</column>
+    	</property>  
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrPeriodCfg" table="TR_PERIOD_CFG">
+    	<comment>TR_PERIOD_CFG</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>TRADESEQ_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeTimepart" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TRADE_TIMEPART">
+    	        <comment>0:不分时间段；1-n：时间段1至n；字段定义默认值为0</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starttime" type="date"  not-null="false">
+	    	<column name="STARTTIME">
+    	        <comment>STARTTIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endtime" type="date"  not-null="false">
+	    	<column name="ENDTIME">
+    	        <comment>ENDTIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

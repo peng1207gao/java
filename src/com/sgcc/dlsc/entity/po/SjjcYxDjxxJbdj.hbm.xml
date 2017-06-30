@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxDjxxJbdj" table="SJJC_YX_DJXX_JBDJ">
+    	<comment>营销_营销电价信息_基本电价</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="prcId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="PRC_ID">
+    	        <comment>基本电价标识,基本电价唯一标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="catPrcId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="CAT_PRC_ID">
+    	        <comment>目录电价标识,目录电价唯一标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capPrc" type="big_decimal"  length="10"  not-null="true">
+	    	<column name="CAP_PRC">
+    	        <comment>容量单价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dmdPrc" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="DMD_PRC">
+    	        <comment>需量单价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iduFlag" type="string"  length="32"  not-null="false">
+	    	<column name="IDU_FLAG">
+    	        <comment>变动标志,查询码表明细信息</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTransRoute" table="TR_TRANS_ROUTE">
+    	<comment>交易输电路径表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="routeId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="ROUTE_ID">
+    	        <comment>输电路径id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="routeName" type="string"  length="128"  not-null="true">
+	    	<column name="ROUTE_NAME">
+    	        <comment>输电路径名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startgateid" type="string"  length="32"  not-null="true">
+	    	<column name="STARTGATEID">
+    	        <comment>起点关口</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endgateid" type="string"  length="32"  not-null="true">
+	    	<column name="ENDGATEID">
+    	        <comment>终点关口</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orderNum" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ORDER_NUM">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netlossRatio" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NETLOSS_RATIO">
+    	        <comment>网损率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netlossRatioPrice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NETLOSS_RATIO_PRICE">
+    	        <comment>网损补偿价格</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transmitPrice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TRANSMIT_PRICE">
+    	        <comment>输电价格</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultI1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_I1">
+    	        <comment>预留整型值1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultI2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_I2">
+    	        <comment>预留整型值2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultF1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_F1">
+    	        <comment>预留实型值1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultF2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_F2">
+    	        <comment>预留实型值2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultUc1" type="string"  length="64"  not-null="false">
+	    	<column name="DEFAULT_UC1">
+    	        <comment>预留缺省字符串值1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultUc2" type="string"  length="64"  not-null="false">
+	    	<column name="DEFAULT_UC2">
+    	        <comment>预留缺省字符串值2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

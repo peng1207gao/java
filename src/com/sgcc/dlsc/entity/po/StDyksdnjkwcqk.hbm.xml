@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.StDyksdnjkwcqk" table="ST_DYKSDNJKWCQK">
+    	<comment>当月跨省电能交换完成情况表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="qymc" type="string"  length="36"  not-null="false">
+	    	<column name="QYMC">
+    	        <comment>区域名称 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jyfx" type="string"  length="36"  not-null="false">
+	    	<column name="JYFX">
+    	        <comment>交易方向 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYDL">
+    	        <comment>当月电量  </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tb" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="TB">
+    	        <comment>同比 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJDL">
+    	        <comment>累计电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljtb" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="LJTB">
+    	        <comment>累计同比 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>年份 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="THEMONTH">
+    	        <comment>月份 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

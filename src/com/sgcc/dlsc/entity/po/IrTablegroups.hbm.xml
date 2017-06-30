@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.IrTablegroups" table="IR_TABLEGROUPS">
+    	<comment>IR_TABLEGROUPS</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tableType" type="string"  length="32"  not-null="false">
+	    	<column name="TABLE_TYPE">
+    	        <comment>功能模块类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tablenameCn" type="string"  length="64"  not-null="false">
+	    	<column name="TABLENAME_CN">
+    	        <comment>表中文</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tablenameEn" type="string"  length="64"  not-null="true">
+	    	<column name="TABLENAME_EN">
+    	        <comment>表英文</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="groupId" type="string"  length="64"  not-null="true">
+	    	<column name="GROUP_ID">
+    	        <comment>组编码  IR _GROUP_LIST 表TabletypeID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="groupName" type="string"  length="64"  not-null="false">
+	    	<column name="GROUP_NAME">
+    	        <comment>组名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>场景</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="regPerson" type="string"  length="32"  not-null="false">
+	    	<column name="REG_PERSON">
+    	        <comment>注册人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="regDate" type="date"  not-null="false">
+	    	<column name="REG_DATE">
+    	        <comment>注册时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

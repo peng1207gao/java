@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwIntertie" table="DW_INTERTIE">
+    	<comment>基础信息_联络线表</comment>
+        <!-- single primaryKey -->
+	    <id name="linkid" type="string" length="36">
+	    	<column name="LINKID">
+    	        <comment>联络线ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="linkname" type="string"  length="64"  not-null="true">
+	    	<column name="LINKNAME">
+    	        <comment>联络线名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startpoint" type="string"  length="36"  not-null="false">
+	    	<column name="STARTPOINT">
+    	        <comment>起点</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endpoint" type="string"  length="36"  not-null="false">
+	    	<column name="ENDPOINT">
+    	        <comment>终点</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linktype" type="string"  length="36"  not-null="false">
+	    	<column name="LINKTYPE">
+    	        <comment>联络线类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energytype" type="string"  length="36"  not-null="false">
+	    	<column name="ENERGYTYPE">
+    	        <comment>交换电能类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loss" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LOSS">
+    	        <comment>设计线损</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXCAPACITY">
+    	        <comment>正向容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reversecapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="REVERSECAPACITY">
+    	        <comment>反向容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linelength" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LINELENGTH">
+    	        <comment>线路长度</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="voltagegrade" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="VOLTAGEGRADE">
+    	        <comment>电压等级</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="registerdate" type="date"  not-null="false">
+	    	<column name="REGISTERDATE">
+    	        <comment>注册时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startstation" type="string"  length="36"  not-null="false">
+	    	<column name="STARTSTATION">
+    	        <comment>起点变电站</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endstarion" type="string"  length="36"  not-null="false">
+	    	<column name="ENDSTARION">
+    	        <comment>终点变电站</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

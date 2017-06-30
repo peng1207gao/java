@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.StKqdljysjsb" table="ST_KQDLJYSJSB">
+    	<comment>跨区交易</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradingtype" type="string"  length="2"  not-null="true">
+	    	<column name="TRADINGTYPE">
+    	        <comment>交易类型(0.年度、1.短期)</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jytdid" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="JYTDID">
+    	        <comment>交易通道ID(对应字典表ST_JYTD)</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jsname" type="string"  length="64"  not-null="true">
+	    	<column name="JSNAME">
+    	        <comment>结算名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jscf" type="string"  length="4"  not-null="true">
+	    	<column name="JSCF">
+    	        <comment>结算成分(水电、火电。。。)</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="10"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ssgx" type="string"  length="2"  not-null="false">
+	    	<column name="SSGX">
+    	        <comment>送受关系(0.送出、1.受入)</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY">
+    	        <comment>电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="THEPRICE">
+    	        <comment>电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ldsfhdbgdj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LDSFHDBGDJ">
+    	        <comment>落地省份火电标杆电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="string"  length="2"  not-null="true">
+	    	<column name="VERSION">
+    	        <comment>版本(0.快报、1.正式报)</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>更新日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>更新人id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbzt" type="string"  length="2"  not-null="false">
+	    	<column name="SBZT">
+    	        <comment>申报状态(0.未申报、1.已申报)</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theunit" type="string"  length="36"  not-null="false">
+	    	<column name="THEUNIT">
+    	        <comment>省（市）</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

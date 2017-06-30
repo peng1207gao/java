@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.ZxjcProaccessLog" table="ZXJC_PROACCESS_LOG">
+    	<comment>ZXJC_PROACCESS_LOG</comment>
+        <!-- single primaryKey -->
+        <id name="sheetid" type="string" length="36">
+			<column name="SHEETID" sql-type="VARCHAR2(36) default 'sys_guid()'">
+    	        <comment>SHEETID</comment>
+		    </column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+        <property name="exTime" type="string"  length="36"  not-null="false">  
+			<column name="EX_TIME" sql-type="VARCHAR2(36) default 'to_char(sysdate,'yyyy-mm-dd hh24:mi:ss')'">
+    	        <comment>EX_TIME</comment>
+			</column>
+        </property> 
+         
+	    <property name="marketidSource" type="string"  length="400"  not-null="false">
+	    	<column name="MARKETID_SOURCE">
+    	        <comment>MARKETID_SOURCE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketidTarget" type="string"  length="400"  not-null="false">
+	    	<column name="MARKETID_TARGET">
+    	        <comment>MARKETID_TARGET</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tablename" type="string"  length="400"  not-null="false">
+	    	<column name="TABLENAME">
+    	        <comment>TABLENAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wherecondtion" type="string"  length="4000"  not-null="false">
+	    	<column name="WHERECONDTION">
+    	        <comment>WHERECONDTION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userid" type="string"  length="400"  not-null="false">
+	    	<column name="USERID">
+    	        <comment>USERID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="username" type="string"  length="400"  not-null="false">
+	    	<column name="USERNAME">
+    	        <comment>USERNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fireDate" type="string"  length="400"  not-null="false">
+	    	<column name="FIRE_DATE">
+    	        <comment>FIRE_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vitype" type="string"  length="400"  not-null="false">
+	    	<column name="VITYPE">
+    	        <comment>VITYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="issuc" type="string"  length="2"  not-null="false">
+	    	<column name="ISSUC">
+    	        <comment>ISSUC</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="failinfo" type="string"  length="4000"  not-null="false">
+	    	<column name="FAILINFO">
+    	        <comment>FAILINFO</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

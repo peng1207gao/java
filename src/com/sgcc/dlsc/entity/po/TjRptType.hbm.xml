@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjRptType" table="TJ_RPT_TYPE">
+    	<comment>报表类型表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="10"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="moduleid" type="string"  length="50"  not-null="true">
+	    	<column name="MODULEID">
+    	        <comment>所属模块：来自ba_gencode a where a.type='9'</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xh" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="XH">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rptid" type="string"  length="50"  not-null="true">
+	    	<column name="RPTID">
+    	        <comment>报表编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rptname" type="string"  length="200"  not-null="true">
+	    	<column name="RPTNAME">
+    	        <comment>报表名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="timetype" type="string"  length="10"  not-null="false">
+	    	<column name="TIMETYPE">
+    	        <comment>Y 年，Q 季，M 月，W 周，D 日</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isuse" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISUSE">
+    	        <comment>是否启用：0否1是</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tblname" type="string"  length="50"  not-null="false">
+	    	<column name="TBLNAME">
+    	        <comment>相关数据库表名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="condition" type="string"  length="800"  not-null="false">
+	    	<column name="CONDITION">
+    	        <comment>过滤条件</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isnation" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISNATION">
+    	        <comment>0否，1是</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actdate" type="string"  length="50"  not-null="false">
+	    	<column name="ACTDATE">
+    	        <comment>日期数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="string"  length="32"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>BAK1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="string"  length="32"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>BAK2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="200"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>BAK3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="200"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>BAK4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>BAK5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>BAK6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak7" type="string"  length="50"  not-null="false">
+	    	<column name="BAK7">
+    	        <comment>BAK7</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak8" type="string"  length="50"  not-null="false">
+	    	<column name="BAK8">
+    	        <comment>BAK8</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

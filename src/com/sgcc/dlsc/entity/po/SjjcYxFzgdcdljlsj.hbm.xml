@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxFzgdcdljlsj" table="SJJC_YX_FZGDCDLJLSJ">
+    	<comment>SJJC_YX_FZGDCDLJLSJ</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="infodate" type="date"  not-null="true">
+	    	<column name="INFODATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plantname" type="string"  length="128"  not-null="true">
+	    	<column name="PLANTNAME">
+    	        <comment>电厂名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plantid" type="string"  length="50"  not-null="true">
+	    	<column name="PLANTID">
+    	        <comment>电厂编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generationquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATIONQUANTITY">
+    	        <comment>发电量,  单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="quantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="QUANTITY">
+    	        <comment>上网电量,  单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

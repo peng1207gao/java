@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxMtielineContractshow" table="TJFX_MTIELINE_CONTRACTSHOW">
+    	<comment>TJFX_MTIELINE_CONTRACTSHOW</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="mktMonth" type="date"  not-null="true">
+	    	<column name="MKT_MONTH">
+    	        <comment>MKT_MONTH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkid" type="string"  length="36"  not-null="true">
+	    	<column name="LINKID">
+    	        <comment>LINKID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkname" type="string"  length="40"  not-null="true">
+	    	<column name="LINKNAME">
+    	        <comment>LINKNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractid" type="string"  length="40"  not-null="true">
+	    	<column name="CONTRACTID">
+    	        <comment>CONTRACTID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractname" type="string"  length="100"  not-null="false">
+	    	<column name="CONTRACTNAME">
+    	        <comment>CONTRACTNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SELLERPRICE">
+    	        <comment>SELLERPRICE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transprice" type="string"  length="50"  not-null="false">
+	    	<column name="TRANSPRICE">
+    	        <comment>TRANSPRICE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchaserprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PURCHASERPRICE">
+    	        <comment>PURCHASERPRICE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="32"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>MARKETID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

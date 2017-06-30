@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaInterfaceconfigModule" table="BA_INTERFACECONFIG_MODULE">
+    	<comment>BA_INTERFACECONFIG_MODULE</comment>
+        <!-- single primaryKey -->
+	    <id name="sheetid" type="string" length="36">
+	    	<column name="SHEETID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="moduleName" type="string"  length="100"  not-null="false">
+	    	<column name="MODULE_NAME">
+    	        <comment>模版名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="interfaceid" type="string"  length="36"  not-null="false">
+	    	<column name="INTERFACEID">
+    	        <comment>界面ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="interfacename" type="string"  length="64"  not-null="false">
+	    	<column name="INTERFACENAME">
+    	        <comment>界面名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="displayitemname" type="string"  length="150"  not-null="false">
+	    	<column name="DISPLAYITEMNAME">
+    	        <comment>项目命名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdisplay" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISDISPLAY">
+    	        <comment>是否显示</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="displayitemid" type="string"  length="36"  not-null="false">
+	    	<column name="DISPLAYITEMID">
+    	        <comment>对应控件ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cotype" type="string"  length="36"  not-null="false">
+	    	<column name="COTYPE">
+    	        <comment>合同类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grade" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="GRADE">
+    	        <comment>级别</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="moduleVersion" type="string"  length="64"  not-null="false">
+	    	<column name="MODULE_VERSION">
+    	        <comment>模版版本</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="moduleKey" type="string"  length="64"  not-null="false">
+	    	<column name="MODULE_KEY">
+    	        <comment>模版key</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="STATE">
+    	        <comment>状态</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isshare" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISSHARE">
+    	        <comment>共享模板</comment>
+	    	</column>
+    	</property>  
+           <property name="orderby" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="ORDERBY">
+    	        <comment>行数</comment>
+	    	</column>
+    	</property> 
+    	<property name="readOnly" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="ISREADONLY">
+    	        <comment>只读</comment>
+	    	</column>
+    	</property>  
+    </class>
+</hibernate-mapping>

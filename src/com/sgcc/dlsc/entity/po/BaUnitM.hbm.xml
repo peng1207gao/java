@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaUnitM" table="BA_UNIT_M">
+    	<comment>日平衡预测历史数据表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDate" type="date"  not-null="true">
+	    	<column name="TAB_DATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatepower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEPOWER">
+    	        <comment>多年分月统调最大电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC">
+    	        <comment>多年分月月度电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxloadforecast" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXLOADFORECAST">
+    	        <comment>最大用电负荷</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="consumption" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CONSUMPTION">
+    	        <comment>月电量营销月度用电量</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

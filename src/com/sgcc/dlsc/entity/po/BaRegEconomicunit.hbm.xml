@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaRegEconomicunit" table="BA_REG_ECONOMICUNIT">
+    	<comment>BA_REG_ECONOMICUNIT</comment>
+        <!-- single primaryKey -->
+	    <id name="ecounitid" type="string" length="36">
+	    	<column name="ECOUNITID">
+    	        <comment>ECOUNITID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="ecounitcode" type="string"  length="32"  not-null="true">
+	    	<column name="ECOUNITCODE">
+    	        <comment>ECOUNITCODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ecounitname" type="string"  length="150"  not-null="true">
+	    	<column name="ECOUNITNAME">
+    	        <comment>ECOUNITNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aliasname" type="string"  length="32"  not-null="false">
+	    	<column name="ALIASNAME">
+    	        <comment>ALIASNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="description" type="string"  length="256"  not-null="false">
+	    	<column name="DESCRIPTION">
+    	        <comment>DESCRIPTION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="participantid" type="string"  length="36"  not-null="true">
+	    	<column name="PARTICIPANTID">
+    	        <comment>PARTICIPANTID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ecoshare" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="ECOSHARE">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ecounitcapacity" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="ECOUNITCAPACITY">
+    	        <comment>ECOUNITCAPACITY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatorid" type="string"  length="36"  not-null="true">
+	    	<column name="GENERATORID">
+    	        <comment>GENERATORID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="true">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>STARTEFFECTIVEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>ENDEFFECTIVEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>UPDATETIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>UPDATEPERSONID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdelete" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="ISDELETE">
+    	        <comment>ISDELETE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="registerdate" type="date"  not-null="false">
+	    	<column name="REGISTERDATE">
+    	        <comment>REGISTERDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="physicsunitname" type="string"  length="50"  not-null="false">
+	    	<column name="PHYSICSUNITNAME">
+    	        <comment>PHYSICSUNITNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operatedate" type="date"  not-null="false">
+	    	<column name="OPERATEDATE">
+    	        <comment>OPERATEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operator" type="string"  length="64"  not-null="false">
+	    	<column name="OPERATOR">
+    	        <comment>OPERATOR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extend1" type="string"  length="32"  not-null="false">
+	    	<column name="EXTEND1">
+    	        <comment>EXTEND1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extend2" type="string"  length="32"  not-null="false">
+	    	<column name="EXTEND2">
+    	        <comment>EXTEND2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="businessid" type="string"  length="64"  not-null="false">
+	    	<column name="BUSINESSID">
+    	        <comment>BUSINESSID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="guid" type="string"  length="36"  not-null="false">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

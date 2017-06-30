@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.FuDailyfuelinfo" table="FU_DAILYFUELINFO">
+    	<comment>?????</comment>
+        <!-- single primaryKey -->
+	    <id name="dailyid" type="string" length="36">
+	    	<column name="DAILYID">
+    	        <comment>????</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="datatime" type="date"  not-null="true">
+	    	<column name="DATATIME">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="unitid" type="string"  length="36"  not-null="false">
+	    	<column name="UNITID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>??ID,??????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ormarketid" type="string"  length="36"  not-null="true">
+	    	<column name="ORMARKETID">
+    	        <comment>?????ID,????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="appdate" type="date"  not-null="false">
+	    	<column name="APPDATE">
+    	        <comment>????,?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userid" type="string"  length="36"  not-null="false">
+	    	<column name="USERID">
+    	        <comment>???,????????????????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="daysupply" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DAYSUPPLY">
+    	        <comment>??????,????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dayconsume" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DAYCONSUME">
+    	        <comment>??????,????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="daystock" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DAYSTOCK">
+    	        <comment>?????,????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sameperioddaystock" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SAMEPERIODDAYSTOCK">
+    	        <comment>??????,????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="availabledays" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="AVAILABLEDAYS">
+    	        <comment>??????,????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="haltunitnum" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="HALTUNITNUM">
+    	        <comment>??????,????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="haltcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HALTCAPACITY">
+    	        <comment>????????,???MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="expectsupply" type="string"  length="64"  not-null="false">
+	    	<column name="EXPECTSUPPLY">
+    	        <comment>?????,???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dayconsumratio" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DAYCONSUMRATIO">
+    	        <comment>?????,????/???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincecoal" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PROVINCECOAL">
+    	        <comment>??????,???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="foreigncoal" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FOREIGNCOAL">
+    	        <comment>??????,???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="highwaycoal" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HIGHWAYCOAL">
+    	        <comment>???????,???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="railwaycoal" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="RAILWAYCOAL">
+    	        <comment>???????,???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="waterway" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="WATERWAY">
+    	        <comment>???????,???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mixcoal" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MIXCOAL">
+    	        <comment>?????,???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stationid" type="string"  length="36"  not-null="false">
+	    	<column name="STATIONID">
+    	        <comment>???????ID?</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="participantid" type="string"  length="36"  not-null="false">
+	    	<column name="PARTICIPANTID">
+    	        <comment>????ID??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="resourcetype" type="string"  length="200"  not-null="false">
+	    	<column name="RESOURCETYPE">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fuelprovidemode" type="string"  length="200"  not-null="false">
+	    	<column name="FUELPROVIDEMODE">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ordermode" type="string"  length="200"  not-null="false">
+	    	<column name="ORDERMODE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="daygeneration" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DAYGENERATION">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="description" type="string"  length="200"  not-null="false">
+	    	<column name="DESCRIPTION">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sendmarketid" type="string"  length="36"  not-null="false">
+	    	<column name="SENDMARKETID">
+    	        <comment>????????ID </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="receiveid" type="string"  length="36"  not-null="false">
+	    	<column name="RECEIVEID">
+    	        <comment>?????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>UPDATETIME</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

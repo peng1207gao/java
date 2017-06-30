@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrResultMainAfter" table="TR_RESULT_MAIN_AFTER">
+    	<comment>省内最终交易结果表</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>???</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="intervalIndex" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="INTERVAL_INDEX">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleUnitsId" type="string"  length="36"  not-null="true">
+	    	<column name="SALE_UNITS_ID">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeUnitsId" type="string"  length="36"  not-null="true">
+	    	<column name="VENDEE_UNITS_ID">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="band" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="BAND">
+    	        <comment>&quot;????  ??????????????????????? &quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetypeId" type="string"  length="32"  not-null="false">
+	    	<column name="TRADETYPE_ID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergy" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergy" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergyPeriod1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY_PERIOD1">
+    	        <comment>??????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergyPeriod1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY_PERIOD1">
+    	        <comment>??????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePricePeriod1" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE_PERIOD1">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePricePeriod1" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE_PERIOD1">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergyPeriod2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY_PERIOD2">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergyPeriod2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY_PERIOD2">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePricePeriod2" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE_PERIOD2">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePricePeriod2" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE_PERIOD2">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergyPeriod3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY_PERIOD3">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergyPeriod3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY_PERIOD3">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePricePeriod3" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE_PERIOD3">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePricePeriod3" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE_PERIOD3">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergyPeriod4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY_PERIOD4">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergyPeriod4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY_PERIOD4">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePricePeriod4" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE_PERIOD4">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePricePeriod4" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE_PERIOD4">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergyPeriod5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY_PERIOD5">
+    	        <comment>??????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergyPeriod5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY_PERIOD5">
+    	        <comment>??????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePricePeriod5" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE_PERIOD5">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePricePeriod5" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE_PERIOD5">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrosseng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGrosseng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_GROSSENG">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrossengPeriod1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG_PERIOD1">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGrossengPeriod1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_GROSSENG_PERIOD1">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrossengPeriod2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG_PERIOD2">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGrossengPeriod2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_GROSSENG_PERIOD2">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrossengPeriod3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG_PERIOD3">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGrossengPeriod3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_GROSSENG_PERIOD3">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrossengPeriod4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG_PERIOD4">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGrossengPeriod4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_GROSSENG_PERIOD4">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrossengPeriod5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG_PERIOD5">
+    	        <comment>&quot;?????????? ??????ID????;??? &quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powerCurveId" type="string"  length="128"  not-null="false">
+	    	<column name="POWER_CURVE_ID">
+    	        <comment>&quot;????  ??????ID????;??? &quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="remark" type="string"  length="512"  not-null="false">
+	    	<column name="REMARK">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleUnitsName" type="string"  length="256"  not-null="false">
+	    	<column name="SALE_UNITS_NAME">
+    	        <comment>&quot;????  ??????????? &quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeUnitsName" type="string"  length="256"  not-null="false">
+	    	<column name="VENDEE_UNITS_NAME">
+    	        <comment>&quot;????  ??????????? &quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stDate" type="date"  not-null="false">
+	    	<column name="ST_DATE">
+    	        <comment>&quot;??????  ??????????? &quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeStatType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TRADE_STAT_TYPE">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGenRate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEE_GEN_RATE">
+    	        <comment>VENDEE_GEN_RATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGenRate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALE_GEN_RATE">
+    	        <comment>SALE_GEN_RATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

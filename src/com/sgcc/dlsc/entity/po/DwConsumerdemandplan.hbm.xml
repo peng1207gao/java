@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwConsumerdemandplan" table="DW_CONSUMERDEMANDPLAN">
+    	<comment>计划_大用户用电需求</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="participantid" type="string"  length="36"  not-null="false">
+	    	<column name="PARTICIPANTID">
+    	        <comment>用户ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="demandquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEMANDQUANTITY">
+    	        <comment>用电量需求</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="economicconsumerid" type="string"  length="36"  not-null="false">
+	    	<column name="ECONOMICCONSUMERID">
+    	        <comment>经济负荷</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchasemode" type="string"  length="36"  not-null="false">
+	    	<column name="PURCHASEMODE">
+    	        <comment>用户购电模式</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubRelease" table="PUB_RELEASE">
+    	<comment>PUB_RELEASE</comment>
+        <!-- single primaryKey -->
+	    <id name="subjectid" type="string" length="32">
+	    	<column name="SUBJECTID">
+    	        <comment>SUBJECTID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>MARKETID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="subjectname" type="string"  length="100"  not-null="true">
+	    	<column name="SUBJECTNAME">
+    	        <comment>SUBJECTNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="description" type="string"  length="100"  not-null="false">
+	    	<column name="DESCRIPTION">
+    	        <comment>DESCRIPTION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isvalid" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="ISVALID">
+    	        <comment>ISVALID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="string"  length="2"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>BAK1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="string"  length="36"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>BAK2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="36"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>BAK3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="200"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>BAK4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="subjecttype" type="string"  length="200"  not-null="false">
+	    	<column name="SUBJECTTYPE">
+    	        <comment>SUBJECTTYPE</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

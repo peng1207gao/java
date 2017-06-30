@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwEcounitplan" table="DW_ECOUNITPLAN">
+    	<comment>计划_经济机组月度计划</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="name" type="string"  length="36"  not-null="false">
+	    	<column name="NAME">
+    	        <comment>名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractid" type="string"  length="36"  not-null="false">
+	    	<column name="CONTRACTID">
+    	        <comment>合同ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ecounitid" type="string"  length="36"  not-null="false">
+	    	<column name="ECOUNITID">
+    	        <comment>经济机组ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECQUANTITY">
+    	        <comment>电量</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

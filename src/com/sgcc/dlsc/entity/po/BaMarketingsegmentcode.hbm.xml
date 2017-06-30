@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaMarketingsegmentcode" table="BA_MARKETINGSEGMENTCODE">
+    	<comment>BA_MARKETINGSEGMENTCODE</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="category1" type="string"  length="6"  not-null="false">
+	    	<column name="CATEGORY1">
+    	        <comment>门类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="category2" type="string"  length="6"  not-null="false">
+	    	<column name="CATEGORY2">
+    	        <comment>大类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="category3" type="string"  length="6"  not-null="false">
+	    	<column name="CATEGORY3">
+    	        <comment>中类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="category4" type="string"  length="6"  not-null="false">
+	    	<column name="CATEGORY4">
+    	        <comment>小类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="standardcode" type="string"  length="6"  not-null="true">
+	    	<column name="STANDARDCODE">
+    	        <comment>行业用电标准代码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="codename" type="string"  length="100"  not-null="true">
+	    	<column name="CODENAME">
+    	        <comment>代码含义</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="parentcode" type="string"  length="6"  not-null="false">
+	    	<column name="PARENTCODE">
+    	        <comment>父类别代码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isLightorheavy" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="IS_LIGHTORHEAVY">
+    	        <comment>轻/重工业,1轻、2重</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="false">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>生效日期,备用</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>失效日期,备用</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>信息更新时间,备用</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID,备用</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orderno" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="ORDERNO">
+    	        <comment>排序号</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

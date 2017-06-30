@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaUnitmapping" table="BA_UNITMAPPING">
+    	<comment>平衡映射关系表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="balance" type="string"  length="36"  not-null="false">
+	    	<column name="BALANCE">
+    	        <comment>BALANCE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="balanceDate" type="date"  not-null="false">
+	    	<column name="BALANCE_DATE">
+    	        <comment>时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datatype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="DATATYPE">
+    	        <comment>横向数据类型1调度、2营销、3计划、4市场成员、5人工录入、6逻辑计算</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="baUnit" type="string"  length="36"  not-null="false">
+	    	<column name="BA_UNIT">
+    	        <comment>项目</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

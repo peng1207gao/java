@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubTmSwdljhzxjhltj" table="PUB_TM_SWDLJHZXJHLTJ">
+    	<comment>PUB_TM_SWDLJHZXJHLTJ</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TYEAR">
+    	        <comment>TYEAR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tmonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="TMONTH">
+    	        <comment>TMONTH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="markerid" type="string"  length="10"  not-null="true">
+	    	<column name="MARKERID">
+    	        <comment>MARKERID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="numid" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="NUMID">
+    	        <comment>NUMID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dcmc" type="string"  length="128"  not-null="false">
+	    	<column name="DCMC">
+    	        <comment>DCMC</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jhbzbm" type="string"  length="128"  not-null="false">
+	    	<column name="JHBZBM">
+    	        <comment>JHBZBM</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jsgx" type="string"  length="128"  not-null="false">
+	    	<column name="JSGX">
+    	        <comment>JSGX</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ddgx" type="string"  length="128"  not-null="false">
+	    	<column name="DDGX">
+    	        <comment>DDGX</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grsx" type="string"  length="128"  not-null="false">
+	    	<column name="GRSX">
+    	        <comment>GRSX</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sysjswdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SYSJSWDL">
+    	        <comment>SYSJSWDL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="syjhswdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SYJHSWDL">
+    	        <comment>SYJHSWDL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tddcswdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TDDCSWDL">
+    	        <comment>TDDCSWDL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="remark" type="string"  length="500"  not-null="false">
+	    	<column name="REMARK">
+    	        <comment>REMARK</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xh" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="XH">
+    	        <comment>XH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="STATE">
+    	        <comment>STATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="subjectguid" type="string"  length="32"  not-null="false">
+	    	<column name="SUBJECTGUID">
+    	        <comment>SUBJECTGUID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="20"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>FILLINMAN</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillintime" type="date"  not-null="true">
+	    	<column name="FILLINTIME">
+    	        <comment>FILLINTIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>BAK1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>BAK2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>BAK3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="32"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>BAK4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="200"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>BAK5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="200"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>BAK6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak7" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK7">
+    	        <comment>BAK7</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak8" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK8">
+    	        <comment>BAK8</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak9" type="string"  length="36"  not-null="false">
+	    	<column name="BAK9">
+    	        <comment>BAK9</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak10" type="string"  length="36"  not-null="false">
+	    	<column name="BAK10">
+    	        <comment>BAK10</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak11" type="string"  length="200"  not-null="false">
+	    	<column name="BAK11">
+    	        <comment>BAK11</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak12" type="string"  length="200"  not-null="false">
+	    	<column name="BAK12">
+    	        <comment>BAK12</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

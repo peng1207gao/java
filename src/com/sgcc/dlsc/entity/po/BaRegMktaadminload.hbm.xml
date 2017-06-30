@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaRegMktaadminload" table="BA_REG_MKTAADMINLOAD">
+    	<comment>负荷信息表(市场消费者)注册表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+        </id>     
+		
+	    <property name="loadId" type="string"  length="36"  not-null="true">
+	    	<column name="LOAD_ID">
+    	        <comment>负荷信息ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="participantId" type="string"  length="36"  not-null="false">
+	    	<column name="PARTICIPANT_ID">
+    	        <comment>所属市场成员id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loadName" type="string"  length="64"  not-null="false">
+	    	<column name="LOAD_NAME">
+    	        <comment>负荷名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loadAliasname" type="string"  length="64"  not-null="false">
+	    	<column name="LOAD_ALIASNAME">
+    	        <comment>别名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="industryType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="INDUSTRY_TYPE">
+    	        <comment>行业类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loadType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="LOAD_TYPE">
+    	        <comment>负荷类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="normalCap" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NORMAL_CAP">
+    	        <comment>基本容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxLoad" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="MAX_LOAD">
+    	        <comment>最大负荷</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powerFactor" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="POWER_FACTOR">
+    	        <comment>功率因素</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="validDate" type="java.util.Date"  not-null="true">
+	    	<column name="VALID_DATE">
+    	        <comment>生效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="invalidDate" type="java.util.Date"  not-null="false">
+	    	<column name="INVALID_DATE">
+    	        <comment>失效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateTime" type="java.util.Date"  not-null="false">
+	    	<column name="UPDATE_TIME">
+    	        <comment>信息更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatePersonId" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATE_PERSON_ID">
+    	        <comment>信息更新人id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operatedate" type="date"  not-null="false">
+	    	<column name="OPERATEDATE">
+    	        <comment>修改时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operator" type="string"  length="64"  not-null="false">
+	    	<column name="OPERATOR">
+    	        <comment>修改人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extend1" type="string"  length="32"  not-null="false">
+	    	<column name="EXTEND1">
+    	        <comment>扩展字段1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extend2" type="string"  length="32"  not-null="false">
+	    	<column name="EXTEND2">
+    	        <comment>扩展字段2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="businessid" type="string"  length="64"  not-null="false">
+	    	<column name="BUSINESSID">
+    	        <comment>业务序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="voltageGrade" type="big_decimal"  length="3"  not-null="false">
+	    	<column name="VOLTAGE_GRADE">
+    	        <comment>用电压等级</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userType" type="big_decimal"  length="3"  not-null="false">
+	    	<column name="USER_TYPE">
+    	        <comment>用电用户类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loadSafeGrade" type="big_decimal"  length="3"  not-null="false">
+	    	<column name="LOAD_SAFE_GRADE">
+    	        <comment>负荷安全等级</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transformerVolume" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="TRANSFORMER_VOLUME">
+    	        <comment>变压器容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mostVolume" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="MOST_VOLUME">
+    	        <comment>最大需求量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="directSupplyVolume" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="DIRECT_SUPPLY_VOLUME">
+    	        <comment>直供容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transferAllotLoss" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TRANSFER_ALLOT_LOSS">
+    	        <comment>输配电损耗率</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

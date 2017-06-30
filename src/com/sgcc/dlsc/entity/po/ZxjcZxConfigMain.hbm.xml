@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.ZxjcZxConfigMain" table="ZXJC_ZX_CONFIG_MAIN">
+    	<comment>批量数据总线配置表</comment>
+        <!-- single primaryKey -->
+        <id name="objId" type="string" length="40">
+			<column name="OBJ_ID" sql-type="VARCHAR2(40) default 'sys_guid()'">
+    	        <comment>主键ID</comment>
+		    </column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="callId" type="string"  length="100"  not-null="false">
+	    	<column name="CALL_ID">
+    	        <comment>纵向_批量数据总线配置的callID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serverId" type="string"  length="100"  not-null="false">
+	    	<column name="SERVER_ID">
+    	        <comment>纵向_批量数据总线配置的serviceID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketIdS" type="string"  length="100"  not-null="false">
+	    	<column name="MARKET_ID_S">
+    	        <comment>传输源头MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="clientappId" type="string"  length="100"  not-null="false">
+	    	<column name="CLIENTAPP_ID">
+    	        <comment>纵向_批量数据总线配置的ClientAppID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="apptype" type="string"  length="100"  not-null="false">
+	    	<column name="APPTYPE">
+    	        <comment>纵向_批量数据总线配置的AppType</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dcExTableId" type="string"  length="100"  not-null="false">
+	    	<column name="DC_EX_TABLE_ID">
+    	        <comment>数据中心执行的表名ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="callName" type="string"  length="100"  not-null="false">
+	    	<column name="CALL_NAME">
+    	        <comment>此配置的名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketIdT" type="string"  length="100"  not-null="false">
+	    	<column name="MARKET_ID_T">
+    	        <comment>传输目标MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ywTableId" type="string"  length="100"  not-null="false">
+	    	<column name="YW_TABLE_ID">
+    	        <comment>执行的业务表名ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="idMarketName" type="string"  length="100"  not-null="false">
+	    	<column name="ID_MARKET_NAME">
+    	        <comment>标识的MARKET_ID字段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exType" type="string"  length="2"  not-null="false">
+	    	<column name="EX_TYPE">
+    	        <comment>执行的类型 1,上传 2下传</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="keyColumnName" type="string"  length="100"  not-null="false">
+	    	<column name="KEY_COLUMN_NAME">
+    	        <comment>表主键字段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zxlsExTableId" type="string"  length="100"  not-null="false">
+	    	<column name="ZXLS_EX_TABLE_ID">
+    	        <comment>总线用户表名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isAutoToYw" type="string"  length="2"  not-null="false">
+	    	<column name="IS_AUTO_TO_YW">
+    	        <comment>纵向数据是否直接插入业务表</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

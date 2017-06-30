@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrBidinfoJydy" table="TR_BIDINFO_JYDY">
+    	<comment>集中交易申报表（交易单元）</comment>
+        <!-- single primaryKey -->
+	    <id name="bidinfoid" type="string" length="32">
+	    	<column name="BIDINFOID">
+    	        <comment>申报数据编号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="id" type="string"  length="32"  not-null="false">
+	    	<column name="ID">
+    	        <comment>申报流水号（市场成员）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jydyId" type="string"  length="36"  not-null="false">
+	    	<column name="JYDY_ID">
+    	        <comment>交易单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="interval" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="INTERVAL">
+    	        <comment>轮次</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="band" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BAND">
+    	        <comment>段号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeRole" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="TRADE_ROLE">
+    	        <comment>申报角色</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energy" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY">
+    	        <comment>电量（总）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE">
+    	        <comment>电价（总）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyPeriod1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_PERIOD1">
+    	        <comment>电量（尖峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricePeriod1" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_PERIOD1">
+    	        <comment>电价（尖峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyPeriod2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_PERIOD2">
+    	        <comment>电量（峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricePeriod2" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_PERIOD2">
+    	        <comment>电价（峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyPeriod3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_PERIOD3">
+    	        <comment>电量（平）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricePeriod3" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_PERIOD3">
+    	        <comment>电价（平）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyPeriod4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_PERIOD4">
+    	        <comment>电量（谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricePeriod4" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_PERIOD4">
+    	        <comment>电价（谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyPeriod5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_PERIOD5">
+    	        <comment>电量（低谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricePeriod5" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_PERIOD5">
+    	        <comment>电价（低谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CHECK_ENERGY">
+    	        <comment>校核电量（总）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergyPeriod1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="CHECK_ENERGY_PERIOD1">
+    	        <comment>校核电量（尖峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergyPeriod2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="CHECK_ENERGY_PERIOD2">
+    	        <comment>校核电量（峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergyPeriod3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="CHECK_ENERGY_PERIOD3">
+    	        <comment>校核电量（平）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergyPeriod4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="CHECK_ENERGY_PERIOD4">
+    	        <comment>校核电量（谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergyPeriod5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="CHECK_ENERGY_PERIOD5">
+    	        <comment>校核电量（低谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powerId" type="string"  length="128"  not-null="false">
+	    	<column name="POWER_ID">
+    	        <comment>电力曲线</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stDate" type="date"  not-null="false">
+	    	<column name="ST_DATE">
+    	        <comment>开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endDate" type="date"  not-null="false">
+	    	<column name="END_DATE">
+    	        <comment>结束时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateTime" type="timestamp"  not-null="false">
+	    	<column name="UPDATE_TIME">
+    	        <comment>报价时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bidPerson" type="string"  length="64"  not-null="false">
+	    	<column name="BID_PERSON">
+    	        <comment>报价人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultI1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_I1">
+    	        <comment>预留整型值1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultI2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_I2">
+    	        <comment>预留整型值2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultF1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_F1">
+    	        <comment>预留实型值1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultF2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_F2">
+    	        <comment>预留实型值2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultUc1" type="string"  length="64"  not-null="false">
+	    	<column name="DEFAULT_UC1">
+    	        <comment>预留缺省字符串值1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultUc2" type="string"  length="64"  not-null="false">
+	    	<column name="DEFAULT_UC2">
+    	        <comment>预留缺省字符串值2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="validateFlag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="VALIDATE_FLAG">
+    	        <comment>是否属于有效申报</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeTimepart" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TRADE_TIMEPART">
+    	        <comment>时间段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reason" type="string"  length="2000"  not-null="false">
+	    	<column name="REASON">
+    	        <comment>校核原因</comment>
+	    	</column>
+    	</property>  
+         
+        <property name="userMaxPower" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="USER_MAX_POWER">
+    	        <comment>用户最大电力</comment>
+	    	</column>
+    	</property>
+    	
+    	<property name="bidStatus" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="BID_STATUS">
+    	        <comment>申报状态</comment>
+	    	</column>
+    	</property> 
+         
+    </class>
+</hibernate-mapping>

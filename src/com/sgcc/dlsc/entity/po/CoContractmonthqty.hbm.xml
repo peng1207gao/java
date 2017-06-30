@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoContractmonthqty" table="CO_CONTRACTMONTHQTY">
+    	<comment>计划辅助使用，存储12个月分月电量，数据来源于分段电量电价表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>guid</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+        
+	    <property name="janqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="JANQTY">
+    	        <comment>一月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="febqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEBQTY">
+    	        <comment>二月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="MARQTY">
+    	        <comment>三月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aprilqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="APRILQTY">
+    	        <comment>四月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mayqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="MAYQTY">
+    	        <comment>五月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="junqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="JUNQTY">
+    	        <comment>六月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="julyqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="JULYQTY">
+    	        <comment>七月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="augqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="AUGQTY">
+    	        <comment>八月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sepqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SEPQTY">
+    	        <comment>九月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="octqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="OCTQTY">
+    	        <comment>十月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="novqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NOVQTY">
+    	        <comment>十一月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="decqty" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="DECQTY">
+    	        <comment>十二月电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="addpersonid" type="string"  length="36"  not-null="false">
+	    	<column name="ADDPERSONID">
+    	        <comment>新增人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="adddate" type="date"  not-null="false">
+	    	<column name="ADDDATE">
+    	        <comment>新增时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>更新人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatedate" type="date"  not-null="false">
+	    	<column name="UPDATEDATE">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthqtytype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="MONTHQTYTYPE">
+    	        <comment>电量类型1,总电量2,替代方发电量3,替代方上网电量4,被替代方发电量5,被替代方上网电量</comment>
+	    	</column>
+    	</property>  
+         
+         
+	    <property name="contractid" type="string"  length="36"  not-null="true">
+	    	<column name="CONTRACTID">
+    	        <comment>GUID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

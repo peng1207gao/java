@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjRptProperty" table="TJ_RPT_PROPERTY">
+    	<comment>报表类型属性表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="10"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rptid" type="string"  length="50"  not-null="true">
+	    	<column name="RPTID">
+    	        <comment>报表编号，来自TJ_RPT_TYPE（报表类型表）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xh" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="XH">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="procode" type="string"  length="50"  not-null="false">
+	    	<column name="PROCODE">
+    	        <comment>属性代码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="proname" type="string"  length="200"  not-null="false">
+	    	<column name="PRONAME">
+    	        <comment>属性名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dtype" type="string"  length="50"  not-null="false">
+	    	<column name="DTYPE">
+    	        <comment>VARCHAR2 字符型，NUMBER 数字型，DATE 日期型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dlength" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="DLENGTH">
+    	        <comment>字段长度</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="declength" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="DECLENGTH">
+    	        <comment>小数点后数位，只在数据类型为数字型时使用。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="conversion" type="string"  length="10"  not-null="false">
+	    	<column name="CONVERSION">
+    	        <comment>转换编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iscount" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISCOUNT">
+    	        <comment>是否可计算指标,0否1是</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isuse" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISUSE">
+    	        <comment>是否启用：0否1是</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdate" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISDATE">
+    	        <comment>是否时间条件,0否1是</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dunit" type="string"  length="50"  not-null="false">
+	    	<column name="DUNIT">
+    	        <comment>计量单位</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hlimit" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="HLIMIT">
+    	        <comment>数据上限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="llimit" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="LLIMIT">
+    	        <comment>数据下限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rptsheet" type="string"  length="100"  not-null="false">
+	    	<column name="RPTSHEET">
+    	        <comment>报表所在页</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rptrow" type="string"  length="10"  not-null="false">
+	    	<column name="RPTROW">
+    	        <comment>报表所在行</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rptcol" type="string"  length="10"  not-null="false">
+	    	<column name="RPTCOL">
+    	        <comment>报表所在列</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fonttype" type="string"  length="20"  not-null="false">
+	    	<column name="FONTTYPE">
+    	        <comment>字体类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fontvol" type="string"  length="20"  not-null="false">
+	    	<column name="FONTVOL">
+    	        <comment>字段大小</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fontcol" type="string"  length="20"  not-null="false">
+	    	<column name="FONTCOL">
+    	        <comment>字体颜色</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="string"  length="32"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>BAK1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="string"  length="32"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>BAK2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="200"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>BAK3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="200"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>BAK4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>BAK5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>BAK6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak7" type="string"  length="50"  not-null="false">
+	    	<column name="BAK7">
+    	        <comment>BAK7</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak8" type="string"  length="50"  not-null="false">
+	    	<column name="BAK8">
+    	        <comment>BAK8</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcGhFdlxx" table="SJJC_GH_FDLXX">
+    	<comment>规划计划_发电量信息</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="statisticalcalibre" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="STATISTICALCALIBRE">
+    	        <comment>统计口径</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="totalquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TOTALQUANTITY">
+    	        <comment>合计发电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="totalquantityrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TOTALQUANTITYRATE">
+    	        <comment>合计发电量同比，单位：%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thermalquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="THERMALQUANTITY">
+    	        <comment>火电发电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thermalquantityrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="THERMALQUANTITYRATE">
+    	        <comment>火电发电量同比，单位：%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hydropowerquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HYDROPOWERQUANTITY">
+    	        <comment>水电发电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hydropowerquantityrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HYDROPOWERQUANTITYRATE">
+    	        <comment>水电发电量同比，单位：%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="nuclearquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NUCLEARQUANTITY">
+    	        <comment>核电发电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="nuclearquantityrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NUCLEARQUANTITYRATE">
+    	        <comment>核电发电量同比，单位：%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="windquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="WINDQUANTITY">
+    	        <comment>风电发电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="windquantityrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="WINDQUANTITYRATE">
+    	        <comment>风电发电量同比，单位：%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="otherquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="OTHERQUANTITY">
+    	        <comment>其他发电量，单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="otherquantityrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="OTHERQUANTITYRATE">
+    	        <comment>其他发电量同比，单位：%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dxpdeptcode" type="string"  length="18"  not-null="true">
+	    	<column name="DXPDEPTCODE">
+    	        <comment>国网公司代码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="deptCode" type="string"  length="18"  not-null="false">
+	    	<column name="DEPT_CODE">
+    	        <comment>DEPT_CODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabYear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="TAB_YEAR">
+    	        <comment>TAB_YEAR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabMonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TAB_MONTH">
+    	        <comment>TAB_MONTH</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

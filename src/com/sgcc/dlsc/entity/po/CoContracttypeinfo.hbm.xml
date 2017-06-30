@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoContracttypeinfo" table="CO_CONTRACTTYPEINFO">
+    	<comment>CO_CONTRACTTYPEINFO</comment>
+        <!-- single primaryKey -->
+	    <id name="contracttypeid" type="string" length="36">
+	    	<column name="CONTRACTTYPEID">
+    	        <comment>CONTRACTTYPEID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="supertypeid" type="string"  length="36"  not-null="false">
+	    	<column name="SUPERTYPEID">
+    	        <comment>SUPERTYPEID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="typename" type="string"  length="64"  not-null="false">
+	    	<column name="TYPENAME">
+    	        <comment>TYPENAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="description" type="string"  length="256"  not-null="false">
+	    	<column name="DESCRIPTION">
+    	        <comment>DESCRIPTION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdefine" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISDEFINE">
+    	        <comment>ISDEFINE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>MARKETID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="false">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>STARTEFFECTIVEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>ENDEFFECTIVEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="effectiveflag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="EFFECTIVEFLAG">
+    	        <comment>EFFECTIVEFLAG</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>UPDATETIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>UPDATEPERSONID</comment>
+	    	</column>
+    	</property>  
+         
+        <!-- one-to-many define -->
+        <set name="coContracttypeinfos" table="CO_CONTRACTTYPEINFO" inverse="false" cascade="all" lazy="false" >
+            <key>
+                <column name="SUPERTYPEID"/>
+            </key>  
+            <one-to-many class="com.sgcc.dlsc.entity.po.CoContracttypeinfo" />
+        </set>
+		
+    </class>
+</hibernate-mapping>

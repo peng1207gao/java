@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaOverstepAuthorityLog" table="BA_overstep_authority_log">
+    	<comment>越权访问记录表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="userId" type="string"  length="36"  not-null="false">
+	    	<column name="USER_ID">
+    	        <comment>用户ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userName" type="string"  length="100"  not-null="false">
+	    	<column name="USER_NAME">
+    	        <comment>用户名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sessionId" type="string"  length="36"  not-null="false">
+	    	<column name="SESSION_ID">
+    	        <comment>用户SESSIONID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="url" type="string"  length="200"  not-null="false">
+	    	<column name="URL">
+    	        <comment>越权访问的URL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="overstepDate" type="timestamp"  not-null="false">
+	    	<column name="OVERSTEP_DATE">
+    	        <comment>访问时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

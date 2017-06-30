@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxDrrz" table="TJFX_DRRZ">
+    	<comment>TJFX_DRRZ</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>系统主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="drsj" type="timestamp"  not-null="true">
+	    	<column name="DRSJ">
+    	        <comment>导入时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zbmc" type="string"  length="36"  not-null="false">
+	    	<column name="ZBMC">
+    	        <comment>指标名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="czr" type="string"  length="36"  not-null="false">
+	    	<column name="CZR">
+    	        <comment>操作人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="czzt" type="string"  length="36"  not-null="false">
+	    	<column name="CZZT">
+    	        <comment>操作状态</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

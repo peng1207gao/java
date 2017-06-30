@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxPurchasetradeincomeShow" table="TJFX_PURCHASETRADEINCOME_SHOW">
+    	<comment>发电侧购电交易效益分析展示表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>guid </comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="mktMonth" type="date"  not-null="true">
+	    	<column name="MKT_MONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tjname" type="string"  length="36"  not-null="true">
+	    	<column name="TJNAME">
+    	        <comment>统计项目</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthsettlequantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHSETTLEQUANTITY">
+    	        <comment>当月交易电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHPRICE">
+    	        <comment>当月购电均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthpricetb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHPRICETB">
+    	        <comment>当月购电均价同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthincome" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHINCOME">
+    	        <comment>当月购电费</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthincometb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHINCOMETB">
+    	        <comment>当月购电费同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljsettlequantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJSETTLEQUANTITY">
+    	        <comment>累计购电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJPRICE">
+    	        <comment>累计购电均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljpricetb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJPRICETB">
+    	        <comment>累计购电均价同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljincome" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJINCOME">
+    	        <comment>累计购电费</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljincometb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJINCOMETB">
+    	        <comment>累计购电费同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yl1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="YL1">
+    	        <comment>预留字段1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yl2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="YL2">
+    	        <comment>预留字段2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yl3" type="string"  length="50"  not-null="false">
+	    	<column name="YL3">
+    	        <comment>预留字段3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yl4" type="string"  length="50"  not-null="false">
+	    	<column name="YL4">
+    	        <comment>预留字段4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

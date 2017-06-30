@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaWithparam" table="BA_WITHPARAM">
+    	<comment>BA_WITHPARAM</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="batype" type="string"  length="32"  not-null="false">
+	    	<column name="BATYPE">
+    	        <comment>平衡主题</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="batemplatecode" type="string"  length="32"  not-null="true">
+	    	<column name="BATEMPLATECODE">
+    	        <comment>范本文号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="batemplatename" type="string"  length="500"  not-null="false">
+	    	<column name="BATEMPLATENAME">
+    	        <comment>范本名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="batemplatefile" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+	    	<column name="BATEMPLATEFILE">
+    	        <comment>范本文件</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="false">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>生效日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>失效日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isshare" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISSHARE">
+    	        <comment>是否共享</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="descreption" type="string"  length="500"  not-null="false">
+	    	<column name="DESCREPTION">
+    	        <comment>描述</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaCapacity" table="BA_CAPACITY">
+    	<comment>装机容量信息</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="false">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="DATE_TYPE">
+    	        <comment>期别  年、冬、夏、季、月、旬、周、日 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabdate" type="date"  not-null="false">
+	    	<column name="TABDATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="balanceType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BALANCE_TYPE">
+    	        <comment>业务类型  预测、实际 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityS" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S">
+    	        <comment>期初装机容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySSu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityN" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N">
+    	        <comment>期内新增装机容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNSu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityR" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R">
+    	        <comment>期内退役装机容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityRWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityRFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityRNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityRWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityRSu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityROt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY">
+    	        <comment>计划检修容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacitySu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

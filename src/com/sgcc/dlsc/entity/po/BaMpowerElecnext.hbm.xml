@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaMpowerElecnext" table="BA_MPOWER_ELECNEXT">
+    	<comment>次月电力电量平衡预测表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDate" type="date"  not-null="true">
+	    	<column name="TAB_DATE">
+    	        <comment>数据日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacaity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACAITY">
+    	        <comment>统调装机容量  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="avgplanfixcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AVGPLANFIXCAPACITY">
+    	        <comment>月均计划检修容量  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="avgblockcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AVGBLOCKCAPACITY">
+    	        <comment>月均受阻容量  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="adjustcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ADJUSTCAPACITY">
+    	        <comment>统调可调容量  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buypower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BUYPOWER">
+    	        <comment>购入电力  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salepower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEPOWER">
+    	        <comment>售出电力  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iadjustcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="IADJUSTCAPACITY">
+    	        <comment>综合可调容量  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BACKCAPACITY">
+    	        <comment>旋转备用容量  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxdemand" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXDEMAND">
+    	        <comment>统调最大用电需求  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powersurplus" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="POWERSURPLUS">
+    	        <comment>电力余缺  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="usingdemand" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="USINGDEMAND">
+    	        <comment>统调用电量需求  MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC">
+    	        <comment>统调可发电量  MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buyelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BUYELEC">
+    	        <comment>购入电量  MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEELEC">
+    	        <comment>售出电量  MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isupplyelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ISUPPLYELEC">
+    	        <comment>综合可供电量  MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecsurplus" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECSURPLUS">
+    	        <comment>全月电量余缺  MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="balanceanalyse" type="string"  length="1024"  not-null="false">
+	    	<column name="BALANCEANALYSE">
+    	        <comment>月度电力电量平衡分析说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="newversion" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="NEWVERSION">
+    	        <comment>最新版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>更新人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="versiondesc" type="string"  length="256"  not-null="false">
+	    	<column name="VERSIONDESC">
+    	        <comment>版本说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="baType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BA_TYPE">
+    	        <comment>平衡情况</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="issueddate" type="date"  not-null="false">
+	    	<column name="ISSUEDDATE">
+    	        <comment>&quot;发布时间 &quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="perreserve" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PERRESERVE">
+    	        <comment>需求备用率 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

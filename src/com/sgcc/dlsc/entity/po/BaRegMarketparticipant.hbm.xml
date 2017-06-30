@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaRegMarketparticipant" table="BA_REG_MARKETPARTICIPANT">
+    	<comment>BA_REG_MARKETPARTICIPANT</comment>
+        <!-- single primaryKey -->
+	    <id name="participantid" type="string" length="36">
+	    	<column name="PARTICIPANTID">
+    	        <comment>PARTICIPANTID</comment>
+	    	</column>
+        </id>     
+		
+	    <property name="participantname" type="string"  length="500"  not-null="true">
+	    	<column name="PARTICIPANTNAME">
+    	        <comment>PARTICIPANTNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aliasname" type="string"  length="150"  not-null="false">
+	    	<column name="ALIASNAME">
+    	        <comment>ALIASNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="participanttype" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="PARTICIPANTTYPE">
+    	        <comment>PARTICIPANTTYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="participantcode" type="string"  length="60"  not-null="true">
+	    	<column name="PARTICIPANTCODE">
+    	        <comment>PARTICIPANTCODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="60"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>MARKETID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="address" type="string"  length="256"  not-null="false">
+	    	<column name="ADDRESS">
+    	        <comment>ADDRESS</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="postalcode" type="string"  length="60"  not-null="false">
+	    	<column name="POSTALCODE">
+    	        <comment>POSTALCODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="corporation" type="string"  length="60"  not-null="false">
+	    	<column name="CORPORATION">
+    	        <comment>CORPORATION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkman" type="string"  length="64"  not-null="false">
+	    	<column name="LINKMAN">
+    	        <comment>LINKMAN</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="officephone" type="string"  length="60"  not-null="false">
+	    	<column name="OFFICEPHONE">
+    	        <comment>OFFICEPHONE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="telephone" type="string"  length="60"  not-null="false">
+	    	<column name="TELEPHONE">
+    	        <comment>TELEPHONE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="faxphone" type="string"  length="60"  not-null="false">
+	    	<column name="FAXPHONE">
+    	        <comment>FAXPHONE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="email" type="string"  length="64"  not-null="false">
+	    	<column name="EMAIL">
+    	        <comment>EMAIL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="webaddress" type="string"  length="256"  not-null="false">
+	    	<column name="WEBADDRESS">
+    	        <comment>WEBADDRESS</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="licencecode" type="string"  length="200"  not-null="false">
+	    	<column name="LICENCECODE">
+    	        <comment>LICENCECODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="depositbank" type="string"  length="100"  not-null="false">
+	    	<column name="DEPOSITBANK">
+    	        <comment>DEPOSITBANK</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="depositname" type="string"  length="100"  not-null="false">
+	    	<column name="DEPOSITNAME">
+    	        <comment>DEPOSITNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="depositaccount" type="string"  length="100"  not-null="false">
+	    	<column name="DEPOSITACCOUNT">
+    	        <comment>DEPOSITACCOUNT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="registerdate" type="java.util.Date"  not-null="false">
+	    	<column name="REGISTERDATE">
+    	        <comment>REGISTERDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="java.util.Date"  not-null="true">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>STARTEFFECTIVEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="java.util.Date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>ENDEFFECTIVEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="agreementid" type="string"  length="100"  not-null="false">
+	    	<column name="AGREEMENTID">
+    	        <comment>AGREEMENTID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="businesscode" type="string"  length="100"  not-null="false">
+	    	<column name="BUSINESSCODE">
+    	        <comment>BUSINESSCODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="taxcode" type="string"  length="100"  not-null="false">
+	    	<column name="TAXCODE">
+    	        <comment>TAXCODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="geogrregionid" type="string"  length="36"  not-null="false">
+	    	<column name="GEOGRREGIONID">
+    	        <comment>GEOGRREGIONID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="controlareaid" type="string"  length="36"  not-null="false">
+	    	<column name="CONTROLAREAID">
+    	        <comment>CONTROLAREAID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>UPDATETIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>UPDATEPERSONID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operatedate" type="date"  not-null="false">
+	    	<column name="OPERATEDATE">
+    	        <comment>OPERATEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operator" type="string"  length="64"  not-null="false">
+	    	<column name="OPERATOR">
+    	        <comment>OPERATOR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extend1" type="string"  length="60"  not-null="false">
+	    	<column name="EXTEND1">
+    	        <comment>EXTEND1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extend2" type="string"  length="60"  not-null="false">
+	    	<column name="EXTEND2">
+    	        <comment>EXTEND2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="businessid" type="string"  length="64"  not-null="false">
+	    	<column name="BUSINESSID">
+    	        <comment>BUSINESSID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="guid" type="string"  length="36"  not-null="false">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="eastLongitude" type="string"  length="36"  not-null="false">
+	    	<column name="EAST_LONGITUDE">
+    	        <comment>EAST_LONGITUDE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="northernLatitude" type="string"  length="36"  not-null="false">
+	    	<column name="NORTHERN_LATITUDE">
+    	        <comment>NORTHERN_LATITUDE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyInstallCountVolume" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="COMPANY_INSTALL_COUNT_VOLUME">
+    	        <comment>COMPANY_INSTALL_COUNT_VOLUME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyDispatchVolume" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="COMPANY_DISPATCH_VOLUME">
+    	        <comment>COMPANY_DISPATCH_VOLUME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyAccountsVolume" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="COMPANY_ACCOUNTS_VOLUME">
+    	        <comment>COMPANY_ACCOUNTS_VOLUME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyDispatchType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="COMPANY_DISPATCH_TYPE">
+    	        <comment>COMPANY_DISPATCH_TYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="COMPANY_TYPE">
+    	        <comment>COMPANY_TYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyAccountsUnit" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="COMPANY_ACCOUNTS_UNIT">
+    	        <comment>COMPANY_ACCOUNTS_UNIT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="STATE">
+    	        <comment>STATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdj" type="string"  length="96"  not-null="false">
+	    	<column name="GDJ">
+    	        <comment>GDJ</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dfdc" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="DFDC">
+    	        <comment>DFDC</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="judicialperson" type="string"  length="90"  not-null="false">
+	    	<column name="JUDICIALPERSON">
+    	        <comment>JUDICIALPERSON</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="position" type="string"  length="100"  not-null="false">
+	    	<column name="POSITION">
+    	        <comment>POSITION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zdkcdmmfts" type="big_decimal"  length="5"  not-null="false">
+	    	<column name="ZDKCDMMFTS">
+    	        <comment>ZDKCDMMFTS</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="oldname" type="string"  length="100"  not-null="false">
+	    	<column name="OLDNAME">
+    	        <comment>曾用名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateofissue" type="date"  not-null="false">
+	    	<column name="DATEOFISSUE">
+    	        <comment>许可证发证时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="expirationdate" type="date"  not-null="false">
+	    	<column name="EXPIRATIONDATE">
+    	        <comment>许可证失效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="installednum" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="INSTALLEDNUM">
+    	        <comment>装机台数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="servicepower" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="SERVICEPOWER">
+    	        <comment>厂用电率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="basin" type="string"  length="100"  not-null="false">
+	    	<column name="BASIN">
+    	        <comment>水电厂所属流域</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="taxrate" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="TAXRATE">
+    	        <comment>增值税税率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powertype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="POWERTYPE">
+    	        <comment>发电厂类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatch" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="DISPATCH">
+    	        <comment>调度关系</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdistributed" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISDISTRIBUTED">
+    	        <comment>是否分布式电源</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isaggregation" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISAGGREGATION">
+    	        <comment>是否资源综合利用</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rating" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="RATING">
+    	        <comment>购电层级</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powerkind" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="POWERKIND">
+    	        <comment>电厂性质</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gengroupid" type="string"  length="200"  not-null="false">
+	    	<column name="GENGROUPID">
+    	        <comment>隶属企业名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="uindustrytype" type="string"  length="128"  not-null="false">
+	    	<column name="U_INDUSTRYTYPE">
+    	        <comment>行业分类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="uelectricitytype" type="string"  length="128"  not-null="false">
+	    	<column name="U_ELECTRICITYTYPE">
+    	        <comment>用电类别</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="uconsumertype" type="string"  length="128"  not-null="false">
+	    	<column name="U_CONSUMERTYPE">
+    	        <comment>用户分类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="uvoltageLevel" type="string"  length="50"  not-null="false">
+	    	<column name="U_VOLTAGE_LEVEL">
+    	        <comment>电压等级</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="uconsumeraddress" type="string"  length="300"  not-null="false">
+	    	<column name="U_CONSUMERADDRESS">
+    	        <comment>用电地址</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="uproductionshift" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="U_PRODUCTIONSHIFT">
+    	        <comment>生产班次</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ucontractVolume" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="U_CONTRACT_VOLUME">
+    	        <comment>合同容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="udeclareVolume" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="U_DECLARE_VOLUME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="urunVolume" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="U_RUN_VOLUME">
+    	        <comment>运行容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="uifapprovetransprice" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="U_IFAPPROVETRANSPRICE">
+    	        <comment>?????????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ifexecutefgflag" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="IFEXECUTEFGFLAG">
+    	        <comment>是否执行峰谷标志</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="upricetype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="U_PRICETYPE">
+    	        <comment>定价策略类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="umeasurementinfo" type="string"  length="1024"  not-null="false">
+	    	<column name="U_MEASUREMENTINFO">
+    	        <comment>合同计量点信息</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="safelevel" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="SAFELEVEL">
+    	        <comment>市场成员安全等级</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isDelete" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="IS_DELETE">
+    	        <comment>删除标志 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datasource" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="DATASOURCE">
+    	        <comment>数据来源 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

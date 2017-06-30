@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradetypeRule" table="TR_TRADETYPE_RULE">
+    	<comment>???????????? </comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>???</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradetypeId" type="string"  length="32"  not-null="true">
+	    	<column name="TRADETYPE_ID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ruleType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="RULE_TYPE">
+    	        <comment>????  0????????1????????2????????3????????4????????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ruleId" type="string"  length="32"  not-null="false">
+	    	<column name="RULE_ID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="createPerson" type="string"  length="64"  not-null="false">
+	    	<column name="CREATE_PERSON">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateTime" type="date"  not-null="false">
+	    	<column name="UPDATE_TIME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>????  ???? </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

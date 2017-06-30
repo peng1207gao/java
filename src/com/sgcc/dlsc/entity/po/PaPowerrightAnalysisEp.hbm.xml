@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PaPowerrightAnalysisEp" table="PA_POWERRIGHT_ANALYSIS_EP">
+    	<comment>发电权交易减排分析 </comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="100">
+	    	<column name="GUID">
+    	        <comment>Guid</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="100"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="querydate" type="date"  not-null="true">
+	    	<column name="QUERYDATE">
+    	        <comment>年月</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeid" type="string"  length="100"  not-null="true">
+	    	<column name="TRADEID">
+    	        <comment>交易ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradename" type="string"  length="100"  not-null="false">
+	    	<column name="TRADENAME">
+    	        <comment>交易名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeeq" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TRADEEQ">
+    	        <comment>交易电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reduceco2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="REDUCECO2">
+    	        <comment>减排CO2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reduceso2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="REDUCESO2">
+    	        <comment>减排SO2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="economycoal" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ECONOMYCOAL">
+    	        <comment>节约标煤</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr1" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR1">
+    	        <comment>备用字符串1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr2" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR2">
+    	        <comment>备用字符串2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr3" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR3">
+    	        <comment>备用字符串3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT1">
+    	        <comment>备用整数1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT2">
+    	        <comment>备用整数2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT3">
+    	        <comment>备用整数3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE1">
+    	        <comment>备用实数1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE2">
+    	        <comment>备用实数2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE3">
+    	        <comment>备用实数3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate1" type="date"  not-null="false">
+	    	<column name="BAK_DATE1">
+    	        <comment>备用时间1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate2" type="date"  not-null="false">
+	    	<column name="BAK_DATE2">
+    	        <comment>备用时间2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate3" type="date"  not-null="false">
+	    	<column name="BAK_DATE3">
+    	        <comment>备用时间3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

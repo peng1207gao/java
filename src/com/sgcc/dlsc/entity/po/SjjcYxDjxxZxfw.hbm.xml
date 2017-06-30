@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxDjxxZxfw" table="SJJC_YX_DJXX_ZXFW">
+    	<comment>营销_营销电价信息_执行范围</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rangeId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="RANGE_ID">
+    	        <comment>执行范围标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="catPrcId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="CAT_PRC_ID">
+    	        <comment>目录电价标识,目录电价唯一标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="policyTypeCode" type="string"  length="8"  not-null="true">
+	    	<column name="POLICY_TYPE_CODE">
+    	        <comment>政策分类,丰枯、采暖（季节峰谷）、阶梯</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rangeTypeCode" type="string"  length="8"  not-null="true">
+	    	<column name="RANGE_TYPE_CODE">
+    	        <comment>执行范围分类,对于丰枯指：丰水期、枯水期、平水期；对采暖（季节峰谷）指采暖期、非采暖期；阶梯电价指：第一级、第二级、第三级,目录电价中按范围执行标志为&quot;否&quot;的，则此值无效。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bgnValue" type="big_decimal"  length="15"  not-null="true">
+	    	<column name="BGN_VALUE">
+    	        <comment>执行起始值,如是丰枯、采暖是指该范围期起始月份，对于阶梯指起始电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endValue" type="big_decimal"  length="15"  not-null="true">
+	    	<column name="END_VALUE">
+    	        <comment>执行结束值,如是丰枯、采暖是指该范围期结束月份，对于阶梯指结束电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="refRangeFlag" type="string"  length="8"  not-null="true">
+	    	<column name="REF_RANGE_FLAG">
+    	        <comment>基准范围标志</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rangeRemark" type="string"  length="256"  not-null="false">
+	    	<column name="RANGE_REMARK">
+    	        <comment>执行范围备注</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iduFlag" type="string"  length="32"  not-null="false">
+	    	<column name="IDU_FLAG">
+    	        <comment>变动标志</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

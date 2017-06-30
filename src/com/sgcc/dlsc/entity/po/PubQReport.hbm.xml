@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubQReport" table="PUB_Q_REPORT">
+    	<comment>PUB_Q_REPORT</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tquarter" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="TQUARTER">
+    	        <comment>季度：1,2,3,4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="addfile" type="string"  length="500"  not-null="false">
+	    	<column name="ADDFILE">
+    	        <comment>UAP附件表：T_MX_ATTACHMENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="STATE">
+    	        <comment>状态,0未发布，1发布，2待审批，3审批通过，4退回。默认为0</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="subjectguid" type="string"  length="32"  not-null="false">
+	    	<column name="SUBJECTGUID">
+    	        <comment>发布对象ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="20"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>填报人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillintime" type="date"  not-null="true">
+	    	<column name="FILLINTIME">
+    	        <comment>填报时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>备用1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>备用2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>备用3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="32"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>备用4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="200"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>备用5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="200"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>备用6</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

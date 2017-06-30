@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaDatachangeLog" table="BA_DATACHANGE_LOG">
+    	<comment>接口信息表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tableid" type="string"  length="32"  not-null="false">
+	    	<column name="TABLEID">
+    	        <comment>TABLEID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userid" type="string"  length="64"  not-null="false">
+	    	<column name="USERID">
+    	        <comment>USERID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatedate" type="date"  not-null="false">
+	    	<column name="UPDATEDATE">
+    	        <comment>UPDATEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wherecond" type="string"  length="4000"  not-null="false">
+	    	<column name="WHERECOND">
+    	        <comment>WHERECOND</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="condext" type="string"  length="4000"  not-null="false">
+	    	<column name="CONDEXT">
+    	        <comment>CONDEXT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="deptCode" type="string"  length="18"  not-null="false">
+	    	<column name="DEPT_CODE">
+    	        <comment>DEPT_CODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabYear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="TAB_YEAR">
+    	        <comment>TAB_YEAR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabMonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TAB_MONTH">
+    	        <comment>TAB_MONTH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDay" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TAB_DAY">
+    	        <comment>TAB_DAY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dataFlag" type="string"  length="8"  not-null="false">
+	    	<column name="DATA_FLAG">
+    	        <comment>DATA_FLAG</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

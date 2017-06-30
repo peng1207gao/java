@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradeanmtResultlog" table="TR_TRADEANMT_RESULTLOG">
+    	<comment>TR_TRADEANMT_RESULTLOG</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="resultId" type="string"  length="32"  not-null="false">
+	    	<column name="RESULT_ID">
+    	        <comment>交易结果id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jydyId" type="string"  length="36"  not-null="true">
+	    	<column name="JYDY_ID">
+    	        <comment>交易单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="peakElcIn" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PEAK_ELC_IN">
+    	        <comment>区域内高峰电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="valleyElcIn" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VALLEY_ELC_IN">
+    	        <comment>区域内低谷电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="averageElcIn" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="AVERAGE_ELC_IN">
+    	        <comment>区域内平均电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powerIn" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="POWER_IN">
+    	        <comment>区域内电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>场景信息</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="retType" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="RET_TYPE">
+    	        <comment>结果类型（0表示无约束结果，1表示初审结果，2表示审定结果）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="refreshtime" type="timestamp"  not-null="false">
+	    	<column name="REFRESHTIME">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeTimepart" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TRADE_TIMEPART">
+    	        <comment>0:不分时间段；1-n：1至n时间段申报数据</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="band" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BAND">
+    	        <comment>段号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeRole" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="TRADE_ROLE">
+    	        <comment>申报角色</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="auditFlag" type="string"  length="64"  not-null="false">
+	    	<column name="AUDIT_FLAG">
+    	        <comment>如果审批不通过，修改出清结果，给出相关意见</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="peakElcSum" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PEAK_ELC_SUM">
+    	        <comment>高峰电力合计</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="valleyElcSum" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VALLEY_ELC_SUM">
+    	        <comment>低谷电力合计</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="averageElcSum" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="AVERAGE_ELC_SUM">
+    	        <comment>平均电力合计</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powerSum" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="POWER_SUM">
+    	        <comment>电量合计</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="peakElcOut" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PEAK_ELC_OUT">
+    	        <comment>区域间高峰电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="valleyElcOut" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VALLEY_ELC_OUT">
+    	        <comment>区域间低谷电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="averageElcOut" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="AVERAGE_ELC_OUT">
+    	        <comment>区域间平均电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powerOut" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="POWER_OUT">
+    	        <comment>区域间电量</comment>
+	    	</column>
+    	</property>  
+         
+         <property name="refreshRole" type="string"  length="36"  not-null="false">
+	    	<column name="REFRESH_ROLE">
+    	        <comment>更新人</comment>
+	    	</column>
+    	</property>  
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTransNetloss" table="TR_TRANS_NETLOSS">
+    	<comment>?????????</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>???</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="roadId" type="string"  length="36"  not-null="true">
+	    	<column name="ROAD_ID">
+    	        <comment>??ID  ?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tielineId" type="string"  length="36"  not-null="true">
+	    	<column name="TIELINE_ID">
+    	        <comment>???ID  ?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netlossRatio" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NETLOSS_RATIO">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="valideDate" type="date"  not-null="true">
+	    	<column name="VALIDE_DATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="regDate" type="date"  not-null="false">
+	    	<column name="REG_DATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="regMenber" type="string"  length="64"  not-null="false">
+	    	<column name="REG_MENBER">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="remark" type="string"  length="256"  not-null="false">
+	    	<column name="REMARK">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="shudianfang" type="string"  length="32"  not-null="true">
+	    	<column name="SHUDIANFANG">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

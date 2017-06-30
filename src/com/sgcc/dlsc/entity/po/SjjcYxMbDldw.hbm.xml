@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxMbDldw" table="SJJC_YX_MB_DLDW">
+    	<comment>营销_码表_供电单位</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orgNo" type="string"  length="16"  not-null="true">
+	    	<column name="ORG_NO">
+    	        <comment>供电单位编号,本实体记录的唯一标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orgName" type="string"  length="256"  not-null="false">
+	    	<column name="ORG_NAME">
+    	        <comment>供电单位名称,供电单位详细的名称。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="porgNo" type="string"  length="16"  not-null="false">
+	    	<column name="P_ORG_NO">
+    	        <comment>上级供电单位编号,直接上级供电单位编号。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orgType" type="string"  length="8"  not-null="false">
+	    	<column name="ORG_TYPE">
+    	        <comment>供电单位类别,单位类别：如国01 国网公司、02 省公司、03 地市公司。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sortNo" type="big_decimal"  length="5"  not-null="false">
+	    	<column name="SORT_NO">
+    	        <comment>排序序号,同级顺序</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

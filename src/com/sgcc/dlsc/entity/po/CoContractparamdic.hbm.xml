@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoContractparamdic" table="CO_CONTRACTPARAMDIC">
+    	<comment>合同参数字典</comment>
+        <!-- single primaryKey -->
+	    <id name="sheetid" type="string" length="36">
+	    	<column name="SHEETID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="dicName" type="string"  length="200"  not-null="false">
+	    	<column name="DIC_NAME">
+    	        <comment>标签名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dicValue" type="string"  length="500"  not-null="false">
+	    	<column name="DIC_VALUE">
+    	        <comment>标签值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dicContent" type="string"  length="500"  not-null="false">
+	    	<column name="DIC_CONTENT">
+    	        <comment>说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operateUser" type="string"  length="36"  not-null="false">
+	    	<column name="OPERATE_USER">
+    	        <comment>维护人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operateDate" type="date"  not-null="false">
+	    	<column name="OPERATE_DATE">
+    	        <comment>维护时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateUser" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATE_USER">
+    	        <comment>更新人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateDate" type="date"  not-null="false">
+	    	<column name="UPDATE_DATE">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orderNo" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="ORDER_NO">
+    	        <comment>是否显示</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.ZxjcDxpConfigMain" table="ZXJC_DXP_CONFIG_MAIN">
+    	<comment>DXP配置主表</comment>
+        <!-- single primaryKey -->
+        <id name="objId" type="string" length="40">
+			<column name="OBJ_ID" sql-type="VARCHAR2(40) default 'sys_guid()'">
+    	        <comment>主键ID</comment>
+		    </column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="callId" type="string"  length="100"  not-null="false">
+	    	<column name="CALL_ID">
+    	        <comment>纵向DXP的配置ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="callName" type="string"  length="100"  not-null="false">
+	    	<column name="CALL_NAME">
+    	        <comment>纵向DXP的配置名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ywTableId" type="string"  length="100"  not-null="false">
+	    	<column name="YW_TABLE_ID">
+    	        <comment>业务表名ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zxTableId" type="string"  length="100"  not-null="false">
+	    	<column name="ZX_TABLE_ID">
+    	        <comment>ZXUSER表名ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dcTableId" type="string"  length="100"  not-null="false">
+	    	<column name="DC_TABLE_ID">
+    	        <comment>数据中心表名ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exType" type="string"  length="2"  not-null="false">
+	    	<column name="EX_TYPE">
+    	        <comment>执行的类型 1,上传 2下传</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="callType" type="string"  length="2"  not-null="false">
+	    	<column name="CALL_TYPE">
+    	        <comment>表类型 1,年表 2月表 3日表 4普通表</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dxpYearCol" type="string"  length="100"  not-null="false">
+	    	<column name="DXP_YEAR_COL">
+    	        <comment>DXP要求的年字段名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dxpMonthCol" type="string"  length="100"  not-null="false">
+	    	<column name="DXP_MONTH_COL">
+    	        <comment>DXP要求的月字段名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dxpDayCol" type="string"  length="100"  not-null="false">
+	    	<column name="DXP_DAY_COL">
+    	        <comment>DXP要求的日字段名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dxpDeptCol" type="string"  length="100"  not-null="false">
+	    	<column name="DXP_DEPT_COL">
+    	        <comment>DXP要求的单位字段名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketIdS" type="string"  length="100"  not-null="true">
+	    	<column name="MARKET_ID_S">
+    	        <comment>传输源头MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketIdT" type="string"  length="100"  not-null="false">
+	    	<column name="MARKET_ID_T">
+    	        <comment>传输目标MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dxpTableNumber" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="DXP_TABLE_NUMBER">
+    	        <comment>DXP注册的表号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="keyColumnName" type="string"  length="100"  not-null="false">
+	    	<column name="KEY_COLUMN_NAME">
+    	        <comment>业务表的主键字段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isAutoToYw" type="string"  length="2"  not-null="false">
+	    	<column name="IS_AUTO_TO_YW">
+    	        <comment>纵向数据是否直接插入业务表</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

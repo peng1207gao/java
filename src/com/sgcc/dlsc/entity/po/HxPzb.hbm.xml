@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.HxPzb" table="HX_PZB" catalog="HXSJ">
+    	<comment>配置表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tablename" type="string"  length="80"  not-null="true">
+	    	<column name="TABLENAME">
+    	        <comment>表名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="epmtableid" type="string"  length="32"  not-null="true">
+	    	<column name="EPMTABLEID">
+    	        <comment>交易运营系统表ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datasource" type="string"  length="8"  not-null="true">
+	    	<column name="DATASOURCE">
+    	        <comment>数据来源部门  1：调度；2：营销；3财务管控；4：规划计划；5：经法；</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ddtableid" type="string"  length="32"  not-null="true">
+	    	<column name="DDTABLEID">
+    	        <comment>对应横向物理表ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cycletype" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="CYCLETYPE">
+    	        <comment>周期类型  1年；2月；3日；4实时；0无周期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cycle" type="string"  length="32"  not-null="true">
+	    	<column name="CYCLE">
+    	        <comment>周期  导数周期设置</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isvalid" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="ISVALID">
+    	        <comment>是否有效  1有效；0无效</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zqms" type="string"  length="32"  not-null="false">
+	    	<column name="ZQMS">
+    	        <comment>周期描述  文字描述</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="drfs" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="DRFS">
+    	        <comment>导入方式  1自动；2手动</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transtype" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="TRANSTYPE">
+    	        <comment>传输类型  1、消息邮件；2、ESB；3DXP</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orderno" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="ORDERNO">
+    	        <comment>排序号</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

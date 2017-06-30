@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrMethodReg" table="TR_METHOD_REG">
+    	<comment>交易出清算法注册表</comment>
+        <!-- single primaryKey -->
+	    <id name="tradeAlgorithmId" type="string" length="32">
+	    	<column name="TRADE_ALGORITHM_ID">
+    	        <comment>交易算法ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeAlgorithmName" type="string"  length="64"  not-null="true">
+	    	<column name="TRADE_ALGORITHM_NAME">
+    	        <comment>交易算法名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sourceClass" type="string"  length="64"  not-null="false">
+	    	<column name="SOURCE_CLASS">
+    	        <comment>算法类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sourceMethod" type="string"  length="64"  not-null="false">
+	    	<column name="SOURCE_METHOD">
+    	        <comment>算法方法</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="regDate" type="date"  not-null="false">
+	    	<column name="REG_DATE">
+    	        <comment>算法注册时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="regPerson" type="string"  length="32"  not-null="false">
+	    	<column name="REG_PERSON">
+    	        <comment>算法注册人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bigtypeId" type="string"  length="32"  not-null="true">
+	    	<column name="BIGTYPE_ID">
+    	        <comment>算法适用的交易类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

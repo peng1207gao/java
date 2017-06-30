@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwBusiunit" table="DW_BUSIUNIT">
+    	<comment>基础信息_业务单元表</comment>
+        <!-- single primaryKey -->
+	    <id name="busiunitid" type="string" length="36">
+	    	<column name="BUSIUNITID">
+    	        <comment>业务单元ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="busiunitname" type="string"  length="100"  not-null="false">
+	    	<column name="BUSIUNITNAME">
+    	        <comment>业务单元名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketmemberid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETMEMBERID">
+    	        <comment>所属市场成员</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="unittype" type="string"  length="36"  not-null="false">
+	    	<column name="UNITTYPE">
+    	        <comment>单元类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

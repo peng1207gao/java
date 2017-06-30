@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwBreakcontract" table="DW_BREAKCONTRACT">
+    	<comment>结算_合同违约分析</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractcount" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CONTRACTCOUNT">
+    	        <comment>违约合同数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thetype" type="string"  length="50"  not-null="false">
+	    	<column name="THETYPE">
+    	        <comment>类型名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

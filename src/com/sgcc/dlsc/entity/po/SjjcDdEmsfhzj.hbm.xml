@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcDdEmsfhzj" table="SJJC_DD_EMSFHZJ">
+    	<comment>调度_EMS负荷总加</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gridname" type="string"  length="128"  not-null="true">
+	    	<column name="GRIDNAME">
+    	        <comment>电网名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="infoTime" type="date"  not-null="true">
+	    	<column name="INFO_TIME">
+    	        <comment>时间,15分钟一点</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="totalload" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TOTALLOAD">
+    	        <comment>负荷总加值,单位：MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatchcompanyname" type="string"  length="128"  not-null="false">
+	    	<column name="DISPATCHCOMPANYNAME">
+    	        <comment>所属调度单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    
+         
+    </class>
+</hibernate-mapping>

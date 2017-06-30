@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.IrFuctionnode" table="IR_FUCTIONNODE">
+    	<comment>IR_FUCTIONNODE</comment>
+        <!-- single primaryKey -->
+	    <id name="itemid" type="string" length="32">
+	    	<column name="ITEMID">
+    	        <comment>栏目编号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="guid" type="string"  length="32"  not-null="false">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="32"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="itemname" type="string"  length="32"  not-null="false">
+	    	<column name="ITEMNAME">
+    	        <comment>栏目名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fatheritemid" type="string"  length="32"  not-null="false">
+	    	<column name="FATHERITEMID">
+    	        <comment>父栏目编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fatheritemname" type="string"  length="32"  not-null="false">
+	    	<column name="FATHERITEMNAME">
+    	        <comment>父栏目名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isvalid" type="string"  length="2"  not-null="false">
+	    	<column name="ISVALID">
+    	        <comment>是否有效</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcDdZrsjdl" table="SJJC_DD_ZRSJDL">
+    	<comment>调度_电厂、联络线昨日实际电量</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="infoDate" type="date"  not-null="false">
+	    	<column name="INFO_DATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="infoClass" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="INFO_CLASS">
+    	        <comment>类别,1机组2联络线</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="unitlinename" type="string"  length="128"  not-null="false">
+	    	<column name="UNITLINENAME">
+    	        <comment>机组/联络线名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="infoTime" type="date"  not-null="false">
+	    	<column name="INFO_TIME">
+    	        <comment>时间,15分钟一点</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linequantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LINEQUANTITY">
+    	        <comment>联络线电量值,单位：MWh，仅适用联络线</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generationquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATIONQUANTITY">
+    	        <comment>机组发电量值,单位：MWh，仅适用机组</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatchcompanyname" type="string"  length="128"  not-null="true">
+	    	<column name="DISPATCHCOMPANYNAME">
+    	        <comment>所属调度单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthcumulativecapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHCUMULATIVECAPACITY">
+    	        <comment>月累计发电量,单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bootmode" type="string"  length="256"  not-null="false">
+	    	<column name="BOOTMODE">
+    	        <comment>开机方式</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

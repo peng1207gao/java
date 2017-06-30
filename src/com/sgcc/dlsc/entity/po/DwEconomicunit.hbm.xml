@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwEconomicunit" table="DW_ECONOMICUNIT">
+    	<comment>基础信息_经济机组</comment>
+        <!-- single primaryKey -->
+	    <id name="ecounitid" type="string" length="36">
+	    	<column name="ECOUNITID">
+    	        <comment>经济机组ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="generatorid" type="string"  length="36"  not-null="true">
+	    	<column name="GENERATORID">
+    	        <comment>所属物理机组</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ecounitrname" type="string"  length="500"  not-null="true">
+	    	<column name="ECOUNITRNAME">
+    	        <comment>经济机组名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stationid" type="string"  length="36"  not-null="true">
+	    	<column name="STATIONID">
+    	        <comment>所属发电企业</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY">
+    	        <comment>装机容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitylevel" type="string"  length="36"  not-null="false">
+	    	<column name="CAPACITYLEVEL">
+    	        <comment>容量等级</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="voltagegrade" type="big_decimal"  length="3"  not-null="false">
+	    	<column name="VOLTAGEGRADE">
+    	        <comment>电压等级</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatortype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="GENERATORTYPE">
+    	        <comment>机组类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="opbegindate" type="date"  not-null="false">
+	    	<column name="OPBEGINDATE">
+    	        <comment>投运时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gengroupid" type="string"  length="36"  not-null="false">
+	    	<column name="GENGROUPID">
+    	        <comment>所属发电集团</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="geogrregionid" type="string"  length="36"  not-null="false">
+	    	<column name="GEOGRREGIONID">
+    	        <comment>地理位置</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaModelconfig" table="BA_MODELCONFIG">
+    	<comment>模板详细配置表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="modelId" type="string"  length="32"  not-null="true">
+	    	<column name="MODEL_ID">
+    	        <comment>模版id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="unitId" type="string"  length="32"  not-null="false">
+	    	<column name="UNIT_ID">
+    	        <comment>项目id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="displayName" type="string"  length="200"  not-null="false">
+	    	<column name="DISPLAY_NAME">
+    	        <comment>显示名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isDisplay" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="IS_DISPLAY">
+    	        <comment>是否显示</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="displayNo" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="DISPLAY_NO">
+    	        <comment>显示顺序</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="itemId" type="string"  length="32"  not-null="false">
+	    	<column name="ITEM_ID">
+    	        <comment>分组ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="itemName" type="string"  length="200"  not-null="false">
+	    	<column name="ITEM_NAME">
+    	        <comment>分组名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rcId" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="RC_ID">
+    	        <comment>报表ID </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

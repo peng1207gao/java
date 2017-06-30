@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoTempclienfieldconfig" table="CO_TEMPCLIENFIELDCONFIG">
+    	<comment>????????</comment>
+        <!-- single primaryKey -->
+	    <id name="sheetid" type="string" length="36">
+	    	<column name="SHEETID">
+    	        <comment>??</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="canSheetid" type="string"  length="36"  not-null="false">
+	    	<column name="CAN_SHEETID">
+    	        <comment>??????SHEETID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="configFieldName" type="string"  length="64"  not-null="false">
+	    	<column name="CONFIG_FIELD_NAME">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="personid" type="string"  length="36"  not-null="false">
+	    	<column name="PERSONID">
+    	        <comment>???ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatedate" type="date"  not-null="false">
+	    	<column name="UPDATEDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contracttemplatecode" type="string"  length="36"  not-null="false">
+	    	<column name="CONTRACTTEMPLATECODE">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

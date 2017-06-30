@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxDjxxMldj" table="SJJC_YX_DJXX_MLDJ">
+    	<comment>营销_营销电价信息_目录电价</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="false">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="catPrcId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="CAT_PRC_ID">
+    	        <comment>目录电价标识,目录电价唯一标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paraVn" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="PARA_VN">
+    	        <comment>计算参数版本号,电价版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="prcCode" type="string"  length="8"  not-null="true">
+	    	<column name="PRC_CODE">
+    	        <comment>电价码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orgNo" type="string"  length="16"  not-null="true">
+	    	<column name="ORG_NO">
+    	        <comment>供电单位编号,描述电价的执行单位</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="prcVoltCode" type="string"  length="8"  not-null="true">
+	    	<column name="PRC_VOLT_CODE">
+    	        <comment>电价电压等级,电价电压等级代码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="discMode" type="string"  length="8"  not-null="false">
+	    	<column name="DISC_MODE">
+    	        <comment>优惠方式分类,引用国家电网公司营销管理代码类集:5110.26 优惠方式分类与代码：国家淘汰目录电度电价增收、国家淘汰目录基本电价增收、国家淘汰电费比例增收</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="catPrcAbbr" type="string"  length="256"  not-null="true">
+	    	<column name="CAT_PRC_ABBR">
+    	        <comment>目录电价简称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="catPrcName" type="string"  length="256"  not-null="true">
+	    	<column name="CAT_PRC_NAME">
+    	        <comment>目录电价名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rangeFlag" type="string"  length="8"  not-null="true">
+	    	<column name="RANGE_FLAG">
+    	        <comment>按范围执行标志,是否按月份范围或电量范围执行。阶梯电价按电量范围，丰枯电价、采暖季节电价按月份范围执行</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tsNum" type="big_decimal"  length="5"  not-null="true">
+	    	<column name="TS_NUM">
+    	        <comment>时段数目,目录电价的时段数目</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecTypeCode" type="string"  length="8"  not-null="true">
+	    	<column name="ELEC_TYPE_CODE">
+    	        <comment>用电分类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pfQtyFlag" type="string"  length="8"  not-null="true">
+	    	<column name="PF_QTY_FLAG">
+    	        <comment>参与实际功率因数计算标志,该电价对应计费电量是否参与实际功率因数计算，其值为：是、否</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pfaaFlag" type="string"  length="8"  not-null="true">
+	    	<column name="PFAA_FLAG">
+    	        <comment>参与功率因数调整电费计算标志,该电价的目录电度电费是否参与计算功率因数电费，其值为：是、否</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iduFlag" type="string"  length="32"  not-null="false">
+	    	<column name="IDU_FLAG">
+    	        <comment>变动标志,标注电费计算标准参数维护时实体信息变动方式，例如：增加的电价，变动标识为“增加”，删除时的变动标识为“删除”，修改时的变动标识为“修改”。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maintModeCode" type="string"  length="8"  not-null="false">
+	    	<column name="MAINT_MODE_CODE">
+    	        <comment>维护方式代码,方式一：维护目录电度电价,方式二：维护浮动比例，除基准电价外都是浮动比例,方式三：维护浮动额度，除基准电价外都是浮动额度</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

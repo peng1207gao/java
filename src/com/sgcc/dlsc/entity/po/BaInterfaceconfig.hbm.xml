@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaInterfaceconfig" table="BA_INTERFACECONFIG">
+    	<comment>??????</comment>
+        <!-- single primaryKey -->
+	    <id name="sheetid" type="string" length="36">
+	    	<column name="SHEETID">
+    	        <comment>??</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="interfaceid" type="string"  length="36"  not-null="false">
+	    	<column name="INTERFACEID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="interfacename" type="string"  length="200"  not-null="false">
+	    	<column name="INTERFACENAME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="displayitemname" type="string"  length="200"  not-null="false">
+	    	<column name="DISPLAYITEMNAME">
+    	        <comment>????,  ??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdisplay" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISDISPLAY">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="displayitemid" type="string"  length="36"  not-null="false">
+	    	<column name="DISPLAYITEMID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cotype" type="string"  length="36"  not-null="false">
+	    	<column name="COTYPE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grade" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="GRADE">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

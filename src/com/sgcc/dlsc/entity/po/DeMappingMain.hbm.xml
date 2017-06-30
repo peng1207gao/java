@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DeMappingMain" table="DE_MAPPING_MAIN">
+    	<comment>DE_MAPPING_MAIN</comment>
+        <!-- single primaryKey -->
+	    <id name="sheetid" type="string" length="36">
+	    	<column name="SHEETID">
+    	        <comment>表单实例编码</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="showorder" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="SHOWORDER">
+    	        <comment>显示序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sheetname" type="string"  length="200"  not-null="false">
+	    	<column name="SHEETNAME">
+    	        <comment>表单实例名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datatype" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="DATATYPE">
+    	        <comment>数据类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datastatusid" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="DATASTATUSID">
+    	        <comment>数据状态编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="50"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>场景</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="kzzd1" type="string"  length="50"  not-null="false">
+	    	<column name="KZZD1">
+    	        <comment>扩展字段1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="kzzd2" type="string"  length="50"  not-null="false">
+	    	<column name="KZZD2">
+    	        <comment>扩展字段2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="kzzd3" type="string"  length="50"  not-null="false">
+	    	<column name="KZZD3">
+    	        <comment>扩展字段3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="kssysj" type="string"  length="50"  not-null="false">
+	    	<column name="KSSYSJ">
+    	        <comment>开始使用时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jssysj" type="string"  length="50"  not-null="false">
+	    	<column name="JSSYSJ">
+    	        <comment>结束使用时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ysysb" type="string"  length="200"  not-null="false">
+	    	<column name="YSYSB">
+    	        <comment>映射原始表</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ysmbb" type="string"  length="200"  not-null="false">
+	    	<column name="YSMBB">
+    	        <comment>映射目标表</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bz" type="string"  length="1000"  not-null="false">
+	    	<column name="BZ">
+    	        <comment>备注</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ysbidzd" type="string"  length="200"  not-null="false">
+	    	<column name="YSBIDZD">
+    	        <comment>原始表ID字段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ysbmczd" type="string"  length="200"  not-null="false">
+	    	<column name="YSBMCZD">
+    	        <comment>原始表名称字段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ysbtj" type="string"  length="500"  not-null="false">
+	    	<column name="YSBTJ">
+    	        <comment>原始表条件</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ysbsfqz" type="string"  length="10"  not-null="false">
+	    	<column name="YSBSFQZ">
+    	        <comment>原始表是否去重</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mbbidzd" type="string"  length="200"  not-null="false">
+	    	<column name="MBBIDZD">
+    	        <comment>目标表ID字段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mbbmczd" type="string"  length="200"  not-null="false">
+	    	<column name="MBBMCZD">
+    	        <comment>目标表名称字段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mbbtj" type="string"  length="500"  not-null="false">
+	    	<column name="MBBTJ">
+    	        <comment>目标表条件</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mbbsfqz" type="string"  length="10"  not-null="false">
+	    	<column name="MBBSFQZ">
+    	        <comment>目标表是否去重</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ysbpxtj" type="string"  length="200"  not-null="false">
+	    	<column name="YSBPXTJ">
+    	        <comment>原始表排序条件</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mbbpxtj" type="string"  length="200"  not-null="false">
+	    	<column name="MBBPXTJ">
+    	        <comment>目标表排序条件</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ysbcfnr" type="string"  length="10"  not-null="false">
+	    	<column name="YSBCFNR">
+    	        <comment>原始表存放内容</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mbbcfnr" type="string"  length="10"  not-null="false">
+	    	<column name="MBBCFNR">
+    	        <comment>目标表存放内容</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bxtqb" type="string"  length="50"  not-null="false">
+	    	<column name="BXTQB">
+    	        <comment>本系统区别</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wxtqb" type="string"  length="50"  not-null="false">
+	    	<column name="WXTQB">
+    	        <comment>外系统区别</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xtpx" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="XTPX">
+    	        <comment>系统排序</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

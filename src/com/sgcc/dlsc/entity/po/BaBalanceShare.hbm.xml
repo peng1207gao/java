@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaBalanceShare" table="BA_BALANCE_SHARE">
+    	<comment>主题共享表</comment>
+        <!-- single primaryKey -->
+	    <id name="balanceId" type="string" length="32">
+	    	<column name="BALANCE_ID">
+    	        <comment>共享id</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>MARKETID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="shareid" type="string"  length="1000"  not-null="false">
+	    	<column name="SHAREID">
+    	        <comment>共享给的场景id，预留使用</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="shareDate" type="date"  not-null="false">
+	    	<column name="SHARE_DATE">
+    	        <comment>共享时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iswrite" type="string"  length="5"  not-null="false">
+	    	<column name="ISWRITE">
+    	        <comment>是否可编辑</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

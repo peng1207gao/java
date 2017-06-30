@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrBidinfoJydyLog" table="TR_BIDINFO_JYDY_LOG">
+    	<comment>TR_BIDINFO_JYDY_LOG</comment>
+        <!-- single primaryKey -->
+	    <id name="bidinfoid" type="string" length="32">
+	    	<column name="BIDINFOID">
+    	        <comment>BIDINFOID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="guid" type="string"  length="32"  not-null="true">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="id" type="string"  length="32"  not-null="false">
+	    	<column name="ID">
+    	        <comment>????????????????,????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jydyId" type="string"  length="36"  not-null="false">
+	    	<column name="JYDY_ID">
+    	        <comment>JYDY_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>TRADESEQ_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="interval" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="INTERVAL">
+    	        <comment>?????1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeTimepart" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="TRADE_TIMEPART">
+    	        <comment>0:??????1-n?1?n???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="band" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BAND">
+    	        <comment>BAND</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeRole" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="TRADE_ROLE">
+    	        <comment>TRADE_ROLE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energy" type="string"  length="32"  not-null="false">
+	    	<column name="ENERGY">
+    	        <comment>ENERGY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price" type="string"  length="32"  not-null="false">
+	    	<column name="PRICE">
+    	        <comment>PRICE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyPeriod1" type="string"  length="32"  not-null="false">
+	    	<column name="ENERGY_PERIOD1">
+    	        <comment>ENERGY_PERIOD1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricePeriod1" type="string"  length="32"  not-null="false">
+	    	<column name="PRICE_PERIOD1">
+    	        <comment>PRICE_PERIOD1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyPeriod2" type="string"  length="32"  not-null="false">
+	    	<column name="ENERGY_PERIOD2">
+    	        <comment>ENERGY_PERIOD2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricePeriod2" type="string"  length="32"  not-null="false">
+	    	<column name="PRICE_PERIOD2">
+    	        <comment>PRICE_PERIOD2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyPeriod3" type="string"  length="32"  not-null="false">
+	    	<column name="ENERGY_PERIOD3">
+    	        <comment>ENERGY_PERIOD3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricePeriod3" type="string"  length="32"  not-null="false">
+	    	<column name="PRICE_PERIOD3">
+    	        <comment>PRICE_PERIOD3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyPeriod4" type="string"  length="32"  not-null="false">
+	    	<column name="ENERGY_PERIOD4">
+    	        <comment>ENERGY_PERIOD4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricePeriod4" type="string"  length="32"  not-null="false">
+	    	<column name="PRICE_PERIOD4">
+    	        <comment>PRICE_PERIOD4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyPeriod5" type="string"  length="32"  not-null="false">
+	    	<column name="ENERGY_PERIOD5">
+    	        <comment>ENERGY_PERIOD5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricePeriod5" type="string"  length="32"  not-null="false">
+	    	<column name="PRICE_PERIOD5">
+    	        <comment>PRICE_PERIOD5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergy" type="string"  length="32"  not-null="false">
+	    	<column name="CHECK_ENERGY">
+    	        <comment>1????????????????? 2?????????????????????????????????????????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergyPeriod1" type="string"  length="32"  not-null="false">
+	    	<column name="CHECK_ENERGY_PERIOD1">
+    	        <comment>CHECK_ENERGY_PERIOD1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergyPeriod2" type="string"  length="32"  not-null="false">
+	    	<column name="CHECK_ENERGY_PERIOD2">
+    	        <comment>CHECK_ENERGY_PERIOD2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergyPeriod3" type="string"  length="32"  not-null="false">
+	    	<column name="CHECK_ENERGY_PERIOD3">
+    	        <comment>CHECK_ENERGY_PERIOD3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergyPeriod4" type="string"  length="32"  not-null="false">
+	    	<column name="CHECK_ENERGY_PERIOD4">
+    	        <comment>CHECK_ENERGY_PERIOD4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkEnergyPeriod5" type="string"  length="32"  not-null="false">
+	    	<column name="CHECK_ENERGY_PERIOD5">
+    	        <comment>CHECK_ENERGY_PERIOD5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powerId" type="string"  length="128"  not-null="false">
+	    	<column name="POWER_ID">
+    	        <comment>POWER_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stDate" type="java.util.Date"  not-null="false">
+	    	<column name="ST_DATE">
+    	        <comment>ST_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endDate" type="java.util.Date"  not-null="false">
+	    	<column name="END_DATE">
+    	        <comment>END_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateTime" type="java.util.Date"  not-null="false">
+	    	<column name="UPDATE_TIME">
+    	        <comment>UPDATE_TIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bidPerson" type="string"  length="64"  not-null="false">
+	    	<column name="BID_PERSON">
+    	        <comment>BID_PERSON</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultI1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_I1">
+    	        <comment>DEFAULT_I1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultI2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_I2">
+    	        <comment>DEFAULT_I2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultF1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_F1">
+    	        <comment>DEFAULT_F1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultF2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DEFAULT_F2">
+    	        <comment>DEFAULT_F2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultUc1" type="string"  length="64"  not-null="false">
+	    	<column name="DEFAULT_UC1">
+    	        <comment>DEFAULT_UC1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="defaultUc2" type="string"  length="64"  not-null="false">
+	    	<column name="DEFAULT_UC2">
+    	        <comment>DEFAULT_UC2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="validateFlag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="VALIDATE_FLAG">
+    	        <comment>???1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reason" type="string"  length="2000"  not-null="false">
+	    	<column name="REASON">
+    	        <comment>REASON</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleLoss" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALE_LOSS">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeLoss" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEE_LOSS">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeBreathPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_BREATH_PRICE">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleBreathPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_BREATH_PRICE">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property> 
+    	
+    	<property name="userMaxPower" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="USER_MAX_POWER">
+    	        <comment>用户最大电力</comment>
+	    	</column>
+    	</property>
+    	
+    	<property name="bidStatus" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="BID_STATUS">
+    	        <comment>申报状态</comment>
+	    	</column>
+    	</property> 
+         
+    </class>
+</hibernate-mapping>

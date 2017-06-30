@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaUnitD" table="BA_UNIT_D">
+    	<comment>日平衡预测历史数据表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDate" type="date"  not-null="true">
+	    	<column name="TAB_DATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC">
+    	        <comment>发电量  发电量预计值 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY">
+    	        <comment>受阻容量  日受阻容量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="freepacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FREEPACITY">
+    	        <comment>空闲容量  空闲容量 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

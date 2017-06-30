@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.ZxjcDxpConfigUnit" table="ZXJC_DXP_CONFIG_UNIT">
+    	<comment>DXP??????</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="40">
+	    	<column name="OBJ_ID">
+    	        <comment>??ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="filePath" type="string"  length="256"  not-null="false">
+	    	<column name="FILE_PATH">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fdeptcodesrc" type="string"  length="18"  not-null="false">
+	    	<column name="FDEPTCODESRC">
+    	        <comment>DXP FDEPTCODESRC</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="foperationname" type="string"  length="32"  not-null="false">
+	    	<column name="FOPERATIONNAME">
+    	        <comment>DXP????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rfeportdeptname" type="string"  length="128"  not-null="false">
+	    	<column name="RFEPORTDEPTNAME">
+    	        <comment>DXP RFEPORTDEPTNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fusername" type="string"  length="32"  not-null="false">
+	    	<column name="FUSERNAME">
+    	        <comment>DXPF???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fpassword" type="string"  length="32"  not-null="false">
+	    	<column name="FPASSWORD">
+    	        <comment>DXPF??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="furlsrc" type="string"  length="128"  not-null="false">
+	    	<column name="FURLSRC">
+    	        <comment>DXPwebservice FURLSRC</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isjms" type="string"  length="32"  not-null="false">
+	    	<column name="ISJMS">
+    	        <comment>???jms ?0?1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="128"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>MARKETID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jmsaddr" type="string"  length="128"  not-null="false">
+	    	<column name="JMSADDR">
+    	        <comment>jms??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jmsmessagequeue" type="string"  length="128"  not-null="false">
+	    	<column name="JMSMESSAGEQUEUE">
+    	        <comment>jms????</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

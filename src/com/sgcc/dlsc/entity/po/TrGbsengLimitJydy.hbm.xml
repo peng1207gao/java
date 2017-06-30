@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrGbsengLimitJydy" table="TR_GBSENG_LIMIT_JYDY">
+    	<comment>交易电量限额信息表（交易单元）</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>记录流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeunitId" type="string"  length="36"  not-null="true">
+	    	<column name="TRADEUNIT_ID">
+    	        <comment>交易单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeRole" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="TRADE_ROLE">
+    	        <comment>角色</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeTimepart" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TRADE_TIMEPART">
+    	        <comment>时间段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyHiLmt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_HI_LMT">
+    	        <comment>总上限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyLowLmt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_LOW_LMT">
+    	        <comment>总下限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyHiLmtPeriod1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_HI_LMT_PERIOD1">
+    	        <comment>尖峰上限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyLowLmtPeriod1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_LOW_LMT_PERIOD1">
+    	        <comment>尖峰下限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyHiLmtPeriod2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_HI_LMT_PERIOD2">
+    	        <comment>峰上限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyLowLmtPeriod2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_LOW_LMT_PERIOD2">
+    	        <comment>峰下限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyHiLmtPeriod3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_HI_LMT_PERIOD3">
+    	        <comment>平上限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyLowLmtPeriod3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_LOW_LMT_PERIOD3">
+    	        <comment>平下限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyHiLmtPeriod4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_HI_LMT_PERIOD4">
+    	        <comment>谷上限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyLowLmtPeriod4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_LOW_LMT_PERIOD4">
+    	        <comment>谷下限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyHiLmtPeriod5" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_HI_LMT_PERIOD5">
+    	        <comment>低谷上限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyLowLmtPeriod5" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_LOW_LMT_PERIOD5">
+    	        <comment>低谷下限</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateTime" type="timestamp"  not-null="false">
+	    	<column name="UPDATE_TIME">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

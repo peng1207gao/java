@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaEnergyFq" table="BA_ENERGY_FQ">
+    	<comment>燃料信息</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATE_TYPE">
+    	        <comment>期别  年、冬、夏、季、月、旬、周、日 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabdate" type="date"  not-null="true">
+	    	<column name="TABDATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="balanceType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BALANCE_TYPE">
+    	        <comment>业务类型  预测、实际 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityS" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S">
+    	        <comment>缺煤停机容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_WA">
+    	        <comment>期初存煤</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_FI">
+    	        <comment>期内供煤</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_NU">
+    	        <comment>平均煤耗</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY">
+    	        <comment>期内可发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="32"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场成员ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

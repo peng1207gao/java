@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaModeltable" table="BA_MODELTABLE">
+    	<comment>模板表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="50">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="50"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场成员id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabname" type="string"  length="50"  not-null="false">
+	    	<column name="TABNAME">
+    	        <comment>页面名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabid" type="string"  length="50"  not-null="false">
+	    	<column name="TABID">
+    	        <comment>页面id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="modelname" type="string"  length="50"  not-null="false">
+	    	<column name="MODELNAME">
+    	        <comment>模板名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="string"  length="50"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="balance" type="string"  length="50"  not-null="false">
+	    	<column name="BALANCE">
+    	        <comment>平衡主题</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="STATE">
+    	        <comment>状态0、备用,1、应用</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATE_TYPE">
+    	        <comment>期别   年、冬、夏、季、月、旬、周、日 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="balanceType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="BALANCE_TYPE">
+    	        <comment>业务类型   预测、实际 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

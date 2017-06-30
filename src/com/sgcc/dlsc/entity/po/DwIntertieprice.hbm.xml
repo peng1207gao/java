@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwIntertieprice" table="DW_INTERTIEPRICE">
+    	<comment>DW_INTERTIEPRICE</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="linkid" type="string"  length="36"  not-null="false">
+	    	<column name="LINKID">
+    	        <comment>联络线ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkname" type="string"  length="64"  not-null="false">
+	    	<column name="LINKNAME">
+    	        <comment>联络线名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE">
+    	        <comment>电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="false">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>生效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startstationname" type="string"  length="32"  not-null="false">
+	    	<column name="STARTSTATIONNAME">
+    	        <comment>起点变电站</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endstationname" type="string"  length="32"  not-null="false">
+	    	<column name="ENDSTATIONNAME">
+    	        <comment>终点变电站</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

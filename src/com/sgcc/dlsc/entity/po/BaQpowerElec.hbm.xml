@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaQpowerElec" table="BA_QPOWER_ELEC">
+    	<comment>本季度电力电量平衡情况表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDate" type="date"  not-null="true">
+	    	<column name="TAB_DATE">
+    	        <comment>数据日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dataType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATA_TYPE">
+    	        <comment>数据类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ymd" type="string"  length="10"  not-null="false">
+	    	<column name="YMD">
+    	        <comment>出现日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY">
+    	        <comment>统调装机容量  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY">
+    	        <comment>计划检修容量  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tempfixcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TEMPFIXCAPACITY">
+    	        <comment>临时检修容量  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY">
+    	        <comment>受阻容量  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacitynet" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITYNET">
+    	        <comment>电网受阻容量  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityfire" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITYFIRE">
+    	        <comment>火电机组不可用容量  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacitywater" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITYWATER">
+    	        <comment>水电机组不可用容量  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityorther" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITYORTHER">
+    	        <comment>其他受阻容量  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="adjustcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ADJUSTCAPACITY">
+    	        <comment>统调可调容量  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="acceptelecmax" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACCEPTELECMAX">
+    	        <comment>最大购电能力  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="acceptelecplan" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACCEPTELECPLAN">
+    	        <comment>计划购电电力  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="acceptelecactuala" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACCEPTELECACTUALA">
+    	        <comment>实际购电电力  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iadjustcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="IADJUSTCAPACITY">
+    	        <comment>综合可调容量  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BACKCAPACITY">
+    	        <comment>旋转备用容量  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxusingload" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXUSINGLOAD">
+    	        <comment>统调最高用电负荷  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxpullpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXPULLPOWER">
+    	        <comment>最大拉路电力  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxlimitpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXLIMITPOWER">
+    	        <comment>最大限电电力  MW </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pullelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PULLELEC">
+    	        <comment>拉路电量  MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="limitelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LIMITELEC">
+    	        <comment>限电电量  MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="newversion" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="NEWVERSION">
+    	        <comment>最新版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>更新人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="versiondesc" type="string"  length="256"  not-null="false">
+	    	<column name="VERSIONDESC">
+    	        <comment>版本说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="issueddate" type="date"  not-null="false">
+	    	<column name="ISSUEDDATE">
+    	        <comment>发布时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

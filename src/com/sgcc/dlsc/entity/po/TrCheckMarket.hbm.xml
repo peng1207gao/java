@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrCheckMarket" table="TR_CHECK_MARKET">
+    	<comment>交易校核市场表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易序列编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="checkMarketid" type="string"  length="32"  not-null="false">
+	    	<column name="CHECK_MARKETID">
+    	        <comment>校核市场id</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

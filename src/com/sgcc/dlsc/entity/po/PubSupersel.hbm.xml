@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubSupersel" table="PUB_SUPERSEL">
+    	<comment>PUB_SUPERSEL</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>guid</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="pageid" type="string"  length="36"  not-null="false">
+	    	<column name="PAGEID">
+    	        <comment>pageid</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramid" type="string"  length="30"  not-null="false">
+	    	<column name="PARAMID">
+    	        <comment>paramid</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramname" type="string"  length="100"  not-null="false">
+	    	<column name="PARAMNAME">
+    	        <comment>PARAMNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="issql" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="ISSQL">
+    	        <comment>isssql</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sql" type="string"  length="500"  not-null="false">
+	    	<column name="SQL">
+    	        <comment>sql</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="type" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="TYPE">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="shortname" type="string"  length="40"  not-null="false">
+	    	<column name="SHORTNAME">
+    	        <comment>SHORTNAME</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

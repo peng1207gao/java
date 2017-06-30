@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTransRouteRoad" table="TR_TRANS_ROUTE_ROAD">
+    	<comment>交易输电路径通道表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="routeId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="ROUTE_ID">
+    	        <comment>输电路径id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tielinenetId" type="string"  length="32"  not-null="true">
+	    	<column name="TIELINENET_ID">
+    	        <comment>区域或断面id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isPass" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="IS_PASS">
+    	        <comment>是否经过</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orderNum" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ORDER_NUM">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isPassTrans" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="IS_PASS_TRANS">
+    	        <comment>是否经过(输电价格)</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

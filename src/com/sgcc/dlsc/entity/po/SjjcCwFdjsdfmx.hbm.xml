@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcCwFdjsdfmx" table="SJJC_CW_FDJSDFMX">
+    	<comment>财务管控_发电结算电费明细信息</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jzjsdybm" type="string"  length="50"  not-null="false">
+	    	<column name="JZJSDYBM">
+    	        <comment>机组（结算单元）编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ssdcbm" type="string"  length="50"  not-null="false">
+	    	<column name="SSDCBM">
+    	        <comment>所属电厂编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0016" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0016">
+    	        <comment>容量电费,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0001" type="date"  not-null="false">
+	    	<column name="ZD0001">
+    	        <comment>时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0019" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0019">
+    	        <comment>考核电量,单位：MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0021" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0021">
+    	        <comment>平均电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0022" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0022">
+    	        <comment>电度电费,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0023" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0023">
+    	        <comment>考核电费,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5522" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5522">
+    	        <comment>辅助服务补偿,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0024" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0024">
+    	        <comment>应付购电费（总计）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0026" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0026">
+    	        <comment>购电成本（总计）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0027" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0027">
+    	        <comment>电费（商运不执行峰平谷）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0032" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0032">
+    	        <comment>电费（商运峰段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0035" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0035">
+    	        <comment>电费（商运平段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0038" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0038">
+    	        <comment>电费（商运谷段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0041" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0041">
+    	        <comment>其中：脱硫电费,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5527" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5527">
+    	        <comment>其中：可再生能源电费,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0044" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0044">
+    	        <comment>电费（超基数不执行峰平谷）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0047" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0047">
+    	        <comment>电费（超基数峰段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0050" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0050">
+    	        <comment>电费（超基数平段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0053" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0053">
+    	        <comment>电费（超基数谷段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="btddcbh" type="string"  length="50"  not-null="false">
+	    	<column name="BTDDCBH">
+    	        <comment>被替代电厂编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0055" type="string"  length="128"  not-null="false">
+	    	<column name="ZD0055">
+    	        <comment>被替代电厂名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0057" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0057">
+    	        <comment>电价（替代不执行峰平谷）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0058" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0058">
+    	        <comment>电费（替代不执行峰平谷）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0060" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0060">
+    	        <comment>电价（替代峰段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0061" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0061">
+    	        <comment>电费（替代峰段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0063" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0063">
+    	        <comment>电价（替代平段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0064" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0064">
+    	        <comment>电费（替代平段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0066" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0066">
+    	        <comment>电价（替代谷段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0067" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0067">
+    	        <comment>电费（替代谷段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5552" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5552">
+    	        <comment>电价（直接交易不执行峰平谷）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5553" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5553">
+    	        <comment>电费（直接交易不执行峰平谷）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5558" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5558">
+    	        <comment>电价（直接交易峰段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5559" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5559">
+    	        <comment>电费（直接交易峰段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5561" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5561">
+    	        <comment>电价（直接交易平段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5562" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5562">
+    	        <comment>电费（直接交易平段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5564" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5564">
+    	        <comment>电价（直接交易谷段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5565" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5565">
+    	        <comment>电费（直接交易谷段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5567" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5567">
+    	        <comment>电价（直接交易余缺不执行峰平谷）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5568" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5568">
+    	        <comment>电费（直接交易余缺不执行峰平谷）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5573" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5573">
+    	        <comment>电价（直接交易余缺峰段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5574" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5574">
+    	        <comment>电费（直接交易余缺峰段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5576" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5576">
+    	        <comment>电价（直接交易余缺平段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5577" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5577">
+    	        <comment>电费（直接交易余缺平段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5579" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5579">
+    	        <comment>电价（直接交易余缺谷段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5580" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5580">
+    	        <comment>电费（直接交易余缺谷段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0068" type="string"  length="15"  not-null="false">
+	    	<column name="ZD0068">
+    	        <comment>受电电网</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0069" type="string"  length="100"  not-null="false">
+	    	<column name="ZD0069">
+    	        <comment>网省公司名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0071" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0071">
+    	        <comment>电价（外送不执行峰平谷）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0072" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0072">
+    	        <comment>电费（外送不执行峰平谷）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0074" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0074">
+    	        <comment>电价（外送峰段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0075" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0075">
+    	        <comment>电费（外送峰段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0077" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0077">
+    	        <comment>电价（外送平段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0078" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0078">
+    	        <comment>电费（外送平段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0080" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0080">
+    	        <comment>电价（外送谷段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0081" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0081">
+    	        <comment>电费（外送谷段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0083" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0083">
+    	        <comment>电价（调试不执行峰平谷）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0084" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0084">
+    	        <comment>电费（调试不执行峰平谷）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0086" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0086">
+    	        <comment>电价（调试峰段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0087" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0087">
+    	        <comment>电费（调试峰段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0089" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0089">
+    	        <comment>电价（调试平段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0090" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0090">
+    	        <comment>电费（调试平段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0092" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0092">
+    	        <comment>电价（调试谷段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0093" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0093">
+    	        <comment>电费（调试谷段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0095" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0095">
+    	        <comment>电价（协议不执行峰平谷）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0096" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0096">
+    	        <comment>电费（协议不执行峰平谷）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0098" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0098">
+    	        <comment>电价（协议峰段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0099" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0099">
+    	        <comment>电费（协议峰段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0101" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0101">
+    	        <comment>电价（协议平段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0102" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0102">
+    	        <comment>电费（协议平段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0104" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0104">
+    	        <comment>电价（协议谷段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0105" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0105">
+    	        <comment>电费（协议谷段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0110" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0110">
+    	        <comment>无功成本,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0111" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0111">
+    	        <comment>税额,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0395" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0395">
+    	        <comment>计费容量,单位：MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0484" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0484">
+    	        <comment>退补电价（商运不执行峰平谷）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0485" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0485">
+    	        <comment>退补电费（商运不执行峰平谷）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0398" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0398">
+    	        <comment>脱硫加价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0488" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0488">
+    	        <comment>退补脱硫电费,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5533" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5533">
+    	        <comment>可再生能源加价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5534" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5534">
+    	        <comment>其中：退补可再生能源电费,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0493" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0493">
+    	        <comment>退补电价（商运峰段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0494" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0494">
+    	        <comment>退补电费（商运峰段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0496" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0496">
+    	        <comment>退补电价（商运平段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0497" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0497">
+    	        <comment>退补电费（商运平段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0499" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0499">
+    	        <comment>退补电价（商运谷段）,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0500" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0500">
+    	        <comment>退补电费（商运谷段）,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5628" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5628">
+    	        <comment>除尘电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5627" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5627">
+    	        <comment>除尘电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5629" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5629">
+    	        <comment>除尘电费,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5626" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5626">
+    	        <comment>脱硝电费,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5618" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5618">
+    	        <comment>脱硝加价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5615" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5615">
+    	        <comment>脱硝电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0519" type="string"  length="500"  not-null="false">
+	    	<column name="ZD0519">
+    	        <comment>备注</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0520" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0520">
+    	        <comment>清算电费,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gxsj" type="date"  not-null="false">
+	    	<column name="GXSJ">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

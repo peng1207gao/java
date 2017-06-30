@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaElecnext" table="BA_ELECNEXT">
+    	<comment>自定义期别平衡预测表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATE_TYPE">
+    	        <comment>期别  年、冬、夏、季、月、旬、周、日 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDate" type="date"  not-null="true">
+	    	<column name="TAB_DATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityS" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S">
+    	        <comment>期初装机容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySSu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitySOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_S_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityN" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N">
+    	        <comment>期内新增装机容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNSu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityNOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_N_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityR" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R">
+    	        <comment>期内退役装机容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityRWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityRFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityRNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityRWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityRSu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacityROt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY_R_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY">
+    	        <comment>计划检修容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacitySu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY">
+    	        <comment>临时检修容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacityWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacityFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacityNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacityWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacitySu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacityOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY">
+    	        <comment>受阻容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacitySu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityN" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_N">
+    	        <comment>电网受阻</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityP" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_P">
+    	        <comment>电厂受阻</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityFu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_FU">
+    	        <comment>燃料原因造成的受阻</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityC" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_C">
+    	        <comment>煤炭原因受阻</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityG" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_G">
+    	        <comment>燃气原因受阻</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacityH" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY_H">
+    	        <comment>供热原因造成的受阻</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="freepacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FREEPACITY">
+    	        <comment>空闲容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="perreserve" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PERRESERVE">
+    	        <comment>需求备用率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BACKCAPACITY">
+    	        <comment>旋转备用容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="coldstandby" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="COLDSTANDBY">
+    	        <comment>冷备用容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="realreserve" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="REALRESERVE">
+    	        <comment>实际备用率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="adjustcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ADJUSTCAPACITY">
+    	        <comment>统调可调容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iadjustcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="IADJUSTCAPACITY">
+    	        <comment>综合可调容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC">
+    	        <comment>统调可发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecSu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generateelecOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENERATEELEC_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY">
+    	        <comment>受电电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buyenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BUYENERGY">
+    	        <comment>其中：输入电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEENERGY">
+    	        <comment>输出电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="power" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="POWER">
+    	        <comment>受电电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buypower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BUYPOWER">
+    	        <comment>其中：输入电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salepower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEPOWER">
+    	        <comment>输出电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="usingdemand" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="USINGDEMAND">
+    	        <comment>统调用电量需求</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxdemand" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXDEMAND">
+    	        <comment>最大需求负荷</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="unifyqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="UNIFYQTY">
+    	        <comment>全网用电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="allunifyqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ALLUNIFYQTY">
+    	        <comment>全社会用电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powersurplus" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="POWERSURPLUS">
+    	        <comment>电力余缺</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecsurplus" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECSURPLUS">
+    	        <comment>电量盈亏</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lineenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LINEENERGY">
+    	        <comment>联络线电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linepower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LINEPOWER">
+    	        <comment>联络线电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SERPOWER">
+    	        <comment>地方电厂上网电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SERENERGY">
+    	        <comment>地方电厂上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serenergyWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SERENERGY_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serenergyFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SERENERGY_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serenergyNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SERENERGY_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serenergyWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SERENERGY_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serenergySu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SERENERGY_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serenergyOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SERENERGY_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxpullpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXPULLPOWER">
+    	        <comment>最大拉路电力  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxlimitpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXLIMITPOWER">
+    	        <comment>最大限电电力  MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pullelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PULLELEC">
+    	        <comment>拉路电量  MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="limitelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LIMITELEC">
+    	        <comment>限电电量  MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cfpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CFPOWER">
+    	        <comment>错峰电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bfpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BFPOWER">
+    	        <comment>避峰电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cfelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CFELEC">
+    	        <comment>错峰电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bfelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BFELEC">
+    	        <comment>避峰电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="newversion" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="NEWVERSION">
+    	        <comment>最新版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>更新人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="versiondesc" type="string"  length="256"  not-null="false">
+	    	<column name="VERSIONDESC">
+    	        <comment>版本说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="issueddate" type="date"  not-null="false">
+	    	<column name="ISSUEDDATE">
+    	        <comment>发布时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

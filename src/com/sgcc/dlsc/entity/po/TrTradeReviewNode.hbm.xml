@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradeReviewNode" table="TR_TRADE_REVIEW_NODE">
+    	<comment>TR_TRADE_REVIEW_NODE</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>TRADESEQ_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="infotype" type="string"  length="3"  not-null="false">
+	    	<column name="INFOTYPE">
+    	        <comment>00：交易序列发布审核  后续根据业务需要继续增加编号与信息类型的对应关系</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reviewnum" type="string"  length="128"  not-null="false">
+	    	<column name="REVIEWNUM">
+    	        <comment>REVIEWNUM</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="nodenum" type="string"  length="128"  not-null="false">
+	    	<column name="NODENUM">
+    	        <comment>NODENUM</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reviewresult" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="REVIEWRESULT">
+    	        <comment>0：同意，1：不同意</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reviewinfo" type="string"  length="2000"  not-null="false">
+	    	<column name="REVIEWINFO">
+    	        <comment>REVIEWINFO</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="issendmsg" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISSENDMSG">
+    	        <comment>0：发送 1：不发送</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reviewpersion" type="string"  length="64"  not-null="false">
+	    	<column name="REVIEWPERSION">
+    	        <comment>REVIEWPERSION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reviewtime" type="java.util.Date"  not-null="false">
+	    	<column name="REVIEWTIME">
+    	        <comment>REVIEWTIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>MARKET_ID</comment>
+	    	</column>
+    	</property>  
+    	
+    	<property name="nodeName" type="string"  length="128"  not-null="false">
+	    	<column name="NODENAME">
+    	        <comment>NODENAME</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

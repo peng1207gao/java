@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.FuMonthpowercoalbalance" table="FU_MONTHPOWERCOALBALANCE">
+    	<comment>???????</comment>
+        <!-- single primaryKey -->
+	    <id name="mpcbid" type="string" length="36">
+	    	<column name="MPCBID">
+    	        <comment>????</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="datatime" type="date"  not-null="true">
+	    	<column name="DATATIME">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ormarketid" type="string"  length="36"  not-null="true">
+	    	<column name="ORMARKETID">
+    	        <comment>?????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="appdate" type="date"  not-null="true">
+	    	<column name="APPDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userid" type="string"  length="36"  not-null="true">
+	    	<column name="USERID">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="docflag" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DOCFLAG">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="currentqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CURRENTQTY">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="currenttherqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CURRENTTHERQTY">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="currenthydroqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CURRENTHYDROQTY">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="currentotherqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CURRENTOTHERQTY">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="relationid" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="RELATIONID">
+    	        <comment>??????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="currentuseqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CURRENTUSEQTY">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startstock" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="STARTSTOCK">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="expectsupply" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="EXPECTSUPPLY">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="expectconsum" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="EXPECTCONSUM">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endstock" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENDSTOCK">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="availdays" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="AVAILDAYS">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cfireqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CFIREQTY">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="afireqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AFIREQTY">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fileid" type="string"  length="36"  not-null="false">
+	    	<column name="FILEID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="filename" type="string"  length="64"  not-null="false">
+	    	<column name="FILENAME">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sendmarketid" type="string"  length="36"  not-null="false">
+	    	<column name="SENDMARKETID">
+    	        <comment>????????ID </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="STATE">
+    	        <comment>???(???)</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="receiveid" type="string"  length="36"  not-null="false">
+	    	<column name="RECEIVEID">
+    	        <comment>???id</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

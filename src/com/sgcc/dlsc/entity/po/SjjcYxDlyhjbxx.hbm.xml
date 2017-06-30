@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxDlyhjbxx" table="SJJC_YX_DLYHJBXX">
+    	<comment>SJJC_YX_DLYHJBXX</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="false">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="false">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="largeconsumername" type="string"  length="128"  not-null="true">
+	    	<column name="LARGECONSUMERNAME">
+    	        <comment>用户名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="largeconsumerid" type="string"  length="50"  not-null="true">
+	    	<column name="LARGECONSUMERID">
+    	        <comment>用户编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="area" type="string"  length="50"  not-null="false">
+	    	<column name="AREA">
+    	        <comment>所属地市级供电单位编码,查询码表明细信息</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricitytype" type="string"  length="128"  not-null="false">
+	    	<column name="ELECTRICITYTYPE">
+    	        <comment>用电类别,查询码表明细信息</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="consumervoltage" type="string"  length="50"  not-null="false">
+	    	<column name="CONSUMERVOLTAGE">
+    	        <comment>用户供电电压,查询码表明细信息</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="consumeraddress" type="string"  length="256"  not-null="false">
+	    	<column name="CONSUMERADDRESS">
+    	        <comment>用电地址</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="industrytype" type="string"  length="128"  not-null="false">
+	    	<column name="INDUSTRYTYPE">
+    	        <comment>行业分类,查询码表明细信息</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="productionshift" type="string"  length="64"  not-null="false">
+	    	<column name="PRODUCTIONSHIFT">
+    	        <comment>生产班次</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loadcharacter" type="string"  length="28"  not-null="false">
+	    	<column name="LOADCHARACTER">
+    	        <comment>负荷性质,查询码表明细信息</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractqutantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CONTRACTQUTANTITY">
+    	        <comment>合同容量,单位：MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="functionqutantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FUNCTIONQUTANTITY">
+    	        <comment>运行容量,单位：MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="consumertype" type="string"  length="128"  not-null="false">
+	    	<column name="CONSUMERTYPE">
+    	        <comment>用户分类,查询码表明细信息</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

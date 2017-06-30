@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoContractbackupinfo" table="CO_CONTRACTBACKUPINFO">
+    	<comment>?????? </comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="contractid" type="string"  length="36"  not-null="true">
+	    	<column name="CONTRACTID">
+    	        <comment>CONTRACTID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backupdate" type="date"  not-null="false">
+	    	<column name="BACKUPDATE">
+    	        <comment>BACKUPDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backupperson" type="string"  length="50"  not-null="false">
+	    	<column name="BACKUPPERSON">
+    	        <comment>BACKUPPERSON</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backuporg" type="string"  length="64"  not-null="true">
+	    	<column name="BACKUPORG">
+    	        <comment>BACKUPORG</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backuptype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BACKUPTYPE">
+    	        <comment>1??????2??????3?? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractnum" type="big_decimal"  length="3"  not-null="false">
+	    	<column name="CONTRACTNUM">
+    	        <comment>CONTRACTNUM</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backupstatus" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BACKUPSTATUS">
+    	        <comment>1?????0???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="description" type="string"  length="256"  not-null="false">
+	    	<column name="DESCRIPTION">
+    	        <comment>DESCRIPTION</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

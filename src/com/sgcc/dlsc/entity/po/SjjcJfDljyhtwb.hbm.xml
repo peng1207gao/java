@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcJfDljyhtwb" table="SJJC_JF_DLJYHTWB">
+    	<comment>经法_电力交易合同文本</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractname" type="string"  length="768"  not-null="false">
+	    	<column name="CONTRACTNAME">
+    	        <comment>合同名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractid" type="string"  length="512"  not-null="true">
+	    	<column name="CONTRACTID">
+    	        <comment>合同ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractno" type="string"  length="512"  not-null="false">
+	    	<column name="CONTRACTNO">
+    	        <comment>合同编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="appendixname" type="string"  length="4000"  not-null="false">
+	    	<column name="APPENDIXNAME">
+    	        <comment>合同文本名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="appendixtype" type="string"  length="50"  not-null="false">
+	    	<column name="APPENDIXTYPE">
+    	        <comment>非结构平台附件类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contracttext" type="string"  length="256"  not-null="false">
+	    	<column name="CONTRACTTEXT">
+    	        <comment>合同文本所在非结构化平台ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

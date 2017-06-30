@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaTableS" table="BA_TABLE_S">
+    	<comment>平衡主题映射关系从表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="baUnitId" type="string"  length="32"  not-null="true">
+	    	<column name="BA_UNIT_ID">
+    	        <comment>项目ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="detail" type="string"  length="1000"  not-null="false">
+	    	<column name="DETAIL">
+    	        <comment>详细信息</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="formula" type="string"  length="1000"  not-null="false">
+	    	<column name="FORMULA">
+    	        <comment>计算公式</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datasource" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="DATASOURCE">
+    	        <comment>数据源 1调度、2营销、3计划、4市场成员、5人工录入、6逻辑计算</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="precision" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="PRECISION">
+    	        <comment>数据精度 1全网、2全省、3地区、4市场成员</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

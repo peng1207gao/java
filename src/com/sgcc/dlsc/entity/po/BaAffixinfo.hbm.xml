@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaAffixinfo" table="BA_AFFIXINFO">
+    	<comment>平衡附件表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="baid" type="string"  length="32"  not-null="true">
+	    	<column name="BAID">
+    	        <comment>平衡业务流水号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="affixno" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="AFFIXNO">
+    	        <comment>附件编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="affixname" type="string"  length="50"  not-null="true">
+	    	<column name="AFFIXNAME">
+    	        <comment>附件名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paperfile" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+	    	<column name="PAPERFILE">
+    	        <comment>平衡文本附件</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="uploadperson" type="string"  length="32"  not-null="false">
+	    	<column name="UPLOADPERSON">
+    	        <comment>上传人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="uploadtime" type="date"  not-null="false">
+	    	<column name="UPLOADTIME">
+    	        <comment>上传时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcGhFdlyxss" table="SJJC_GH_FDLYXSS">
+    	<comment>SJJC_GH_FDLYXSS</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="statisticalcalibre" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="STATISTICALCALIBRE">
+    	        <comment>统计口径</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hour" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HOUR">
+    	        <comment>累计利用小时数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hourrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HOURRATE">
+    	        <comment>累计利用小时数同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hydropowerhour" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HYDROPOWERHOUR">
+    	        <comment>水电累计利用小时数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hydropowerhourrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HYDROPOWERHOURRATE">
+    	        <comment>水电累计利用小时数同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thermalhour" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="THERMALHOUR">
+    	        <comment>火电累计利用小时数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thermalhourrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="THERMALHOURRATE">
+    	        <comment>火电累计利用小时数同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="nuclearhour" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NUCLEARHOUR">
+    	        <comment>核电累计利用小时数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="nuclearhourrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NUCLEARHOURRATE">
+    	        <comment>核电累计利用小时数同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="windhour" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="WINDHOUR">
+    	        <comment>风电累计利用小时数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="windhourrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="WINDHOURRATE">
+    	        <comment>风电累计利用小时数同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="otherhour" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="OTHERHOUR">
+    	        <comment>其他累计利用小时数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="otherhourrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="OTHERHOURRATE">
+    	        <comment>其他累计利用小时数同比</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

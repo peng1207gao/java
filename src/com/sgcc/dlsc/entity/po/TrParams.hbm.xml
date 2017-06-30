@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrParams" table="TR_PARAMS">
+    	<comment>???????</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="paramTypeCode" type="string"  length="64"  not-null="true">
+	    	<column name="PARAM_TYPE_CODE">
+    	        <comment>参数类型编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="PARAM_ID">
+    	        <comment>参数ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramCode" type="string"  length="64"  not-null="true">
+	    	<column name="PARAM_CODE">
+    	        <comment>参数编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramName" type="string"  length="64"  not-null="true">
+	    	<column name="PARAM_NAME">
+    	        <comment>参数名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramTypeName" type="string"  length="128"  not-null="true">
+	    	<column name="PARAM_TYPE_NAME">
+    	        <comment>参数类型编码 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

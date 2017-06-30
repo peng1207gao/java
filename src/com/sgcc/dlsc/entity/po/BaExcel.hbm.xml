@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaExcel" table="BA_EXCEL">
+    	<comment>BA_EXCEL</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>MARKETCODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="balance" type="string"  length="36"  not-null="false">
+	    	<column name="BALANCE">
+    	        <comment>BALANCE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="baTable" type="string"  length="36"  not-null="false">
+	    	<column name="BA_TABLE">
+    	        <comment>BA_TABLE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="baScript" type="string"  length="2000"  not-null="false">
+	    	<column name="BA_SCRIPT">
+    	        <comment>BA_SCRIPT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="baFile" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+	    	<column name="BA_FILE">
+    	        <comment>BA_FILE</comment>
+	    	</column>
+    	</property>  
+    	
+    	<property name="filename" type="string"  length="500"  not-null="false">
+	    	<column name="FILENAME">
+    	        <comment>FILENAME</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

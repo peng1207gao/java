@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrRuleValue" table="TR_RULE_VALUE">
+    	<comment>???????????</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>???</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>????ID  ??tr_TradeSeq_Info??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ruleId" type="string"  length="32"  not-null="true">
+	    	<column name="RULE_ID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramName" type="string"  length="64"  not-null="true">
+	    	<column name="PARAM_NAME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramType" type="big_decimal"  length="3"  not-null="true">
+	    	<column name="PARAM_TYPE">
+    	        <comment>????  1????2?????3?????4????5??????6?????7:????8???ID(????????,?????,???.)  </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paramValue" type="string"  length="64"  not-null="true">
+	    	<column name="PARAM_VALUE">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="keyClass" type="string"  length="30"  not-null="false">
+	    	<column name="KEY_CLASS">
+    	        <comment>????  &quot;?????????????????? ?????????ID?????ID?&quot; </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+        
+        <property name="paramCode" type="string"  length="32"  not-null="true">
+	    	<column name="PARAM_CODE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property> 
+    </class>
+</hibernate-mapping>

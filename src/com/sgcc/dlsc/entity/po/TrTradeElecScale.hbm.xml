@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradeElecScale" table="TR_TRADE_ELEC_SCALE">
+    	<comment>TR_TRADE_ELEC_SCALE</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>FGUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="participantId" type="string"  length="36"  not-null="true">
+	    	<column name="PARTICIPANT_ID">
+    	        <comment>市场成员ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetype" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="TRADETYPE">
+    	        <comment>交易类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="busiunitid" type="string"  length="36"  not-null="true">
+	    	<column name="BUSIUNITID">
+    	        <comment>业务单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reportqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="REPORTQTY">
+    	        <comment>上报交易电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="affirmqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="AFFIRMQTY">
+    	        <comment>确认交易电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isrpt" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISRPT">
+    	        <comment>是否上报</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="repdate" type="java.util.Date"  not-null="false">
+	    	<column name="REPDATE">
+    	        <comment>上报时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="chkdate" type="java.util.Date"  not-null="false">
+	    	<column name="CHKDATE">
+    	        <comment>确认时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isaffirm" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISAFFIRM">
+    	        <comment>是否确认</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

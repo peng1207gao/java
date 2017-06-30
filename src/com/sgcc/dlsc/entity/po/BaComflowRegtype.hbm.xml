@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaComflowRegtype" table="BA_COMFLOW_REGTYPE">
+    	<comment>流程与注册类别关系表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="regtype" type="string"  length="20"  not-null="true">
+	    	<column name="REGTYPE">
+    	        <comment>注册类别</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="flowid" type="string"  length="32"  not-null="true">
+	    	<column name="FLOWID">
+    	        <comment>流程ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

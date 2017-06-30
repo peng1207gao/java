@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.Plantbaseinformation" table="PLANTBASEINFORMATION">
+    	<comment>地方电厂基础信息 </comment>
+        <!-- single primaryKey -->
+	    <id name="plantid" type="string" length="100">
+	    	<column name="PLANTID">
+    	        <comment>电厂ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="stationname" type="string"  length="100"  not-null="true">
+	    	<column name="STATIONNAME">
+    	        <comment>电厂名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aliasname" type="string"  length="100"  not-null="false">
+	    	<column name="ALIASNAME">
+    	        <comment>电厂别名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkarea" type="string"  length="100"  not-null="false">
+	    	<column name="LINKAREA">
+    	        <comment>接入地区</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gentype" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="GENTYPE">
+    	        <comment>发电类型  例如：0-火电1-水电2-风电3-太阳能 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatchdepartment" type="string"  length="100"  not-null="true">
+	    	<column name="DISPATCHDEPARTMENT">
+    	        <comment>调度单位  供电局名称 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="usetype" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="USETYPE">
+    	        <comment>电厂性质  例如：0-公用1-自备2-自备有余 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="voltagelevel" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="VOLTAGELEVEL">
+    	        <comment>电压等级  例如：0-10kV以下，1-35kV，2-110kV。。。 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="totalcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TOTALCAPACITY">
+    	        <comment>总装机容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>信息更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="remarks" type="string"  length="200"  not-null="false">
+	    	<column name="REMARKS">
+    	        <comment>备注</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr1" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR1">
+    	        <comment>备用字符串1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr2" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR2">
+    	        <comment>备用字符串2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr3" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR3">
+    	        <comment>备用字符串3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT1">
+    	        <comment>备用整数1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT2">
+    	        <comment>备用整数2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT3">
+    	        <comment>备用整数3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE1">
+    	        <comment>备用实数1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE2">
+    	        <comment>备用实数2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE3">
+    	        <comment>备用实数3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate1" type="date"  not-null="false">
+	    	<column name="BAK_DATE1">
+    	        <comment>备用时间1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate2" type="date"  not-null="false">
+	    	<column name="BAK_DATE2">
+    	        <comment>备用时间2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate3" type="date"  not-null="false">
+	    	<column name="BAK_DATE3">
+    	        <comment>备用时间3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

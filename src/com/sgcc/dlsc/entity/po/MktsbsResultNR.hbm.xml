@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.MktsbsResultNR" table="MKTSBS_RESULT_N_R">
+    	<comment>日上网统计结算明细结果表 </comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="mktDay" type="date"  not-null="true">
+	    	<column name="MKT_DAY">
+    	        <comment>MKT_DAY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bandIndex" type="string"  length="20"  not-null="true">
+	    	<column name="BAND_INDEX">
+    	        <comment>默认为0.  </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startDate" type="date"  not-null="true">
+	    	<column name="START_DATE">
+    	        <comment>START_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endDate" type="date"  not-null="true">
+	    	<column name="END_DATE">
+    	        <comment>END_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbsUnitId" type="string"  length="32"  not-null="true">
+	    	<column name="SBS_UNIT_ID">
+    	        <comment>SBS_UNIT_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="recipientUnitId" type="string"  length="32"  not-null="true">
+	    	<column name="RECIPIENT_UNIT_ID">
+    	        <comment>RECIPIENT_UNIT_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="payerUnitId" type="string"  length="32"  not-null="true">
+	    	<column name="PAYER_UNIT_ID">
+    	        <comment>PAYER_UNIT_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractId" type="string"  length="32"  not-null="true">
+	    	<column name="CONTRACT_ID">
+    	        <comment>CONTRACT_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbstypeId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="SBSTYPE_ID">
+    	        <comment>交易成分类型ID、结算成分类型ID </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyT" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_T">
+    	        <comment>ENERGY_T</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceT" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE_T">
+    	        <comment>PRICE_T</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeT" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FEE_T">
+    	        <comment>FEE_T</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyS" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_S">
+    	        <comment>ENERGY_S</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceS" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE_S">
+    	        <comment>PRICE_S</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeS" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FEE_S">
+    	        <comment>FEE_S</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyP" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_P">
+    	        <comment>ENERGY_P</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceP" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE_P">
+    	        <comment>PRICE_P</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeP" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FEE_P">
+    	        <comment>FEE_P</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyL" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_L">
+    	        <comment>ENERGY_L</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceL" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE_L">
+    	        <comment>PRICE_L</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeL" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FEE_L">
+    	        <comment>FEE_L</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyB" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENERGY_B">
+    	        <comment>ENERGY_B</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceB" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE_B">
+    	        <comment>PRICE_B</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeB" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FEE_B">
+    	        <comment>FEE_B</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr1" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR1">
+    	        <comment>BAK_STR1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr2" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR2">
+    	        <comment>BAK_STR2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr3" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR3">
+    	        <comment>BAK_STR3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT1">
+    	        <comment>BAK_INT1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT2">
+    	        <comment>BAK_INT2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT3">
+    	        <comment>BAK_INT3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE1">
+    	        <comment>BAK_DOUBLE1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE2">
+    	        <comment>BAK_DOUBLE2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE3">
+    	        <comment>BAK_DOUBLE3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate1" type="date"  not-null="false">
+	    	<column name="BAK_DATE1">
+    	        <comment>BAK_DATE1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate2" type="date"  not-null="false">
+	    	<column name="BAK_DATE2">
+    	        <comment>BAK_DATE2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate3" type="date"  not-null="false">
+	    	<column name="BAK_DATE3">
+    	        <comment>BAK_DATE3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

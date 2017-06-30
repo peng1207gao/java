@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaLogPartmarketrelation" table="BA_LOG_PARTMARKETRELATION">
+    	<comment>BA_LOG_PARTMARKETRELATION</comment>
+        <!-- single primaryKey -->
+	    <id name="sheetid" type="string" length="36">
+	    	<column name="SHEETID">
+    	        <comment>??ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="guid" type="string"  length="36"  not-null="true">
+	    	<column name="GUID">
+    	        <comment>??ID,    ???????????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="participantid" type="string"  length="36"  not-null="true">
+	    	<column name="PARTICIPANTID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="true">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cmd" type="string"  length="64"  not-null="false">
+	    	<column name="CMD">
+    	        <comment>????, 1??????2?????3????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operator" type="string"  length="64"  not-null="false">
+	    	<column name="OPERATOR">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operatingdescription" type="string"  length="256"  not-null="false">
+	    	<column name="OPERATINGDESCRIPTION">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operatedate" type="date"  not-null="false">
+	    	<column name="OPERATEDATE">
+    	        <comment>????,  ???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="guid2" type="string"  length="32"  not-null="false">
+	    	<column name="GUID2">
+    	        <comment>???, ???????????????????????????1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extend1" type="string"  length="32"  not-null="false">
+	    	<column name="EXTEND1">
+    	        <comment>????1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extend2" type="string"  length="32"  not-null="false">
+	    	<column name="EXTEND2">
+    	        <comment>????2</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

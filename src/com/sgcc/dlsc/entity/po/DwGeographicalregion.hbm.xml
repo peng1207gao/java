@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwGeographicalregion" table="DW_GEOGRAPHICALREGION">
+    	<comment>DW_GEOGRAPHICALREGION</comment>
+        <!-- single primaryKey -->
+	    <id name="geogrregionid" type="string" length="36">
+	    	<column name="GEOGRREGIONID">
+    	        <comment>地理区域ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="geogrregionname" type="string"  length="36"  not-null="true">
+	    	<column name="GEOGRREGIONNAME">
+    	        <comment>地理区域名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="geogrregionalias" type="string"  length="36"  not-null="false">
+	    	<column name="GEOGRREGIONALIAS">
+    	        <comment>地理区域别名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="parentregionid" type="string"  length="36"  not-null="false">
+	    	<column name="PARENTREGIONID">
+    	        <comment>上级地理区域ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="geogrregioncode" type="string"  length="32"  not-null="false">
+	    	<column name="GEOGRREGIONCODE">
+    	        <comment>区域编码</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

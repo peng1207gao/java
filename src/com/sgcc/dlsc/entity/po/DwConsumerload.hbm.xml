@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwConsumerload" table="DW_CONSUMERLOAD">
+    	<comment>基础信息_用户负荷表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="consumerloadid" type="string"  length="36"  not-null="true">
+	    	<column name="CONSUMERLOADID">
+    	        <comment>用户负荷ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="consumerloadname" type="string"  length="64"  not-null="false">
+	    	<column name="CONSUMERLOADNAME">
+    	        <comment>用户负荷名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="consumerid" type="string"  length="36"  not-null="false">
+	    	<column name="CONSUMERID">
+    	        <comment>用户ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxLoad" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="MAX_LOAD">
+    	        <comment>最大负荷</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoContractbaseinfo" table="CO_CONTRACTBASEINFO">
+    	<comment>??????</comment>
+        <!-- single primaryKey -->
+	    <id name="contractid" type="string" length="36">
+	    	<column name="CONTRACTID">
+    	        <comment>??id</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>??????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="supercontractid" type="string"  length="36"  not-null="false">
+	    	<column name="SUPERCONTRACTID">
+    	        <comment>????id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractname" type="string"  length="200"  not-null="false">
+	    	<column name="CONTRACTNAME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contracttype" type="string"  length="64"  not-null="false">
+	    	<column name="CONTRACTTYPE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="papercontractcode" type="string"  length="64"  not-null="false">
+	    	<column name="PAPERCONTRACTCODE">
+    	        <comment>?????????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="papercontractname" type="string"  length="200"  not-null="false">
+	    	<column name="PAPERCONTRACTNAME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contracttemplateid" type="string"  length="36"  not-null="false">
+	    	<column name="CONTRACTTEMPLATEID">
+    	        <comment>?????????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="signstate" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="SIGNSTATE">
+    	        <comment>1???2??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="signeddate" type="date"  not-null="false">
+	    	<column name="SIGNEDDATE">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="notsignedreason" type="string"  length="256"  not-null="false">
+	    	<column name="NOTSIGNEDREASON">
+    	        <comment>??????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="signedperson" type="string"  length="16"  not-null="false">
+	    	<column name="SIGNEDPERSON">
+    	        <comment>????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="signedsite" type="string"  length="32"  not-null="false">
+	    	<column name="SIGNEDSITE">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backupperson" type="string"  length="16"  not-null="false">
+	    	<column name="BACKUPPERSON">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backupdate" type="date"  not-null="false">
+	    	<column name="BACKUPDATE">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backupstate" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BACKUPSTATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backuporg" type="string"  length="64"  not-null="false">
+	    	<column name="BACKUPORG">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="disbackupreason" type="string"  length="16"  not-null="false">
+	    	<column name="DISBACKUPREASON">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isend" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISEND">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="prepcontractflag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="PREPCONTRACTFLAG">
+    	        <comment>????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="issecrecyflag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISSECRECYFLAG">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractcyc" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="CONTRACTCYC">
+    	        <comment>1??2??3??4??5??6?? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchaser" type="string"  length="36"  not-null="false">
+	    	<column name="PURCHASER">
+    	        <comment>???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="seller" type="string"  length="36"  not-null="false">
+	    	<column name="SELLER">
+    	        <comment>???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerunit" type="string"  length="36"  not-null="false">
+	    	<column name="SELLERUNIT">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchaseunit" type="string"  length="36"  not-null="false">
+	    	<column name="PURCHASEUNIT">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CONTRACTQTY">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="qtytype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="QTYTYPE">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractstartdate" type="date"  not-null="false">
+	    	<column name="CONTRACTSTARTDATE">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractenddate" type="date"  not-null="false">
+	    	<column name="CONTRACTENDDATE">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transactionid" type="string"  length="36"  not-null="false">
+	    	<column name="TRANSACTIONID">
+    	        <comment>????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transactiontype" type="string"  length="64"  not-null="false">
+	    	<column name="TRANSACTIONTYPE">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rightsettlementside" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="RIGHTSETTLEMENTSIDE">
+    	        <comment>1???2??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isrepurchaseflag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISREPURCHASEFLAG">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="replacetype" type="string"  length="16"  not-null="false">
+	    	<column name="REPLACETYPE">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="areatype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="AREATYPE">
+    	        <comment>???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isehvflag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISEHVFLAG">
+    	        <comment>???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isresaleflag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISRESALEFLAG">
+    	        <comment>????????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isopen" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISOPEN">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchasegate" type="string"  length="36"  not-null="false">
+	    	<column name="PURCHASEGATE">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="settlegate" type="string"  length="36"  not-null="false">
+	    	<column name="SETTLEGATE">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lossundertaker" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="LOSSUNDERTAKER">
+    	        <comment>1???2??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchaserperson" type="string"  length="32"  not-null="false">
+	    	<column name="PURCHASERPERSON">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchaserphone" type="string"  length="32"  not-null="false">
+	    	<column name="PURCHASERPHONE">
+    	        <comment>??????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchaserconftime" type="date"  not-null="false">
+	    	<column name="PURCHASERCONFTIME">
+    	        <comment>??????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerperson" type="string"  length="32"  not-null="false">
+	    	<column name="SELLERPERSON">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerphone" type="string"  length="32"  not-null="false">
+	    	<column name="SELLERPHONE">
+    	        <comment>??????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerconftime" type="date"  not-null="false">
+	    	<column name="SELLERCONFTIME">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transperson" type="string"  length="32"  not-null="false">
+	    	<column name="TRANSPERSON">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transphone" type="string"  length="20"  not-null="false">
+	    	<column name="TRANSPHONE">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transconftime" type="date"  not-null="false">
+	    	<column name="TRANSCONFTIME">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="changetimes" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="CHANGETIMES">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="description" type="string"  length="256"  not-null="false">
+	    	<column name="DESCRIPTION">
+    	        <comment>?? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdelete" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="ISDELETE">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="timestamp"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>??????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="versionid" type="string"  length="36"  not-null="true">
+	    	<column name="VERSIONID">
+    	        <comment>??ID </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="string"  length="16"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="versiondesc" type="string"  length="256"  not-null="false">
+	    	<column name="VERSIONDESC">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isrelation" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISRELATION">
+    	        <comment>?????????????????????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exectype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="EXECTYPE">
+    	        <comment>??1???????2?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="flow" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="FLOW">
+    	        <comment>1??????2?????????3?????4?????5??????????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="settleside" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="SETTLESIDE">
+    	        <comment>1????2???3?? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="businessid" type="string"  length="36"  not-null="false">
+	    	<column name="BUSINESSID">
+    	        <comment>????id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="flowflag" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="FLOWFLAG">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sequenceid" type="string"  length="36"  not-null="false">
+	    	<column name="SEQUENCEID">
+    	        <comment>????id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energy" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="ENERGY">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractprice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="CONTRACTPRICE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractenergy" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="CONTRACTENERGY">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="superexecid" type="string"  length="36"  not-null="false">
+	    	<column name="SUPEREXECID">
+    	        <comment>?????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ingodown" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="INGODOWN">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="expend1" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="EXPEND1">
+    	        <comment>??1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="expend2" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="EXPEND2">
+    	        <comment>??2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="expend3" type="big_decimal" length="12" not-null="false">
+	    	<column name="EXPEND3">
+    	        <comment>??3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="expend4" type="date"  not-null="false">
+	    	<column name="EXPEND4">
+    	        <comment>??4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="expend5" type="string"  length="32"  not-null="false">
+	    	<column name="EXPEND5">
+    	        <comment>??5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="expend6" type="string"  length="32"  not-null="false">
+	    	<column name="EXPEND6">
+    	        <comment>??6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchasergen" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PURCHASERGEN">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchaserenergy" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PURCHASERENERGY">
+    	        <comment>??????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellergen" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SELLERGEN">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerenergy" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SELLERENERGY">
+    	        <comment>??????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="coVersion" type="string"  length="20"  not-null="false">
+	    	<column name="CO_VERSION">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isTax" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="IS_TAX">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+        
+        <property name="vendeeGenRate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEE_GEN_RATE">
+    	        <comment>购方厂用电率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGenRate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALE_GEN_RATE">
+    	        <comment>售方厂用电率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleLoss" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALE_LOSS">
+    	        <comment>售方网损</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeLoss" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEE_LOSS">
+    	        <comment>购方网损</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeBreathPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_BREATH_PRICE">
+    	        <comment>购方违约赔偿电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleBreathPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_BREATH_PRICE">
+    	        <comment>售方违约赔偿电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="approvedTariff" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="APPROVED_TARIFF">
+    	        <comment>批复上网电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="catalogPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="CATALOG_PRICE">
+    	        <comment>目录电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transferAllotPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TRANSFER_ALLOT_PRICE">
+    	        <comment>输配电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netDiscountLoss" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="NET_DISCOUNT_LOSS">
+    	        <comment>网损折价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fundsandaddPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="FUNDSANDADD_PRICE">
+    	        <comment>政府基金及附加</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradePriceMargin" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TRADE_PRICE_MARGIN">
+    	        <comment>价差成交价格</comment>
+	    	</column>
+    	</property>
+    	 
+    </class>
+</hibernate-mapping>

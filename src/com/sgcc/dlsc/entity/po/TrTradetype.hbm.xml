@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradetype" table="TR_TRADETYPE">
+    	<comment>二级交易类型信息表</comment>
+        <!-- single primaryKey -->
+	    <id name="tradetypeId" type="string" length="32">
+	    	<column name="TRADETYPE_ID">
+    	        <comment>交易类型ID</comment>
+	    	</column>
+           <!--  <generator class="uuid.hex"/>-->
+           <generator class="assigned"/>
+        </id>     
+		
+	    <property name="subTradetypeId" type="string"  length="32"  not-null="false">
+	    	<column name="SUB_TRADETYPE_ID">
+    	        <comment>交易大类ID  </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetypeCode" type="string"  length="64"  not-null="false">
+	    	<column name="TRADETYPE_CODE">
+    	        <comment>交易类型编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetypeName" type="string"  length="64"  not-null="false">
+	    	<column name="TRADETYPE_NAME">
+    	        <comment>交易类型中文名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetypeShortName" type="string"  length="32"  not-null="false">
+	    	<column name="TRADETYPE_SHORT_NAME">
+    	        <comment>交易类型中文简称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetypeMode" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TRADETYPE_MODE">
+    	        <comment>交易形式  双边或集中 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="beginDate" type="date"  not-null="false">
+	    	<column name="BEGIN_DATE">
+    	        <comment>生效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exitDate" type="date"  not-null="false">
+	    	<column name="EXIT_DATE">
+    	        <comment>失效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="regDate" type="date"  not-null="false">
+	    	<column name="REG_DATE">
+    	        <comment>注册时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="createPerson" type="string"  length="64"  not-null="false">
+	    	<column name="CREATE_PERSON">
+    	        <comment>创建人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场 网省公司 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="note" type="string"  length="128"  not-null="false">
+	    	<column name="NOTE">
+    	        <comment>备注</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

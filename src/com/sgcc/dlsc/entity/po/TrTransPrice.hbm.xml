@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTransPrice" table="TR_TRANS_PRICE">
+    	<comment>交易输电电价信息表</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="roadId" type="string"  length="32"  not-null="true">
+	    	<column name="ROAD_ID">
+    	        <comment>输电通道</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lineId" type="string"  length="32"  not-null="true">
+	    	<column name="LINE_ID">
+    	        <comment>联络线</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transmitPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TRANSMIT_PRICE">
+    	        <comment>输电电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="valideDate" type="date"  not-null="true">
+	    	<column name="VALIDE_DATE">
+    	        <comment>生效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="regDate" type="date"  not-null="false">
+	    	<column name="REG_DATE">
+    	        <comment>注册时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="regMenber" type="string"  length="64"  not-null="false">
+	    	<column name="REG_MENBER">
+    	        <comment>操作人</comment>
+	    	</column>
+    	</property>  
+         
+         <property name="shudianfang" type="string"  length="32"  not-null="true">
+	    	<column name="shudianfang">
+    	        <comment>输电方</comment>
+	    	</column>
+    	</property>  
+    </class>
+</hibernate-mapping>

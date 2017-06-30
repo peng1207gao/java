@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwNationwidetradeinfo" table="DW_NATIONWIDETRADEINFO">
+    	<comment>结算_全国电力市场交易电量</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="total" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TOTAL">
+    	        <comment>交易总量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="coalpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="COALPOWER">
+    	        <comment>大煤电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hydroelectric" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HYDROELECTRIC">
+    	        <comment>大水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="nuclearpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NUCLEARPOWER">
+    	        <comment>大核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cocurent" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="COCURENT">
+    	        <comment>特高压直流</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exchange" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="EXCHANGE">
+    	        <comment>特高压交流</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theother" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="THEOTHER">
+    	        <comment>其它</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

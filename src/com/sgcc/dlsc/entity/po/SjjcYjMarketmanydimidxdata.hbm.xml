@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYjMarketmanydimidxdata" table="SJJC_YJ_MARKETMANYDIMIDXDATA">
+    	<comment>SJJC_YJ_MARKETMANYDIMIDXDATA</comment>
+        <!-- single primaryKey -->
+	    <id name="fguid" type="string" length="32">
+	    	<column name="FGUID">
+    	        <comment>FGUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="idxcode" type="string"  length="32"  not-null="false">
+	    	<column name="IDXCODE">
+    	        <comment>指标编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orguniquecode" type="string"  length="32"  not-null="false">
+	    	<column name="ORGUNIQUECODE">
+    	        <comment>单位的唯一编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="statcalibre" type="string"  length="32"  not-null="false">
+	    	<column name="STATCALIBRE">
+    	        <comment>统计口径</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="statcycle" type="string"  length="32"  not-null="false">
+	    	<column name="STATCYCLE">
+    	        <comment>统计周期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fqid" type="string"  length="32"  not-null="false">
+	    	<column name="FQID">
+    	        <comment>频度</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datavalue" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="DATAVALUE">
+    	        <comment>指标值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datavaluelq" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="DATAVALUELQ">
+    	        <comment>上期值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datavaluely" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="DATAVALUELY">
+    	        <comment>同期值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datavaluetot" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="DATAVALUETOT">
+    	        <comment>累计值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datavaluetotlq" type="string"  length="32"  not-null="false">
+	    	<column name="DATAVALUETOTLQ">
+    	        <comment>上期累计值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datavaluetotly" type="string"  length="32"  not-null="false">
+	    	<column name="DATAVALUETOTLY">
+    	        <comment>同期累计值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimtypeid1" type="string"  length="32"  not-null="false">
+	    	<column name="DIMTYPEID1">
+    	        <comment>交易成分</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimtypeid2" type="string"  length="32"  not-null="false">
+	    	<column name="DIMTYPEID2">
+    	        <comment>合同周期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimtypeid3" type="string"  length="32"  not-null="false">
+	    	<column name="DIMTYPEID3">
+    	        <comment>发电集团</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimtypeid4" type="string"  length="32"  not-null="false">
+	    	<column name="DIMTYPEID4">
+    	        <comment>电厂</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimtypeid5" type="string"  length="32"  not-null="false">
+	    	<column name="DIMTYPEID5">
+    	        <comment>结算单元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimtypeid6" type="string"  length="32"  not-null="false">
+	    	<column name="DIMTYPEID6">
+    	        <comment>电源类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimtypeid7" type="string"  length="32"  not-null="false">
+	    	<column name="DIMTYPEID7">
+    	        <comment>维度代码7</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimtypeid8" type="string"  length="32"  not-null="false">
+	    	<column name="DIMTYPEID8">
+    	        <comment>维度代码8</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimvalid1" type="string"  length="32"  not-null="false">
+	    	<column name="DIMVALID1">
+    	        <comment>维度值代码1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimvalid2" type="string"  length="32"  not-null="false">
+	    	<column name="DIMVALID2">
+    	        <comment>维度值代码2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimvalid3" type="string"  length="32"  not-null="false">
+	    	<column name="DIMVALID3">
+    	        <comment>维度值代码3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimvalid4" type="string"  length="32"  not-null="false">
+	    	<column name="DIMVALID4">
+    	        <comment>维度值代码4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimvalid5" type="string"  length="32"  not-null="false">
+	    	<column name="DIMVALID5">
+    	        <comment>维度值代码5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimvalid6" type="string"  length="32"  not-null="false">
+	    	<column name="DIMVALID6">
+    	        <comment>维度值代码6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimvalid7" type="string"  length="32"  not-null="false">
+	    	<column name="DIMVALID7">
+    	        <comment>维度值代码7</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dimvalid8" type="string"  length="32"  not-null="false">
+	    	<column name="DIMVALID8">
+    	        <comment>维度值代码8</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planvalue" type="string"  length="32"  not-null="false">
+	    	<column name="PLANVALUE">
+    	        <comment>对应指标的同期值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planvalueyear" type="string"  length="32"  not-null="false">
+	    	<column name="PLANVALUEYEAR">
+    	        <comment>对应指标的年度值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datasourceorg" type="string"  length="32"  not-null="false">
+	    	<column name="DATASOURCEORG">
+    	        <comment>数据来源单位</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datasourcesystem" type="string"  length="32"  not-null="false">
+	    	<column name="DATASOURCESYSTEM">
+    	        <comment>数据来源系统维护</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="recordtimestamp" type="string"  length="32"  not-null="false">
+	    	<column name="RECORDTIMESTAMP">
+    	        <comment>时间戳</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extvalue1" type="string"  length="32"  not-null="false">
+	    	<column name="EXTVALUE1">
+    	        <comment>备用字段1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extvalue2" type="string"  length="32"  not-null="false">
+	    	<column name="EXTVALUE2">
+    	        <comment>备用字段2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extvalue3" type="string"  length="32"  not-null="false">
+	    	<column name="EXTVALUE3">
+    	        <comment>备用字段3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extvalue4" type="string"  length="32"  not-null="false">
+	    	<column name="EXTVALUE4">
+    	        <comment>备用字段4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extvalue5" type="string"  length="32"  not-null="false">
+	    	<column name="EXTVALUE5">
+    	        <comment>备用字段5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="periodvaluetot" type="string"  length="32"  not-null="false">
+	    	<column name="PERIODVALUETOT">
+    	        <comment>累计同比值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="chainvaluetot" type="string"  length="32"  not-null="false">
+	    	<column name="CHAINVALUETOT">
+    	        <comment>累计环比值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="periodvalue" type="string"  length="32"  not-null="false">
+	    	<column name="PERIODVALUE">
+    	        <comment>同比值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="chainvalue" type="string"  length="32"  not-null="false">
+	    	<column name="CHAINVALUE">
+    	        <comment>环比值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="verno" type="string"  length="32"  not-null="false">
+	    	<column name="VERNO">
+    	        <comment>版本号</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxElimcoefficient" table="TJFX_ELIMCOEFFICIENT">
+    	<comment>剔除系数配置</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>系统主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketId" type="string"  length="18"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elimRatio" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="ELIM_RATIO">
+    	        <comment>剔除系统</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="years" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="YEARS">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

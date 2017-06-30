@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PaGenratorclassVer" table="PA_GENRATORCLASS_VER">
+    	<comment>机组容量等级设置表 </comment>
+	   <id name="guid" type="string" length="100">
+	    	<column name="关系ID">
+    	        <comment>Guid</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>
+         
+	    <property name="marketid" type="string"  length="100"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="effectivedate" type="date"  not-null="true">
+	    	<column name="EFFECTIVEDATE">
+    	        <comment>设置日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="classid" type="big_decimal"  length="5"  not-null="false">
+	    	<column name="CLASSID">
+    	        <comment>段号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startvalue" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="STARTVALUE">
+    	        <comment>起始值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endvalue" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ENDVALUE">
+    	        <comment>终止值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theversion" type="string"  length="100"  not-null="false">
+	    	<column name="THEVERSION">
+    	        <comment>版本名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr1" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR1">
+    	        <comment>备用字符串1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr2" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR2">
+    	        <comment>备用字符串2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr3" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR3">
+    	        <comment>备用字符串3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT1">
+    	        <comment>备用整数1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT2">
+    	        <comment>备用整数2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT3">
+    	        <comment>备用整数3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE1">
+    	        <comment>备用实数1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE2">
+    	        <comment>备用实数2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE3">
+    	        <comment>备用实数3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate1" type="date"  not-null="false">
+	    	<column name="BAK_DATE1">
+    	        <comment>备用时间1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate2" type="date"  not-null="false">
+	    	<column name="BAK_DATE2">
+    	        <comment>备用时间2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate3" type="date"  not-null="false">
+	    	<column name="BAK_DATE3">
+    	        <comment>备用时间3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

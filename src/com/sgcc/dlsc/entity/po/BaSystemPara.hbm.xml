@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaSystemPara" table="BA_SYSTEM_PARA">
+    	<comment>系统参数表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>FGUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="dorder" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="D_ORDER">
+    	        <comment>显示顺序</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paraId" type="string"  length="32"  not-null="true">
+	    	<column name="PARA_ID">
+    	        <comment>参数ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paraName" type="string"  length="32"  not-null="true">
+	    	<column name="PARA_NAME">
+    	        <comment>参数名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paraValue" type="string"  length="256"  not-null="false">
+	    	<column name="PARA_VALUE">
+    	        <comment>参数值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="paraRemark" type="string"  length="256"  not-null="false">
+	    	<column name="PARA_REMARK">
+    	        <comment>参数说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

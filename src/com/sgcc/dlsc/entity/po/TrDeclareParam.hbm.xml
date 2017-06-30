@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrDeclareParam" table="TR_DECLARE_PARAM">
+    	<comment>TR_DECLARE_PARAM</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>TRADESEQ_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeunitId" type="string"  length="32"  not-null="false">
+	    	<column name="TRADEUNIT_ID">
+    	        <comment>TRADEUNIT_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="participantcode" type="string"  length="60"  not-null="false">
+	    	<column name="PARTICIPANTCODE">
+    	        <comment>PARTICIPANTCODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeRole" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="TRADE_ROLE">
+    	        <comment>TRADE_ROLE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isVhvAbet" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="IS_VHV_ABET">
+    	        <comment>IS_VHV_ABET</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isColdbyair" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="IS_COLDBYAIR">
+    	        <comment>IS_COLDBYAIR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isConsumptionLowess" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="IS_CONSUMPTION_LOWESS">
+    	        <comment>IS_CONSUMPTION_LOWESS</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="desulfuratedRate" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="DESULFURATED_RATE">
+    	        <comment>DESULFURATED_RATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="desaltRate" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="DESALT_RATE">
+    	        <comment>DESALT_RATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="popedomCoefficient" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="POPEDOM_COEFFICIENT">
+    	        <comment>POPEDOM_COEFFICIENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capCoefficient" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="CAP_COEFFICIENT">
+    	        <comment>CAP_COEFFICIENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="desulfuratedCoefficient" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="DESULFURATED_COEFFICIENT">
+    	        <comment>DESULFURATED_COEFFICIENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="desaltCoefficient" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="DESALT_COEFFICIENT">
+    	        <comment>DESALT_COEFFICIENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="coldbyairCoefficient" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="COLDBYAIR_COEFFICIENT">
+    	        <comment>COLDBYAIR_COEFFICIENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="comprehensiveCoefficient" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="COMPREHENSIVE_COEFFICIENT">
+    	        <comment>COMPREHENSIVE_COEFFICIENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="declareTime" type="date"  not-null="false">
+	    	<column name="DECLARE_TIME">
+    	        <comment>DECLARE_TIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="calculatedTime" type="date"  not-null="false">
+	    	<column name="CALCULATED_TIME">
+    	        <comment>CALCULATED_TIME</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

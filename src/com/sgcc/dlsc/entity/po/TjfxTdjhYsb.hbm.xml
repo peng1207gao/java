@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxTdjhYsb" table="TJFX_TDJH_YSB">
+    	<comment>???????????????????????</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketerid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETERID">
+    	        <comment>????????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="string"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="string"  length="2"  not-null="true">
+	    	<column name="THEMONTH">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthplanquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHPLANQUANTITY">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthactualquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHACTUALQUANTITY">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthplancompletionrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHPLANCOMPLETIONRATE">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthplandeviation" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHPLANDEVIATION">
+    	        <comment>?????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="establishtime" type="date"  not-null="false">
+	    	<column name="ESTABLISHTIME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="establishpersonid" type="string"  length="32"  not-null="false">
+	    	<column name="ESTABLISHPERSONID">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="approvaltime" type="date"  not-null="false">
+	    	<column name="APPROVALTIME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="approvaltimepersonid" type="string"  length="32"  not-null="false">
+	    	<column name="APPROVALTIMEPERSONID">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iseffict" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="ISEFFICT">
+    	        <comment>????  1????2???? </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

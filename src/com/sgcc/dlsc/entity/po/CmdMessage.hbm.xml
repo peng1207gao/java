@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CmdMessage" table="CMD_MESSAGE">
+    	<comment>程序执行信息</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>调用ID（20位随机字符串）</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="cmdId" type="string"  length="512"  not-null="false">
+	    	<column name="CMD_ID">
+    	        <comment>程序ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cmdDescr" type="string"  length="512"  not-null="false">
+	    	<column name="CMD_DESCR">
+    	        <comment>程序描述</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cmdMsg" type="string"  length="512"  not-null="false">
+	    	<column name="CMD_MSG">
+    	        <comment>程序参数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="position" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="POSITION">
+    	        <comment>状态标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userId" type="string"  length="512"  not-null="false">
+	    	<column name="USER_ID">
+    	        <comment>用户ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userName" type="string"  length="512"  not-null="false">
+	    	<column name="USER_NAME">
+    	        <comment>用户名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actTime" type="string"  length="512"  not-null="false">
+	    	<column name="ACT_TIME">
+    	        <comment>调用时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.Tjycfb" table="T_JYCFB">
+    	<comment>T_JYCFB</comment>
+        <!-- single primaryKey -->
+	    <id name="comptid" type="string" length="20">
+	    	<column name="COMPTID">
+    	        <comment>COMPTID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="comptname" type="string"  length="80"  not-null="false">
+	    	<column name="COMPTNAME">
+    	        <comment>COMPTNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="superiorcomptid" type="string"  length="20"  not-null="false">
+	    	<column name="SUPERIORCOMPTID">
+    	        <comment>SUPERIORCOMPTID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jylx" type="string"  length="32"  not-null="false">
+	    	<column name="JYLX">
+    	        <comment>JYLX</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powerType" type="string"  length="10"  not-null="false">
+	    	<column name="POWER_TYPE">
+    	        <comment>POWER_TYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linegroupid" type="string"  length="32"  not-null="false">
+	    	<column name="LINEGROUPID">
+    	        <comment>LINEGROUPID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fstart" type="string"  length="20"  not-null="false">
+	    	<column name="FSTART">
+    	        <comment>FSTART</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ffinish" type="string"  length="20"  not-null="false">
+	    	<column name="FFINISH">
+    	        <comment>FFINISH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketcode" type="string"  length="20"  not-null="false">
+	    	<column name="MARKETCODE">
+    	        <comment>MARKETCODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sfzd" type="string"  length="32"  not-null="true">
+	    	<column name="SFZD">
+    	        <comment>SFZD</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sx" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="SX">
+    	        <comment>SX</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sfhzcf" type="string"  length="32"  not-null="false">
+	    	<column name="SFHZCF">
+    	        <comment>SFHZCF</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sfhz" type="string"  length="32"  not-null="false">
+	    	<column name="SFHZ">
+    	        <comment>SFHZ</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="systemid" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SYSTEMID">
+    	        <comment>SYSTEMID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="systemname" type="string"  length="200"  not-null="false">
+	    	<column name="SYSTEMNAME">
+    	        <comment>SYSTEMNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pri" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="PRI">
+    	        <comment>PRI</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ismust" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="ISMUST">
+    	        <comment>ISMUST</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="statistype" type="string"  length="2"  not-null="false">
+	    	<column name="STATISTYPE">
+    	        <comment>STATISTYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="showname" type="string"  length="500"  not-null="false">
+	    	<column name="SHOWNAME">
+    	        <comment>SHOWNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="qylx" type="string"  length="32"  not-null="false">
+	    	<column name="QYLX">
+    	        <comment>QYLX</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isstate" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="ISSTATE">
+    	        <comment>ISSTATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="compttype" type="big_decimal"  length="15"  not-null="false">
+	    	<column name="COMPTTYPE">
+    	        <comment>COMPTTYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iserp" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="ISERP">
+    	        <comment>ISERP</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="settletype" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="SETTLETYPE">
+    	        <comment>SETTLETYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="memberrelation" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="MEMBERRELATION">
+    	        <comment>MEMBERRELATION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netsidename" type="string"  length="200"  not-null="false">
+	    	<column name="NETSIDENAME">
+    	        <comment>NETSIDENAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fallsidename" type="string"  length="200"  not-null="false">
+	    	<column name="FALLSIDENAME">
+    	        <comment>FALLSIDENAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="trademodel" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="TRADEMODEL">
+    	        <comment>TRADEMODEL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceanalyse" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="PRICEANALYSE">
+    	        <comment>PRICEANALYSE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isfallside" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="ISFALLSIDE">
+    	        <comment>ISFALLSIDE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellid" type="string"  length="32"  not-null="false">
+	    	<column name="SELLID">
+    	        <comment>SELLID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

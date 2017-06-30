@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoContracsequenceinfo" table="CO_CONTRACSEQUENCEINFO">
+    	<comment>????? </comment>
+        <!-- single primaryKey -->
+	    <id name="sequenceid" type="string" length="36">
+	    	<column name="SEQUENCEID">
+    	        <comment>????id</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="sequencename" type="string"  length="64"  not-null="false">
+	    	<column name="SEQUENCENAME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sequencetype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="SEQUENCETYPE">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="64"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="java.util.Date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sequencecircle" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="SEQUENCECIRCLE">
+    	        <comment>???????1????? 2????? 0???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="createdate" type="java.util.Date"  not-null="false">
+	    	<column name="CREATEDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

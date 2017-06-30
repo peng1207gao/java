@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaFlowactdef" table="BA_FLOWACTDEF">
+    	<comment>??????</comment>
+        <!-- single primaryKey -->
+	    <id name="actid" type="string" length="32">
+	    	<column name="ACTID">
+    	        <comment>ACTID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="actname" type="string"  length="32"  not-null="true">
+	    	<column name="ACTNAME">
+    	        <comment>ACTNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="flowid" type="string"  length="64"  not-null="true">
+	    	<column name="FLOWID">
+    	        <comment>FLOWID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr1" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR1">
+    	        <comment>BACKSTR1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr2" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR2">
+    	        <comment>BACKSTR2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr3" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR3">
+    	        <comment>BACKSTR3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr4" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR4">
+    	        <comment>BACKSTR4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr5" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR5">
+    	        <comment>BACKSTR5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xh" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="XH">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

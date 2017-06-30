@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaWaitdo" table="BA_WAITDO">
+    	<comment>BA_WAITDO</comment>
+        <!-- single primaryKey -->
+	    <id name="waitdoid" type="string" length="36">
+	    	<column name="WAITDOID">
+    	        <comment>WAITDOID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="sequenceid" type="string"  length="64"  not-null="false">
+	    	<column name="SEQUENCEID">
+    	        <comment>SEQUENCEID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userid" type="string"  length="40"  not-null="false">
+	    	<column name="USERID">
+    	        <comment>USERID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="url" type="string"  length="200"  not-null="false">
+	    	<column name="URL">
+    	        <comment>URL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="type" type="string"  length="10"  not-null="false">
+	    	<column name="TYPE">
+    	        <comment>??/??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startdate" type="string"  length="20"  not-null="false">
+	    	<column name="STARTDATE">
+    	        <comment>STARTDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="activename" type="string"  length="70"  not-null="false">
+	    	<column name="ACTIVENAME">
+    	        <comment>ACTIVENAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="currentstate" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="CURRENTSTATE">
+    	        <comment>CURRENTSTATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="processinstname" type="string"  length="100"  not-null="false">
+	    	<column name="PROCESSINSTNAME">
+    	        <comment>PROCESSINSTNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="processdefid" type="string"  length="32"  not-null="false">
+	    	<column name="PROCESSDEFID">
+    	        <comment>PROCESSDEFID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="processchname" type="string"  length="60"  not-null="false">
+	    	<column name="PROCESSCHNAME">
+    	        <comment>PROCESSCHNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="activityinstid" type="string"  length="32"  not-null="false">
+	    	<column name="ACTIVITYINSTID">
+    	        <comment>流程节点实例ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="workitemid" type="string"  length="32"  not-null="false">
+	    	<column name="WORKITEMID">
+    	        <comment>WORKITEMID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

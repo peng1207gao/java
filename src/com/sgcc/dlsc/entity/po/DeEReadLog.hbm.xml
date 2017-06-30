@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DeEReadLog" table="DE_E_READ_LOG">
+    	<comment>DE_E_READ_LOG</comment>
+        <!-- single primaryKey -->
+	    <id name="sheetid" type="string" length="36">
+	    	<column name="SHEETID">
+    	        <comment>表单实例编码</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="showorder" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="SHOWORDER">
+    	        <comment>显示序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sheetname" type="string"  length="200"  not-null="false">
+	    	<column name="SHEETNAME">
+    	        <comment>表单实例名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datatype" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="DATATYPE">
+    	        <comment>数据类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datastatusid" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="DATASTATUSID">
+    	        <comment>数据状态编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wldz" type="string"  length="100"  not-null="false">
+	    	<column name="WLDZ">
+    	        <comment>网络地址</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xrwjjdz" type="string"  length="100"  not-null="false">
+	    	<column name="XRWJJDZ">
+    	        <comment>写入文件夹地址</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sfcg" type="string"  length="2"  not-null="false">
+	    	<column name="SFCG">
+    	        <comment>是否成功</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbyy" type="string"  length="4000"  not-null="false">
+	    	<column name="SBYY">
+    	        <comment>失败原因</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="createdate" type="string"  length="30"  not-null="false">
+	    	<column name="CREATEDATE">
+    	        <comment>创建时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serviceipaddr" type="string"  length="100"  not-null="false">
+	    	<column name="SERVICEIPADDR">
+    	        <comment>服务器IP地址</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

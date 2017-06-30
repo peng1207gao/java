@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubDemandElectricity" table="PUB_DEMAND_ELECTRICITY">
+    	<comment>全省统调用电量分月增长情况</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tyear" type="int"  length="4"  not-null="true">
+	    	<column name="TYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tmonth" type="int"  length="2"  not-null="true">
+	    	<column name="TMONTH">
+    	        <comment>月份：1、2、3、4……11、12</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY1">
+    	        <comment>用电量单位：亿千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecTb1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELEC_TB1">
+    	        <comment>用电量同比增长率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY2">
+    	        <comment>日均用电量=用电量*10000/用电天数，单位：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecTb2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELEC_TB2">
+    	        <comment>日均用电量同比增长率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxpowerload" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXPOWERLOAD">
+    	        <comment>最大负荷单位：万千瓦</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loadTb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LOAD_TB">
+    	        <comment>负荷同比增长率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="int"  length="2"  not-null="true">
+	    	<column name="STATE">
+    	        <comment>状态,0未发布，1发布，2待审批，3审批通过，4退回。默认为0</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="subjectguid" type="string"  length="32"  not-null="false">
+	    	<column name="SUBJECTGUID">
+    	        <comment>发布主题ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="20"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>填报人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillintime" type="date"  not-null="true">
+	    	<column name="FILLINTIME">
+    	        <comment>填报时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>备用1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>备用2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>备用3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>备用4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="32"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>备用5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="32"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>备用6</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

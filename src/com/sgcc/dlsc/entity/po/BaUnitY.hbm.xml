@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaUnitY" table="BA_UNIT_Y">
+    	<comment>BA_UNIT_Y</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDate" type="date"  not-null="true">
+	    	<column name="TAB_DATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+    	 <property name="dateType" type="big_decimal"  not-null="false">
+	    	<column name="DATE_TYPE">
+    	        <comment>日期类型</comment>
+	    	</column>
+    	</property> 
+         
+	    <property name="gdp" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GDP">
+    	        <comment>GDP增长   GDP增长情况（实际增长） </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdpsum" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GDPSUM">
+    	        <comment>GDP累计增长  当年累计经济增长数据（GDP）  </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdpnextY" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GDPNEXT_Y">
+    	        <comment>当年GDP增长预测  GDP增长预测</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdpnextM" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GDPNEXT_M">
+    	        <comment>次月GDP增长预测   GDP增长预测</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.ScYeargenItems" table="SC_YEARGEN_ITEMS">
+    	<comment>单元年度发电计划总电量结果明细表</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planDate" type="date"  not-null="false">
+	    	<column name="PLAN_DATE">
+    	        <comment>计划日期</comment>
+	    	</column>
+    	</property>  
+         
+         <property name="versionId" type="string"  length="36"  not-null="false">
+	    	<column name="VERSION_ID">
+    	        <comment>计划版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planunitId" type="string"  length="32"  not-null="false">
+	    	<column name="PLANUNIT_ID">
+    	        <comment>计划单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plantypeId" type="string"  length="32"  not-null="false">
+	    	<column name="PLANTYPE_ID">
+    	        <comment>计划类型ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractId" type="string"  length="32"  not-null="false">
+	    	<column name="CONTRACT_ID">
+    	        <comment>所属交易合同ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG">
+    	        <comment>年度发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG">
+    	        <comment>年度上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M1">
+    	        <comment>1月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M1">
+    	        <comment>1月上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M2">
+    	        <comment>2月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M2">
+    	        <comment>2月上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M3">
+    	        <comment>3月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M3">
+    	        <comment>3月上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M4">
+    	        <comment>4月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M4">
+    	        <comment>4月上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M5">
+    	        <comment>5月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M5">
+    	        <comment>5月上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM6" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M6">
+    	        <comment>6月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM6" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M6">
+    	        <comment>6月上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM7" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M7">
+    	        <comment>7月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM7" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M7">
+    	        <comment>7月上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM8" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M8">
+    	        <comment>8月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM8" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M8">
+    	        <comment>8月上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM9" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M9">
+    	        <comment>9月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM9" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M9">
+    	        <comment>9月上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM10" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M10">
+    	        <comment>10月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM10" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M10">
+    	        <comment>10上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM11" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M11">
+    	        <comment>11月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM11" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M11">
+    	        <comment>11月上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grossEngM12" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="GROSS_ENG_M12">
+    	        <comment>12月发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netEngM12" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="NET_ENG_M12">
+    	        <comment>12月上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="remark" type="string"  length="200"  not-null="false">
+	    	<column name="REMARK">
+    	        <comment>备注</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateTime" type="date"  not-null="false">
+	    	<column name="UPDATE_TIME">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="phyunitName" type="string"  length="100"  not-null="false">
+	    	<column name="PHYUNIT_NAME">
+    	        <comment>计划单元名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userName" type="string"  length="100"  not-null="false">
+	    	<column name="USER_NAME">
+    	        <comment>操作用户</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startDate" type="date"  not-null="false">
+	    	<column name="START_DATE">
+    	        <comment>段开始日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endDate" type="date"  not-null="false">
+	    	<column name="END_DATE">
+    	        <comment>段结束日期</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrResultMainCheck" table="TR_RESULT_MAIN_CHECK">
+    	<comment>TR_RESULT_MAIN_CHECK</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易序列编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="intervalIndex" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="INTERVAL_INDEX">
+    	        <comment>交易轮次</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleUnitsId" type="string"  length="36"  not-null="true">
+	    	<column name="SALE_UNITS_ID">
+    	        <comment>售方编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeUnitsId" type="string"  length="36"  not-null="true">
+	    	<column name="VENDEE_UNITS_ID">
+    	        <comment>购方编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="band" type="big_decimal"  length="10"  not-null="true">
+	    	<column name="BAND">
+    	        <comment>成交段号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetypeId" type="string"  length="32"  not-null="false">
+	    	<column name="TRADETYPE_ID">
+    	        <comment>交易类型ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergy" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY">
+    	        <comment>购方上网电量（总）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergy" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY">
+    	        <comment>售方上网电量（总）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE">
+    	        <comment>购方电价（总）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE">
+    	        <comment>售方电价（总）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergyPeriod1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY_PERIOD1">
+    	        <comment>购方上网电量（尖峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergyPeriod1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY_PERIOD1">
+    	        <comment>售方上网电量（尖峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePricePeriod1" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE_PERIOD1">
+    	        <comment>购方电价（尖峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePricePeriod1" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE_PERIOD1">
+    	        <comment>售方电价（尖峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergyPeriod2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY_PERIOD2">
+    	        <comment>购方上网电量（峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergyPeriod2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY_PERIOD2">
+    	        <comment>售方上网电量（峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePricePeriod2" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE_PERIOD2">
+    	        <comment>购方电价（峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePricePeriod2" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE_PERIOD2">
+    	        <comment>售方电价（峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergyPeriod3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY_PERIOD3">
+    	        <comment>购方上网电量（平）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergyPeriod3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY_PERIOD3">
+    	        <comment>售方上网电量（平）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePricePeriod3" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE_PERIOD3">
+    	        <comment>购方电价（平）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePricePeriod3" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE_PERIOD3">
+    	        <comment>售方电价（平）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergyPeriod4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY_PERIOD4">
+    	        <comment>购方上网电量（谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergyPeriod4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY_PERIOD4">
+    	        <comment>售方上网电量（谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePricePeriod4" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE_PERIOD4">
+    	        <comment>购方电价（谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePricePeriod4" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE_PERIOD4">
+    	        <comment>售方电价（谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeEnergyPeriod5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_ENERGY_PERIOD5">
+    	        <comment>购方上网电量（低谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleEnergyPeriod5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_ENERGY_PERIOD5">
+    	        <comment>售方上网电量（低谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeePricePeriod5" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE_PERIOD5">
+    	        <comment>购方电价（低谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salePricePeriod5" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE_PERIOD5">
+    	        <comment>售方电价（低谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrosseng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG">
+    	        <comment>购方发电量（总）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGrosseng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_GROSSENG">
+    	        <comment>售方发电量（总）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrossengPeriod1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG_PERIOD1">
+    	        <comment>购方发电量（尖峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGrossengPeriod1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_GROSSENG_PERIOD1">
+    	        <comment>售方发电量（尖峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrossengPeriod2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG_PERIOD2">
+    	        <comment>购方发电量（峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGrossengPeriod2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_GROSSENG_PERIOD2">
+    	        <comment>售方发电量（峰）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrossengPeriod3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG_PERIOD3">
+    	        <comment>购方发电量（平）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGrossengPeriod3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_GROSSENG_PERIOD3">
+    	        <comment>售方发电量（平）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrossengPeriod4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG_PERIOD4">
+    	        <comment>购方发电电量（谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGrossengPeriod4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_GROSSENG_PERIOD4">
+    	        <comment>售方发电电量（谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGrossengPeriod5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VENDEE_GROSSENG_PERIOD5">
+    	        <comment>购方发电电量（低谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGrossengPeriod5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SALE_GROSSENG_PERIOD5">
+    	        <comment>售方发电电量（低谷）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powerCurveId" type="string"  length="128"  not-null="false">
+	    	<column name="POWER_CURVE_ID">
+    	        <comment>电力曲线</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="remark" type="string"  length="2000"  not-null="false">
+	    	<column name="REMARK">
+    	        <comment>校核原因</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleUnitsName" type="string"  length="256"  not-null="false">
+	    	<column name="SALE_UNITS_NAME">
+    	        <comment>售方名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeUnitsName" type="string"  length="256"  not-null="false">
+	    	<column name="VENDEE_UNITS_NAME">
+    	        <comment>购方名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stDate" type="date"  not-null="false">
+	    	<column name="ST_DATE">
+    	        <comment>交易开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeStatType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TRADE_STAT_TYPE">
+    	        <comment>交易统计类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeGenRate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEE_GEN_RATE">
+    	        <comment>购方厂用电率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleGenRate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALE_GEN_RATE">
+    	        <comment>售方厂用电率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeTimepart" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="TRADE_TIMEPART">
+    	        <comment>时间段 0:不分时间段；1-n：时间段1至n；字段定义默认值为0</comment>
+	    	</column>
+    	</property>  
+         
+        <property name="saleLoss" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALE_LOSS">
+    	        <comment>售方网损</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeLoss" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEE_LOSS">
+    	        <comment>购方网损</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeBreathPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_BREATH_PRICE">
+    	        <comment>购方违约赔偿电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleBreathPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_BREATH_PRICE">
+    	        <comment>售方违约赔偿电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="approvedTariff" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="APPROVED_TARIFF">
+    	        <comment>批复上网电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="catalogPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="CATALOG_PRICE">
+    	        <comment>目录电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transferAllotPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TRANSFER_ALLOT_PRICE">
+    	        <comment>输配电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netDiscountLoss" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="NET_DISCOUNT_LOSS">
+    	        <comment>网损折价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fundsandaddPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="FUNDSANDADD_PRICE">
+    	        <comment>政府基金及附加</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradePriceMargin" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TRADE_PRICE_MARGIN">
+    	        <comment>价差成交价格</comment>
+	    	</column>
+    	</property>
+    	<property name="subscribeCapPowerrate" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SUBSCRIBE_CAP_POWERRATE">
+    	        <comment>投标认购电费</comment>
+	    	</column>
+    	</property>
+    </class>
+</hibernate-mapping>

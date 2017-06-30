@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.Forcast" table="FORCAST">
+    	<comment>FORCAST</comment>
+        <!-- single primaryKey -->
+	    <!--<id name="sdate" type="string" length="50">
+	    	<column name="SDATE">
+    	        <comment>SDATE</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>  -->   
+		<composite-id>
+        	 <key-property name="sid" column="SID" type="string" length="50"/>
+        	 <key-property name="sdate" column="SDATE" type="string"  length="50"/>
+        </composite-id> 
+
+	    <property name="mwh" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MWH">
+    	        <comment>电量</comment>
+	    	</column>
+    	</property>  
+    	<property name="maxMw" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAX_MW">
+    	        <comment>电力</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

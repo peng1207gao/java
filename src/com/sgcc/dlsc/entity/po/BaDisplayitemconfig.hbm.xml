@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaDisplayitemconfig" table="BA_DISPLAYITEMCONFIG">
+    	<comment>??????????</comment>
+        <!-- single primaryKey -->
+	    <id name="sheetid" type="string" length="36">
+	    	<column name="SHEETID">
+    	        <comment>??ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="pageId" type="string"  length="36"  not-null="false">
+	    	<column name="PAGE_ID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pageName" type="string"  length="90"  not-null="false">
+	    	<column name="PAGE_NAME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="itemType" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="ITEM_TYPE">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="itemFieldId" type="string"  length="36"  not-null="false">
+	    	<column name="ITEM_FIELD_ID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="itemFieldName" type="string"  length="150"  not-null="false">
+	    	<column name="ITEM_FIELD_NAME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isDispaly" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="IS_DISPALY">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="itemDisplayName" type="string"  length="150"  not-null="false">
+	    	<column name="ITEM_DISPLAY_NAME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="code" type="string"  length="200"  not-null="false">
+	    	<column name="CODE">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dataButton" type="string"  length="200"  not-null="false">
+	    	<column name="DATA_BUTTON">
+    	        <comment>?????????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dataUrl" type="string"  length="200"  not-null="false">
+	    	<column name="DATA_URL">
+    	        <comment>?????URL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dataSelect" type="string"  length="200"  not-null="false">
+	    	<column name="DATA_SELECT">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orderby" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="ORDERBY">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isRequiredDisplay" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="IS_REQUIRED_DISPLAY">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isRequired" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="IS_REQUIRED">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dataValidation" type="string"  length="200"  not-null="false">
+	    	<column name="DATA_VALIDATION">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.MktsbsResultNZ" table="MKTSBS_RESULT_N_Z">
+    	<comment>月度上网追补结算明细结果表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>场景（市场）ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mktMonth" type="date"  not-null="true">
+	    	<column name="MKT_MONTH">
+    	        <comment>历史结算月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="addMonth" type="date"  not-null="true">
+	    	<column name="ADD_MONTH">
+    	        <comment>发生追补月份  按照该结算单元的历史结算月份所产生的补偿次数进行累加，默认是0</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="addIndex" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="ADD_INDEX">
+    	        <comment>追补序号 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startDate" type="date"  not-null="true">
+	    	<column name="START_DATE">
+    	        <comment>开始日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endDate" type="date"  not-null="true">
+	    	<column name="END_DATE">
+    	        <comment>结束日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bandIndex" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="BAND_INDEX">
+    	        <comment>调价段号 默认为0. </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbsUnitId" type="string"  length="32"  not-null="true">
+	    	<column name="SBS_UNIT_ID">
+    	        <comment>结算单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="recipientUnitId" type="string"  length="32"  not-null="true">
+	    	<column name="RECIPIENT_UNIT_ID">
+    	        <comment>收款方结算单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="payerUnitId" type="string"  length="32"  not-null="true">
+	    	<column name="PAYER_UNIT_ID">
+    	        <comment>付款方结算单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractId" type="string"  length="32"  not-null="true">
+	    	<column name="CONTRACT_ID">
+    	        <comment>所属合同ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbstypeId" type="string"  length="32"  not-null="true">
+	    	<column name="SBSTYPE_ID">
+    	        <comment>结算成分类型ID  交易成分类型ID、结算成分类型ID </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyT" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_T">
+    	        <comment>总电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceT" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_T">
+    	        <comment>总电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeT" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEE_T">
+    	        <comment>总电费</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyS" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_S">
+    	        <comment>尖电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceS" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_S">
+    	        <comment>尖电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeS" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEE_S">
+    	        <comment>尖电费</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyP" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_P">
+    	        <comment>峰电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceP" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_P">
+    	        <comment>峰电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeP" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEE_P">
+    	        <comment>峰电费</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyF" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_F">
+    	        <comment>平电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceF" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_F">
+    	        <comment>平电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeF" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEE_F">
+    	        <comment>平电费</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyB" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_B">
+    	        <comment>谷电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceB" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_B">
+    	        <comment>谷电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeB" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEE_B">
+    	        <comment>谷电费</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr1" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR1">
+    	        <comment>备用字符串1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr2" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR2">
+    	        <comment>备用字符串2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr3" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR3">
+    	        <comment>备用字符串3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT1">
+    	        <comment>备用整数1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT2">
+    	        <comment>备用整数2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT3">
+    	        <comment>备用整数3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE1">
+    	        <comment>备用实数1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE2">
+    	        <comment>备用实数2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE3">
+    	        <comment>备用实数3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate1" type="date"  not-null="false">
+	    	<column name="BAK_DATE1">
+    	        <comment>备用时间1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate2" type="date"  not-null="false">
+	    	<column name="BAK_DATE2">
+    	        <comment>备用时间2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate3" type="date"  not-null="false">
+	    	<column name="BAK_DATE3">
+    	        <comment>备用时间3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

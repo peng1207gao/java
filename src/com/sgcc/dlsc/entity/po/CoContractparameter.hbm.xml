@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoContractparameter" table="CO_CONTRACTPARAMETER">
+    	<comment>范本参数</comment>
+        <!-- single primaryKey -->
+	    <id name="tempparamid" type="string" length="36">
+	    	<column name="TEMPPARAMID">
+    	        <comment>参数ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tempparamname" type="string"  length="64"  not-null="true">
+	    	<column name="TEMPPARAMNAME">
+    	        <comment>参数名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tempparamex" type="string"  length="500"  not-null="false">
+	    	<column name="TEMPPARAMEX">
+    	        <comment>参数公式</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tempparamsql" type="string"  length="500"  not-null="false">
+	    	<column name="TEMPPARAMSQL">
+    	        <comment>参数SQL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tempparamdesc" type="string"  length="500"  not-null="false">
+	    	<column name="TEMPPARAMDESC">
+    	        <comment>参数说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contracttype" type="string"  length="64"  not-null="false">
+	    	<column name="CONTRACTTYPE">
+    	        <comment>合同类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="false">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>生效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>失效日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isshare" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="ISSHARE">
+    	        <comment>是否共享</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="createdate" type="date"  not-null="false">
+	    	<column name="CREATEDATE">
+    	        <comment>创建时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="creator" type="string"  length="36"  not-null="false">
+	    	<column name="CREATOR">
+    	        <comment>创建人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdelete" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="ISDELETE">
+    	        <comment>删除标记</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>信息更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>信息更新人编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contracttemplatecode" type="string"  length="36"  not-null="false">
+	    	<column name="CONTRACTTEMPLATECODE">
+    	        <comment>合同范本编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dicId" type="string"  length="36"  not-null="false">
+	    	<column name="DIC_ID">
+    	        <comment>合同范本参数字典ID</comment>
+	    	</column>
+    	</property>  
+         
+        <property name="bookmark" type="string"  length="64"  not-null="false">
+	    	<column name="BOOKMARK">
+    	        <comment>书签名称</comment>
+	    	</column>
+    	</property>  
+    </class>
+</hibernate-mapping>

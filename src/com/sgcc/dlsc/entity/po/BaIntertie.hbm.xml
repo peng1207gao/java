@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaIntertie" table="BA_INTERTIE">
+    	<comment>???</comment>
+        <!-- single primaryKey -->
+	    <id name="linkid" type="string" length="36">
+	    	<column name="LINKID">
+    	        <comment>???ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="linkname" type="string"  length="64"  not-null="true">
+	    	<column name="LINKNAME">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linktype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="LINKTYPE">
+    	        <comment>?????,   1-???2- ??3- ??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energytype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ENERGYTYPE">
+    	        <comment>??????,   1-???2-??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="voltagegrade" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="VOLTAGEGRADE">
+    	        <comment>????,  ???KV</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXCAPACITY">
+    	        <comment>????????,   ???MW???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reversecapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="REVERSECAPACITY">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="registerdate" type="date"  not-null="true">
+	    	<column name="REGISTERDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="conductortype" type="string"  length="36"  not-null="false">
+	    	<column name="CONDUCTORTYPE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linelength" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LINELENGTH">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatchunit" type="string"  length="36"  not-null="false">
+	    	<column name="DISPATCHUNIT">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="true">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkcode" type="string"  length="32"  not-null="false">
+	    	<column name="LINKCODE">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startgateid" type="string"  length="36"  not-null="false">
+	    	<column name="STARTGATEID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endgateid" type="string"  length="36"  not-null="false">
+	    	<column name="ENDGATEID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loss" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="LOSS">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdelete" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="ISDELETE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>????ID?????????????????????????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="guid" type="string"  length="36"  not-null="false">
+	    	<column name="GUID">
+    	        <comment>GUID????????????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="superlinkid" type="string"  length="36"  not-null="false">
+	    	<column name="SUPERLINKID">
+    	        <comment>?????ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

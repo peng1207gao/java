@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrResultIspub" table="TR_RESULT_ISPUB">
+    	<comment>?????????</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="isPub" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="IS_PUB">
+    	        <comment>????  0?????1???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pubTime" type="date"  not-null="true">
+	    	<column name="PUB_TIME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pubPerson" type="string"  length="64"  not-null="false">
+	    	<column name="PUB_PERSON">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pubRage" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="PUB_RAGE">
+    	        <comment>发布范围   0,“仅中标市场成员”、1，“仅参与市场成员”、2、“所有市场成员”、3“公开” </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

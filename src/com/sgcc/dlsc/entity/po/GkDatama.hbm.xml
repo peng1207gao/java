@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.GkDatama" table="GK_DATAMA">
+    	<comment>管控管理数据表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDate" type="date"  not-null="true">
+	    	<column name="TAB_DATE">
+    	        <comment>数据日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="url" type="string"  length="200"  not-null="false">
+	    	<column name="URL">
+    	        <comment>数据展示</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datatype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="DATATYPE">
+    	        <comment>&quot;业务类型  1计划2交易3结算&quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ispass" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISPASS">
+    	        <comment>是否考核通过</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maDate" type="date"  not-null="false">
+	    	<column name="MA_DATE">
+    	        <comment>业务时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr1" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR1">
+    	        <comment>备用字段1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr2" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR2">
+    	        <comment>备用字段2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr3" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR3">
+    	        <comment>备用字段3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr4" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR4">
+    	        <comment>备用字段4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr5" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR5">
+    	        <comment>备用字段5</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

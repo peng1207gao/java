@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrResultIslock" table="TR_RESULT_ISLOCK">
+    	<comment>???????</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isLock" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="IS_LOCK">
+    	        <comment>????  0?????1??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lockTime" type="date"  not-null="true">
+	    	<column name="LOCK_TIME">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lockPerson" type="string"  length="64"  not-null="false">
+	    	<column name="LOCK_PERSON">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dataType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="DATA_TYPE">
+    	        <comment>0：分部修改限额数据，1：出清结果数据   数据类型</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

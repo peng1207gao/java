@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PaSettleUnitResult" table="PA_SETTLE_UNIT_RESULT">
+    	<comment>结算单元量价费基本情况表 </comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="100">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="100"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>MARKETID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="querydate" type="date"  not-null="true">
+	    	<column name="QUERYDATE">
+    	        <comment>QUERYDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbsUnitId" type="string"  length="100"  not-null="true">
+	    	<column name="SBS_UNIT_ID">
+    	        <comment>SBS_UNIT_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbsUnitname" type="string"  length="100"  not-null="true">
+	    	<column name="SBS_UNITNAME">
+    	        <comment>SBS_UNITNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="effectivetype" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="EFFECTIVETYPE">
+    	        <comment>0-快报值；1-实际值 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buytype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BUYTYPE">
+    	        <comment>0-直购电；1-非直购；2-跨区跨省 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="calltype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="CALLTYPE">
+    	        <comment>1-统调；0-非统调 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkarea" type="string"  length="20"  not-null="false">
+	    	<column name="LINKAREA">
+    	        <comment>LINKAREA</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="usetype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="USETYPE">
+    	        <comment>1-是；0-否 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gengroupid" type="string"  length="100"  not-null="false">
+	    	<column name="GENGROUPID">
+    	        <comment>GENGROUPID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="genratorclass" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENRATORCLASS">
+    	        <comment>GENRATORCLASS</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gentype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="GENTYPE">
+    	        <comment>1-火电；2-水电；3-核电；4-风电；5-地热；9-其它 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stationid" type="string"  length="100"  not-null="false">
+	    	<column name="STATIONID">
+    	        <comment>STATIONID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="montheq" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHEQ">
+    	        <comment>MONTHEQ</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthplaneq" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHPLANEQ">
+    	        <comment>MONTHPLANEQ</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthplanrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHPLANRATE">
+    	        <comment>MONTHPLANRATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="montheqcomparehistory" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHEQCOMPAREHISTORY">
+    	        <comment>MONTHEQCOMPAREHISTORY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="montheqpercent" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHEQPERCENT">
+    	        <comment>MONTHEQPERCENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthaverprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHAVERPRICE">
+    	        <comment>MONTHAVERPRICE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthmoney" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHMONEY">
+    	        <comment>MONTHMONEY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthmoneypercent" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHMONEYPERCENT">
+    	        <comment>MONTHMONEYPERCENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthmoneycomparehistory" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHMONEYCOMPAREHISTORY">
+    	        <comment>MONTHMONEYCOMPAREHISTORY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="montheqT" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHEQ_T">
+    	        <comment>MONTHEQ_T</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yearplaneq" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="YEARPLANEQ">
+    	        <comment>YEARPLANEQ</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yearplanrate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="YEARPLANRATE">
+    	        <comment>YEARPLANRATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yearplanratediff" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="YEARPLANRATEDIFF">
+    	        <comment>年度累计计划完成率与平均完成率偏差率 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="montheqTcomparehistory" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHEQ_TCOMPAREHISTORY">
+    	        <comment>MONTHEQ_TCOMPAREHISTORY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="montheqTpercent" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHEQ_TPERCENT">
+    	        <comment>MONTHEQ_TPERCENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthaverpriceTpercent" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHAVERPRICE_TPERCENT">
+    	        <comment>MONTHAVERPRICE_TPERCENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthaverpriceTcomparehistory" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHAVERPRICE_TCOMPAREHISTORY">
+    	        <comment>确认计算公式 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buytypechangeprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BUYTYPECHANGEPRICE">
+    	        <comment>确认计算公式 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricechangeaverprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICECHANGEAVERPRICE">
+    	        <comment>确认计算公式 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthmoneyT" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHMONEY_T">
+    	        <comment>MONTHMONEY_T</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monthmoneyTpercent" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MONTHMONEY_TPERCENT">
+    	        <comment>MONTHMONEY_TPERCENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr1" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR1">
+    	        <comment>BAK_STR1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr2" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR2">
+    	        <comment>BAK_STR2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr3" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR3">
+    	        <comment>BAK_STR3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT1">
+    	        <comment>BAK_INT1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT2">
+    	        <comment>BAK_INT2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_INT3">
+    	        <comment>BAK_INT3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE1">
+    	        <comment>BAK_DOUBLE1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE2">
+    	        <comment>BAK_DOUBLE2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_DOUBLE3">
+    	        <comment>BAK_DOUBLE3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate1" type="date"  not-null="false">
+	    	<column name="BAK_DATE1">
+    	        <comment>BAK_DATE1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate2" type="date"  not-null="false">
+	    	<column name="BAK_DATE2">
+    	        <comment>BAK_DATE2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate3" type="date"  not-null="false">
+	    	<column name="BAK_DATE3">
+    	        <comment>BAK_DATE3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

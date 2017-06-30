@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrBigtype" table="TR_BIGTYPE">
+    	<comment>一级交易大类型信息表</comment>
+        <!-- single primaryKey -->
+	    <id name="tradetypeId" type="string" length="32">
+	    	<column name="TRADETYPE_ID">
+    	        <comment>TRADETYPE_ID</comment>
+	    	</column>
+          <!-- <generator class="uuid.hex"/>-->
+            <generator class="assigned"/>
+        </id>     
+		
+	    <property name="tradetypeCode" type="string"  length="64"  not-null="true">
+	    	<column name="TRADETYPE_CODE">
+    	        <comment>TRADETYPE_CODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetypeName" type="string"  length="64"  not-null="true">
+	    	<column name="TRADETYPE_NAME">
+    	        <comment>TRADETYPE_NAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetypeShortName" type="string"  length="32"  not-null="true">
+	    	<column name="TRADETYPE_SHORT_NAME">
+    	        <comment>TRADETYPE_SHORT_NAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="beginDate" type="date"  not-null="false">
+	    	<column name="BEGIN_DATE">
+    	        <comment>BEGIN_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exitDate" type="date"  not-null="false">
+	    	<column name="EXIT_DATE">
+    	        <comment>EXIT_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="regDate" type="date"  not-null="false">
+	    	<column name="REG_DATE">
+    	        <comment>REG_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="createPerson" type="string"  length="64"  not-null="false">
+	    	<column name="CREATE_PERSON">
+    	        <comment>CREATE_PERSON</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="text" type="string"  length="128"  not-null="false">
+	    	<column name="TEXT">
+    	        <comment>网省公司 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

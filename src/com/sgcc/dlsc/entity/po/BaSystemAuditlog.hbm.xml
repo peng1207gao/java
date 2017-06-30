@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaSystemAuditlog" table="BA_SYSTEM_AUDITLOG">
+    	<comment>BA_SYSTEM_AUDITLOG</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="56"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="modulename" type="string"  length="36"  not-null="false">
+	    	<column name="MODULENAME">
+    	        <comment>模块名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="funcname" type="string"  length="150"  not-null="false">
+	    	<column name="FUNCNAME">
+    	        <comment>功能名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="opratype" type="string"  length="36"  not-null="false">
+	    	<column name="OPRATYPE">
+    	        <comment>操作类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="opraperson" type="string"  length="8"  not-null="false">
+	    	<column name="OPRAPERSON">
+    	        <comment>操作人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="opradate" type="date"  not-null="false">
+	    	<column name="OPRADATE">
+    	        <comment>操作日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="opratime" type="string"  length="8"  not-null="false">
+	    	<column name="OPRATIME">
+    	        <comment>操作时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="remark" type="string"  length="256"  not-null="false">
+	    	<column name="REMARK">
+    	        <comment>备注</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

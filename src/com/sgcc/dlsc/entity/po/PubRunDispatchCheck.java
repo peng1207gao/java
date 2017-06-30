@@ -1,0 +1,564 @@
+package com.sgcc.dlsc.entity.po;
+//导入 java 类
+import java.io.Serializable;
+import java.math.BigDecimal;
+import java.sql.Date;
+import java.util.*;
+import org.apache.commons.lang.builder.EqualsBuilder;
+
+/**
+ * PubRunDispatchCheck的POJO类
+ *
+ * @author  zhangyr  [Sat Mar 01 20:45:16 CST 2014]
+ * 
+ */
+public class PubRunDispatchCheck implements Serializable{
+
+    /** 
+     * 属性guid
+     */
+    private String guid;
+	
+    /** 
+     * 属性marketid
+     */
+    private String marketid;
+	
+    /** 
+     * 属性tyear
+     */
+    private int tyear;
+	
+    /** 
+     * 属性tmonth
+     */
+    private int tmonth;
+	
+    /** 
+     * 属性facname
+     */
+    private String facname;
+	
+    /** 
+     * 属性electricity
+     */
+    private BigDecimal electricity;
+	
+    /** 
+     * 属性passrate1
+     */
+    private BigDecimal passrate1;
+	
+    /** 
+     * 属性passrate2
+     */
+    private BigDecimal passrate2;
+	
+    /** 
+     * 属性inputrate1
+     */
+    private BigDecimal inputrate1;
+	
+    /** 
+     * 属性inputrate2
+     */
+    private BigDecimal inputrate2;
+	
+    /** 
+     * 属性inputrate3
+     */
+    private BigDecimal inputrate3;
+	
+    /** 
+     * 属性state
+     */
+    private BigDecimal state;
+	
+    /** 
+     * 属性subjectguid
+     */
+    private String subjectguid;
+	
+    /** 
+     * 属性fillinman
+     */
+    private String fillinman;
+	
+    /** 
+     * 属性fillintime
+     */
+    private Date fillintime;
+	
+    /** 
+     * 属性bak1
+     */
+    private BigDecimal bak1;
+	
+    /** 
+     * 属性bak2
+     */
+    private BigDecimal bak2;
+	
+    /** 
+     * 属性bak3
+     */
+    private BigDecimal bak3;
+	
+    /** 
+     * 属性bak4
+     */
+    private BigDecimal bak4;
+	
+    /** 
+     * 属性bak5
+     */
+    private String bak5;
+	
+    /** 
+     * 属性bak6
+     */
+    private String bak6;
+    /** 
+     * 属性bak6
+     */
+    private String facid;
+	
+    /**
+     * PubRunDispatchCheck构造函数
+     */
+    public PubRunDispatchCheck() {
+        super();
+    }  
+	
+    /**
+     * PubRunDispatchCheck完整的构造函数
+     */  
+    public PubRunDispatchCheck(String guid,String marketid,Integer tyear,Integer tmonth,BigDecimal state,String fillinman,Date fillintime){
+        this.guid = guid;
+        this.marketid = marketid;
+        this.tyear = tyear;
+        this.tmonth = tmonth;
+        this.state = state;
+        this.fillinman = fillinman;
+        this.fillintime = fillintime;
+    }
+ 
+    /**
+     * 属性 guid 的get方法
+     * @return String
+     */
+    public String getGuid(){
+        return guid;
+    }
+	
+    /**
+     * 属性 guid 的set方法
+     * @return
+     */
+    public void setGuid(String guid){
+        if(guid != null && guid.trim().length() == 0){
+            this.guid = null;
+        }else{
+            this.guid = guid;
+        }
+    } 
+	
+    /**
+     * 属性 marketid 的get方法
+     * @return String
+     */
+    public String getMarketid(){
+        return marketid;
+    }
+	
+    /**
+     * 属性 marketid 的set方法
+     * @return
+     */
+    public void setMarketid(String marketid){
+        this.marketid = marketid;
+    } 
+	
+    /**
+     * 属性 tyear 的get方法
+     * @return int
+     */
+    public int getTyear(){
+        return tyear;
+    }
+	
+    /**
+     * 属性 tyear 的set方法
+     * @return
+     */
+    public void setTyear(int tyear){
+        this.tyear = tyear;
+    } 
+	
+    /**
+     * 属性 tmonth 的get方法
+     * @return int
+     */
+    public int getTmonth(){
+        return tmonth;
+    }
+	
+    /**
+     * 属性 tmonth 的set方法
+     * @return
+     */
+    public void setTmonth(int tmonth){
+        this.tmonth = tmonth;
+    } 
+	
+    /**
+     * 属性 facname 的get方法
+     * @return String
+     */
+    public String getFacname(){
+        return facname;
+    }
+	
+    /**
+     * 属性 facname 的set方法
+     * @return
+     */
+    public void setFacname(String facname){
+        this.facname = facname;
+    } 
+	
+    /**
+     * 属性 electricity 的get方法
+     * @return BigDecimal
+     */
+    public BigDecimal getElectricity(){
+        return electricity;
+    }
+	
+    /**
+     * 属性 electricity 的set方法
+     * @return
+     */
+    public void setElectricity(BigDecimal electricity){
+        this.electricity = electricity;
+    } 
+	
+    /**
+     * 属性 passrate1 的get方法
+     * @return BigDecimal
+     */
+    public BigDecimal getPassrate1(){
+        return passrate1;
+    }
+	
+    /**
+     * 属性 passrate1 的set方法
+     * @return
+     */
+    public void setPassrate1(BigDecimal passrate1){
+        this.passrate1 = passrate1;
+    } 
+	
+    /**
+     * 属性 passrate2 的get方法
+     * @return BigDecimal
+     */
+    public BigDecimal getPassrate2(){
+        return passrate2;
+    }
+	
+    /**
+     * 属性 passrate2 的set方法
+     * @return
+     */
+    public void setPassrate2(BigDecimal passrate2){
+        this.passrate2 = passrate2;
+    } 
+	
+    /**
+     * 属性 inputrate1 的get方法
+     * @return BigDecimal
+     */
+    public BigDecimal getInputrate1(){
+        return inputrate1;
+    }
+	
+    /**
+     * 属性 inputrate1 的set方法
+     * @return
+     */
+    public void setInputrate1(BigDecimal inputrate1){
+        this.inputrate1 = inputrate1;
+    } 
+	
+    /**
+     * 属性 inputrate2 的get方法
+     * @return BigDecimal
+     */
+    public BigDecimal getInputrate2(){
+        return inputrate2;
+    }
+	
+    /**
+     * 属性 inputrate2 的set方法
+     * @return
+     */
+    public void setInputrate2(BigDecimal inputrate2){
+        this.inputrate2 = inputrate2;
+    } 
+	
+    /**
+     * 属性 inputrate3 的get方法
+     * @return BigDecimal
+     */
+    public BigDecimal getInputrate3(){
+        return inputrate3;
+    }
+	
+    /**
+     * 属性 inputrate3 的set方法
+     * @return
+     */
+    public void setInputrate3(BigDecimal inputrate3){
+        this.inputrate3 = inputrate3;
+    } 
+	
+    /**
+     * 属性 state 的get方法
+     * @return BigDecimal
+     */
+    public BigDecimal getState(){
+        return state;
+    }
+	
+    /**
+     * 属性 state 的set方法
+     * @return
+     */
+    public void setState(BigDecimal state){
+        this.state = state;
+    } 
+	
+    /**
+     * 属性 subjectguid 的get方法
+     * @return String
+     */
+    public String getSubjectguid(){
+        return subjectguid;
+    }
+	
+    /**
+     * 属性 subjectguid 的set方法
+     * @return
+     */
+    public void setSubjectguid(String subjectguid){
+        this.subjectguid = subjectguid;
+    } 
+	
+    /**
+     * 属性 fillinman 的get方法
+     * @return String
+     */
+    public String getFillinman(){
+        return fillinman;
+    }
+	
+    /**
+     * 属性 fillinman 的set方法
+     * @return
+     */
+    public void setFillinman(String fillinman){
+        this.fillinman = fillinman;
+    } 
+	
+    /**
+     * 属性 fillintime 的get方法
+     * @return Date
+     */
+    public Date getFillintime(){
+        return fillintime;
+    }
+	
+    /**
+     * 属性 fillintime 的set方法
+     * @return
+     */
+    public void setFillintime(Date fillintime){
+        this.fillintime = fillintime;
+    } 
+	
+    /**
+     * 属性 bak1 的get方法
+     * @return BigDecimal
+     */
+    public BigDecimal getBak1(){
+        return bak1;
+    }
+	
+    /**
+     * 属性 bak1 的set方法
+     * @return
+     */
+    public void setBak1(BigDecimal bak1){
+        this.bak1 = bak1;
+    } 
+	
+    /**
+     * 属性 bak2 的get方法
+     * @return BigDecimal
+     */
+    public BigDecimal getBak2(){
+        return bak2;
+    }
+	
+    /**
+     * 属性 bak2 的set方法
+     * @return
+     */
+    public void setBak2(BigDecimal bak2){
+        this.bak2 = bak2;
+    } 
+	
+    /**
+     * 属性 bak3 的get方法
+     * @return BigDecimal
+     */
+    public BigDecimal getBak3(){
+        return bak3;
+    }
+	
+    /**
+     * 属性 bak3 的set方法
+     * @return
+     */
+    public void setBak3(BigDecimal bak3){
+        this.bak3 = bak3;
+    } 
+	
+    /**
+     * 属性 bak4 的get方法
+     * @return BigDecimal
+     */
+    public BigDecimal getBak4(){
+        return bak4;
+    }
+	
+    /**
+     * 属性 bak4 的set方法
+     * @return
+     */
+    public void setBak4(BigDecimal bak4){
+        this.bak4 = bak4;
+    } 
+	
+    /**
+     * 属性 bak5 的get方法
+     * @return String
+     */
+    public String getBak5(){
+        return bak5;
+    }
+	
+    /**
+     * 属性 bak5 的set方法
+     * @return
+     */
+    public void setBak5(String bak5){
+        this.bak5 = bak5;
+    } 
+	
+    /**
+     * 属性 bak6 的get方法
+     * @return String
+     */
+    public String getBak6(){
+        return bak6;
+    }
+	
+    /**
+     * 属性 bak6 的set方法
+     * @return
+     */
+    public void setBak6(String bak6){
+        this.bak6 = bak6;
+    } 
+    /**
+     * 属性 facid 的get方法
+     * @return String
+     */
+    public String getFacid(){
+        return facid;
+    }
+	
+    /**
+     * 属性 facid 的set方法
+     * @return
+     */
+    public void setFacid(String facid){
+        this.facid = facid;
+    } 
+	
+    /**
+     * Hibernate通过该方法判断对象是否相等
+     * @return boolean
+     */  
+    public boolean equals(Object o) {
+        if (this == o)
+			return true;
+		
+        if (o == null || !(o instanceof PubRunDispatchCheck))
+	        return false; 
+			
+        if(getGuid() == null) 
+	        return false;
+
+        PubRunDispatchCheck other = (PubRunDispatchCheck) o;	        
+	    return new EqualsBuilder()
+            .append(this.getGuid(), other.getGuid())
+			.isEquals();
+    } 
+     
+    /**
+     * toString方法
+     * @return String
+     */
+	public String toString(){
+
+		  return new StringBuffer()
+            .append("guid"+":"+getGuid())
+            .append("marketid"+":"+getMarketid())
+            .append("tyear"+":"+getTyear())
+            .append("tmonth"+":"+getTmonth())
+            .append("facname"+":"+getFacname())
+            .append("electricity"+":"+getElectricity())
+            .append("passrate1"+":"+getPassrate1())
+            .append("passrate2"+":"+getPassrate2())
+            .append("inputrate1"+":"+getInputrate1())
+            .append("inputrate2"+":"+getInputrate2())
+            .append("inputrate3"+":"+getInputrate3())
+            .append("state"+":"+getState())
+            .append("subjectguid"+":"+getSubjectguid())
+            .append("fillinman"+":"+getFillinman())
+            .append("fillintime"+":"+getFillintime())
+            .append("bak1"+":"+getBak1())
+            .append("bak2"+":"+getBak2())
+            .append("bak3"+":"+getBak3())
+            .append("bak4"+":"+getBak4())
+            .append("bak5"+":"+getBak5())
+            .append("bak6"+":"+getBak6())
+            .toString(); 
+			
+    } 
+   
+
+    /**
+     * hashcode方法
+     * @return int
+     * 
+     */
+    @Override
+    public int hashCode(){
+		return super.hashCode();
+	}
+
+}

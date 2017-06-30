@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxMbFjmj" table="SJJC_YX_MB_FJMJ">
+    	<comment>营销_码表_码表分级枚举值</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="codeId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="CODE_ID">
+    	        <comment>代码标识,本实体记录的唯一标识。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="codeSortId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="CODE_SORT_ID">
+    	        <comment>代码分类标识,本实体记录的唯一标识。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pcode" type="string"  length="16"  not-null="false">
+	    	<column name="P_CODE">
+    	        <comment>上级代码,上级代码的代码标识，用于支持多级代码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="codeType" type="string"  length="16"  not-null="false">
+	    	<column name="CODE_TYPE">
+    	        <comment>代码分类,上级代码分类的代码分类标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orgNo" type="string"  length="16"  not-null="false">
+	    	<column name="ORG_NO">
+    	        <comment>所属供电单位编号,代码所属单位。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value" type="string"  length="256"  not-null="false">
+	    	<column name="VALUE">
+    	        <comment>代码值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="name" type="string"  length="256"  not-null="false">
+	    	<column name="NAME">
+    	        <comment>代码名称,代码值的名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispSn" type="big_decimal"  length="5"  not-null="false">
+	    	<column name="DISP_SN">
+    	        <comment>显示序号,代码显示顺序号。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="content1" type="string"  length="512"  not-null="false">
+	    	<column name="CONTENT1">
+    	        <comment>代码内容1,代码的内容，备用属性</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="content2" type="string"  length="512"  not-null="false">
+	    	<column name="CONTENT2">
+    	        <comment>代码内容2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="content3" type="string"  length="512"  not-null="false">
+	    	<column name="CONTENT3">
+    	        <comment>代码内容3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="content4" type="string"  length="512"  not-null="false">
+	    	<column name="CONTENT4">
+    	        <comment>代码内容4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="content5" type="string"  length="512"  not-null="false">
+	    	<column name="CONTENT5">
+    	        <comment>代码内容5</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

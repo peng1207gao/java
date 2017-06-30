@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaFlowVeriinfo" table="BA_FLOW_VERIINFO">
+    	<comment>???????</comment>
+        <!-- single primaryKey -->
+	    <id name="workitemid" type="big_decimal" length="22">
+	    	<column name="WORKITEMID">
+    	        <comment>???ID</comment>
+	    	</column>
+            <generator class="assigned"/>
+        </id>     
+		
+	    <property name="outcome" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="OUTCOME">
+    	        <comment>??(0??/1??)</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="opiniom" type="string"  length="1500"  not-null="false">
+	    	<column name="OPINIOM">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operetedate" type="date"  not-null="false">
+	    	<column name="OPERETEDATE">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="usercode" type="string"  length="36"  not-null="false">
+	    	<column name="USERCODE">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extends1" type="string"  length="100"  not-null="false">
+	    	<column name="EXTENDS1">
+    	        <comment>????1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extends2" type="string"  length="100"  not-null="false">
+	    	<column name="EXTENDS2">
+    	        <comment>????2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extends3" type="string"  length="100"  not-null="false">
+	    	<column name="EXTENDS3">
+    	        <comment>????3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

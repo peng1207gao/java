@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaAppraise" table="BA_APPRAISE">
+    	<comment>平衡评价信息表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="balance" type="string"  length="36"  not-null="false">
+	    	<column name="BALANCE">
+    	        <comment>平衡主题  日平衡、月度平衡预测…… </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDate" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TAB_DATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="baUnit" type="string"  length="36"  not-null="false">
+	    	<column name="BA_UNIT">
+    	        <comment>评分</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startdate" type="date"  not-null="false">
+	    	<column name="STARTDATE">
+    	        <comment>开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="enddate" type="date"  not-null="false">
+	    	<column name="ENDDATE">
+    	        <comment>结束时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

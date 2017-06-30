@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CmdConfig" table="CMD_CONFIG">
+    	<comment>CMD_CONFIG</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="cmdId" type="string"  length="512"  not-null="true">
+	    	<column name="CMD_ID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cmdDescr" type="string"  length="512"  not-null="false">
+	    	<column name="CMD_DESCR">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cmd" type="string"  length="512"  not-null="true">
+	    	<column name="CMD">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cmdTimeouts" type="string"  length="5"  not-null="false">
+	    	<column name="CMD_TIMEOUTS">
+    	        <comment>????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cmdWatch" type="string"  length="3"  not-null="false">
+	    	<column name="CMD_WATCH">
+    	        <comment>??????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cmdType" type="string"  length="512"  not-null="false">
+	    	<column name="CMD_TYPE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>
+    	
+    	<property name="cmdExplicate" type="string"  length="4000"  not-null="false">
+	    	<column name="CMD_EXPLICATE">
+    	        <comment>算法说明</comment>
+	    	</column>
+    	</property>   
+         
+    </class>
+</hibernate-mapping>

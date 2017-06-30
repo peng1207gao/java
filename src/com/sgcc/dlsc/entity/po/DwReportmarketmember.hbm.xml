@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwReportmarketmember" table="DW_REPORTMARKETMEMBER">
+    	<comment>DW_REPORTMARKETMEMBER</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqid" type="string"  length="36"  not-null="false">
+	    	<column name="TRADESEQID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="participantid" type="string"  length="36"  not-null="false">
+	    	<column name="PARTICIPANTID">
+    	        <comment>市场成员ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="busiunitid" type="string"  length="36"  not-null="false">
+	    	<column name="BUSIUNITID">
+    	        <comment>业务单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startdate" type="date"  not-null="false">
+	    	<column name="STARTDATE">
+    	        <comment>开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="enddate" type="date"  not-null="false">
+	    	<column name="ENDDATE">
+    	        <comment>结束时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradbrandnum" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TRADBRANDNUM">
+    	        <comment>时间段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reportbrandnumb" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="REPORTBRANDNUMB">
+    	        <comment>申报段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thetype" type="string"  length="36"  not-null="false">
+	    	<column name="THETYPE">
+    	        <comment>类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecquantity" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ELECQUANTITY">
+    	        <comment>电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE">
+    	        <comment>电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="intervalnum" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="INTERVALNUM">
+    	        <comment>轮次</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

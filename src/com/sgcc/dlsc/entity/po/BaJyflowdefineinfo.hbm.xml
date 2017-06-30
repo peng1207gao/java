@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaJyflowdefineinfo" table="BA_JYFLOWDEFINEINFO">
+    	<comment>????</comment>
+        <!-- single primaryKey -->
+	    <id name="flowid" type="string" length="64">
+	    	<column name="FLOWID">
+    	        <comment>????ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="flowname" type="string"  length="64"  not-null="false">
+	    	<column name="FLOWNAME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="flowdefdate" type="date"  not-null="false">
+	    	<column name="FLOWDEFDATE">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr1" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR1">
+    	        <comment>????1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr2" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR2">
+    	        <comment>????2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr3" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR3">
+    	        <comment>????3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr4" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR4">
+    	        <comment>????4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr5" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR5">
+    	        <comment>????5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="flowdefperson" type="string"  length="32"  not-null="false">
+	    	<column name="FLOWDEFPERSON">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

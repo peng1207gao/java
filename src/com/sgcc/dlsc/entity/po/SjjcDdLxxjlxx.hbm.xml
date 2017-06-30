@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcDdLxxjlxx" table="SJJC_DD_LXXJLXX">
+    	<comment>调度_联络线计量信息</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="infoDate" type="date"  not-null="true">
+	    	<column name="INFO_DATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plantname" type="string"  length="128"  not-null="true">
+	    	<column name="PLANTNAME">
+    	        <comment>联络线名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="markname" type="string"  length="128"  not-null="false">
+	    	<column name="MARKNAME">
+    	        <comment>计量关口名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="infoTime" type="date"  not-null="true">
+	    	<column name="INFO_TIME">
+    	        <comment>时间,15分钟一点</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lastcode" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LASTCODE">
+    	        <comment>底码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatchcompanyname" type="string"  length="128"  not-null="false">
+	    	<column name="DISPATCHCOMPANYNAME">
+    	        <comment>所属调度单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="forwardquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FORWARDQUANTITY">
+    	        <comment>正向电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="oppositequantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="OPPOSITEQUANTITY">
+    	        <comment>反向电量</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

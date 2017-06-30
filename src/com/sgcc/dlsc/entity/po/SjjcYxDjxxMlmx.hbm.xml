@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcYxDjxxMlmx" table="SJJC_YX_DJXX_MLMX">
+    	<comment>营销_营销电价信息_目录电价明细</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="detId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="DET_ID">
+    	        <comment>目录电价明细标识,目录电度电价唯一标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="catPrcId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="CAT_PRC_ID">
+    	        <comment>目录电价标识,目录电价唯一标识</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rangeTypeCode" type="string"  length="8"  not-null="false">
+	    	<column name="RANGE_TYPE_CODE">
+    	        <comment>执行范围分类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="catKwhPrc" type="big_decimal"  length="10"  not-null="true">
+	    	<column name="CAT_KWH_PRC">
+    	        <comment>目录电度电价单价,目录电度电价指不含代征电价的电度电价。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="kwhPrc" type="big_decimal"  length="10"  not-null="true">
+	    	<column name="KWH_PRC">
+    	        <comment>电度电价单价,电度电价是指按用户用电度数计算的电价。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="prcTiCode" type="string"  length="8"  not-null="true">
+	    	<column name="PRC_TI_CODE">
+    	        <comment>电价时段,电价时段：如尖峰、峰、平、谷、脊谷</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="refTsFlag" type="string"  length="8"  not-null="true">
+	    	<column name="REF_TS_FLAG">
+    	        <comment>基准时段标志</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iduFlag" type="string"  length="32"  not-null="false">
+	    	<column name="IDU_FLAG">
+    	        <comment>变动标志</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

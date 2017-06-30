@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubYGeneOvhPlan" table="PUB_Y_GENE_OVH_PLAN">
+    	<comment>年度火电机组计划检修</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="facid" type="string"  length="36"  not-null="false">
+	    	<column name="FACID">
+    	        <comment>电厂ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="facname" type="string"  length="100"  not-null="false">
+	    	<column name="FACNAME">
+    	        <comment>电厂名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="macid" type="string"  length="36"  not-null="false">
+	    	<column name="MACID">
+    	        <comment>机组ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="macname" type="string"  length="100"  not-null="false">
+	    	<column name="MACNAME">
+    	        <comment>机组名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="begintime" type="date"  not-null="false">
+	    	<column name="BEGINTIME">
+    	        <comment>开工时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endtime" type="date"  not-null="false">
+	    	<column name="ENDTIME">
+    	        <comment>完工时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stopdays" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="STOPDAYS">
+    	        <comment>停机天数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ovhtype" type="string"  length="100"  not-null="false">
+	    	<column name="OVHTYPE">
+    	        <comment>检修类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="genevolume" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENEVOLUME">
+    	        <comment>机组容量单位：万千瓦</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="STATE">
+    	        <comment>状态,0未发布，1发布，2待审批，3审批通过，4退回。默认为0</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="subjectguid" type="string"  length="32"  not-null="false">
+	    	<column name="SUBJECTGUID">
+    	        <comment>发布对象ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="20"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>填报人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillintime" type="date"  not-null="true">
+	    	<column name="FILLINTIME">
+    	        <comment>填报时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>BAK1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>BAK2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>BAK3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="32"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>BAK4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="200"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>BAK5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="200"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>BAK6</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

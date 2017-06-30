@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubBusiGenerateElec" table="PUB_BUSI_GENERATE_ELEC">
+    	<comment>统调发电企业发电情况</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tyear" type="int"  length="4"  not-null="true">
+	    	<column name="TYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tmonth" type="int"  length="2"  not-null="true">
+	    	<column name="TMONTH">
+    	        <comment>月份：1、2、3、4……11、12</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="unitid" type="string"  length="36"  not-null="false">
+	    	<column name="UNITID">
+    	        <comment>计划单元ID</comment>
+	    	</column>
+    	</property>  
+    	
+	    <property name="busiunit" type="string"  length="100"  not-null="false">
+	    	<column name="BUSIUNIT">
+    	        <comment>计划单元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY1">
+    	        <comment>实际发电量单位：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY2">
+    	        <comment>实际发电量单位：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY3">
+    	        <comment>年合同电量单位：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hours1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HOURS1">
+    	        <comment>年合同利用小时数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY4">
+    	        <comment>基数年合同上网电量单位：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity5" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY5">
+    	        <comment>基数年合同上网电量年累单位：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rate" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="RATE">
+    	        <comment>基数年合同完成率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE1">
+    	        <comment>基数年合同上网电价单位：元/MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity6" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY6">
+    	        <comment>跨省双边交易上网电量单位：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity7" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY7">
+    	        <comment>跨省双边交易上网电量年累单位：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE2">
+    	        <comment>跨省双边交易上网电价单位：元/MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity8" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY8">
+    	        <comment>低谷抽水电上网电量单位：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity9" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY9">
+    	        <comment>低谷抽水电上网电量年累单位：万千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE3">
+    	        <comment>低谷抽水电上网电价单位：元/MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hours2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HOURS2">
+    	        <comment>年度实际利用小时数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="int"  length="2"  not-null="true">
+	    	<column name="STATE">
+    	        <comment>状态,0未发布，1发布，2待审批，3审批通过，4退回。默认为0</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="subjectguid" type="string"  length="32"  not-null="false">
+	    	<column name="SUBJECTGUID">
+    	        <comment>发布主题ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="20"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>填报人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillintime" type="date"  not-null="true">
+	    	<column name="FILLINTIME">
+    	        <comment>填报时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>备用1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>备用2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>备用3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>备用4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="32"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>备用5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="32"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>备用6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity12" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY12">
+    	        <comment>调试上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity13" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY13">
+    	        <comment>调试上网电量年累</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price5" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE5">
+    	        <comment>调试上网电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity14" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY14">
+    	        <comment>跨省集中交易上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity15" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY15">
+    	        <comment>跨省集中交易上网电量年累</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price6" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE6">
+    	        <comment>跨省集中交易上网电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity16" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY16">
+    	        <comment>直接交易上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity17" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY17">
+    	        <comment>直接交易上网电量年累</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price7" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE7">
+    	        <comment>直接交易上网电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity10" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY10">
+    	        <comment>替代上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity11" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY11">
+    	        <comment>替代上网电量年累</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE4">
+    	        <comment>替代上网电价</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

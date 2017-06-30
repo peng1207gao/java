@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DocxManager" table="DOCX_MANAGER">
+    	<comment>文件管理表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>场景ID  默认为国网=91812</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="docid" type="string"  length="20"  not-null="true">
+	    	<column name="DOCID">
+    	        <comment>文档ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="docname" type="string"  length="36"  not-null="false">
+	    	<column name="DOCNAME">
+    	        <comment>文档名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="moduleid" type="string"  length="36"  not-null="true">
+	    	<column name="MODULEID">
+    	        <comment>模块ID  通用编码表中type=9</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="docmodeid" type="string"  length="20"  not-null="false">
+	    	<column name="DOCMODEID">
+    	        <comment>文档模板ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="nversion" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="NVERSION">
+    	        <comment>最新版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="effective" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="EFFECTIVE">
+    	        <comment>是否生效</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="32"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>更新人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="versiondesc" type="string"  length="256"  not-null="false">
+	    	<column name="VERSIONDESC">
+    	        <comment>版本说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ymd" type="string"  length="10"  not-null="false">
+	    	<column name="YMD">
+    	        <comment>出现日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="string"  length="32"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>bak1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="string"  length="32"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>bak2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>bak3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

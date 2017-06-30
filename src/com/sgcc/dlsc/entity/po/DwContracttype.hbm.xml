@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwContracttype" table="DW_CONTRACTTYPE">
+    	<comment>合同_合同类型</comment>
+        <!-- single primaryKey -->
+	    <id name="contracttypeid" type="string" length="36">
+	    	<column name="CONTRACTTYPEID">
+    	        <comment>合同类型ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="typename" type="string"  length="64"  not-null="false">
+	    	<column name="TYPENAME">
+    	        <comment>合同类型名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="supertypeid" type="string"  length="36"  not-null="false">
+	    	<column name="SUPERTYPEID">
+    	        <comment>上级合同类型ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="false">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>生效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>失效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="effectiveflag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="EFFECTIVEFLAG">
+    	        <comment>是否失效</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

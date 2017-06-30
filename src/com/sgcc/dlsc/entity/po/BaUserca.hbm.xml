@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaUserca" table="BA_USERCA">
+    	<comment>BA_USERCA</comment>
+        <!-- single primaryKey -->
+	    <id name="usercaid" type="string" length="36">
+	    	<column name="USERCAID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="userid" type="string"  length="36"  not-null="true">
+	    	<column name="USERID">
+    	        <comment>账号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isout" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISOUT">
+    	        <comment>是否是外网用户</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isca" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="ISCA">
+    	        <comment>登录使用CA证书</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="caid" type="string"  length="200"  not-null="false">
+	    	<column name="CAID">
+    	        <comment>证书ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>维护人员ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>维护时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="castartdate" type="date"  not-null="false">
+	    	<column name="CASTARTDATE">
+    	        <comment>生效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="caenddate" type="date"  not-null="false">
+	    	<column name="CAENDDATE">
+    	        <comment>失效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="username" type="string"  length="64"  not-null="false">
+	    	<column name="USERNAME">
+    	        <comment>用户名称</comment>
+	    	</column>
+    	</property>  
+    </class>
+</hibernate-mapping>

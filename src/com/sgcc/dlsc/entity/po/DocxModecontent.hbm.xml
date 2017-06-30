@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DocxModecontent" table="DOCX_MODECONTENT">
+    	<comment>文件模板内容表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="docmodeid" type="string"  length="20"  not-null="true">
+	    	<column name="DOCMODEID">
+    	        <comment>文档模板ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="indexnum" type="big_decimal"  length="22"  not-null="true">
+	    	<column name="INDEXNUM">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ftype" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="FTYPE">
+    	        <comment>类型  通用编码表：1=图片；2=表格；3=文字；4=特殊字符；5=其它</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="picture" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+	    	<column name="PICTURE">
+    	        <comment>图片 docx_picture</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jce" type="string"  length="20"  not-null="false">
+	    	<column name="JCE">
+    	        <comment>对齐方式  docx_picture\docx_text</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stype" type="string"  length="20"  not-null="false">
+	    	<column name="STYPE">
+    	        <comment>特殊类型   docx_special</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="titledata" type="org.springframework.orm.hibernate3.support.ClobStringType"  not-null="false">
+	    	<column name="TITLEDATA">
+    	        <comment>表格标题行数据 docx_table</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contentdata" type="org.springframework.orm.hibernate3.support.ClobStringType"  not-null="false">
+	    	<column name="CONTENTDATA">
+    	        <comment>表格内容数据    docx_table</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fonttypetable" type="string"  length="20"  not-null="false">
+	    	<column name="FONTTYPETABLE">
+    	        <comment>表格字体    docx_table【暂时没有】</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rowcount" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="ROWCOUNT">
+    	        <comment>行数  docx_table</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="colcount" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="COLCOUNT">
+    	        <comment>列数  docx_table</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="colwidth" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="COLWIDTH">
+    	        <comment>列宽  docx_table</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tablesql" type="string"  length="500"  not-null="false">
+	    	<column name="TABLESQL">
+    	        <comment>列表定义sql   docx_table【暂时没有】</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="text" type="org.springframework.orm.hibernate3.support.ClobStringType"  not-null="false">
+	    	<column name="TEXT">
+    	        <comment>文字  docx_table</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fonttype" type="string"  length="20"  not-null="false">
+	    	<column name="FONTTYPE">
+    	        <comment>字体  docx_table</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fontsize" type="string"  length="20"  not-null="false">
+	    	<column name="FONTSIZE">
+    	        <comment>字号  docx_table</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isblod" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="ISBLOD">
+    	        <comment>是否加粗  docx_table</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="string"  length="32"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>bak1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="string"  length="32"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>bak2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>bak3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

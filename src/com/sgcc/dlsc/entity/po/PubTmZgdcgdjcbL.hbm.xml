@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubTmZgdcgdjcbL" table="PUB_TM_ZGDCGDJCB_L">
+    	<comment>PUB_TM_ZGDCGDJCB_L</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tyear" type="integer"  not-null="true">
+	    	<column name="TYEAR">
+    	        <comment>年度</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tmonth" type="integer"  not-null="true">
+	    	<column name="TMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="markerid" type="string"  length="10"  not-null="true">
+	    	<column name="MARKERID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xh" type="integer"  not-null="false">
+	    	<column name="XH">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jzmc" type="string"  length="36"  not-null="false">
+	    	<column name="JZMC">
+    	        <comment>机组名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jzlx" type="string"  length="128"  not-null="false">
+	    	<column name="JZLX">
+    	        <comment>机组类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jzrl" type="string"  length="128"  not-null="false">
+	    	<column name="JZRL">
+    	        <comment>机组容量（兆瓦）</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ssfdjt" type="string"  length="36"  not-null="false">
+	    	<column name="SSFDJT">
+    	        <comment>所属发电集团</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jsdy" type="string"  length="128"  not-null="false">
+	    	<column name="JSDY">
+    	        <comment>结算单元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="20"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>填写人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vartime" type="date"  not-null="true">
+	    	<column name="VARTIME">
+    	        <comment>入库时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>BAK1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>BAK2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>BAK3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="32"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>BAK4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="200"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>BAK5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="200"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>BAK6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dcid" type="string"  length="36"  not-null="false">
+	    	<column name="DCID">
+    	        <comment>DCID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jsdyid" type="string"  length="36"  not-null="false">
+	    	<column name="JSDYID">
+    	        <comment>JSDYID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="integer"  not-null="false">
+	    	<column name="STATE">
+    	        <comment>STATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lcid" type="string"  length="36"  not-null="false">
+	    	<column name="LCID">
+    	        <comment>LCID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

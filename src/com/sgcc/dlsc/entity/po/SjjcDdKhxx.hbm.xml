@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcDdKhxx" table="SJJC_DD_KHXX">
+    	<comment>调度_考核信息</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plantname" type="string"  length="128"  not-null="false">
+	    	<column name="PLANTNAME">
+    	        <comment>电厂名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="unitname" type="string"  length="128"  not-null="false">
+	    	<column name="UNITNAME">
+    	        <comment>机组名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="assessmentclass" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="ASSESSMENTCLASS">
+    	        <comment>考核类别,1.电量偏差考核 2.电力偏差考核 3.强迫停运考核 4.等效非计划停运考核 5.无功考核 6.电压考核 7.其他 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="assessmentquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ASSESSMENTQUANTITY">
+    	        <comment>考核电量,单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="assessmentexpenses" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ASSESSMENTEXPENSES">
+    	        <comment>考核费用,单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatchcompanyname" type="string"  length="128"  not-null="false">
+	    	<column name="DISPATCHCOMPANYNAME">
+    	        <comment>所属调度单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	      
+         
+    </class>
+</hibernate-mapping>

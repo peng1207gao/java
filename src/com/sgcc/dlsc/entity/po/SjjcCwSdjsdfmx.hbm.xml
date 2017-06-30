@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcCwSdjsdfmx" table="SJJC_CW_SDJSDFMX">
+    	<comment>财务管控_输电结算电费明细信息</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wjjshtbm" type="string"  length="50"  not-null="false">
+	    	<column name="WJJSHTBM">
+    	        <comment>网间结算合同编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sj" type="date"  not-null="false">
+	    	<column name="SJ">
+    	        <comment>时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="shudldf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SHUDLDF">
+    	        <comment>售电量电费，单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="shoudldf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SHOUDLDF">
+    	        <comment>输电量电费，单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jfrl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="JFRL">
+    	        <comment>计费容量，单位：MW</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rldf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="RLDF">
+    	        <comment>容量电费，单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ydesdf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="YDESDF">
+    	        <comment>月定额输电费，单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="khdf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="KHDF">
+    	        <comment>考核电费，单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tbdf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TBDF">
+    	        <comment>退补电费，单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="qtdf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="QTDF">
+    	        <comment>其他电费，单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ysdfhjhs" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="YSDFHJHS">
+    	        <comment>应收电费合计（含税），单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="srcbbhs" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SRCBBHS">
+    	        <comment>收入/成本（不含税），单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="se" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SE">
+    	        <comment>税额，单位：元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bz" type="string"  length="500"  not-null="false">
+	    	<column name="BZ">
+    	        <comment>备注</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gxsj" type="date"  not-null="false">
+	    	<column name="GXSJ">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

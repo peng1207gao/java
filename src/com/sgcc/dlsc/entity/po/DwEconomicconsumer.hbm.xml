@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwEconomicconsumer" table="DW_ECONOMICCONSUMER">
+    	<comment>基础信息_经济负荷</comment>
+        <!-- single primaryKey -->
+	    <id name="economicconsumerid" type="string" length="36">
+	    	<column name="ECONOMICCONSUMERID">
+    	        <comment>经济负荷ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="economicconsumername" type="string"  length="150"  not-null="false">
+	    	<column name="ECONOMICCONSUMERNAME">
+    	        <comment>经济负荷名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="consumerloadid" type="string"  length="36"  not-null="false">
+	    	<column name="CONSUMERLOADID">
+    	        <comment>所属用户负荷</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

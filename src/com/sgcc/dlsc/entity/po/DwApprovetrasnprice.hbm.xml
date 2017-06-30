@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwApprovetrasnprice" table="DW_APPROVETRASNPRICE">
+    	<comment>基础信息_批复输配电价</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffecttime" type="date"  not-null="false">
+	    	<column name="STARTEFFECTTIME">
+    	        <comment>生效日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="voltagegrade" type="big_decimal"  length="3"  not-null="false">
+	    	<column name="VOLTAGEGRADE">
+    	        <comment>电压等级</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PRICE">
+    	        <comment>批复电价</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

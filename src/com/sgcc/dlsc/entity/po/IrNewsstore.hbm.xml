@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.IrNewsstore" table="IR_NEWSSTORE">
+    	<comment>IR_NEWSSTORE</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="flowid" type="string"  length="32"  not-null="false">
+	    	<column name="FLOWID">
+    	        <comment>流程ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="itemid" type="string"  length="32"  not-null="true">
+	    	<column name="ITEMID">
+    	        <comment>所在栏目编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="itemname" type="string"  length="32"  not-null="false">
+	    	<column name="ITEMNAME">
+    	        <comment>栏目名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="numid" type="string"  length="32"  not-null="false">
+	    	<column name="NUMID">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ntitle" type="string"  length="100"  not-null="true">
+	    	<column name="NTITLE">
+    	        <comment>新闻标题</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="nsummary" type="string"  length="400"  not-null="false">
+	    	<column name="NSUMMARY">
+    	        <comment>内容摘要</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="nsource" type="string"  length="32"  not-null="false">
+	    	<column name="NSOURCE">
+    	        <comment>新闻来源</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="nauthor" type="string"  length="32"  not-null="false">
+	    	<column name="NAUTHOR">
+    	        <comment>发布人或作者</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="issuetime" type="timestamp"  not-null="true">
+	    	<column name="ISSUETIME">
+    	        <comment>发布时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endtime" type="timestamp"  not-null="false">
+	    	<column name="ENDTIME">
+    	        <comment>有效期至</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="clicktimes" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="CLICKTIMES">
+    	        <comment>点击率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hottype" type="string"  length="2"  not-null="false">
+	    	<column name="HOTTYPE">
+    	        <comment>热度等级  0-一般；1-置顶</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="opentype" type="string"  length="2"  not-null="false">
+	    	<column name="OPENTYPE">
+    	        <comment>打开方式  0-明细； 1-链接； 2-下载 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="piclayouttype" type="string"  length="2"  not-null="false">
+	    	<column name="PICLAYOUTTYPE">
+    	        <comment>图片布局  0-文字上部； 1-文字右包围；2-文字左包围；3-文字下部； </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="issuetype" type="string"  length="2"  not-null="false">
+	    	<column name="ISSUETYPE">
+    	        <comment>是否发布  0-未发布；1-发布；</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operuser" type="string"  length="32"  not-null="false">
+	    	<column name="OPERUSER">
+    	        <comment>操作人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="opertime" type="date"  not-null="false">
+	    	<column name="OPERTIME">
+    	        <comment>操作时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="verifytype" type="string"  length="2"  not-null="false">
+	    	<column name="VERIFYTYPE">
+    	        <comment>审核状态  0-尚未审核； 1-已审核通过；2-审核未通过 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="verifyinfo" type="string"  length="32"  not-null="false">
+	    	<column name="VERIFYINFO">
+    	        <comment>审核信息ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField1" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+	    	<column name="BACK_FIELD1">
+    	        <comment>备用字段1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField2" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+	    	<column name="BACK_FIELD2">
+    	        <comment>备用字段2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField3" type="string"  length="50"  not-null="false">
+	    	<column name="BACK_FIELD3">
+    	        <comment>备用字段3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField4" type="string"  length="50"  not-null="false">
+	    	<column name="BACK_FIELD4">
+    	        <comment>备用字段4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField5" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="BACK_FIELD5">
+    	        <comment>备用字段5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField6" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="BACK_FIELD6">
+    	        <comment>备用字段6</comment>
+	    	</column>
+    	</property> 
+	    <property name="tyear" type="int"  length="4"  not-null="false">
+	    	<column name="tyear">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property> 
+	    <property name="tmonth" type="int"  length="2"  not-null="false">
+	    	<column name="tmonth">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property> 
+	    <property name="tquarter" type="int"  length="2"  not-null="false">
+	    	<column name="tquarter">
+    	        <comment>季度</comment>
+	    	</column>
+    	</property> 
+	    <property name="tdate" type="date" not-null="false">
+	    	<column name="tdate">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property> 
+	    <property name="timetype" type="int"  length="2"  not-null="false">
+	    	<column name="timetype">
+    	        <comment>时间类型</comment>
+	    	</column>
+    	</property> 
+    	 
+	    <property name="backField7" type="string"  length="50"  not-null="false">
+	    	<column name="BACK_FIELD7">
+    	        <comment>备用字段7</comment>
+	    	</column>
+    	</property>  
+	    <property name="backField8" type="string"  length="50"  not-null="false">
+	    	<column name="BACK_FIELD8">
+    	        <comment>备用字段8</comment>
+	    	</column>
+    	</property>  
+	    <property name="backField9" type="string"  length="50"  not-null="false">
+	    	<column name="BACK_FIELD9">
+    	        <comment>备用字段9</comment>
+	    	</column>
+    	</property>  
+	    <property name="backField10" type="string"  length="50"  not-null="false">
+	    	<column name="BACK_FIELD10">
+    	        <comment>备用字段10</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="keyword" type="string"  length="50"  not-null="false">
+	    	<column name="KEYWORD">
+    	        <comment>关键字</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="filecontent" type="org.springframework.orm.hibernate3.support.ClobStringType"  not-null="false">
+	    	<column name="FILECONTENT">
+    	        <comment>正文内容</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="addpic" type="string"  length="32"  not-null="false">
+	    	<column name="ADDPIC">
+    	        <comment>代表图片ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="addfile1" type="string"  length="32"  not-null="false">
+	    	<column name="ADDFILE1">
+    	        <comment>附件1ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="addfile2" type="string"  length="32"  not-null="false">
+	    	<column name="ADDFILE2">
+    	        <comment>附件2ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

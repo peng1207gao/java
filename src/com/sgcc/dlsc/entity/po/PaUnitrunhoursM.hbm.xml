@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PaUnitrunhoursM" table="PA_UNITRUNHOURS_M">
+    	<comment>月度发电利用小时数表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="querydate" type="date"  not-null="false">
+	    	<column name="QUERYDATE">
+    	        <comment>年月</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="physicalunitid" type="string"  length="32"  not-null="false">
+	    	<column name="PHYSICALUNITID">
+    	        <comment>物理机组ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="physicalunitname" type="string"  length="32"  not-null="false">
+	    	<column name="PHYSICALUNITNAME">
+    	        <comment>机组名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stationid" type="string"  length="32"  not-null="false">
+	    	<column name="STATIONID">
+    	        <comment>所属电厂ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stationname" type="string"  length="32"  not-null="false">
+	    	<column name="STATIONNAME">
+    	        <comment>电厂名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gengroupid" type="string"  length="32"  not-null="false">
+	    	<column name="GENGROUPID">
+    	        <comment>所属发电集团ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gengroupname" type="string"  length="32"  not-null="false">
+	    	<column name="GENGROUPNAME">
+    	        <comment>发电集团名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gentype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="GENTYPE">
+    	        <comment>机组发电类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="unitcap" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="UNITCAP">
+    	        <comment>机组容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="genratorclass" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="GENRATORCLASS">
+    	        <comment>机组容量等级</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monrealgenereq" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="MONREALGENEREQ">
+    	        <comment>实际发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monplangenereq" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="MONPLANGENEREQ">
+    	        <comment>计划发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monrealgenereqT" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="MONREALGENEREQ_T">
+    	        <comment>累计至本月实际发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monplangenereqT" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="MONPLANGENEREQ_T">
+    	        <comment>累计至本月累计计划发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monrealneteq" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="MONREALNETEQ">
+    	        <comment>实际上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="monplanneteq" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="MONPLANNETEQ">
+    	        <comment>计划上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backStr1" type="string"  length="32"  not-null="false">
+	    	<column name="BACK_STR1">
+    	        <comment>预留字段1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backStr2" type="string"  length="32"  not-null="false">
+	    	<column name="BACK_STR2">
+    	        <comment>预留字段2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backStr3" type="string"  length="32"  not-null="false">
+	    	<column name="BACK_STR3">
+    	        <comment>预留字段3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backStr4" type="string"  length="32"  not-null="false">
+	    	<column name="BACK_STR4">
+    	        <comment>预留字段4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backStr5" type="string"  length="32"  not-null="false">
+	    	<column name="BACK_STR5">
+    	        <comment>预留字段5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backInt1" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="BACK_INT1">
+    	        <comment>预留字段6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backInt2" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="BACK_INT2">
+    	        <comment>预留字段7</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backInt3" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="BACK_INT3">
+    	        <comment>预留字段8</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backInt4" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="BACK_INT4">
+    	        <comment>预留字段9</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backInt5" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="BACK_INT5">
+    	        <comment>预留字段10</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backDouble1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BACK_DOUBLE1">
+    	        <comment>预留字段11</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backDouble2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BACK_DOUBLE2">
+    	        <comment>预留字段12</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backDouble3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BACK_DOUBLE3">
+    	        <comment>预留字段13</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backDouble4" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BACK_DOUBLE4">
+    	        <comment>预留字段14</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backDouble5" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BACK_DOUBLE5">
+    	        <comment>预留字段15</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backDouble6" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BACK_DOUBLE6">
+    	        <comment>预留字段15</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backDouble7" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BACK_DOUBLE7">
+    	        <comment>预留字段16</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backDouble8" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BACK_DOUBLE8">
+    	        <comment>预留字段17</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backDate1" type="date"  not-null="false">
+	    	<column name="BACK_DATE1">
+    	        <comment>预留字段18</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backDate2" type="date"  not-null="false">
+	    	<column name="BACK_DATE2">
+    	        <comment>预留字段19</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backDate3" type="date"  not-null="false">
+	    	<column name="BACK_DATE3">
+    	        <comment>预留字段20</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

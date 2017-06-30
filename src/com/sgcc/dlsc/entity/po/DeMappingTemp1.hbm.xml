@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DeMappingTemp1" table="DE_MAPPING_TEMP1">
+    	<comment>DE_MAPPING_TEMP1</comment>
+        <!-- single primaryKey -->
+	    <id name="sheetid" type="string" length="36">
+	    	<column name="SHEETID">
+    	        <comment>表单实例编码</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="showorder" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="SHOWORDER">
+    	        <comment>显示序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fsheetid" type="string"  length="50"  not-null="false">
+	    	<column name="FSHEETID">
+    	        <comment>映射关系主表ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ysgxblx" type="string"  length="50"  not-null="false">
+	    	<column name="YSGXBLX">
+    	        <comment>映射关系表类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="keyvalue" type="string"  length="200"  not-null="false">
+	    	<column name="KEYVALUE">
+    	        <comment>ID字段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="keyname" type="string"  length="200"  not-null="false">
+	    	<column name="KEYNAME">
+    	        <comment>名称字段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bxzzt" type="string"  length="10"  not-null="false">
+	    	<column name="BXZZT">
+    	        <comment>被选择状态0初始1被选择未保存2保存</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ylzd1" type="string"  length="200"  not-null="false">
+	    	<column name="YLZD1">
+    	        <comment>预留字段1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ylzd2" type="string"  length="200"  not-null="false">
+	    	<column name="YLZD2">
+    	        <comment>预留字段2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ylzd3" type="string"  length="200"  not-null="false">
+	    	<column name="YLZD3">
+    	        <comment>预留字段3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

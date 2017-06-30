@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradeanmtIndicators" table="TR_TRADEANMT_INDICATORS">
+    	<comment>TR_TRADEANMT_INDICATORS</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeanmtId" type="string"  length="32"  not-null="true">
+	    	<column name="TRADEANMT_ID">
+    	        <comment>交易公告ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jydyId" type="string"  length="36"  not-null="true">
+	    	<column name="JYDY_ID">
+    	        <comment>交易单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="peakElc" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PEAK_ELC">
+    	        <comment>高峰电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="valleyElc" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="VALLEY_ELC">
+    	        <comment>低谷电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="averageElc" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="AVERAGE_ELC">
+    	        <comment>平均电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="power" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="POWER">
+    	        <comment>电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tdssnl" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TDSSNL">
+    	        <comment>通道输送能力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>场景信息</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeTimepart" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TRADE_TIMEPART">
+    	        <comment>0:不分时间段；1-n：1至n时间段申报数据</comment>
+	    	</column>
+    	</property>  
+    	
+    	<property name="salePrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_PRICE">
+    	        <comment>售电价（总）</comment>
+	    	</column>
+    	</property>  
+    	
+    	<property name="vendeePrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_PRICE">
+    	        <comment>购电价（总）</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

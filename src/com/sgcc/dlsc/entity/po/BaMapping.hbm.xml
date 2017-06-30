@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaMapping" table="BA_MAPPING">
+    	<comment>横向数据映射表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plantid" type="string"  length="36"  not-null="false">
+	    	<column name="PLANTID">
+    	        <comment>市场成员ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hxsjid" type="string"  length="36"  not-null="false">
+	    	<column name="HXSJID">
+    	        <comment>横向数据ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="busiunitid" type="string"  length="36"  not-null="false">
+	    	<column name="BUSIUNITID">
+    	        <comment>业务单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecid" type="string"  length="36"  not-null="false">
+	    	<column name="ELECID">
+    	        <comment>供电公司ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hxsjtype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="HXSJTYPE">
+    	        <comment>横向数据类型</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

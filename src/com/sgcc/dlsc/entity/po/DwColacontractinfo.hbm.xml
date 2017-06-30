@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwColacontractinfo" table="DW_COLACONTRACTINFO">
+    	<comment>常规燃煤机组合同执行进度</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gridenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GRIDENERGY">
+    	        <comment>上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CONTRACTENERGY">
+    	        <comment>合同电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacitylevel" type="string"  length="16"  not-null="false">
+	    	<column name="CAPACITYLEVEL">
+    	        <comment>容量等级</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

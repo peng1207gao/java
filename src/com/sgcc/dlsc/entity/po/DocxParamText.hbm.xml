@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DocxParamText" table="DOCX_PARAM_TEXT">
+    	<comment>文件标签表</comment>
+        <!-- single primaryKey -->
+	    <id name="tempparamid" type="string" length="32">
+	    	<column name="TEMPPARAMID">
+    	        <comment>参数ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tempparamname" type="string"  length="128"  not-null="true">
+	    	<column name="TEMPPARAMNAME">
+    	        <comment>参数名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tempparamsql" type="string"  length="4000"  not-null="false">
+	    	<column name="TEMPPARAMSQL">
+    	        <comment>参数SQL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tempparamdesc" type="string"  length="500"  not-null="false">
+	    	<column name="TEMPPARAMDESC">
+    	        <comment>参数说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="createdate" type="date"  not-null="false">
+	    	<column name="CREATEDATE">
+    	        <comment>创建时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="creator" type="string"  length="32"  not-null="false">
+	    	<column name="CREATOR">
+    	        <comment>创建人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdelete" type="big_decimal"  length="22"  not-null="true">
+	    	<column name="ISDELETE">
+    	        <comment>删除标记</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="string"  length="32"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>bak1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="string"  length="32"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>bak2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>bak3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

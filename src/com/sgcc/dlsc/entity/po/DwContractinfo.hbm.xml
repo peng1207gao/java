@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwContractinfo" table="DW_CONTRACTINFO">
+    	<comment>合同_合同主表</comment>
+        <!-- single primaryKey -->
+	    <id name="contractid" type="string" length="36">
+	    	<column name="CONTRACTID">
+    	        <comment>合同ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="contractname" type="string"  length="500"  not-null="false">
+	    	<column name="CONTRACTNAME">
+    	        <comment>合同名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeetradeunit" type="string"  length="36"  not-null="false">
+	    	<column name="VENDEETRADEUNIT">
+    	        <comment>购方交易单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saletradeunit" type="string"  length="36"  not-null="false">
+	    	<column name="SALETRADEUNIT">
+    	        <comment>售方交易单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeparticipantid" type="string"  length="36"  not-null="false">
+	    	<column name="VENDEEPARTICIPANTID">
+    	        <comment>购方市场成员ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleparticipantid" type="string"  length="36"  not-null="false">
+	    	<column name="SALEPARTICIPANTID">
+    	        <comment>售方市场成员ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeseqid" type="string"  length="36"  not-null="false">
+	    	<column name="TRADESEQID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contracttype" type="string"  length="64"  not-null="false">
+	    	<column name="CONTRACTTYPE">
+    	        <comment>合同类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetype" type="string"  length="36"  not-null="false">
+	    	<column name="TRADETYPE">
+    	        <comment>交易类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractperiod" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="CONTRACTPERIOD">
+    	        <comment>合同周期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startdate" type="date"  not-null="false">
+	    	<column name="STARTDATE">
+    	        <comment>开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="enddata" type="date"  not-null="false">
+	    	<column name="ENDDATA">
+    	        <comment>结束时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractstatus" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="CONTRACTSTATUS">
+    	        <comment>签订状态</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeelecquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TRADEELECQUANTITY">
+    	        <comment>交易电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdelete" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISDELETE">
+    	        <comment>是否终止</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

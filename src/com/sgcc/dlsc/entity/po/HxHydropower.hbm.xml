@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.HxHydropower" table="HX_HYDROPOWER">
+    	<comment>横向数据表</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>OBJ_ID   记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="false">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hydropowername" type="string"  length="128"  not-null="true">
+	    	<column name="HYDROPOWERNAME">
+    	        <comment>水电厂名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datetime" type="date"  not-null="true">
+	    	<column name="DATETIME">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="enterwaterquantity" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="ENTERWATERQUANTITY">
+    	        <comment>当日入库水量   单位：立方米 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="outerwaterquantity" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="OUTERWATERQUANTITY">
+    	        <comment>当日出库水量  单位：立方米 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="enterwaterflow" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="ENTERWATERFLOW">
+    	        <comment>当日入库流量  单位：立方米 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="outerwaterflow" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="OUTERWATERFLOW">
+    	        <comment>当日出库流量  单位：立方米 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="waterlevel" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="WATERLEVEL">
+    	        <comment>24时水位值   单位：秒立方 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="YL">
+    	        <comment>溢流   单位：秒立方 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bxx" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BXX">
+    	        <comment>比汛限  单位：米 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatchcompanyid" type="string"  length="128"  not-null="false">
+	    	<column name="DISPATCHCOMPANYID">
+    	        <comment>所属调度单位编码</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

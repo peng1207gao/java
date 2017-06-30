@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradeanmtAnnouncement" table="TR_TRADEANMT_ANNOUNCEMENT">
+    	<comment>TR_TRADEANMT_ANNOUNCEMENT</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="32">
+	    	<column name="ID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradPower" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TRAD_POWER">
+    	        <comment>交易电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradMark" type="string"  length="36"  not-null="false">
+	    	<column name="TRAD_MARK">
+    	        <comment>交易关口</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="deadlinetrial" type="date"  not-null="false">
+	    	<column name="DEADLINETRIAL">
+    	        <comment>初审截止时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wysjgfbsj" type="date"  not-null="false">
+	    	<column name="WYSJGFBSJ">
+    	        <comment>无约束交易结果发布时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yysjgfbsj" type="date"  not-null="false">
+	    	<column name="YYSJGFBSJ">
+    	        <comment>有约束交易结果发布时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tgyjhxs" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TGYJHXS">
+    	        <comment>特高压计划线损率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tgyljl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TGYLJL">
+    	        <comment>特高压临检率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sblx" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="SBLX">
+    	        <comment>申报类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>场景信息</comment>
+	    	</column>
+    	</property>
+    	
+    	<property name="jyjgzt" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="JYJGZT">
+    	        <comment>交易结果状态</comment>
+	    	</column>
+    	</property>  
+    	
+    	<property name="priceInfo" type="string"  length="1"  not-null="true">
+	    	<column name="PRICE_INFO">
+    	        <comment>电价说明</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

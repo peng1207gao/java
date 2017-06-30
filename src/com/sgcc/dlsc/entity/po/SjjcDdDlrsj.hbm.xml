@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcDdDlrsj" table="SJJC_DD_DLRSJ">
+    	<comment>调度_电量日数据</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="infoDate" type="date"  not-null="true">
+	    	<column name="INFO_DATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plantname" type="string"  length="128"  not-null="true">
+	    	<column name="PLANTNAME">
+    	        <comment>电厂名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="markname" type="string"  length="128"  not-null="false">
+	    	<column name="MARKNAME">
+    	        <comment>计量关口名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="infoTime" type="date"  not-null="true">
+	    	<column name="INFO_TIME">
+    	        <comment>时间,15分钟一点</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="forwardquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FORWARDQUANTITY">
+    	        <comment>正向电量,单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="oppositequantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="OPPOSITEQUANTITY">
+    	        <comment>反向电量,单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatchcompanyname" type="string"  length="128"  not-null="false">
+	    	<column name="DISPATCHCOMPANYNAME">
+    	        <comment>所属调度单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricityquantity1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITYQUANTITY1">
+    	        <comment>尖峰电量,单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricityquantity2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITYQUANTITY2">
+    	        <comment>高峰电量,单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricityquantity3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITYQUANTITY3">
+    	        <comment>平峰电量,单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricityquantity4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITYQUANTITY4">
+    	        <comment>谷峰电量,单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

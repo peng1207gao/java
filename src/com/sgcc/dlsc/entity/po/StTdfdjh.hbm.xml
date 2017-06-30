@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.StTdfdjh" table="ST_TDFDJH">
+    	<comment>ST_TDFDJH</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="10"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>地区</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jdjhfdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="JDJHFDL">
+    	        <comment>季度计划发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jdjhfdlzf" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="JDJHFDLZF">
+    	        <comment>季度计划发电量增幅</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jdjhhdfdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="JDJHHDFDL">
+    	        <comment>季度计划火电发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jdjhhdfdlzf" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="JDJHHDFDLZF">
+    	        <comment>季度计划火电发电量增幅</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jdjhsdfdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="JDJHSDFDL">
+    	        <comment>季度计划水电发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jdjhsdfdlzf" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="JDJHSDFDLZF">
+    	        <comment>季度计划水电发电量增幅</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjhfdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJHFDL">
+    	        <comment>当月计划发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjhfdlzf" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="DYJHFDLZF">
+    	        <comment>当月计划发电量增幅</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjhhdfdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJHHDFDL">
+    	        <comment>当月计划火电发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjhhdfdlzf" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="DYJHHDFDLZF">
+    	        <comment>当月计划火电发电量增幅</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjhsdfdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJHSDFDL">
+    	        <comment>当月计划水电发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjhsdfdlzf" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="DYJHSDFDLZF">
+    	        <comment>当月计划水电发电量增幅</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="yjlyxs" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="YJLYXS">
+    	        <comment>预计利用小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hdlyxs" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="HDLYXS">
+    	        <comment>火电利用小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sdlyxs" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="SDLYXS">
+    	        <comment>水电利用小时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbzt" type="string"  length="2"  not-null="false">
+	    	<column name="SBZT">
+    	        <comment>申报状态 0.未申报、1.已申报</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>THEYEAR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>THEMONTH</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwCleanenergytradeinfo" table="DW_CLEANENERGYTRADEINFO">
+    	<comment>结算_清洁能源交易信息</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cleanelecquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CLEANELECQUANTITY">
+    	        <comment>清洁能源电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="savecoal" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SAVECOAL">
+    	        <comment>节约标煤</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reduceso2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="REDUCESO2">
+    	        <comment>减排SO2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reduceco2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="REDUCECO2">
+    	        <comment>减排CO2</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

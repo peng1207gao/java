@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxGjscZb" table="TJFX_GJSC_ZB">
+    	<comment>国家电力市场交易收益分析总表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="date"  not-null="true">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="projectid" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="PROJECTID">
+    	        <comment>项目类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjysr" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJYSR">
+    	        <comment>当月交易收入</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dytb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYTB">
+    	        <comment>当月同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjysr" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYSR">
+    	        <comment>累计交易收入</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljtb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJTB">
+    	        <comment>累计同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ndys" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NDYS">
+    	        <comment>年度预算</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wcjd" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="WCJD">
+    	        <comment>完成进度</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

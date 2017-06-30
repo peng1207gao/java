@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaBlockcapacityP2" table="BA_BLOCKCAPACITY_P2">
+    	<comment>电厂受阻信息申报</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATE_TYPE">
+    	        <comment>期别  年、冬、夏、季、月、旬、周、日 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabdate" type="date"  not-null="true">
+	    	<column name="TABDATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hydropowername" type="string"  length="128"  not-null="false">
+	    	<column name="HYDROPOWERNAME">
+    	        <comment>电厂名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hydropowerid" type="string"  length="50"  not-null="true">
+	    	<column name="HYDROPOWERID">
+    	        <comment>电厂ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="balanceType" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BALANCE_TYPE">
+    	        <comment>业务类型  预测、实际 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITY">
+    	        <comment>受阻容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powertype" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="POWERTYPE">
+    	        <comment>发电类型  水、火、核、风、太阳能、其他 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="blockcapacitytype" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BLOCKCAPACITYTYPE">
+    	        <comment>受阻原因  1燃料、2煤炭、3燃气、4供热、5其他 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

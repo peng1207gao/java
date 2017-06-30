@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubSupplyDevputin" table="PUB_SUPPLY_DEVPUTIN">
+    	<comment>新设备投产情况</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tyear" type="int"  length="4"  not-null="true">
+	    	<column name="TYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tmonth" type="int"  length="2"  not-null="true">
+	    	<column name="TMONTH">
+    	        <comment>月份：1、2、3、4……11、12</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tmode" type="string"  length="10"  not-null="false">
+	    	<column name="TMODE">
+    	        <comment>电网,电厂</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="devtype" type="string"  length="32"  not-null="false">
+	    	<column name="DEVTYPE">
+    	        <comment>设备类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="devname" type="string"  length="100"  not-null="false">
+	    	<column name="DEVNAME">
+    	        <comment>设备名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="voltage" type="string"  length="10"  not-null="false">
+	    	<column name="VOLTAGE">
+    	        <comment>接入电压等级:220kV,500kV 引用编码表</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="intime" type="date"  not-null="false">
+	    	<column name="INTIME">
+    	        <comment>投产（并网）日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="capacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CAPACITY">
+    	        <comment>设备容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="units" type="string"  length="10"  not-null="false">
+	    	<column name="UNITS">
+    	        <comment>容量单位:MVA、KM、万千瓦</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="int"  length="2"  not-null="true">
+	    	<column name="STATE">
+    	        <comment>状态,0未发布，1发布，2待审批，3审批通过，4退回。默认为0</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="subjectguid" type="string"  length="32"  not-null="false">
+	    	<column name="SUBJECTGUID">
+    	        <comment>发布主题ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="20"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>填报人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillintime" type="date"  not-null="true">
+	    	<column name="FILLINTIME">
+    	        <comment>填报时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>备用1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>备用2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>备用3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>备用4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="32"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>备用5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="32"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>备用6</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

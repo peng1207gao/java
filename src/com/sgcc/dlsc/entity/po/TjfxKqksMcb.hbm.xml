@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxKqksMcb" table="TJFX_KQKS_MCB">
+    	<comment>?????????</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="regionid" type="string"  length="32"  not-null="true">
+	    	<column name="REGIONID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeid" type="string"  length="32"  not-null="true">
+	    	<column name="TRADEID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradename" type="string"  length="64"  not-null="false">
+	    	<column name="TRADENAME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="establishtime" type="date"  not-null="false">
+	    	<column name="ESTABLISHTIME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="establishpersonid" type="string"  length="32"  not-null="false">
+	    	<column name="ESTABLISHPERSONID">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="approvaltime" type="date"  not-null="false">
+	    	<column name="APPROVALTIME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="approvaltimepersonid" type="string"  length="32"  not-null="false">
+	    	<column name="APPROVALTIMEPERSONID">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iseffict" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="ISEFFICT">
+    	        <comment>????  1????2???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr1" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR1">
+    	        <comment>BACKSTR1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr2" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR2">
+    	        <comment>BACKSTR2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr3" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR3">
+    	        <comment>BACKSTR3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr4" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR4">
+    	        <comment>BACKSTR4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr5" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR5">
+    	        <comment>BACKSTR5</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

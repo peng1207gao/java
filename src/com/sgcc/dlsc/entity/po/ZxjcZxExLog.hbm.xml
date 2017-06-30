@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.ZxjcZxExLog" table="ZXJC_ZX_EX_LOG">
+    	<comment>批量数据总线执行日志表</comment>
+        <!-- single primaryKey -->
+        <id name="objId" type="string" length="40">
+			<column name="OBJ_ID" sql-type="VARCHAR2(40) default 'sys_guid()'">
+    	        <comment>日志主键ID</comment>
+		    </column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="callId" type="string"  length="100"  not-null="false">
+	    	<column name="CALL_ID">
+    	        <comment>纵向_批量数据总线配置的callID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serverId" type="string"  length="100"  not-null="false">
+	    	<column name="SERVER_ID">
+    	        <comment>纵向_批量数据总线配置的serviceID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="clientappId" type="string"  length="100"  not-null="false">
+	    	<column name="CLIENTAPP_ID">
+    	        <comment>纵向_批量数据总线配置的ClientAppID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="apptype" type="string"  length="100"  not-null="false">
+	    	<column name="APPTYPE">
+    	        <comment>纵向_批量数据总线配置的AppType</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="callName" type="string"  length="100"  not-null="false">
+	    	<column name="CALL_NAME">
+    	        <comment>此配置的名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exTime" type="string" length="30" not-null="false">
+	    	<column name="EX_TIME">
+    	        <comment>执行时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exUserid" type="string"  length="100"  not-null="false">
+	    	<column name="EX_USERID">
+    	        <comment>执行用户ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exUsername" type="string"  length="100"  not-null="false">
+	    	<column name="EX_USERNAME">
+    	        <comment>执行用户名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isSuc" type="string"  length="2"  not-null="false">
+	    	<column name="IS_SUC">
+    	        <comment>执行是否成功</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="failInfo" type="string"  length="4000"  not-null="false">
+	    	<column name="FAIL_INFO">
+    	        <comment>如果失败，失败原因</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketIdS" type="string"  length="100"  not-null="false">
+	    	<column name="MARKET_ID_S">
+    	        <comment>传输源头MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dcExTableId" type="string"  length="100"  not-null="false">
+	    	<column name="DC_EX_TABLE_ID">
+    	        <comment>数据中心执行的表名ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketIdT" type="string"  length="100"  not-null="false">
+	    	<column name="MARKET_ID_T">
+    	        <comment>传输目标MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ywTableId" type="string"  length="100"  not-null="false">
+	    	<column name="YW_TABLE_ID">
+    	        <comment>执行的业务表名ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="idMarketName" type="string"  length="100"  not-null="false">
+	    	<column name="ID_MARKET_NAME">
+    	        <comment>标识的MARKET_ID字段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exType" type="string"  length="2"  not-null="false">
+	    	<column name="EX_TYPE">
+    	        <comment>执行的类型 1,上传 2下传</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sqlText" type="string"  length="4000"  not-null="false">
+	    	<column name="SQL_TEXT">
+    	        <comment>执行的表条件内容</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="keyColumnName" type="string"  length="100"  not-null="false">
+	    	<column name="KEY_COLUMN_NAME">
+    	        <comment>业务表的主键字段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exTimelong" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="EX_TIMELONG">
+    	        <comment>总执行时间，毫秒</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zxlsExTableId" type="string"  length="100"  not-null="false">
+	    	<column name="ZXLS_EX_TABLE_ID">
+    	        <comment>总线用户表名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exTimelongFb" type="string"  length="1000"  not-null="false">
+	    	<column name="EX_TIMELONG_FB">
+    	        <comment>分步执行时间，毫秒，用-分隔</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exNumber" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="EX_NUMBER">
+    	        <comment>执行次数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="configObjId" type="string"  length="100"  not-null="false">
+	    	<column name="CONFIG_OBJ_ID">
+    	        <comment>配置主表主键ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

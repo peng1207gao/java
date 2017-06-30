@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrMarketerInfoCheck" table="TR_MARKETER_INFO_CHECK">
+    	<comment>TR_MARKETER_INFO_CHECK</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeunitId" type="string"  length="32"  not-null="false">
+	    	<column name="TRADEUNIT_ID">
+    	        <comment>交易单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeRole" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="TRADE_ROLE">
+    	        <comment>角色</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="participantcode" type="string"  length="60"  not-null="false">
+	    	<column name="PARTICIPANTCODE">
+    	        <comment>所属市场成员</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxcapacity" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="MAXCAPACITY">
+    	        <comment>最大容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sumcapacity" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SUMCAPACITY">
+    	        <comment>容量合计</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isFirstCloseout" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="IS_FIRST_CLOSEOUT">
+    	        <comment>是否参与第一阶段出清 0：是1：否</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isRatingTransferallotPrice" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="IS_RATING_TRANSFERALLOT_PRICE">
+    	        <comment>是否核定输配电价 0：是 1：否</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="catalogPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="CATALOG_PRICE">
+    	        <comment>目录电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transferAllotPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TRANSFER_ALLOT_PRICE">
+    	        <comment>输配电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="netDiscountLoss" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="NET_DISCOUNT_LOSS">
+    	        <comment>网损折价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fundsandaddPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="FUNDSANDADD_PRICE">
+    	        <comment>政府基金及附加</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="java.util.Date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="approvedTariff" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="APPROVED_TARIFF">
+    	        <comment>批复上网电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="participanttype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="PARTICIPANTTYPE">
+    	        <comment>所属市场成员类型</comment>
+	    	</column>
+    	</property>  
+    	
+    	<property name="transferAllotLoss" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TRANSFER_ALLOT_LOSS">
+    	        <comment>输配电损耗率</comment>
+	    	</column>
+    	</property>  
+    	
+         <property name="boilerPressure" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BOILERPRESSURE">
+    	        <comment>临界机组属性</comment>
+	    	</column>
+    	</property>  
+    	
+    	<property name="isHeatSupply" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISHEATSUPPLY">
+    	        <comment>是否供热</comment>
+	    	</column>
+    	</property>
+    	
+    	<property name="lastYearRemoteControl" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="LASTYEAR_REMOTE_CONTROL">
+    	        <comment>上年度用电量比例</comment>
+	    	</column>
+    	</property>
+    	
+    	<property name="generatorClass2" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="GENERATORCLASS2">
+    	        <comment>是否脱尘</comment>
+	    	</column>
+    	</property>
+    	
+    	<property name="isDesalt" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISDESALT">
+    	        <comment>是否脱硝</comment>
+	    	</column>
+    	</property>
+    	
+    	<property name="isDesulfurated" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISDESULFURATED">
+    	        <comment>是否脱硫</comment>
+	    	</column>
+    	</property>
+    	
+    	<property name="isColdbyair" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISCOLDBYAIR">
+    	        <comment>是否空冷</comment>
+	    	</column>
+    	</property>
+    </class>
+</hibernate-mapping>

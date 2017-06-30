@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaWeather" table="BA_WEATHER">
+    	<comment>天气信息 </comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="temperature" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TEMPERATURE">
+    	        <comment>气温</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="windclass" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="WINDCLASS">
+    	        <comment>风力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="winddirection" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="WINDDIRECTION">
+    	        <comment>风向</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="humidity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HUMIDITY">
+    	        <comment>湿度</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="weather" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="WEATHER">
+    	        <comment>天气状况</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datetime" type="date"  not-null="true">
+	    	<column name="DATETIME">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr1" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR1">
+    	        <comment>备用字段1</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

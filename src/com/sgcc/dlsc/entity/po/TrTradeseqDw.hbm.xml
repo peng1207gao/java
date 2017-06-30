@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradeseqDw" table="TR_TRADESEQ_DW">
+    	<comment>TR_TRADESEQ_DW</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="jyxl" type="string"  length="32"  not-null="false">
+	    	<column name="JYXL">
+    	        <comment>交易序列</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw" type="string"  length="32"  not-null="false">
+	    	<column name="DW">
+    	        <comment>单位</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dwtype" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="DWTYPE">
+    	        <comment>属性  1购电方、2售电方、3输电方</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bm1" type="string"  length="32"  not-null="false">
+	    	<column name="BM1">
+    	        <comment>部门1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bm2" type="string"  length="32"  not-null="false">
+	    	<column name="BM2">
+    	        <comment>部门2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bm3" type="string"  length="32"  not-null="false">
+	    	<column name="BM3">
+    	        <comment>部门3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bm1p" type="string"  length="32"  not-null="false">
+	    	<column name="BM1P">
+    	        <comment>部门1人员</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bm2p" type="string"  length="32"  not-null="false">
+	    	<column name="BM2P">
+    	        <comment>部门2人员</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bm3p" type="string"  length="32"  not-null="false">
+	    	<column name="BM3P">
+    	        <comment>部门3人员</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bm1d" type="date"  not-null="false">
+	    	<column name="BM1D">
+    	        <comment>部门1时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bm2d" type="date"  not-null="false">
+	    	<column name="BM2D">
+    	        <comment>部门2时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bm3d" type="date"  not-null="false">
+	    	<column name="BM3D">
+    	        <comment>部门3时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

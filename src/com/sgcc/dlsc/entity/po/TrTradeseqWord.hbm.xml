@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradeseqWord" table="TR_TRADESEQ_WORD">
+    	<comment>TR_TRADESEQ_WORD</comment>
+        <!-- single primaryKey -->
+	    <id name="jyxl" type="string" length="32">
+	    	<column name="JYXL">
+    	        <comment>交易序列</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="dw1" type="string"  length="32"  not-null="false">
+	    	<column name="DW1">
+    	        <comment>单位1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw1bm1" type="string"  length="32"  not-null="false">
+	    	<column name="DW1BM1">
+    	        <comment>单位1部门1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw1bm2" type="string"  length="32"  not-null="false">
+	    	<column name="DW1BM2">
+    	        <comment>单位1部门2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw1bm3" type="string"  length="32"  not-null="false">
+	    	<column name="DW1BM3">
+    	        <comment>单位1部门3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw2" type="string"  length="32"  not-null="false">
+	    	<column name="DW2">
+    	        <comment>单位2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw2bm1" type="string"  length="32"  not-null="false">
+	    	<column name="DW2BM1">
+    	        <comment>单位2部门1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw2bm2" type="string"  length="32"  not-null="false">
+	    	<column name="DW2BM2">
+    	        <comment>单位2部门2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw2bm3" type="string"  length="32"  not-null="false">
+	    	<column name="DW2BM3">
+    	        <comment>单位2部门3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw3" type="string"  length="32"  not-null="false">
+	    	<column name="DW3">
+    	        <comment>单位3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw3bm1" type="string"  length="32"  not-null="false">
+	    	<column name="DW3BM1">
+    	        <comment>单位3部门1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw3bm2" type="string"  length="32"  not-null="false">
+	    	<column name="DW3BM2">
+    	        <comment>单位3部门2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw3bm3" type="string"  length="32"  not-null="false">
+	    	<column name="DW3BM3">
+    	        <comment>单位3部门3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw4" type="string"  length="32"  not-null="false">
+	    	<column name="DW4">
+    	        <comment>单位4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw4bm1" type="string"  length="32"  not-null="false">
+	    	<column name="DW4BM1">
+    	        <comment>单位4部门1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw4bm2" type="string"  length="32"  not-null="false">
+	    	<column name="DW4BM2">
+    	        <comment>单位4部门2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw4bm3" type="string"  length="32"  not-null="false">
+	    	<column name="DW4BM3">
+    	        <comment>单位4部门3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw5" type="string"  length="32"  not-null="false">
+	    	<column name="DW5">
+    	        <comment>单位5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw5bm1" type="string"  length="32"  not-null="false">
+	    	<column name="DW5BM1">
+    	        <comment>单位5部门1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw5bm2" type="string"  length="32"  not-null="false">
+	    	<column name="DW5BM2">
+    	        <comment>单位5部门2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw5bm3" type="string"  length="32"  not-null="false">
+	    	<column name="DW5BM3">
+    	        <comment>单位5部门3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw6" type="string"  length="32"  not-null="false">
+	    	<column name="DW6">
+    	        <comment>单位6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw6bm1" type="string"  length="32"  not-null="false">
+	    	<column name="DW6BM1">
+    	        <comment>单位6部门1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw6bm2" type="string"  length="32"  not-null="false">
+	    	<column name="DW6BM2">
+    	        <comment>单位6部门2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw6bm3" type="string"  length="32"  not-null="false">
+	    	<column name="DW6BM3">
+    	        <comment>单位6部门3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw7" type="string"  length="32"  not-null="false">
+	    	<column name="DW7">
+    	        <comment>单位7</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw7bm1" type="string"  length="32"  not-null="false">
+	    	<column name="DW7BM1">
+    	        <comment>单位7部门1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw7bm2" type="string"  length="32"  not-null="false">
+	    	<column name="DW7BM2">
+    	        <comment>单位7部门2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw7bm3" type="string"  length="32"  not-null="false">
+	    	<column name="DW7BM3">
+    	        <comment>单位7部门3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw8" type="string"  length="32"  not-null="false">
+	    	<column name="DW8">
+    	        <comment>单位8</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw8bm1" type="string"  length="32"  not-null="false">
+	    	<column name="DW8BM1">
+    	        <comment>单位8部门1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw8bm2" type="string"  length="32"  not-null="false">
+	    	<column name="DW8BM2">
+    	        <comment>单位8部门2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dw8bm3" type="string"  length="32"  not-null="false">
+	    	<column name="DW8BM3">
+    	        <comment>单位8部门3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bt" type="string"  length="4000"  not-null="false">
+	    	<column name="BT">
+    	        <comment>表头  ****年*月+交易名称 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dwhz" type="string"  length="4000"  not-null="false">
+	    	<column name="DWHZ">
+    	        <comment>单位汇总  国网华东分部，国网江苏、四川电力： </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jysm" type="string"  length="4000"  not-null="false">
+	    	<column name="JYSM">
+    	        <comment>交易说明  为保障水电清洁能源的可靠消纳，现组织2013年9月四川水电送华东交易2。经商有关单位，达成如下一致意见： </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sdf" type="string"  length="4000"  not-null="false">
+	    	<column name="SDF">
+    	        <comment>售电方      1. 售电方：国网四川省电力公司； </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdf" type="string"  length="4000"  not-null="false">
+	    	<column name="GDF">
+    	        <comment>购电方      2. 购电方：国网江苏省电力公司； </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sddw" type="string"  length="4000"  not-null="false">
+	    	<column name="SDDW">
+    	        <comment>输电单位      3. 输电方：国家电网公司，国家电网公司华东分部； </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jysj" type="string"  length="4000"  not-null="false">
+	    	<column name="JYSJ">
+    	        <comment>交易时间      4. 交易时间：2013年9月1日～9月30日； </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jydli" type="string"  length="4000"  not-null="false">
+	    	<column name="JYDLI">
+    	        <comment>交易电力    5. 交易电力：784兆瓦（电力曲线根据通道能力、四川水情和江苏电网消纳能力调整）； </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jydl" type="string"  length="4000"  not-null="false">
+	    	<column name="JYDL">
+    	        <comment>交易电量    6. 交易电量：5.64亿千瓦时（以实际安排为准）； </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jytd" type="string"  length="4000"  not-null="false">
+	    	<column name="JYTD">
+    	        <comment>交易通道    7. 交易通道：锦苏直流； </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jygk" type="string"  length="4000"  not-null="false">
+	    	<column name="JYGK">
+    	        <comment>交易关口    8. 交易关口：锦苏直流锦屏侧； </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jydj" type="string"  length="4000"  not-null="false">
+	    	<column name="JYDJ">
+    	        <comment>交易电价    9. 交易电价： </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="djmx" type="string"  length="4000"  not-null="false">
+	    	<column name="DJMX">
+    	        <comment>电价明细</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jymc" type="string"  length="4000"  not-null="false">
+	    	<column name="JYMC">
+    	        <comment>交易名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jydh" type="string"  length="4000"  not-null="false">
+	    	<column name="JYDH">
+    	        <comment>交易单号</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

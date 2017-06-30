@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjAverUseHour" table="TJ_AVER_USE_HOUR">
+    	<comment>TJ_AVER_USE_HOUR</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>FGUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+        <property name="tradetype" type="big_decimal"  length="2"  not-null="false">  
+			<column name="TRADETYPE" sql-type="NUMBER(2) default 1">
+    	        <comment>交易类型</comment>
+			</column>
+        </property> 
+         
+	    <property name="usehour" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="USEHOUR">
+    	        <comment>年度利用小时数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabdate" type="java.util.Date"  not-null="false">
+	    	<column name="TABDATE">
+    	        <comment>统计时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

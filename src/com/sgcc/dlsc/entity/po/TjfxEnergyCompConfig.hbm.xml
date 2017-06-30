@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxEnergyCompConfig" table="TJFX_ENERGY_COMP_CONFIG">
+    	<comment>清洁能源节能减排效益计算配置</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>系统主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketId" type="string"  length="18"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>场景id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="years" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="YEARS">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="coalCons" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="COAL_CONS">
+    	        <comment>供电煤耗</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="co2Coeff" type="big_decimal"  length="6"  not-null="false">
+	    	<column name="CO2_COEFF">
+    	        <comment>二氧化碳排放系数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="so2Coeff" type="big_decimal"  length="6"  not-null="false">
+	    	<column name="SO2_COEFF">
+    	        <comment>二氧化硫排放系数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="smokeCoeff" type="big_decimal"  length="6"  not-null="false">
+	    	<column name="SMOKE_COEFF">
+    	        <comment>烟尘系数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ashCoeff" type="big_decimal"  length="6"  not-null="false">
+	    	<column name="ASH_COEFF">
+    	        <comment>灰渣系数</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

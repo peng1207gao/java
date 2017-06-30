@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrPageDisplayConfig" table="TR_PAGE_DISPLAY_CONFIG">
+    	<comment>TR_PAGE_DISPLAY_CONFIG</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradetypeCode" type="string"  length="64"  not-null="true">
+	    	<column name="TRADETYPE_CODE">
+    	        <comment>TRADETYPE_CODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>MARKET_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pageId" type="string"  length="32"  not-null="true">
+	    	<column name="PAGE_ID">
+    	        <comment>PAGE_ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="columnPhysicsName" type="string"  length="64"  not-null="true">
+	    	<column name="COLUMN_PHYSICS_NAME">
+    	        <comment>字段物理名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="columnName" type="string"  length="128"  not-null="false">
+	    	<column name="COLUMN_NAME">
+    	        <comment>字段中文名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="columnIsDisplay" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="COLUMN_IS_DISPLAY">
+    	        <comment>是否显示 0：否 1：是</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="columnIsLock" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="COLUMN_IS_LOCK">
+    	        <comment>是否锁定 0：否 1：是</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="columnDisplayName" type="string"  length="128"  not-null="true">
+	    	<column name="COLUMN_DISPLAY_NAME">
+    	        <comment>显示名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="columnDisplayNum" type="big_decimal"  length="3"  not-null="false">
+	    	<column name="COLUMN_DISPLAY_NUM">
+    	        <comment>显示顺序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tablePhysicsName" type="string"  length="64"  not-null="false">
+	    	<column name="TABLE_PHYSICS_NAME">
+    	        <comment>表物理名</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tableName" type="string"  length="128"  not-null="false">
+	    	<column name="TABLE_NAME">
+    	        <comment>表名</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrAlgorithmParams" table="TR_ALGORITHM_PARAMS">
+    	<comment>交易算法参数表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="param1" type="string"  length="50"  not-null="false">
+	    	<column name="PARAM1">
+    	        <comment>参数1，指定调用的算法</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="param2" type="org.springframework.orm.hibernate3.support.ClobStringType"  not-null="false">
+	    	<column name="PARAM2">
+    	        <comment>参数2，数组出清规则</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="param3" type="org.springframework.orm.hibernate3.support.ClobStringType"  not-null="false">
+	    	<column name="PARAM3">
+    	        <comment>参数3，数据</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="param4" type="org.springframework.orm.hibernate3.support.ClobStringType"  not-null="false">
+	    	<column name="PARAM4">
+    	        <comment>参数4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="param5" type="string"  length="50"  not-null="false">
+	    	<column name="PARAM5">
+    	        <comment>参数5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="param6" type="string"  length="50"  not-null="false">
+	    	<column name="PARAM6">
+    	        <comment>参数6</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.ScMtielineItems" table="SC_MTIELINE_ITEMS">
+    	<comment>????????????</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="36">
+	    	<column name="ID">
+    	        <comment>???</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketId" type="string"  length="36"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planDate" type="date"  not-null="true">
+	    	<column name="PLAN_DATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="versionId" type="string"  length="36"  not-null="true">
+	    	<column name="VERSION_ID">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerId" type="string"  length="36"  not-null="false">
+	    	<column name="SELLER_ID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeId" type="string"  length="36"  not-null="false">
+	    	<column name="VENDEE_ID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plantypeId" type="string"  length="36"  not-null="true">
+	    	<column name="PLANTYPE_ID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractId" type="string"  length="36"  not-null="true">
+	    	<column name="CONTRACT_ID">
+    	        <comment>??????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bandIndex" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="BAND_INDEX">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startDate" type="date"  not-null="false">
+	    	<column name="START_DATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endDate" type="date"  not-null="false">
+	    	<column name="END_DATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="CONTRACT_TYPE">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energy" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="avgEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="AVG_ENG">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="power" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="POWER">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="spireEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SPIRE_ENG">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="spirePower" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SPIRE_POWER">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="peakEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PEAK_ENG">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="peakPower" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PEAK_POWER">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plainEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PLAIN_ENG">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plainPower" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PLAIN_POWER">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bottomEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BOTTOM_ENG">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bottomPower" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BOTTOM_POWER">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lossEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="LOSS_ENG">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lossRatio" type="big_decimal"  length="5"  not-null="false">
+	    	<column name="LOSS_RATIO">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerBusid" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="SELLER_BUSID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeBusid" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="VENDEE_BUSID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="remark" type="string"  length="200"  not-null="false">
+	    	<column name="REMARK">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateTime" type="timestamp"  not-null="false">
+	    	<column name="UPDATE_TIME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userName" type="string"  length="100"  not-null="false">
+	    	<column name="USER_NAME">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bandStartDate" type="date"  not-null="false">
+	    	<column name="BAND_START_DATE">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bandEndDate" type="date"  not-null="false">
+	    	<column name="BAND_END_DATE">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr1" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR1">
+    	        <comment>?????1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr2" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR2">
+    	        <comment>?????2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr3" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR3">
+    	        <comment>?????3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_INT1">
+    	        <comment>????1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_INT2">
+    	        <comment>????2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_INT3">
+    	        <comment>????3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_DOUBLE1">
+    	        <comment>????1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_DOUBLE2">
+    	        <comment>????2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_DOUBLE3">
+    	        <comment>????3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate1" type="date"  not-null="false">
+	    	<column name="BAK_DATE1">
+    	        <comment>????1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate2" type="date"  not-null="false">
+	    	<column name="BAK_DATE2">
+    	        <comment>????2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate3" type="date"  not-null="false">
+	    	<column name="BAK_DATE3">
+    	        <comment>????3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

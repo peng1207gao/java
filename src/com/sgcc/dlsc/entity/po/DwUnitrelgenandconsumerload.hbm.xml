@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwUnitrelgenandconsumerload" table="DW_UNITRELGENANDCONSUMERLOAD">
+    	<comment>基础信息_业务单元与经济机组和经济负荷关系</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>guid</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="busiunitid" type="string"  length="36"  not-null="false">
+	    	<column name="BUSIUNITID">
+    	        <comment>业务单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ecounitidorecoloadid" type="string"  length="36"  not-null="false">
+	    	<column name="ECOUNITIDORECOLOADID">
+    	        <comment>经济机组或经济负荷ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

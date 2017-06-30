@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SeResultNM" table="SE_RESULT_N_M">
+    	<comment>???????????</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>???</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketId" type="string"  length="36"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>??????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mktMonth" type="date"  not-null="true">
+	    	<column name="MKT_MONTH">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bandIndex" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="BAND_INDEX">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startDate" type="date"  not-null="true">
+	    	<column name="START_DATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endDate" type="date"  not-null="true">
+	    	<column name="END_DATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbsUnitId" type="string"  length="36"  not-null="true">
+	    	<column name="SBS_UNIT_ID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbsUnitIdN" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SBS_UNIT_ID_N">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="recipientParticipantid" type="string"  length="36"  not-null="true">
+	    	<column name="RECIPIENT_PARTICIPANTID">
+    	        <comment>???????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="payerParticipantid" type="string"  length="36"  not-null="true">
+	    	<column name="PAYER_PARTICIPANTID">
+    	        <comment>???????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractId" type="string"  length="36"  not-null="true">
+	    	<column name="CONTRACT_ID">
+    	        <comment>????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isAdd" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="IS_ADD">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbstypeId" type="string"  length="32"  not-null="true">
+	    	<column name="SBSTYPE_ID">
+    	        <comment>??????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyT" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_T">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceT" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_T">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeT" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEE_T">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyS" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_S">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceS" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_S">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeS" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEE_S">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyP" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_P">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceP" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_P">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeP" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEE_P">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyF" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_F">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceF" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_F">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeF" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEE_F">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energyB" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY_B">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="priceB" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE_B">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="feeB" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEE_B">
+    	        <comment>???</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

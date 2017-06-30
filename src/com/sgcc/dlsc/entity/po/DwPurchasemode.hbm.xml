@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwPurchasemode" table="DW_PURCHASEMODE">
+    	<comment>交易＿用户购电模式</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+	    	<generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="participantid" type="string"  length="36"  not-null="true">
+	    	<column name="PARTICIPANTID">
+    	        <comment>市场成员ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchasemode" type="string"  length="36"  not-null="false">
+	    	<column name="PURCHASEMODE">
+    	        <comment>用户购电模式</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffecttime" type="date"  not-null="false">
+	    	<column name="STARTEFFECTTIME">
+    	        <comment>生效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffecttime" type="date"  not-null="false">
+	    	<column name="ENDEFFECTTIME">
+    	        <comment>失效时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

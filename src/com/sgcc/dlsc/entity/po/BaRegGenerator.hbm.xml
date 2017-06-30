@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaRegGenerator" table="BA_REG_GENERATOR">
+    	<comment>BA_REG_GENERATOR</comment>
+        <!-- single primaryKey -->
+	    <id name="generatorid" type="string" length="36">
+	    	<column name="GENERATORID">
+    	        <comment>GENERATORID</comment>
+	    	</column>
+        </id>     
+		
+	    <property name="generatorname" type="string"  length="500"  not-null="true">
+	    	<column name="GENERATORNAME">
+    	        <comment>GENERATORNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aliasname" type="string"  length="60"  not-null="false">
+	    	<column name="ALIASNAME">
+    	        <comment>ALIASNAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatorcode" type="string"  length="64"  not-null="false">
+	    	<column name="GENERATORCODE">
+    	        <comment>GENERATORCODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plantid" type="string"  length="60"  not-null="true">
+	    	<column name="PLANTID">
+    	        <comment>PLANTID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatortype" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="GENERATORTYPE">
+    	        <comment>GENERATORTYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatortypesub" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="GENERATORTYPESUB">
+    	        <comment>GENERATORTYPESUB</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="commercialtype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="COMMERCIALTYPE">
+    	        <comment>COMMERCIALTYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatchtype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="DISPATCHTYPE">
+    	        <comment>DISPATCHTYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatorratedcap" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="GENERATORRATEDCAP">
+    	        <comment>GENERATORRATEDCAP</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="addcapacity" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="ADDCAPACITY">
+    	        <comment>ADDCAPACITY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatorratednetcap" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="GENERATORRATEDNETCAP">
+    	        <comment>GENERATORRATEDNETCAP</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxtecpower" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="MAXTECPOWER">
+    	        <comment>MAXTECPOWER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mintecpower" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="MINTECPOWER">
+    	        <comment>MINTECPOWER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="emermaxnetpower" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="EMERMAXNETPOWER">
+    	        <comment>EMERMAXNETPOWER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="connectvoltage" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="CONNECTVOLTAGE">
+    	        <comment>CONNECTVOLTAGE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatorvoltage" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="GENERATORVOLTAGE">
+    	        <comment>GENERATORVOLTAGE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="coalconsumeratio" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="COALCONSUMERATIO">
+    	        <comment>COALCONSUMERATIO</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="opbegindate" type="date"  not-null="false">
+	    	<column name="OPBEGINDATE">
+    	        <comment>OPBEGINDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="opstopdate" type="date"  not-null="false">
+	    	<column name="OPSTOPDATE">
+    	        <comment>OPSTOPDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="commercialbegindate" type="date"  not-null="false">
+	    	<column name="COMMERCIALBEGINDATE">
+    	        <comment>COMMERCIALBEGINDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="true">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>STARTEFFECTIVEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>ENDEFFECTIVEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>UPDATETIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isagcflag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISAGCFLAG">
+    	        <comment>ISAGCFLAG</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isadjustflag" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISADJUSTFLAG">
+    	        <comment>ISADJUSTFLAG</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdesulfurated" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISDESULFURATED">
+    	        <comment>ISDESULFURATED</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iscoldbyair" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISCOLDBYAIR">
+    	        <comment>ISCOLDBYAIR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isheatsupply" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISHEATSUPPLY">
+    	        <comment>ISHEATSUPPLY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdesalt" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISDESALT">
+    	        <comment>ISDESALT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isbidtype" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISBIDTYPE">
+    	        <comment>ISBIDTYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isenviron" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISENVIRON">
+    	        <comment>ISENVIRON</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isccunitmode" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISCCUNITMODE">
+    	        <comment>ISCCUNITMODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="boilerpressure" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BOILERPRESSURE">
+    	        <comment>BOILERPRESSURE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="desulfurateratio" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="DESULFURATERATIO">
+    	        <comment>DESULFURATERATIO</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="denoxratio" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="DENOXRATIO">
+    	        <comment>DENOXRATIO</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="desaltpetreratio" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="DESALTPETRERATIO">
+    	        <comment>DESALTPETRERATIO</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="co2ratio" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="CO2RATIO">
+    	        <comment>CO2RATIO</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dustratio" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="DUSTRATIO">
+    	        <comment>DUSTRATIO</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gateid" type="string"  length="36"  not-null="false">
+	    	<column name="GATEID">
+    	        <comment>GATEID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operatedate" type="date"  not-null="false">
+	    	<column name="OPERATEDATE">
+    	        <comment>OPERATEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operator" type="string"  length="64"  not-null="false">
+	    	<column name="OPERATOR">
+    	        <comment>OPERATOR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extend1" type="string"  length="32"  not-null="false">
+	    	<column name="EXTEND1">
+    	        <comment>EXTEND1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="extend2" type="string"  length="32"  not-null="false">
+	    	<column name="EXTEND2">
+    	        <comment>EXTEND2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="businessid" type="string"  length="64"  not-null="false">
+	    	<column name="BUSINESSID">
+    	        <comment>BUSINESSID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="guid" type="string"  length="36"  not-null="false">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>MARKETID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="npstype" type="string"  length="36"  not-null="false">
+	    	<column name="NPSTYPE">
+    	        <comment>NPSTYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="npsgrade" type="string"  length="36"  not-null="false">
+	    	<column name="NPSGRADE">
+    	        <comment>NPSGRADE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="npgunitreloadingsycle" type="string"  length="36"  not-null="false">
+	    	<column name="NPGUNITRELOADINGSYCLE">
+    	        <comment>NPGUNITRELOADINGSYCLE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="npgdesignuseyear" type="string"  length="36"  not-null="false">
+	    	<column name="NPGDESIGNUSEYEAR">
+    	        <comment>NPGDESIGNUSEYEAR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="npgmodel" type="string"  length="36"  not-null="false">
+	    	<column name="NPGMODEL">
+    	        <comment>NPGMODEL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="npgaddre" type="string"  length="36"  not-null="false">
+	    	<column name="NPGADDRE">
+    	        <comment>NPGADDRE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wpgregulatemode" type="string"  length="36"  not-null="false">
+	    	<column name="WPGREGULATEMODE">
+    	        <comment>WPGREGULATEMODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wptype" type="string"  length="36"  not-null="false">
+	    	<column name="WPTYPE">
+    	        <comment>WPTYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wpgaddtype" type="string"  length="36"  not-null="false">
+	    	<column name="WPGADDTYPE">
+    	        <comment>WPGADDTYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wpgshuitoufenlei" type="string"  length="36"  not-null="false">
+	    	<column name="WPGSHUITOUFENLEI">
+    	        <comment>WPGSHUITOUFENLEI</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wpgbasin" type="string"  length="36"  not-null="false">
+	    	<column name="WPGBASIN">
+    	        <comment>WPGBASIN</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wpskurong" type="string"  length="36"  not-null="false">
+	    	<column name="WPSKURONG">
+    	        <comment>WPSKURONG</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="csxndzskr" type="string"  length="36"  not-null="false">
+	    	<column name="CSXNDZSKR">
+    	        <comment>CSXNDZSKR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="csxnjzcfzhl" type="string"  length="36"  not-null="false">
+	    	<column name="CSXNJZCFZHL">
+    	        <comment>CSXNJZCFZHL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="csxnjzfdzcsyccgl" type="string"  length="36"  not-null="false">
+	    	<column name="CSXNJZFDZCSYCCGL">
+    	        <comment>CSXNJZFDZCSYCCGL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="csxnjzcszfdyccgl" type="string"  length="36"  not-null="false">
+	    	<column name="CSXNJZCSZFDYCCGL">
+    	        <comment>CSXNJZCSZFDYCCGL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="csxnjzdjhdcsgkkcxsj" type="string"  length="36"  not-null="false">
+	    	<column name="CSXNJZDJHDCSGKKCXSJ">
+    	        <comment>CSXNJZDJHDCSGKKCXSJ</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="csxnjzdjhdfdgckcxsj" type="string"  length="36"  not-null="false">
+	    	<column name="CSXNJZDJHDFDGCKCXSJ">
+    	        <comment>CSXNJZDJHDFDGCKCXSJ</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="csxnjzcsgkhdgl" type="string"  length="36"  not-null="false">
+	    	<column name="CSXNJZCSGKHDGL">
+    	        <comment>CSXNJZCSGKHDGL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="csxnjzfdgkhdgl" type="string"  length="36"  not-null="false">
+	    	<column name="CSXNJZFDGKHDGL">
+    	        <comment>CSXNJZFDGKHDGL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="csxnjzjszflx" type="string"  length="36"  not-null="false">
+	    	<column name="CSXNJZJSZFLX">
+    	        <comment>CSXNJZJSZFLX</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zlscsxnjznzlf" type="string"  length="36"  not-null="false">
+	    	<column name="ZLSCSXNJZNZLF">
+    	        <comment>ZLSCSXNJZNZLF</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zlscsxnjzzlfftbDwgs" type="string"  length="36"  not-null="false">
+	    	<column name="ZLSCSXNJZZLFFTB_DWGS">
+    	        <comment>ZLSCSXNJZZLFFTB_DWGS</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zlscsxnjzzlfftbFdqy" type="string"  length="36"  not-null="false">
+	    	<column name="ZLSCSXNJZZLFFTB_FDQY">
+    	        <comment>ZLSCSXNJZZLFFTB_FDQY</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zlscsxnjzzlfftbShyh" type="string"  length="36"  not-null="false">
+	    	<column name="ZLSCSXNJZZLFFTB_SHYH">
+    	        <comment>ZLSCSXNJZZLFFTB_SHYH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dcjz" type="string"  length="36"  not-null="false">
+	    	<column name="DCJZ">
+    	        <comment>DCJZ</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dczedsc" type="string"  length="36"  not-null="false">
+	    	<column name="DCZEDSC">
+    	        <comment>DCZEDSC</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="grjzlx" type="string"  length="36"  not-null="false">
+	    	<column name="GRJZLX">
+    	        <comment>GRJZLX</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jzgryl" type="string"  length="36"  not-null="false">
+	    	<column name="JZGRYL">
+    	        <comment>JZGRYL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jzgzdgrllnl" type="string"  length="36"  not-null="false">
+	    	<column name="JZGZDGRLLNL">
+    	        <comment>JZGZDGRLLNL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pjgrll" type="string"  length="36"  not-null="false">
+	    	<column name="PJGRLL">
+    	        <comment>PJGRLL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatorModel" type="string"  length="64"  not-null="false">
+	    	<column name="GENERATOR_MODEL">
+    	        <comment>GENERATOR_MODEL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cutinWindspeed" type="string"  length="64"  not-null="false">
+	    	<column name="CUTIN_WINDSPEED">
+    	        <comment>CUTIN_WINDSPEED</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="specifiedWindspeed" type="string"  length="64"  not-null="false">
+	    	<column name="SPECIFIED_WINDSPEED">
+    	        <comment>SPECIFIED_WINDSPEED</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cutoutWindspeed" type="string"  length="64"  not-null="false">
+	    	<column name="CUTOUT_WINDSPEED">
+    	        <comment>CUTOUT_WINDSPEED</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vaneDiameter" type="string"  length="64"  not-null="false">
+	    	<column name="VANE_DIAMETER">
+    	        <comment>VANE_DIAMETER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="windfieldType" type="big_decimal"  length="3"  not-null="false">
+	    	<column name="WINDFIELD_TYPE">
+    	        <comment>WINDFIELD_TYPE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="inviteProject" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="INVITE_PROJECT">
+    	        <comment>INVITE_PROJECT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatorTowerNum" type="big_decimal"  length="5"  not-null="false">
+	    	<column name="GENERATOR_TOWER_NUM">
+    	        <comment>GENERATOR_TOWER_NUM</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="standAlonePower" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="STAND_ALONE_POWER">
+    	        <comment>STAND_ALONE_POWER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatorStatus" type="big_decimal"  length="3"  not-null="false">
+	    	<column name="GENERATOR_STATUS">
+    	        <comment>GENERATOR_STATUS</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="registerDate" type="date"  not-null="false">
+	    	<column name="REGISTER_DATE">
+    	        <comment>REGISTER_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="testRunDate" type="date"  not-null="false">
+	    	<column name="TEST_RUN_DATE">
+    	        <comment>TEST_RUN_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeRunDate" type="date"  not-null="false">
+	    	<column name="TRADE_RUN_DATE">
+    	        <comment>TRADE_RUN_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="closeRunDate" type="date"  not-null="false">
+	    	<column name="CLOSE_RUN_DATE">
+    	        <comment>CLOSE_RUN_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="exitMarketDate" type="date"  not-null="false">
+	    	<column name="EXIT_MARKET_DATE">
+    	        <comment>EXIT_MARKET_DATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatorclass" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="GENERATORCLASS">
+    	        <comment>GENERATORCLASS</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="timeConsumption" type="string"  length="64"  not-null="false">
+	    	<column name="TIME_CONSUMPTION">
+    	        <comment>TIME_CONSUMPTION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hotSpotProportion" type="string"  length="64"  not-null="false">
+	    	<column name="HOT_SPOT_PROPORTION">
+    	        <comment>HOT_SPOT_PROPORTION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buildingexaminecode" type="string"  length="128"  not-null="false">
+	    	<column name="BUILDINGEXAMINECODE">
+    	        <comment>BUILDINGEXAMINECODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="batchnumber" type="string"  length="128"  not-null="false">
+	    	<column name="BATCHNUMBER">
+    	        <comment>BATCHNUMBER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="firstcoupledate" type="date"  not-null="false">
+	    	<column name="FIRSTCOUPLEDATE">
+    	        <comment>FIRSTCOUPLEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatormodel" type="string"  length="64"  not-null="false">
+	    	<column name="GENERATORMODEL">
+    	        <comment>GENERATORMODEL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="factor" type="string"  length="128"  not-null="false">
+	    	<column name="FACTOR">
+    	        <comment>FACTOR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="connectvoltageorder" type="string"  length="64"  not-null="false">
+	    	<column name="CONNECTVOLTAGEORDER">
+    	        <comment>CONNECTVOLTAGEORDER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="nominalpower" type="string"  length="64"  not-null="false">
+	    	<column name="NOMINALPOWER">
+    	        <comment>NOMINALPOWER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="settlement" type="string"  length="256"  not-null="false">
+	    	<column name="SETTLEMENT">
+    	        <comment>SETTLEMENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="formula" type="string"  length="256"  not-null="false">
+	    	<column name="FORMULA">
+    	        <comment>FORMULA</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="currentprice" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="CURRENTPRICE">
+    	        <comment>CURRENTPRICE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="assumptionprice" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="ASSUMPTIONPRICE">
+    	        <comment>ASSUMPTIONPRICE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="efpricefectivedate" type="date"  not-null="false">
+	    	<column name="EFPRICEFECTIVEDATE">
+    	        <comment>EFPRICEFECTIVEDATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="currentcode" type="string"  length="128"  not-null="false">
+	    	<column name="CURRENTCODE">
+    	        <comment>CURRENTCODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="composite" type="string"  length="256"  not-null="false">
+	    	<column name="COMPOSITE">
+    	        <comment>COMPOSITE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iscomprehensive" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="ISCOMPREHENSIVE">
+    	        <comment>ISCOMPREHENSIVE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="avgaddspeed" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="AVGADDSPEED">
+    	        <comment>AVGADDSPEED</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="avgremovespeed" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="AVGREMOVESPEED">
+    	        <comment>AVGREMOVESPEED</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="coldstarttime" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="COLDSTARTTIME">
+    	        <comment>COLDSTARTTIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hotstarttime" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="HOTSTARTTIME">
+    	        <comment>HOTSTARTTIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="warmstarttime" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="WARMSTARTTIME">
+    	        <comment>WARMSTARTTIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="opentostopspace" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="OPENTOSTOPSPACE">
+    	        <comment>OPENTOSTOPSPACE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="stoptoopenspace" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="STOPTOOPENSPACE">
+    	        <comment>STOPTOOPENSPACE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="summerpower" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SUMMERPOWER">
+    	        <comment>SUMMERPOWER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="winterpower" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="WINTERPOWER">
+    	        <comment>WINTERPOWER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="leastpower" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="LEASTPOWER">
+    	        <comment>LEASTPOWER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="largestpower" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="LARGESTPOWER">
+    	        <comment>LARGESTPOWER</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="largestpowerinleast" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="LARGESTPOWERINLEAST">
+    	        <comment>LARGESTPOWERINLEAST</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ifoncefm" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="IFONCEFM">
+    	        <comment>IFONCEFM</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ifagcfm" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="IFAGCFM">
+    	        <comment>IFAGCFM</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="oncefmtodeath" type="string"  length="64"  not-null="false">
+	    	<column name="ONCEFMTODEATH">
+    	        <comment>ONCEFMTODEATH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="oncefmrate" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="ONCEFMRATE">
+    	        <comment>ONCEFMRATE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatorclass1" type="string"  length="2"  not-null="false">
+	    	<column name="GENERATORCLASS1">
+    	        <comment>GENERATORCLASS1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="generatorclass2" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="GENERATORCLASS2">
+    	        <comment>GENERATORCLASS2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="licencecode" type="string"  length="200"  not-null="false">
+	    	<column name="LICENCECODE">
+    	        <comment>授权编码</comment>
+	    	</column>
+    	</property>  
+         
+          <property name="desaltdate" type="date"  not-null="false">
+	    	<column name="DESALTDATE">
+    	        <comment>脱硝日期</comment>
+	    	</column>
+    	</property>  
+         <property name="desulfurateddate" type="date"  not-null="false">
+	    	<column name="DESULFURATEDDATE">
+    	        <comment>脱硫日期</comment>
+	    	</column>
+    	</property>  
+         <property name="desdirtdate" type="date"  not-null="false">
+	    	<column name="DESDIRTDATE">
+    	        <comment>除尘日期</comment>
+	    	</column>
+    	</property> 
+    </class>
+</hibernate-mapping>

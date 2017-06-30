@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.ContractRecordInformation" table="CO_CONTRACTBACKUPINFO">
+    	<comment>????????????????</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="maplineid" type="string"  length="32"  not-null="true">
+	    	<column name="MAPLINEID">
+    	        <comment>?????id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maplinename" type="string"  length="64"  not-null="true">
+	    	<column name="MAPLINENAME">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkid" type="string"  length="32"  not-null="true">
+	    	<column name="LINKID">
+    	        <comment>??????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetype" type="string"  length="64"  not-null="true">
+	    	<column name="TRADETYPE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

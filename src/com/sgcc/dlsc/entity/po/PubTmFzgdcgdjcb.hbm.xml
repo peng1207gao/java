@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubTmFzgdcgdjcb" table="PUB_TM_FZGDCGDJCB">
+    	<comment>PUB_TM_FZGDCGDJCB</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tmonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="TMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="markerid" type="string"  length="10"  not-null="true">
+	    	<column name="MARKERID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xh" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="XH">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jzmc" type="string"  length="128"  not-null="false">
+	    	<column name="JZMC">
+    	        <comment>机组名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dsmc" type="string"  length="36"  not-null="false">
+	    	<column name="DSMC">
+    	        <comment>地市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ssfdjt" type="string"  length="128"  not-null="false">
+	    	<column name="SSFDJT">
+    	        <comment>所属发电集团</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jsdy" type="string"  length="128"  not-null="false">
+	    	<column name="JSDY">
+    	        <comment>结算单元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="qt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="QT">
+    	        <comment>QT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mx" type="string"  length="128"  not-null="false">
+	    	<column name="MX">
+    	        <comment>MX</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="20"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>FILLINMAN</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillintime" type="date"  not-null="true">
+	    	<column name="FILLINTIME">
+    	        <comment>FILLINTIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>BAK1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>BAK2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>BAK3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="32"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>BAK4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="200"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>BAK5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="200"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>BAK6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hd" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HD">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sd" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SD">
+    	        <comment>水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hed" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HED">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fd" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FD">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="string"  length="20"  not-null="false">
+	    	<column name="STATE">
+    	        <comment>状态</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lcid" type="string"  length="36"  not-null="false">
+	    	<column name="LCID">
+    	        <comment>流程ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

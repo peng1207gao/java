@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxNdgdGdlb" table="TJFX_NDGD_GDLB">
+    	<comment>年度购电合同购电量表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketerid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETERID">
+    	        <comment>市场成员ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractid" type="string"  length="36"  not-null="true">
+	    	<column name="CONTRACTID">
+    	        <comment>合同ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="string"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractquantity1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CONTRACTQUANTITY1">
+    	        <comment>年度购电合同电量原始值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractquantity2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CONTRACTQUANTITY2">
+    	        <comment>四季度上报的年度购电合同电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="establishtime" type="date"  not-null="false">
+	    	<column name="ESTABLISHTIME">
+    	        <comment>信息创建时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="establishpersonid" type="string"  length="32"  not-null="false">
+	    	<column name="ESTABLISHPERSONID">
+    	        <comment>信息创建人编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="iseffict" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="ISEFFICT">
+    	        <comment>是否生效</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractname" type="string"  length="200"  not-null="false">
+	    	<column name="CONTRACTNAME">
+    	        <comment>合同名称</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

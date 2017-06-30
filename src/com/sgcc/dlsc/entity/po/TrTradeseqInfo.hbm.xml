@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTradeseqInfo" table="TR_TRADESEQ_INFO">
+    	<comment>交易序列信息表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeseqName" type="string"  length="128"  not-null="true">
+	    	<column name="TRADESEQ_NAME">
+    	        <comment>交易序列英文名称  </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeseqCaption" type="string"  length="128"  not-null="true">
+	    	<column name="TRADESEQ_CAPTION">
+    	        <comment>交易序列中文名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetypeId" type="string"  length="32"  not-null="true">
+	    	<column name="TRADETYPE_ID">
+    	        <comment>交易类型ID  对应tr_Tradetype中的主键 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeseqCycle" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="TRADESEQ_CYCLE">
+    	        <comment>交易周期  0年,1季,2月,3周,4其他 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="beginTime" type="date"  not-null="true">
+	    	<column name="BEGIN_TIME">
+    	        <comment>交易开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endTime" type="date"  not-null="true">
+	    	<column name="END_TIME">
+    	        <comment>交易结束时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="intervalNum" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="INTERVAL_NUM">
+    	        <comment>交易轮次</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bandNum" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="BAND_NUM">
+    	        <comment>申报段数  </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isFixedbands" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="IS_FIXEDBANDS">
+    	        <comment>是否固定申报段数  &quot;0：表示申报段数为1——BandNum； 1：表示必须申报Band_Num段&quot; </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isOpenContract" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="IS_OPEN_CONTRACT">
+    	        <comment>是否要约交易  &quot;0：不是要约交易；1：是 要约交易指在交易生成合同后，可以修改合同数据。合同数据和交易数据允许不一致。&quot; </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="peakbottomTypeid" type="big_decimal"  length="8"  not-null="true">
+	    	<column name="PEAKBOTTOM_TYPEID">
+    	        <comment>峰谷平定义类型ID   外键，读峰平谷定义表 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeComments" type="string"  length="1800"  not-null="false">
+	    	<column name="TRADE_COMMENTS">
+    	        <comment>交易详细说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="createTime" type="date"  not-null="false">
+	    	<column name="CREATE_TIME">
+    	        <comment>交易序列创建时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="createUser" type="string"  length="64"  not-null="false">
+	    	<column name="CREATE_USER">
+    	        <comment>交易序列创建人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gbsRuleId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="GBS_RULE_ID">
+    	        <comment>交易申报规则ID  对应表tr_Rule_Define的主键 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="permitRuleId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="PERMIT_RULE_ID">
+    	        <comment>交易准入规则ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sortRuleId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="SORT_RULE_ID">
+    	        <comment>交易排序规则ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="calcuRuleId" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="CALCU_RULE_ID">
+    	        <comment>交易出清规则ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wfInstanceId" type="string"  length="64"  not-null="true">
+	    	<column name="WF_INSTANCE_ID">
+    	        <comment>业务流程实例ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pubId" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PUB_ID">
+    	        <comment>公告id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场  场景信息 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

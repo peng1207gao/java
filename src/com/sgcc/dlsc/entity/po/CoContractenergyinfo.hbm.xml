@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.CoContractenergyinfo" table="CO_CONTRACTENERGYINFO">
+    	<comment>?????????? </comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="contractid" type="string"  length="36"  not-null="false">
+	    	<column name="CONTRACTID">
+    	        <comment>??ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startdate" type="date"  not-null="false">
+	    	<column name="STARTDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="enddate" type="date"  not-null="false">
+	    	<column name="ENDDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="period" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="PERIOD">
+    	        <comment>??,1???2?3?4?5? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchasergen" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PURCHASERGEN">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fee" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="FEE">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energy" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="ENERGY">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="qtytype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="QTYTYPE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="timeno" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TIMENO">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchaserenergy" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PURCHASERENERGY">
+    	        <comment>???????,?????????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchaserprice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PURCHASERPRICE">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purisincludetax" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="PURISINCLUDETAX">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellergen" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SELLERGEN">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerenergy" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SELLERENERGY">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerprice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SELLERPRICE">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerisincludetax" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="SELLERISINCLUDETAX">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="price" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICE">
+    	        <comment>????,?????????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purisincludetp" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PURISINCLUDETP">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerisincludetp" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SELLERISINCLUDETP">
+    	        <comment>?????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricetax" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="PRICETAX">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pricetp" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="PRICETP">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="whereinsert" type="string"  length="10"  not-null="false">
+	    	<column name="WHEREINSERT">
+    	        <comment>?????0????? 1?????</comment>
+	    	</column>
+    	</property>
+    	
+    	<property name="tradePriceMargin" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="TRADE_PRICE_MARGIN">
+    	        <comment>价差成交电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeBreathPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="VENDEE_BREATH_PRICE">
+    	        <comment>购方违约赔偿电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleBreathPrice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SALE_BREATH_PRICE">
+    	        <comment>售方违约赔偿电价</comment>
+	    	</column>
+    	</property>  
+    	
+    	<property name="buyprice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="BUYPRICE">
+    	        <comment>收购电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="usersideqty" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="USERSIDEQTY">
+    	        <comment>用户侧电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lossRatio" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="LOSS_RATIO">
+    	        <comment>网损率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="allowanceprice" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="ALLOWANCEPRICE">
+    	        <comment>政府补贴电价</comment>
+	    	</column>
+    	</property>
+         
+    </class>
+</hibernate-mapping>

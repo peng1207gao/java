@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DeEImpLog" table="DE_E_IMP_LOG">
+    	<comment>e??????</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="fileAddressS" type="string"  length="200"  not-null="false">
+	    	<column name="FILE_ADDRESS_S">
+    	        <comment>源地址</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fileAddressC" type="string"  length="200"  not-null="false">
+	    	<column name="FILE_ADDRESS_C">
+    	        <comment>放的地址</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="etableName" type="string"  length="200"  not-null="false">
+	    	<column name="E_TABLE_NAME">
+    	        <comment>E</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="impRownums" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="IMP_ROWNUMS">
+    	        <comment>插入多少行</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="impTime" type="date"  not-null="false">
+	    	<column name="IMP_TIME">
+    	        <comment>IMP_TIME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isSuc" type="string"  length="2"  not-null="false">
+	    	<column name="IS_SUC">
+    	        <comment>是否成功</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="failInfo" type="string"  length="4000"  not-null="false">
+	    	<column name="FAIL_INFO">
+    	        <comment>失败信息 1服务器连接不成功  2.</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

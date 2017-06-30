@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrSortparamsDefine" table="TR_SORTPARAMS_DEFINE">
+    	<comment>TR_SORTPARAMS_DEFINE</comment>
+        <!-- single primaryKey -->
+	    <id name="factorId" type="string" length="32">
+	    	<column name="FACTOR_ID">
+    	        <comment>因子ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="factorName" type="string"  length="64"  not-null="true">
+	    	<column name="FACTOR_NAME">
+    	        <comment>因子名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="valueObject" type="string"  length="64"  not-null="false">
+	    	<column name="VALUE_OBJECT">
+    	        <comment>表名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="property" type="string"  length="64"  not-null="false">
+	    	<column name="PROPERTY">
+    	        <comment>属性名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="qrySql" type="string"  length="2048"  not-null="false">
+	    	<column name="QRY_SQL">
+    	        <comment>查询脚本</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="returnType" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="RETURN_TYPE">
+    	        <comment>函数返回类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="menuTypeCode" type="string"  length="64"  not-null="false">
+	    	<column name="MENU_TYPE_CODE">
+    	        <comment>菜单类型编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+    	
+    	<property name="ratioIsPermit" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="RATIO_IS_PERMIT">
+    	        <comment>是否设置权重系数</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

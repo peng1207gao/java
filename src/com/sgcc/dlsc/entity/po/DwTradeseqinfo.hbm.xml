@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwTradeseqinfo" table="DW_TRADESEQINFO">
+    	<comment>DW_TRADESEQINFO</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>id</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqid" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradename" type="string"  length="128"  not-null="false">
+	    	<column name="TRADENAME">
+    	        <comment>交易名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startdate" type="date"  not-null="false">
+	    	<column name="STARTDATE">
+    	        <comment>开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="enddate" type="date"  not-null="false">
+	    	<column name="ENDDATE">
+    	        <comment>结束时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bandnumb" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="BANDNUMB">
+    	        <comment>申报段数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buyerstartdate" type="date"  not-null="false">
+	    	<column name="BUYERSTARTDATE">
+    	        <comment>购方申报开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buyerenddate" type="date"  not-null="false">
+	    	<column name="BUYERENDDATE">
+    	        <comment>购方申报结束时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gencapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GENCAPACITY">
+    	        <comment>发电企业交易电量规模</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="comsumercapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="COMSUMERCAPACITY">
+    	        <comment>电力用户用电量需求</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="consumerrate" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="CONSUMERRATE">
+    	        <comment>电力用户年平均利用小时数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetypeid" type="string"  length="36"  not-null="false">
+	    	<column name="TRADETYPEID">
+    	        <comment>交易类型ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerstartdate" type="date"  not-null="false">
+	    	<column name="SELLERSTARTDATE">
+    	        <comment>售方申报开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerenddate" type="date"  not-null="false">
+	    	<column name="SELLERENDDATE">
+    	        <comment>售方申报结束时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

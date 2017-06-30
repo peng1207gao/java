@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubDemandElecAnalyse" table="PUB_DEMAND_ELEC_ANALYSE">
+    	<comment>全省统调用电情况分析</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tyear" type="integer"  not-null="true">
+	    	<column name="TYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tmonth" type="integer"  not-null="true">
+	    	<column name="TMONTH">
+    	        <comment>月份：1、2、3、4……11、12</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY1">
+    	        <comment>全社会用电量:亿千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecTb1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELEC_TB1">
+    	        <comment>全社会用电量同比增长率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY2">
+    	        <comment>第一产业用电量：亿千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecTb2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELEC_TB2">
+    	        <comment>第一产业用电量同比增长率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY3">
+    	        <comment>第二产业用电量：亿千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecTb3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELEC_TB3">
+    	        <comment>第二产业用电量同比增长率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY4">
+    	        <comment>第三产业用电量：亿千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecTb4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELEC_TB4">
+    	        <comment>第三产业用电量同比增长率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity5" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY5">
+    	        <comment>城乡居民生活用电量：亿千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecTb5" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELEC_TB5">
+    	        <comment>城乡居民生活用电量同比增长率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loadfactor" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LOADFACTOR">
+    	        <comment>全省平均用电负荷率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loadfactorTb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LOADFACTOR_TB">
+    	        <comment>全省平均用电负荷率同比增长率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxpowerload" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXPOWERLOAD">
+    	        <comment>最大用电负荷：万千瓦</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loadTime" type="date"  not-null="false">
+	    	<column name="LOAD_TIME">
+    	        <comment>最大负荷发生时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="loadTb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LOAD_TB">
+    	        <comment>最大负荷同比增长率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="electricity6" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECTRICITY6">
+    	        <comment>最大日用电量：亿千瓦时</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecTime" type="date"  not-null="false">
+	    	<column name="ELEC_TIME">
+    	        <comment>最大日用电量发生时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecTb6" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELEC_TB6">
+    	        <comment>最大日用电量同比增长率%</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="integer"  not-null="true">
+	    	<column name="STATE">
+    	        <comment>状态,0未发布，1发布，2待审批，3审批通过，4退回。默认为0</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="subjectguid" type="string"  length="32"  not-null="false">
+	    	<column name="SUBJECTGUID">
+    	        <comment>发布主题ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="20"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>填报人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillintime" type="date"  not-null="true">
+	    	<column name="FILLINTIME">
+    	        <comment>填报时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>备用1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>备用2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>备用3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>备用4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="32"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>备用5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="32"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>备用6</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrFile" table="TR_FILE">
+    	<comment>交易附件表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>记录流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="fileTitle" type="string"  length="200"  not-null="true">
+	    	<column name="FILE_TITLE">
+    	        <comment>标题</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fileId" type="string"  length="500"  not-null="false">
+	    	<column name="FILE_ID">
+    	        <comment>附件ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fileInfo" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+	    	<column name="FILE_INFO">
+    	        <comment>附件内容</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="upTime" type="timestamp"  not-null="true">
+	    	<column name="UP_TIME">
+    	        <comment>上传时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketIds" type="string"  length="2000"  not-null="false">
+	    	<column name="MARKET_IDS">
+    	        <comment>发布场景</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="publishDx" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="PUBLISH_DX">
+    	        <comment>发布对象</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField1" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="BACK_FIELD1">
+    	        <comment>备用字段1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField2" type="big_decimal"  length="10"  not-null="false">
+	    	<column name="BACK_FIELD2">
+    	        <comment>备用字段2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField3" type="string"  length="32"  not-null="false">
+	    	<column name="BACK_FIELD3">
+    	        <comment>备用字段3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField4" type="string"  length="100"  not-null="false">
+	    	<column name="BACK_FIELD4">
+    	        <comment>备用字段4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField5" type="string"  length="500"  not-null="false">
+	    	<column name="BACK_FIELD5">
+    	        <comment>备用字段5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backField6" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+	    	<column name="BACK_FIELD6">
+    	        <comment>备用字段6</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

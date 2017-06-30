@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DocxTable" table="DOCX_TABLE">
+    	<comment>DOCX_TABLE</comment>
+        <!-- single primaryKey -->
+	    <id name="appid" type="string" length="36">
+	    	<column name="APPID">
+    	        <comment>行ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="docid" type="string"  length="20"  not-null="true">
+	    	<column name="DOCID">
+    	        <comment>文档ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="indexnum" type="big_decimal"  length="22"  not-null="true">
+	    	<column name="INDEXNUM">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="titledata" type="org.springframework.orm.hibernate3.support.ClobStringType"  not-null="false">
+	    	<column name="TITLEDATA">
+    	        <comment>表格标题行数据</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contentdata" type="org.springframework.orm.hibernate3.support.ClobStringType"  not-null="false">
+	    	<column name="CONTENTDATA">
+    	        <comment>表格内容数据</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rowcount" type="big_decimal"  length="22"  not-null="true">
+	    	<column name="ROWCOUNT">
+    	        <comment>行数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="colcount" type="big_decimal"  length="22"  not-null="true">
+	    	<column name="COLCOUNT">
+    	        <comment>列数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="colwidth" type="big_decimal"  length="22"  not-null="true">
+	    	<column name="COLWIDTH">
+    	        <comment>列宽</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.StFdqjytjyb" table="ST_FDQJYTJYB">
+    	<comment>发电权交易统计月报</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketid" type="string"  length="10"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment> 单位 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYDL">
+    	        <comment>当月电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dytqdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYTQDL">
+    	        <comment>当月同期电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjh" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJH">
+    	        <comment>当月计划 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dywcl" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="DYWCL">
+    	        <comment>当月完成率 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zytddl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ZYTDDL">
+    	        <comment>在役替代电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zytdtqdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ZYTDTQDL">
+    	        <comment>在役替代同期电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gttdrl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GTTDRL">
+    	        <comment>关停替代容量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gttdtqrl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GTTDTQRL">
+    	        <comment>关停替代同期容量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gttddl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GTTDDL">
+    	        <comment>关停替代电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gttdtqdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GTTDTQDL">
+    	        <comment>关停替代同期电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jybm" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="JYBM">
+    	        <comment>节约标煤 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jpso2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="JPSO2">
+    	        <comment>减排SO2 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jpco2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="JPCO2">
+    	        <comment>减排CO2 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hnjtnbfdqjydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HNJTNBFDQJYDL">
+    	        <comment>华能集团内部发电权交易电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dtjtnbfdqjydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DTJTNBFDQJYDL">
+    	        <comment>大唐集团内部发电权交易电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdjtnbfdqjydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GDJTNBFDQJYDL">
+    	        <comment>国电集团内部发电权交易电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hdjtnbfdqjydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HDJTNBFDQJYDL">
+    	        <comment>华电集团内部发电权交易电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zdtjtnbfdqjydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ZDTJTNBFDQJYDL">
+    	        <comment>中电投集团内部发电权交易电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ghjtnbfdqjydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GHJTNBFDQJYDL">
+    	        <comment>国华集团内部发电权交易电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="qtjtnbfdqjydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="QTJTNBFDQJYDL">
+    	        <comment>其他集团内部发电权交易电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJDL">
+    	        <comment>累计电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljtqdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJTQDL">
+    	        <comment>累计同期电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljzytddl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJZYTDDL">
+    	        <comment>累计在役替代电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljzytdtqdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJZYTDTQDL">
+    	        <comment>累计在役替代同期电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljgttdrl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJGTTDRL">
+    	        <comment>累计关停替代容量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljgttdxzrl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJGTTDXZRL">
+    	        <comment>累计关停替代新增容量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljgttdzbdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJGTTDZBDL">
+    	        <comment>累计关停替代指标电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljgttdyjdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJGTTDYJDL">
+    	        <comment>累计关停替代预计电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjybm" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYBM">
+    	        <comment>累计节约标煤 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjpso2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJPSO2">
+    	        <comment>累计减排SO2 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjpco2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJPCO2">
+    	        <comment>累计减排CO2 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbzt" type="string"  length="2"  not-null="false">
+	    	<column name="SBZT">
+    	        <comment>申报状态 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="string"  length="2"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>版本</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

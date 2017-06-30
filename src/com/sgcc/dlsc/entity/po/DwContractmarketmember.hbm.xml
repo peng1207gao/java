@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwContractmarketmember" table="DW_CONTRACTMARKETMEMBER">
+    	<comment>合同_购售电量信息表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="contractid" type="string"  length="36"  not-null="false">
+	    	<column name="CONTRACTID">
+    	        <comment>合同ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeparticipantid" type="string"  length="36"  not-null="false">
+	    	<column name="VENDEEPARTICIPANTID">
+    	        <comment>购方市场成员</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleparticipantid" type="string"  length="36"  not-null="false">
+	    	<column name="SALEPARTICIPANTID">
+    	        <comment>售方市场成员</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEEENERGY">
+    	        <comment>购方上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeegrosseng" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEEGROSSENG">
+    	        <comment>购方发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeaveprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEEAVEPRICE">
+    	        <comment>购方均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractaveprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CONTRACTAVEPRICE">
+    	        <comment>目录均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEENERGY">
+    	        <comment>售方上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salegrosseng" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEGROSSENG">
+    	        <comment>售方发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleaveprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEAVEPRICE">
+    	        <comment>售方均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="approveaveprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="APPROVEAVEPRICE">
+    	        <comment>售方批复均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleaddquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEADDQUANTITY">
+    	        <comment>售方增加电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleaddhour" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEADDHOUR">
+    	        <comment>售方增加利用小时数</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salecapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALECAPACITY">
+    	        <comment>售方装机容量</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

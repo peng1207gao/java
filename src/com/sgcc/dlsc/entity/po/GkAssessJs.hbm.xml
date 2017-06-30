@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.GkAssessJs" table="GK_ASSESS_JS">
+    	<comment>管控监视表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datatype" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="DATATYPE">
+    	        <comment>业务类型  1计划 2交易 3结算</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gkId" type="string"  length="32"  not-null="false">
+	    	<column name="GK_ID">
+    	        <comment>管控管理数据</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="indexId" type="string"  length="32"  not-null="false">
+	    	<column name="INDEX_ID">
+    	        <comment>考核指标ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="indexName" type="string"  length="200"  not-null="false">
+	    	<column name="INDEX_NAME">
+    	        <comment>考核指标名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isassess" type="string"  length="32"  not-null="false">
+	    	<column name="ISASSESS">
+    	        <comment>是否考核</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VALUE1">
+    	        <comment>阀值1 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value1name" type="string"  length="32"  not-null="false">
+	    	<column name="VALUE1NAME">
+    	        <comment>阀值1名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value1ins" type="string"  length="200"  not-null="false">
+	    	<column name="VALUE1INS">
+    	        <comment>阀值1说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VALUE2">
+    	        <comment>阀值2 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value2name" type="string"  length="32"  not-null="false">
+	    	<column name="VALUE2NAME">
+    	        <comment>阀值2名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value2ins" type="string"  length="200"  not-null="false">
+	    	<column name="VALUE2INS">
+    	        <comment>阀值2说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VALUE3">
+    	        <comment>阀值3 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value3name" type="string"  length="32"  not-null="false">
+	    	<column name="VALUE3NAME">
+    	        <comment>阀值3名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value3ins" type="string"  length="200"  not-null="false">
+	    	<column name="VALUE3INS">
+    	        <comment>阀值3说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value4" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VALUE4">
+    	        <comment>阀值4 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value4name" type="string"  length="32"  not-null="false">
+	    	<column name="VALUE4NAME">
+    	        <comment>阀值4名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value4ins" type="string"  length="200"  not-null="false">
+	    	<column name="VALUE4INS">
+    	        <comment>阀值4说明</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="value" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VALUE">
+    	        <comment>业务数据值 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr1" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR1">
+    	        <comment>BACKSTR1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr2" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR2">
+    	        <comment>BACKSTR2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr3" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR3">
+    	        <comment>BACKSTR3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr4" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR4">
+    	        <comment>BACKSTR4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr5" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR5">
+    	        <comment>BACKSTR5</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

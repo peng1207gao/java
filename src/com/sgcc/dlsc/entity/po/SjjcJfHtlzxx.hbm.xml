@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcJfHtlzxx" table="SJJC_JF_HTLZXX">
+    	<comment>经法_合同流转信息</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractname" type="string"  length="1000"  not-null="false">
+	    	<column name="CONTRACTNAME">
+    	        <comment>合同名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractid" type="string"  length="50"  not-null="true">
+	    	<column name="CONTRACTID">
+    	        <comment>合同ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractno" type="string"  length="512"  not-null="false">
+	    	<column name="CONTRACTNO">
+    	        <comment>合同编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="intodate" type="date"  not-null="false">
+	    	<column name="INTODATE">
+    	        <comment>流转时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractstate" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="CONTRACTSTATE">
+    	        <comment>合同流转信息,1起草2审核流转3审批4编号5签署6备案</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractsuggestion" type="string"  length="3600"  not-null="false">
+	    	<column name="CONTRACTSUGGESTION">
+    	        <comment>合同审批意见</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwTranscontract" table="DW_TRANSCONTRACT">
+    	<comment>合同_输电合同</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="contractid" type="string"  length="36"  not-null="false">
+	    	<column name="CONTRACTID">
+    	        <comment>合同ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="source" type="string"  length="36"  not-null="false">
+	    	<column name="SOURCE">
+    	        <comment>输电方</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkid" type="string"  length="36"  not-null="false">
+	    	<column name="LINKID">
+    	        <comment>联络线ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="serialno" type="big_decimal"  length="12"  not-null="false">
+	    	<column name="SERIALNO">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECQUANTITY">
+    	        <comment>输电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

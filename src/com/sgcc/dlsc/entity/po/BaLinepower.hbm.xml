@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaLinepower" table="BA_LINEPOWER">
+    	<comment>跨区联络线实际送电电力</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATE_TYPE">
+    	        <comment>期别  年、冬、夏、季、月、旬、周、日 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabdate" type="date"  not-null="true">
+	    	<column name="TABDATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linename" type="string"  length="128"  not-null="false">
+	    	<column name="LINENAME">
+    	        <comment>联络线名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lineid" type="string"  length="50"  not-null="true">
+	    	<column name="LINEID">
+    	        <comment>联络线编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="time" type="date"  not-null="true">
+	    	<column name="TIME">
+    	        <comment>时间  15分钟一点 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powernumber" type="big_decimal"  length="6"  not-null="true">
+	    	<column name="POWERNUMBER">
+    	        <comment>实际电力值  单位：MW </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

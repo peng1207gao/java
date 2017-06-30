@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaPlanfixca" table="BA_PLANFIXCA">
+    	<comment>联络线/机组检修计划</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATE_TYPE">
+    	        <comment>&quot;期别  年、冬、夏、季、月、旬、周、日 &quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="datetime" type="date"  not-null="true">
+	    	<column name="DATETIME">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maintenanceplanclass" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="MAINTENANCEPLANCLASS">
+    	        <comment>&quot;检修计划类别  1.年度2.月度3.临时 &quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maintenanceequipmentclass" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="MAINTENANCEEQUIPMENTCLASS">
+    	        <comment>&quot;检修设备类型  1.机组2.联络线 &quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="unitlinename" type="string"  length="128"  not-null="true">
+	    	<column name="UNITLINENAME">
+    	        <comment>机组/联络线名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="unitlineid" type="string"  length="50"  not-null="false">
+	    	<column name="UNITLINEID">
+    	        <comment>机组/联络线编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starttime" type="date"  not-null="true">
+	    	<column name="STARTTIME">
+    	        <comment>检修开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endtime" type="date"  not-null="true">
+	    	<column name="ENDTIME">
+    	        <comment>检修截止时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maintenancecapacity" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="MAINTENANCECAPACITY">
+    	        <comment>&quot;检修容量  单位：MW &quot;</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maintenancereason" type="string"  length="500"  not-null="false">
+	    	<column name="MAINTENANCEREASON">
+    	        <comment>检修原因</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

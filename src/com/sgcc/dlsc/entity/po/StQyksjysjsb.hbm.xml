@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.StQyksjysjsb" table="ST_QYKSJYSJSB">
+    	<comment>ST_QYKSJYSJSB</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID </comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>?? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="THEMONTH">
+    	        <comment>?? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradename" type="string"  length="64"  not-null="true">
+	    	<column name="TRADENAME">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jscf" type="string"  length="2"  not-null="true">
+	    	<column name="JSCF">
+    	        <comment>???? ????????? ?</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradetype" type="string"  length="2"  not-null="true">
+	    	<column name="TRADETYPE">
+    	        <comment>???? ?0.???1.?? ?</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjyjhdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJYJHDL">
+    	        <comment>???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cyjyjhdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CYJYJHDL">
+    	        <comment>???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="seller" type="string"  length="36"  not-null="false">
+	    	<column name="SELLER">
+    	        <comment>??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SDL">
+    	        <comment>??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sdjg" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SDJG">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchaser" type="string"  length="36"  not-null="false">
+	    	<column name="PURCHASER">
+    	        <comment>??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GDL">
+    	        <comment>??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdjg" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GDJG">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sdf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SDF">
+    	        <comment>??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GDF">
+    	        <comment>??? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jyjhwcl" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="JYJHWCL">
+    	        <comment>??????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jydlt" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="JYDLT">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdspjxsdj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GDSPJXSDJ">
+    	        <comment>????????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdshdtlbgdj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GDSHDTLBGDJ">
+    	        <comment>??????????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdspjgdj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="GDSPJGDJ">
+    	        <comment>???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jygdsgdcb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="JYGDSGDCB">
+    	        <comment>????????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jysy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="JYSY">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjyjhdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYJHDL">
+    	        <comment>???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljsdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJSDL">
+    	        <comment>????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljsdjg" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJSDJG">
+    	        <comment>(??)???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljsdf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJSDF">
+    	        <comment>????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljgdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJGDL">
+    	        <comment>????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljgdjg" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJGDJG">
+    	        <comment>???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljgdf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJGDF">
+    	        <comment>????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bnpjxsdj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BNPJXSDJ">
+    	        <comment>???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bnpjgdj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BNPJGDJ">
+    	        <comment>??????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jydlljtb" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="JYDLLJTB">
+    	        <comment>???????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjygdsgdcb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYGDSGDCB">
+    	        <comment>??????????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjysy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYSY">
+    	        <comment>?????? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sbzt" type="string"  length="2"  not-null="false">
+	    	<column name="SBZT">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="version" type="string"  length="2"  not-null="false">
+	    	<column name="VERSION">
+    	        <comment>VERSION</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="10"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>MARKETID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dcswdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DCSWDL">
+    	        <comment>DCSWDL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dcswdj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DCSWDJ">
+    	        <comment>DCSWDJ</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljsdsgdcdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJSDSGDCDL">
+    	        <comment>LJSDSGDCDL</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljsdsgdcdj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJSDSGDCDJ">
+    	        <comment>LJSDSGDCDJ</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljsdsgdcdf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJSDSGDCDF">
+    	        <comment>LJSDSGDCDF</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

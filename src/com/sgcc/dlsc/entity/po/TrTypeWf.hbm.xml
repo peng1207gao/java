@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrTypeWf" table="TR_TYPE_WF">
+    	<comment>交易类型和流程关联表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradetypeId" type="string"  length="32"  not-null="true">
+	    	<column name="TRADETYPE_ID">
+    	        <comment>交易类型ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wfId" type="string"  length="64"  not-null="true">
+	    	<column name="WF_ID">
+    	        <comment>流程ID  不是流程实例ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="wfName" type="string"  length="64"  not-null="false">
+	    	<column name="WF_NAME">
+    	        <comment>流程名称  </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateTime" type="date"  not-null="true">
+	    	<column name="UPDATE_TIME">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场 网省公司 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

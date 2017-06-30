@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaChgpursemodeApp" table="BA_CHGPURSEMODE_APP">
+    	<comment>购电模式变更申请表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>FGUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="participantId" type="string"  length="32"  not-null="true">
+	    	<column name="PARTICIPANT_ID">
+    	        <comment>市场成员ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="appNo" type="string"  length="32"  not-null="true">
+	    	<column name="APP_NO">
+    	        <comment>申请单编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="upursemode" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="U_PURSEMODE">
+    	        <comment>用户购电模式</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="appUser" type="string"  length="32"  not-null="true">
+	    	<column name="APP_USER">
+    	        <comment>申请人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="appDate" type="java.util.Date"  not-null="true">
+	    	<column name="APP_DATE">
+    	        <comment>申请时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bizyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="BIZYEAR">
+    	        <comment>业务年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="chkUser" type="string"  length="32"  not-null="false">
+	    	<column name="CHK_USER">
+    	        <comment>审核人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="chkDate" type="date"  not-null="false">
+	    	<column name="CHK_DATE">
+    	        <comment>审核时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isPass" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="IS_PASS">
+    	        <comment>审核结果</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isPub" type="big_decimal"  length="1"  not-null="false">
+	    	<column name="IS_PUB">
+    	        <comment>是否发布</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

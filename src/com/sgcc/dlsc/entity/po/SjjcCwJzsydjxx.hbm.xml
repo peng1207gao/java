@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcCwJzsydjxx" table="SJJC_CW_JZSYDJXX">
+    	<comment>财务管控_机组（结算单元）商运电价信息</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provincename" type="string"  length="128"  not-null="true">
+	    	<column name="PROVINCENAME">
+    	        <comment>省市名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="provinceid" type="string"  length="50"  not-null="true">
+	    	<column name="PROVINCEID">
+    	        <comment>省市编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jzjsdymc" type="string"  length="128"  not-null="true">
+	    	<column name="JZJSDYMC">
+    	        <comment>机组（结算单元）名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jzjsdybm" type="string"  length="20"  not-null="true">
+	    	<column name="JZJSDYBM">
+    	        <comment>机组（结算单元）编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sj" type="date"  not-null="true">
+	    	<column name="SJ">
+    	        <comment>时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0039" type="date"  not-null="false">
+	    	<column name="ZD0039">
+    	        <comment>脱硫电价出台时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0038" type="date"  not-null="false">
+	    	<column name="ZD0038">
+    	        <comment>脱硫加价疏导时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0018" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0018">
+    	        <comment>商运电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0016" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0016">
+    	        <comment>容量电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0020" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0020">
+    	        <comment>可再生能源加价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5064" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5064">
+    	        <comment>商运丰水期不执行峰平谷电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5061" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5061">
+    	        <comment>商运丰水期不执行峰段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5062" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5062">
+    	        <comment>商运丰水期不执行平段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5063" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5063">
+    	        <comment>商运丰水期不执行谷段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0023" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0023">
+    	        <comment>商运峰段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0024" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0024">
+    	        <comment>商运平段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0025" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0025">
+    	        <comment>商运谷段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5069" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5069">
+    	        <comment>商运枯水期不执行峰平谷电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5066" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5066">
+    	        <comment>商运枯水期不执行峰段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5067" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5067">
+    	        <comment>商运枯水期不执行平段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5068" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5068">
+    	        <comment>商运枯水期不执行谷段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5071" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5071">
+    	        <comment>脱硝加价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0019" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0019">
+    	        <comment>脱硫加价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0021" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0021">
+    	        <comment>超基数电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0027" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0027">
+    	        <comment>超基数峰段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0028" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0028">
+    	        <comment>超基数平段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0029" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD0029">
+    	        <comment>超基数谷段电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd5072" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ZD5072">
+    	        <comment>除尘电价,单位：元/MWH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0046" type="string"  length="20"  not-null="false">
+	    	<column name="ZD0046">
+    	        <comment>按分时电价分类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0048" type="string"  length="20"  not-null="false">
+	    	<column name="ZD0048">
+    	        <comment>按标杆电价分类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0049" type="string"  length="20"  not-null="false">
+	    	<column name="ZD0049">
+    	        <comment>按丰枯电价分类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="zd0050" type="string"  length="20"  not-null="false">
+	    	<column name="ZD0050">
+    	        <comment>按季节电价分类</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gxsj" type="date"  not-null="false">
+	    	<column name="GXSJ">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

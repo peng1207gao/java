@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwTradeunitresult" table="DW_TRADEUNITRESULT">
+    	<comment>交易_交易单元交易结果</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqid" type="string"  length="36"  not-null="false">
+	    	<column name="TRADESEQID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="date"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="date"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>结束时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradebrand" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TRADEBRAND">
+    	        <comment>时间段</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeetradeunit" type="string"  length="36"  not-null="false">
+	    	<column name="VENDEETRADEUNIT">
+    	        <comment>购方交易单元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saletradeunit" type="string"  length="36"  not-null="false">
+	    	<column name="SALETRADEUNIT">
+    	        <comment>售方交易单元</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEEENERGY">
+    	        <comment>购方上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeegrosseng" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEEGROSSENG">
+    	        <comment>购方发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="VENDEEPRICE">
+    	        <comment>购方电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CONTRACTPRICE">
+    	        <comment>目录电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEENERGY">
+    	        <comment>售方上网电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salegrosseng" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEGROSSENG">
+    	        <comment>售方发电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEPRICE">
+    	        <comment>售方电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="approveprice" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="APPROVEPRICE">
+    	        <comment>售方批复电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="thetype" type="string"  length="36"  not-null="false">
+	    	<column name="THETYPE">
+    	        <comment>类型</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

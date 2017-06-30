@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SjjcDdLshtdliang" table="SJJC_DD_LSHTDLIANG">
+    	<comment>调度_临时合同电量信息</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>记录ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPANYNAME">
+    	        <comment>运行单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>运行单位编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractname" type="string"  length="128"  not-null="true">
+	    	<column name="CONTRACTNAME">
+    	        <comment>合同名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellername" type="string"  length="128"  not-null="false">
+	    	<column name="SELLERNAME">
+    	        <comment>售电方名称,依照“单位编码规范”+“电厂基础信息”</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchasername" type="string"  length="128"  not-null="false">
+	    	<column name="PURCHASERNAME">
+    	        <comment>购电方名称,依照“单位编码规范”</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="transmissionname" type="string"  length="128"  not-null="false">
+	    	<column name="TRANSMISSIONNAME">
+    	        <comment>输电方名称,依照“单位编码规范”</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractquantity" type="big_decimal"  length="6"  not-null="false">
+	    	<column name="CONTRACTQUANTITY">
+    	        <comment>合同电量,单位：MWh</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractstarttime" type="string"  length="50"  not-null="false">
+	    	<column name="CONTRACTSTARTTIME">
+    	        <comment>合同开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractendtime" type="string"  length="50"  not-null="false">
+	    	<column name="CONTRACTENDTIME">
+    	        <comment>合同截止时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatchcompanyname" type="string"  length="128"  not-null="false">
+	    	<column name="DISPATCHCOMPANYNAME">
+    	        <comment>所属调度单位名称</comment>
+	    	</column>
+    	</property>  
+         
+	     
+         
+    </class>
+</hibernate-mapping>

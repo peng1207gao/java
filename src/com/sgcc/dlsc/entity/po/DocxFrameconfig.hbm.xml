@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DocxFrameconfig" table="DOCX_FRAMECONFIG">
+    	<comment>文件界面配置表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketId" type="string"  length="32"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>场景ID 默认为国网=91812</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="moduleid" type="string"  length="36"  not-null="true">
+	    	<column name="MODULEID">
+    	        <comment>模块ID  通用编码表中type=9</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="funcname" type="string"  length="64"  not-null="true">
+	    	<column name="FUNCNAME">
+    	        <comment>界面名称  日天气情况预测</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="btnid" type="string"  length="36"  not-null="false">
+	    	<column name="BTNID">
+    	        <comment>按钮ID  btnGen</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="docmodeid" type="string"  length="20"  not-null="true">
+	    	<column name="DOCMODEID">
+    	        <comment>文档模板ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="indexnum" type="big_decimal"  length="22"  not-null="true">
+	    	<column name="INDEXNUM">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="string"  length="32"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>bak1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="string"  length="32"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>bak2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>bak3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

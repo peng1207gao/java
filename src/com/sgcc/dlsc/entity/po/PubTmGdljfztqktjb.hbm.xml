@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PubTmGdljfztqktjb" table="PUB_TM_GDLJFZTQKTJB">
+    	<comment>购电量价费总体情况统计表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TYEAR">
+    	        <comment>年度</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tmonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="TMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="markerid" type="string"  length="10"  not-null="true">
+	    	<column name="MARKERID">
+    	        <comment>场景</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tjxm" type="string"  length="128"  not-null="false">
+	    	<column name="TJXM">
+    	        <comment>TJXM</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dygdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYGDL">
+    	        <comment>当月购电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjhwcl" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="DYJHWCL">
+    	        <comment>当月计划完成率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dytb" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="DYTB">
+    	        <comment>当月同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dygdbz" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="DYGDBZ">
+    	        <comment>当月购电比重</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dygdjj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYGDJJ">
+    	        <comment>当月购电均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ndljgdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NDLJGDL">
+    	        <comment>年度累计购电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ndljjhwcl" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="NDLJJHWCL">
+    	        <comment>年度累计计划完成率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ndljtb" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="NDLJTB">
+    	        <comment>年度累计同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ndljgdbz" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="NDLJGDBZ">
+    	        <comment>年度累计购电比重</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ndljgdjj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NDLJGDJJ">
+    	        <comment>年度累计购电均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ndljgdjjtbzl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NDLJGDJJTBZL">
+    	        <comment>年度累计购电均价同比增量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ndljgdjgyxjj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NDLJGDJGYXJJ">
+    	        <comment>年度累计购电结构影响均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ndljdjtzyxjj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="NDLJDJTZYXJJ">
+    	        <comment>年度累计电价调整影响均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xh" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="XH">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="STATE">
+    	        <comment>状态</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="subjectguid" type="string"  length="32"  not-null="false">
+	    	<column name="SUBJECTGUID">
+    	        <comment>发布对象</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="20"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>填报人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillintime" type="date"  not-null="true">
+	    	<column name="FILLINTIME">
+    	        <comment>填报时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>备用1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>备用2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>备用3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="32"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>备用4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="200"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>备用5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="200"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>备用6</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

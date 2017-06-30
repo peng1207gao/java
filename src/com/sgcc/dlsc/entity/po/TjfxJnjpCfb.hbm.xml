@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxJnjpCfb" table="TJFX_JNJP_CFB">
+    	<comment>节能减排效益分析表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="theyear" type="string"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="string"  length="2"  not-null="true">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>市场ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="projectid" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="PROJECTID">
+    	        <comment>项目类型  1.清洁能源跨区消纳 2.清洁能源跨省消纳 3.清洁能源省内消纳 4.关停机组发电权交易 5.非关停机组发电权交易 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJYDL">
+    	        <comment>当月交易电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjydltb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJYDLTB">
+    	        <comment>当月交易电量同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjybm" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJYBM">
+    	        <comment>当月节约标煤</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjpco2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJPCO2">
+    	        <comment>当月减排CO2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjpso2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJPSO2">
+    	        <comment>当月减排SO2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYDL">
+    	        <comment>累计交易电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjydltb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYDLTB">
+    	        <comment>累计交易电量同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjybm" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYBM">
+    	        <comment>累计节约标煤</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjpco2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJPCO2">
+    	        <comment>累计减排CO2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjpso2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJPSO2">
+    	        <comment>累计减排SO2</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

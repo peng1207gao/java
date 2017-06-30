@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.StCyksdnjhjh" table="ST_CYKSDNJHJH">
+    	<comment>???????????</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="qymc" type="string"  length="36"  not-null="false">
+	    	<column name="QYMC">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jyfx" type="string"  length="36"  not-null="false">
+	    	<column name="JYFX">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYDL">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tb" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="TB">
+    	        <comment>?? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljdl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJDL">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljtb" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="LJTB">
+    	        <comment>???? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>?? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="THEMONTH">
+    	        <comment>?? </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="10"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>MARKETID</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

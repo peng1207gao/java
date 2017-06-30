@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaGeographicalregion" table="BA_GEOGRAPHICALREGION">
+    	<comment>????</comment>
+        <!-- single primaryKey -->
+	    <id name="geogrregionid" type="string" length="36">
+	    	<column name="GEOGRREGIONID">
+    	        <comment>????ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="geogrregionname" type="string"  length="64"  not-null="true">
+	    	<column name="GEOGRREGIONNAME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="aliasname" type="string"  length="32"  not-null="false">
+	    	<column name="ALIASNAME">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="suppergeogrregionid" type="string"  length="32"  not-null="false">
+	    	<column name="SUPPERGEOGRREGIONID">
+    	        <comment>??????ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="geogrregioncode" type="string"  length="32"  not-null="true">
+	    	<column name="GEOGRREGIONCODE">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="starteffectivedate" type="date"  not-null="true">
+	    	<column name="STARTEFFECTIVEDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endeffectivedate" type="date"  not-null="false">
+	    	<column name="ENDEFFECTIVEDATE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatetime" type="date"  not-null="false">
+	    	<column name="UPDATETIME">
+    	        <comment>??????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updatepersonid" type="string"  length="36"  not-null="false">
+	    	<column name="UPDATEPERSONID">
+    	        <comment>???????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isdelete" type="big_decimal"  length="1"  not-null="true">
+	    	<column name="ISDELETE">
+    	        <comment>????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="guid" type="string"  length="36"  not-null="false">
+	    	<column name="GUID">
+    	        <comment>GUID????????????????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ordernum" type="big_decimal"  length="6"  not-null="false">
+	    	<column name="ORDERNUM">
+    	        <comment>??</comment>
+	    	</column>
+    	</property>  
+         
+        <!-- one-to-many define -->
+        <set name="baGeographicalregions" table="BA_GEOGRAPHICALREGION" inverse="false" cascade="all" lazy="true" >
+            <key>
+                <column name="SUPPERGEOGRREGIONID"/>
+            </key>  
+            <one-to-many class="com.sgcc.dlsc.entity.po.BaGeographicalregion" />
+        </set>
+		
+    </class>
+</hibernate-mapping>

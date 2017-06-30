@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.PublicCognosConfig" table="PUBLIC_COGNOS_CONFIG">
+    	<comment>公共报表配置</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="moduleid" type="string"  length="36"  not-null="false">
+	    	<column name="MODULEID">
+    	        <comment>模块ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="url" type="string"  length="2000"  not-null="false">
+	    	<column name="URL">
+    	        <comment>URL地址</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="spname" type="string"  length="200"  not-null="false">
+	    	<column name="SPNAME">
+    	        <comment>存储过程名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isresult" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISRESULT">
+    	        <comment>是否返回值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>BAK1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>BAK2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>BAK3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="32"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>BAK4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="200"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>BAK5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="200"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>BAK6</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjZxqx" table="TJ_ZXQX">
+    	<comment>市场统计信息纵向权限表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="markerid" type="string"  length="10"  not-null="true">
+	    	<column name="MARKERID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xh" type="big_decimal"  length="8"  not-null="false">
+	    	<column name="XH">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="rptid" type="string"  length="20"  not-null="false">
+	    	<column name="RPTID">
+    	        <comment>报表ID，来自TJ_REPORT报表信息表RPTID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fillinman" type="string"  length="50"  not-null="true">
+	    	<column name="FILLINMAN">
+    	        <comment>填报人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="filldept" type="string"  length="200"  not-null="false">
+	    	<column name="FILLDEPT">
+    	        <comment>填报单位</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sjqx" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="SJQX">
+    	        <comment>数据权限：0 只读，1 读写</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="TYEAR">
+    	        <comment>许可年度</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tmonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="TMONTH">
+    	        <comment>许可月份：报表时间类型为月报、季报时使用</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tday" type="date"  not-null="false">
+	    	<column name="TDAY">
+    	        <comment>许可日期：报表时间类型为周报、日报时使用。</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xkr" type="string"  length="50"  not-null="false">
+	    	<column name="XKR">
+    	        <comment>许可人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xksj" type="date"  not-null="false">
+	    	<column name="XKSJ">
+    	        <comment>许可时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK1">
+    	        <comment>BAK1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK2">
+    	        <comment>BAK2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak3" type="string"  length="32"  not-null="false">
+	    	<column name="BAK3">
+    	        <comment>BAK3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak4" type="string"  length="32"  not-null="false">
+	    	<column name="BAK4">
+    	        <comment>BAK4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak5" type="string"  length="200"  not-null="false">
+	    	<column name="BAK5">
+    	        <comment>BAK5</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak6" type="string"  length="200"  not-null="false">
+	    	<column name="BAK6">
+    	        <comment>BAK6</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak7" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK7">
+    	        <comment>BAK7</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak8" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK8">
+    	        <comment>BAK8</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak9" type="string"  length="36"  not-null="false">
+	    	<column name="BAK9">
+    	        <comment>BAK9</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak10" type="string"  length="36"  not-null="false">
+	    	<column name="BAK10">
+    	        <comment>BAK10</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak11" type="string"  length="200"  not-null="false">
+	    	<column name="BAK11">
+    	        <comment>BAK11</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bak12" type="string"  length="200"  not-null="false">
+	    	<column name="BAK12">
+    	        <comment>BAK12</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

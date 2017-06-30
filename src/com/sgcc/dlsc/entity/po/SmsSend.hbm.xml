@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.SmsSend" table="SMS_SEND">
+    	<comment>短信表</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="big_decimal" length="15">
+	    	<column name="ID">
+    	        <comment>ID</comment>
+	    	</column>
+        </id>     
+		
+	    <property name="orgaddr" type="string"  length="50"  not-null="false">
+	    	<column name="ORGADDR">
+    	        <comment>1065750075069994[国网指定]</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="mobile" type="string"  length="30"  not-null="false">
+	    	<column name="MOBILE">
+    	        <comment>MOBILE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="content" type="string"  length="2000"  not-null="false">
+	    	<column name="CONTENT">
+    	        <comment>CONTENT</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="flag" type="string"  length="30"  not-null="false">
+	    	<column name="FLAG">
+    	        <comment>0=待发送[国网指定]</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

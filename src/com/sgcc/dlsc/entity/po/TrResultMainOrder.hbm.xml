@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrResultMainOrder" table="TR_RESULT_MAIN_ORDER">
+    	<comment>申报数据排序记录表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="bidinfoid" type="string"  length="32"  not-null="false">
+	    	<column name="BIDINFOID">
+    	        <comment>申报数据编号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="orderno" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="ORDERNO">
+    	        <comment>排序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jydyId" type="string"  length="36"  not-null="true">
+	    	<column name="JYDY_ID">
+    	        <comment>交易单元ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易序列ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tradeTimepart" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="TRADE_TIMEPART">
+    	        <comment>时间段</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

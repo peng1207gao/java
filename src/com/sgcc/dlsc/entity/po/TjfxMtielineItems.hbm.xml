@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxMtielineItems" table="TJFX_MTIELINE_ITEMS">
+    	<comment>TJFX_MTIELINE_ITEMS</comment>
+        <!-- single primaryKey -->
+	    <id name="id" type="string" length="36">
+	    	<column name="ID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketId" type="string"  length="36"  not-null="true">
+	    	<column name="MARKET_ID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planDate" type="date"  not-null="true">
+	    	<column name="PLAN_DATE">
+    	        <comment>计划日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="versionId" type="string"  length="36"  not-null="true">
+	    	<column name="VERSION_ID">
+    	        <comment>计划版本号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkid" type="string"  length="36"  not-null="false">
+	    	<column name="LINKID">
+    	        <comment>联络线ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linkname" type="string"  length="40"  not-null="false">
+	    	<column name="LINKNAME">
+    	        <comment>联络线名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerId" type="string"  length="36"  not-null="false">
+	    	<column name="SELLER_ID">
+    	        <comment>卖方ID 特殊合同允许购方或售方为空。9/5 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeId" type="string"  length="36"  not-null="false">
+	    	<column name="VENDEE_ID">
+    	        <comment>买方ID </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plantypeId" type="string"  length="36"  not-null="true">
+	    	<column name="PLANTYPE_ID">
+    	        <comment>成份类型ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractId" type="string"  length="36"  not-null="true">
+	    	<column name="CONTRACT_ID">
+    	        <comment>所属交易合同ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bandIndex" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="BAND_INDEX">
+    	        <comment>计划段号  99表示合计值</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="startDate" type="date"  not-null="false">
+	    	<column name="START_DATE">
+    	        <comment>开始日期 标识该计划可能只是月内几天，不做为主键</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="endDate" type="date"  not-null="false">
+	    	<column name="END_DATE">
+    	        <comment>结束日期 标识该计划可能只是月内几天，不做为主键</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="contractType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="CONTRACT_TYPE">
+    	        <comment>计划合同种类  目前包含两类： 0:来自合同；1：来自计划</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="energy" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="ENERGY">
+    	        <comment>总电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="avgEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="AVG_ENG">
+    	        <comment>日均电量 7/24增加</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="power" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="POWER">
+    	        <comment>平均电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="spireEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SPIRE_ENG">
+    	        <comment>尖峰电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="spirePower" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="SPIRE_POWER">
+    	        <comment>尖峰电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="peakEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PEAK_ENG">
+    	        <comment>峰电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="peakPower" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PEAK_POWER">
+    	        <comment>峰电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plainEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PLAIN_ENG">
+    	        <comment>平电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="plainPower" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="PLAIN_POWER">
+    	        <comment>平电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bottomEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BOTTOM_ENG">
+    	        <comment>谷电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bottomPower" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BOTTOM_POWER">
+    	        <comment>谷电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lossEng" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="LOSS_ENG">
+    	        <comment>网损电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lossRatio" type="big_decimal"  length="5"  not-null="false">
+	    	<column name="LOSS_RATIO">
+    	        <comment>网损率</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sellerBusid" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="SELLER_BUSID">
+    	        <comment>卖方业务ID   卖方计划单元业务id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="vendeeBusid" type="big_decimal"  length="20"  not-null="true">
+	    	<column name="VENDEE_BUSID">
+    	        <comment>买方业务ID   买方计划单元业务id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="remark" type="string"  length="200"  not-null="false">
+	    	<column name="REMARK">
+    	        <comment>备注</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateTime" type="timestamp"  not-null="false">
+	    	<column name="UPDATE_TIME">
+    	        <comment>更新时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userName" type="string"  length="100"  not-null="false">
+	    	<column name="USER_NAME">
+    	        <comment>操作用户</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bandStartDate" type="date"  not-null="false">
+	    	<column name="BAND_START_DATE">
+    	        <comment>段开始日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bandEndDate" type="date"  not-null="false">
+	    	<column name="BAND_END_DATE">
+    	        <comment>段结束日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr1" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR1">
+    	        <comment>备用字符串1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr2" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR2">
+    	        <comment>备用字符串2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakStr3" type="string"  length="100"  not-null="false">
+	    	<column name="BAK_STR3">
+    	        <comment>备用字符串3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt1" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_INT1">
+    	        <comment>备用整数1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt2" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_INT2">
+    	        <comment>备用整数2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakInt3" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BAK_INT3">
+    	        <comment>备用整数3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble1" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_DOUBLE1">
+    	        <comment>备用实数1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble2" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_DOUBLE2">
+    	        <comment>备用实数2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDouble3" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="BAK_DOUBLE3">
+    	        <comment>备用实数3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate1" type="date"  not-null="false">
+	    	<column name="BAK_DATE1">
+    	        <comment>备用时间1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate2" type="date"  not-null="false">
+	    	<column name="BAK_DATE2">
+    	        <comment>备用时间2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bakDate3" type="date"  not-null="false">
+	    	<column name="BAK_DATE3">
+    	        <comment>备用时间3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isForward" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="IS_FORWARD">
+    	        <comment>是否正向 1为正向，0为反向</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

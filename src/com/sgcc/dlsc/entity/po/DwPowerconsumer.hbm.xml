@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwPowerconsumer" table="DW_POWERCONSUMER">
+    	<comment>基础信息_电力用户</comment>
+        <!-- single primaryKey -->
+	    <id name="consumerid" type="string" length="36">
+	    	<column name="CONSUMERID">
+    	        <comment>用户ID</comment>
+	    	</column>
+        </id>     
+		
+	    <property name="consumername" type="string"  length="500"  not-null="true">
+	    	<column name="CONSUMERNAME">
+    	        <comment>用户名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="consumerdescr" type="string"  length="150"  not-null="false">
+	    	<column name="CONSUMERDESCR">
+    	        <comment>用户描述</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="geogrregionid" type="string"  length="36"  not-null="false">
+	    	<column name="GEOGRREGIONID">
+    	        <comment>地理位置</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="voltagegrade" type="big_decimal"  length="3"  not-null="false">
+	    	<column name="VOLTAGEGRADE">
+    	        <comment>电压等级</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="registerdate" type="date"  not-null="false">
+	    	<column name="REGISTERDATE">
+    	        <comment>注册时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="isapprovalprice" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="ISAPPROVALPRICE">
+    	        <comment>是否有批复输配电价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="operationalcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="OPERATIONALCAPACITY">
+    	        <comment>运行容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reportcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="REPORTCAPACITY">
+    	        <comment>报装容量</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

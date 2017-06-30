@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DdKqksllxrjhap" table="DD_KQKSLLXRJHAP">
+    	<comment>DD_KQKSLLXRJHAP</comment>
+        <!-- single primaryKey -->
+	    <id name="objId" type="string" length="50">
+	    	<column name="OBJ_ID">
+    	        <comment>OBJ_ID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="companyname" type="string"  length="128"  not-null="false">
+	    	<column name="COMPANYNAME">
+    	        <comment>所属公司</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="companyid" type="string"  length="50"  not-null="true">
+	    	<column name="COMPANYID">
+    	        <comment>COMPANYID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tableDate" type="date"  not-null="true">
+	    	<column name="TABLE_DATE">
+    	        <comment>计划时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linename" type="string"  length="128"  not-null="true">
+	    	<column name="LINENAME">
+    	        <comment>联络线名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="compositionname" type="string"  length="128"  not-null="true">
+	    	<column name="COMPOSITIONNAME">
+    	        <comment>成分名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tableTime" type="timestamp"  not-null="true">
+	    	<column name="TABLE_TIME">
+    	        <comment>计划时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="powerplan" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="POWERPLAN">
+    	        <comment>计划电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dispatchcompanyid" type="string"  length="128"  not-null="false">
+	    	<column name="DISPATCHCOMPANYID">
+    	        <comment>DISPATCHCOMPANYID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="deptCode" type="string"  length="18"  not-null="true">
+	    	<column name="DEPT_CODE">
+    	        <comment>DEPT_CODE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabYear" type="big_decimal"  length="4"  not-null="true">
+	    	<column name="TAB_YEAR">
+    	        <comment>TAB_YEAR</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabMonth" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="TAB_MONTH">
+    	        <comment>TAB_MONTH</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabDay" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="TAB_DAY">
+    	        <comment>TAB_DAY</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

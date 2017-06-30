@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaComflownodeinstance" table="BA_COMFLOWNODEINSTANCE">
+    	<comment>BA_COMFLOWNODEINSTANCE</comment>
+        <!-- single primaryKey -->
+	    <id name="flownodeinsid" type="string" length="32">
+	    	<column name="FLOWNODEINSID">
+    	        <comment>流程节点实例ID</comment>
+	    	</column>
+        </id>     
+		
+	    <property name="flowinsid" type="string"  length="32"  not-null="true">
+	    	<column name="FLOWINSID">
+    	        <comment>流程实例ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="flowdefid" type="string"  length="32"  not-null="true">
+	    	<column name="FLOWDEFID">
+    	        <comment>流程定义ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ddate" type="timestamp"  not-null="false">
+	    	<column name="DDATE">
+    	        <comment>处理时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dmane" type="string"  length="32"  not-null="false">
+	    	<column name="DMANE">
+    	        <comment>处理人</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="state1" type="big_decimal"  length="22"  not-null="true">
+	    	<column name="STATE1">
+    	        <comment>状态 0流转中,1已结束</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xuhao" type="big_decimal"  length="22"  not-null="true">
+	    	<column name="XUHAO">
+    	        <comment>序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr1" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR1">
+    	        <comment>备用字段1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr2" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR2">
+    	        <comment>备用字段2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr3" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR3">
+    	        <comment>备用字段3</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr4" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR4">
+    	        <comment>备用字段4</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="backstr5" type="string"  length="32"  not-null="false">
+	    	<column name="BACKSTR5">
+    	        <comment>备用字段5</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxKqksZb" table="TJFX_KQKS_ZB">
+    	<comment>跨区跨省成本分析总表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="theyear" type="string"  length="4"  not-null="true">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="string"  length="2"  not-null="true">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="projectid" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="PROJECTID">
+    	        <comment>项目类型  1.跨区交易   2.华北     3.华东   4.华中    5.东北    6.西北 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyswjj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYSWJJ">
+    	        <comment>当月上网均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyswjjtb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYSWJJTB">
+    	        <comment>当月上网均价同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyldjj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYLDJJ">
+    	        <comment>当月落地均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyldjjtb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYLDJJTB">
+    	        <comment>当月落地均价同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjygdcb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJYGDCB">
+    	        <comment>当月节约购电成本</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjygdcbtb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJYGDCBTB">
+    	        <comment>当月节约购电成本同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJYDL">
+    	        <comment>当月交易电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dyjydltb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="DYJYDLTB">
+    	        <comment>当月交易电量同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dygdf" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="DYGDF">
+    	        <comment>当月购电费</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dygdftb" type="big_decimal"  length="16"  not-null="true">
+	    	<column name="DYGDFTB">
+    	        <comment>当月购电费成本</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljswjj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJSWJJ">
+    	        <comment>累计上网均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljswjjtb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJSWJJTB">
+    	        <comment>累计上网均价同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljldjj" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJLDJJ">
+    	        <comment>累计落地均价</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljldjjtb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJLDJJTB">
+    	        <comment>累计落地均价同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjygdcb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYGDCB">
+    	        <comment>累计节约购电成本</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjygdcbtb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYGDCBTB">
+    	        <comment>累计节约购电成本同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjydl" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYDL">
+    	        <comment>累计交易电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljjydltb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJJYDLTB">
+    	        <comment>累计交易电量同比</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljgdf" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJGDF">
+    	        <comment>累计购电费</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="ljgdftb" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LJGDFTB">
+    	        <comment>累计购电费同比</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

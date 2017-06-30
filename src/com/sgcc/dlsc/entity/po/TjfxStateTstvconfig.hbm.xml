@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxStateTstvconfig" table="TJFX_STATE_TSTVCONFIG">
+    	<comment>TJFX_STATE_TSTVCONFIG</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>guid</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="mktMonth" type="date"  not-null="false">
+	    	<column name="MKT_MONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tjxh" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="TJXH">
+    	        <comment>排序号</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tjname" type="string"  length="100"  not-null="true">
+	    	<column name="TJNAME">
+    	        <comment>统计名称  华北→华中；华中→华北；华中→华东；华东→华中；东北→华北；华北→东北；西北→华中；华中→西北；华中→华东；华东→华中</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="purchaser" type="string"  length="36"  not-null="false">
+	    	<column name="PURCHASER">
+    	        <comment>购电方  关联市场成员</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="seller" type="string"  length="36"  not-null="false">
+	    	<column name="SELLER">
+    	        <comment>售电方  关联市场成员</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETID">
+    	        <comment>业务场景ID  用户登录的场景id</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

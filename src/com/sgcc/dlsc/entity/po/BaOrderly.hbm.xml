@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaOrderly" table="BA_ORDERLY">
+    	<comment>有序用电信息</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATE_TYPE">
+    	        <comment>期别  年、冬、夏、季、月、旬、周、日 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabdate" type="date"  not-null="true">
+	    	<column name="TABDATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxpullpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXPULLPOWER">
+    	        <comment>最大拉路电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="maxlimitpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="MAXLIMITPOWER">
+    	        <comment>最大限电电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="pullelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PULLELEC">
+    	        <comment>拉路电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="limitelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="LIMITELEC">
+    	        <comment>限电电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cfpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CFPOWER">
+    	        <comment>错峰电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bfpower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BFPOWER">
+    	        <comment>避峰电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="cfelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="CFELEC">
+    	        <comment>错峰电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="bfelec" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BFELEC">
+    	        <comment>避峰电量</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TrRegionReason" table="TR_REGION_REASON">
+    	<comment>TR_REGION_REASON</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="tradeseqId" type="big_decimal"  length="20"  not-null="false">
+	    	<column name="TRADESEQ_ID">
+    	        <comment>交易序列id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketId" type="string"  length="32"  not-null="false">
+	    	<column name="MARKET_ID">
+    	        <comment>登录人场景id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="reason" type="string"  length="2000"  not-null="false">
+	    	<column name="REASON">
+    	        <comment>校核原因</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userId" type="string"  length="32"  not-null="false">
+	    	<column name="USER_ID">
+    	        <comment>用户id</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="updateTime" type="date"  not-null="false">
+	    	<column name="UPDATE_TIME">
+    	        <comment>操作时间</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

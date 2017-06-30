@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.TjfxSdxqxxb" table="TJFX_SDXQXXB">
+    	<comment>水电汛期信息表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="64">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="xqkssj" type="date"  not-null="false">
+	    	<column name="XQKSSJ">
+    	        <comment>汛期开始时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xqjssj" type="date"  not-null="false">
+	    	<column name="XQJSSJ">
+    	        <comment>汛期结束时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="xqmc" type="string"  length="128"  not-null="false">
+	    	<column name="XQMC">
+    	        <comment>汛期名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="remark" type="string"  length="500"  not-null="false">
+	    	<column name="REMARK">
+    	        <comment>备注</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

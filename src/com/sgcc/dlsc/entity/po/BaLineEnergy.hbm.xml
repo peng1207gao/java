@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaLineEnergy" table="BA_LINE_ENERGY">
+    	<comment>联络线电量信息</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATE_TYPE">
+    	        <comment>期别  年、冬、夏、季、月、旬、周、日 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabdate" type="date"  not-null="true">
+	    	<column name="TABDATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="linename" type="string"  length="128"  not-null="false">
+	    	<column name="LINENAME">
+    	        <comment>联络线名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="lineid" type="string"  length="32"  not-null="true">
+	    	<column name="LINEID">
+    	        <comment>联络线编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="compositionname" type="string"  length="128"  not-null="false">
+	    	<column name="COMPOSITIONNAME">
+    	        <comment>成分名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="compositionid" type="string"  length="32"  not-null="true">
+	    	<column name="COMPOSITIONID">
+    	        <comment>成分编码</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buyerid" type="string"  length="32"  not-null="false">
+	    	<column name="BUYERID">
+    	        <comment>购入方</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleerid" type="string"  length="32"  not-null="false">
+	    	<column name="SALEERID">
+    	        <comment>售出方</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buypower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BUYPOWER">
+    	        <comment>购入电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="salepower" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEPOWER">
+    	        <comment>售出电力</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="buyenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="BUYENERGY">
+    	        <comment>购入电量 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="saleenergy" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SALEENERGY">
+    	        <comment>售出电量 </comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

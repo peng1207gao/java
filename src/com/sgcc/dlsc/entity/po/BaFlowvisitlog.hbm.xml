@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaFlowvisitlog" table="BA_FLOWVISITLOG">
+    	<comment>流程访问历史表</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>主键</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="businessid" type="string"  length="32"  not-null="false">
+	    	<column name="BUSINESSID">
+    	        <comment>流程实例ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="processinstname" type="string"  length="100"  not-null="false">
+	    	<column name="PROCESSINSTNAME">
+    	        <comment>流程实例名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="workitemid" type="big_decimal"  length="22"  not-null="false">
+	    	<column name="WORKITEMID">
+    	        <comment>节点ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="workitemname" type="string"  length="60"  not-null="false">
+	    	<column name="WORKITEMNAME">
+    	        <comment>节点名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="processdefid" type="string"  length="32"  not-null="false">
+	    	<column name="PROCESSDEFID">
+    	        <comment>流程定义ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="processchname" type="string"  length="60"  not-null="false">
+	    	<column name="PROCESSCHNAME">
+    	        <comment>流程定义名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="32"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="username" type="string"  length="60"  not-null="false">
+	    	<column name="USERNAME">
+    	        <comment>用户名称</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="userid" type="string"  length="32"  not-null="false">
+	    	<column name="USERID">
+    	        <comment>用户ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="visittime" type="string"  length="20"  not-null="false">
+	    	<column name="VISITTIME">
+    	        <comment>访问时间</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="note" type="string"  length="200"  not-null="false">
+	    	<column name="NOTE">
+    	        <comment>注释</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="etc1" type="string"  length="60"  not-null="false">
+	    	<column name="ETC1">
+    	        <comment>扩展1</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="etc2" type="string"  length="61"  not-null="false">
+	    	<column name="ETC2">
+    	        <comment>扩展2</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="etc3" type="string"  length="62"  not-null="false">
+	    	<column name="ETC3">
+    	        <comment>扩展3</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

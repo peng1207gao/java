@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaFixcapacity" table="BA_FIXCAPACITY">
+    	<comment>检修容量信息</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="32">
+	    	<column name="GUID">
+    	        <comment>流水号</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="marketcode" type="string"  length="32"  not-null="true">
+	    	<column name="MARKETCODE">
+    	        <comment>场景ID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="dateType" type="big_decimal"  length="2"  not-null="true">
+	    	<column name="DATE_TYPE">
+    	        <comment>期别  年、冬、夏、季、月、旬、周、日 </comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tabdate" type="date"  not-null="true">
+	    	<column name="TABDATE">
+    	        <comment>日期</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY">
+    	        <comment>计划检修容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacitySu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="planfixcapacityOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="PLANFIXCAPACITY_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY">
+    	        <comment>临时检修容量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacityWa" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_WA">
+    	        <comment>其中：水电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacityFi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_FI">
+    	        <comment>火电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacityNu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_NU">
+    	        <comment>核电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacityWi" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_WI">
+    	        <comment>风电</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacitySu" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_SU">
+    	        <comment>太阳能</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="actualfixcapacityOt" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ACTUALFIXCAPACITY_OT">
+    	        <comment>其他</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

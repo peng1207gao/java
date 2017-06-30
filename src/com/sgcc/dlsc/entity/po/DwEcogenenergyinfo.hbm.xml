@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.DwEcogenenergyinfo" table="DW_ECOGENENERGYINFO">
+    	<comment>结算_机组年基数合同完成情况</comment>
+        <!-- single primaryKey -->
+	    <id name="guid" type="string" length="36">
+	    	<column name="GUID">
+    	        <comment>GUID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="theyear" type="big_decimal"  length="4"  not-null="false">
+	    	<column name="THEYEAR">
+    	        <comment>年份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="themonth" type="big_decimal"  length="2"  not-null="false">
+	    	<column name="THEMONTH">
+    	        <comment>月份</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="quantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="QUANTITY">
+    	        <comment>总电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="elecquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="ELECQUANTITY">
+    	        <comment>常规燃煤电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="jsquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="JSQUANTITY">
+    	        <comment>常规燃煤基数合同电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="marketid" type="string"  length="36"  not-null="false">
+	    	<column name="MARKETID">
+    	        <comment>所属市场</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hdquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HDQUANTITY">
+    	        <comment>火电电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="sdquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="SDQUANTITY">
+    	        <comment>水电电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="hedquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="HEDQUANTITY">
+    	        <comment>核电电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="fdquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="FDQUANTITY">
+    	        <comment>风电电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="tynquantity" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="TYNQUANTITY">
+    	        <comment>太阳能电量</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="otherqty" type="big_decimal"  length="16"  not-null="false">
+	    	<column name="OTHERQTY">
+    	        <comment>其它电量</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>

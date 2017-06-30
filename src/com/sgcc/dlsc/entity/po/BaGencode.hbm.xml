@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false">
+    <class name="com.sgcc.dlsc.entity.po.BaGencode" table="BA_GENCODE">
+    	<comment>BA_GENCODE</comment>
+        <!-- single primaryKey -->
+	    <id name="gencodeid" type="string" length="36">
+	    	<column name="GENCODEID">
+    	        <comment>GENCODEID</comment>
+	    	</column>
+            <generator class="uuid.hex"/>
+        </id>     
+		
+	    <property name="value" type="string"  length="50"  not-null="false">
+	    	<column name="VALUE">
+    	        <comment>VALUE</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="name" type="string"  length="50"  not-null="false">
+	    	<column name="NAME">
+    	        <comment>NAME</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="type" type="string"  length="50"  not-null="false">
+	    	<column name="TYPE">
+    	        <comment>-1????</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="parentid" type="string"  length="50"  not-null="false">
+	    	<column name="PARENTID">
+    	        <comment>PARENTID</comment>
+	    	</column>
+    	</property>  
+         
+	    <property name="gdesc" type="string"  length="64"  not-null="false">
+	    	<column name="GDESC">
+    	        <comment>GDESC</comment>
+	    	</column>
+    	</property>  
+         
+    </class>
+</hibernate-mapping>
